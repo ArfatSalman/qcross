@@ -331,6 +331,7 @@ def produce_and_test_single_program_couple(config, generator):
     div_metadata = transformation.check_output_relationship(
         result_a=exec_metadata["res_A"],
         result_b=exec_metadata["res_B"])
+    print('div_metadata=', div_metadata)
     all_metadata = dump_all_metadata(
         out_folder=join(experiment_folder, "programs", "metadata"),
         program_id=program_id,
@@ -446,8 +447,8 @@ def start_loop(
 # LEVEL 0:
 
 
-# @click.command()
-# @click.argument('config_file')
+@click.command()
+@click.argument('config_file')
 def qmtl(config_file):
     """Run Quantum Metamorphic Testing loop."""
     config = load_config_and_check(config_file)
@@ -458,4 +459,4 @@ def qmtl(config_file):
 
 
 if __name__ == '__main__':
-    qmtl('config/qmt_v55.yaml')
+    qmtl()

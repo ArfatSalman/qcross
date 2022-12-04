@@ -219,6 +219,7 @@ class RunIndependentPartitions(MetamorphicTransformation):
             "res_A": result_a,
             "res_B": result_b
         }
+        print("independent_partition_check_relationships: ", exec_metadata)
         detectors = self.detectors
         return detect_divergence(exec_metadata, detectors)
 

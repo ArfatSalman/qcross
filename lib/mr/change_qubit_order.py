@@ -71,7 +71,6 @@ class ChangeQubitOrder(MetamorphicTransformation):
 
         self.full_mapping = {**mapping, **{
             i: i for i in range(n_idx) if i not in mapping.keys()}}
-
         self.metadata = mr_metadata
 
         return metamorph.reconstruct_sections(sections)
@@ -92,6 +91,7 @@ class ChangeQubitOrder(MetamorphicTransformation):
             "res_A": result_a,
             "res_B": result_b
         }
+        print("change_qubit_order_check_relationships: ", exec_metadata)
         detectors = self.detectors
         return detect_divergence(exec_metadata, detectors)
 

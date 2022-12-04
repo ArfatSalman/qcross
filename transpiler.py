@@ -586,7 +586,7 @@ class CirqCircuit:
                 break
 
         self.instructions = metamorph.get_instructions(qiskit_source)
-        self.is_follow_up = False
+        self.followup_config = {}
 
         # self.qubits = qubits
         # self.qubit_id = qubit_id
@@ -835,10 +835,6 @@ class CirqCircuit:
                         defn, dependencies = gate_source
                         all_defns.append(defn)
                         gate_deps_to_add.extend(dependencies)
-                        # for gate in dependencies:
-                        #     if not gates_defined[gate]:
-                        #         gates_defined[gate] = True
-                        #         all_defns.append(getattr(GateDefinition, gate))
                     else:
                         all_defns.append(gate_source)
 
@@ -854,6 +850,10 @@ class CirqCircuit:
                     else:
                         all_defns.append(gate_source)
             res.append(out)
+
+        if self.followup_config.get("null_circuit"):
+            midpoint = int(len(res) / 2)
+            res.insert(midpoint, self.null_circuit())
 
         res += self.get_measurement_gates()
 
@@ -877,6 +877,7 @@ circuit = cirq.Circuit(
     def prologue(self):
         return f"""
 import cirq
+from cirq.contrib.qasm_import import circuit_from_qasm
 from cirq.circuits.qasm_output import QasmUGate
 import numpy as np
 import math
@@ -890,13 +891,20 @@ from functools import reduce
             pass
 
         measurement_keys = []
-        for i in range(self.qubits):
-            measurement_keys.append(f"'cr{str(i)}'")
+        qasm = self.followup_config.get("qasm_roundtrip")
+        if qasm:
+            for i in range(self.qubits):
+                measurement_keys.append(f"'m_cr{str(i)}_0'")
+        else:
+            for i in range(self.qubits):
+                measurement_keys.append(f"'cr{str(i)}'")
 
         return f"""
-UNITARY = cirq.unitary(circuit)
+{ self.add_unitary() if True else ''}
 
-{ "circuit = apply_transformations(circuit)" if self.is_follow_up else '' }
+{ self.qasm_roundtrip() if self.followup_config.get('qasm_roundtrip') else ''}
+
+{ 'circuit = apply_transformations(circuit)' if self.followup_config.get('transformations') is not None else ''}
 
 {self.backend_selection()}
 result = simulator.run(circuit, repetitions={shots})
@@ -906,6 +914,9 @@ counts = dict(zip(keys,[value for value in result_dict.values()]))
 RESULT = counts
 """
 
+    def add_unitary(self):
+        return "UNITARY = cirq.unitary(circuit)"
+
     def generate_named_qubit_registers(self):
         return f"{self.qubit_id} = [cirq.NamedQubit('q' + str(i)) for i in range({self.qubits})]"
 
@@ -914,7 +925,8 @@ RESULT = counts
 
     def generate_grid_qubit_registers(self):
         return f"""
-lattice = cirq.GridQubit.square(math.ceil({self.qubits} ** 1/2))
+qubits_num = math.ceil({self.qubits} ** 1/2)
+lattice = cirq.GridQubit.square(qubits_num + 1 if qubits_num == 1 else qubits_num)
 {self.qubit_id} = [lattice[i] for i in range({self.qubits})]
         """
 
@@ -924,47 +936,71 @@ lattice = cirq.GridQubit.square(math.ceil({self.qubits} ** 1/2))
             self.generate_line_qubit_registers,
             self.generate_grid_qubit_registers,
         ]
-        if self.is_follow_up:
-            fn = random.choice(qubits)
-            self.followup_metadata["qubit_type"] = fn.__name__
-            return fn()
 
-        return self.generate_named_qubit_registers()
+        qubit_type = self.followup_config.get("qubit_type")
+        if qubit_type == None or qubit_type == "named":
+            fn = qubits[0]
+        elif qubit_type == "line":
+            fn = qubits[1]
+        elif qubit_type == "grid":
+            fn = qubits[2]
+        else:
+            raise ValueError(f"{qubit_type} is not a correct qubit type")
+
+        return fn()
 
     def backend_selection(self):
-        backends = ["Simulator", "DensityMatrixSimulator"]
-        sim = backends[0]
-        if self.is_follow_up:
-            sim = random.choice(backends)
-            self.followup_metadata['backend'] = sim
-        return f"simulator = cirq.{sim}()"
+        selected_backend = self.followup_config.get("backend")
+
+        if selected_backend is None:
+            selected_backend = "Simulator"
+        else:
+            backends = ["Simulator", "DensityMatrixSimulator"]
+            if selected_backend not in backends:
+                raise ValueError(f"{selected_backend} is not a valid backend")
+
+        return f"simulator = cirq.{selected_backend}()"
+
+    def null_ciruit_injector_prologue(self):
+        return f"""
+from cirq.testing import random_circuit
+rand_cirq = random_circuit(qubits={self.qubits}, n_moments=10, op_density=0.75)
+"""
+
+    def null_circuit(self):
+        return """
+rand_cirq,
+cirq.inverse(rand_cirq)
+"""
 
     def get_transformations(self):
+        transformation_order = self.followup_config.get("transformations")
+
+        if transformation_order is None:
+            return ""
 
         transformations_map = {
             "expand_composite": "optimized_circuit = cirq.expand_composite(circuit)",
             "defer_measurements": "optimized_circuit = cirq.defer_measurements(optimized_circuit)",
             "merge_k_qubit_unitaries": """optimized_circuit = cirq.merge_k_qubit_unitaries(
                 optimized_circuit, k=2, rewriter=lambda op: op.with_tags("merged"), context=context)""",
-            "eject_phased_paulis": "cirq.eject_phased_paulis(optimized_circuit, eject_parameterized=True)",
-            "drop_negligible_operations": "cirq.drop_negligible_operations(optimized_circuit)",
+            "eject_phased_paulis": "optimized_circuit = cirq.eject_phased_paulis(optimized_circuit, eject_parameterized=True)",
+            "drop_negligible_operations": "optimized_circuit = cirq.drop_negligible_operations(optimized_circuit)",
             "drop_empty_moments": "optimized_circuit = cirq.drop_empty_moments(optimized_circuit)",
             "synchronize_terminal_measurements": "optimized_circuit = cirq.synchronize_terminal_measurements(optimized_circuit)",
             "eject_z": "optimized_circuit = cirq.eject_z(optimized_circuit, eject_parameterized=True)",
             "stratified_circuit": "optimized_circuit = cirq.stratified_circuit(optimized_circuit)",
         }
 
-        transformations = list(transformations_map.keys())
-        transformations.remove('expand_composite')
+        transformations = []
 
-        random.shuffle(transformations)
+        transformations.insert(0, "expand_composite")
+        transformations.extend(transformation_order)
 
-        transformations.insert(0, 'expand_composite')
-
-        self.followup_metadata['transformations_order'] = transformations
+        self.followup_metadata["transformations_order"] = transformations
 
         optimizations = "\n\n    ".join(
-            [transformations_map[key] for key in transformations_map]
+            [transformations_map[key] for key in transformations]
         )
 
         return f"""
@@ -979,10 +1015,16 @@ def apply_transformations(circuit, context=None):
     return optimized_circuit
 """
 
+    def qasm_roundtrip(self):
+        return """
+qasm_output = cirq.qasm(cirq.expand_composite(circuit))
+circuit = circuit_from_qasm(qasm_output) # new circuit
+"""
+
     def get_equivalent(self):
         cirq_source = self.prologue()
-        if self.is_follow_up:
-            cirq_source += self.get_transformations()
+
+        cirq_source += self.get_transformations()
 
         circuit, defns = self.construct_circuit(self.instructions)
 
@@ -991,6 +1033,9 @@ def apply_transformations(circuit, context=None):
         cirq_source += "\n\n"
 
         cirq_source += self.generate_qubit_registers()
+
+        if self.followup_config.get("null_circuit"):
+            cirq_source += self.null_ciruit_injector_prologue()
 
         cirq_source += circuit
 
@@ -1002,11 +1047,16 @@ def apply_transformations(circuit, context=None):
 
         return cirq_source
 
-    def get_follow_up(self):
-        self.is_follow_up = True
+    def get_follow_up(self, config):
+        self.followup_config = config
+        self.followup_metadata = {}
+
         source = self.get_equivalent()
-        self.is_follow_up = False
-        return self.followup_metadata, source
+        metadata = self.followup_metadata
+
+        self.followup_config = {}
+        self.followup_metadata = {}
+        return metadata, source
 
     @staticmethod
     def from_qiskit_source(qiskit_source: str):
@@ -1022,7 +1072,7 @@ def apply_transformations(circuit, context=None):
 
         instructions = metamorph.get_instructions(qiskit_source)
 
-        cirq_ciruit = CirqCircuit(qubit_size, qubit_name)
+        cirq_ciruit = CirqCircuit(qubit_size)
 
         cirq_source = cirq_ciruit.prologue()
 
@@ -1045,76 +1095,3 @@ def apply_transformations(circuit, context=None):
         cirq_source += cirq_ciruit.epilogue(shots)
 
         return cirq_source
-
-
-if __name__ == "__main__":
-    code = """
-# SECTION
-# NAME: PROLOGUE
-
-import qiskit
-from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
-from qiskit.circuit.library.standard_gates import *
-from qiskit.circuit import Parameter
-# SECTION
-# NAME: CIRCUIT
-
-qr = QuantumRegister(4, name='qr')
-cr = ClassicalRegister(4, name='cr')
-qc = QuantumCircuit(qr, cr, name='qc')
-qc.append(RZXGate(3.4148838654876075), qargs=[qr[0], qr[1]], cargs=[])
-qc.append(U1Gate(3.916311088799146), qargs=[qr[2]], cargs=[])
-qc.append(CSXGate(), qargs=[qr[2], qr[3]], cargs=[])
-qc.append(RYGate(0.30914088102270665), qargs=[qr[1]], cargs=[])
-qc.append(CPhaseGate(2.05519166016469), qargs=[qr[1], qr[2]], cargs=[])
-qc.append(YGate(), qargs=[qr[2]], cargs=[])
-qc.append(U1Gate(2.19375409896333), qargs=[qr[2]], cargs=[])
-qc.append(SXdgGate(), qargs=[qr[2]], cargs=[])
-qc.append(SdgGate(), qargs=[qr[3]], cargs=[])
-qc.append(HGate(), qargs=[qr[1]], cargs=[])
-qc.append(CXGate(), qargs=[qr[2], qr[0]], cargs=[])
-qc.append(RXXGate(0.6958411378279826), qargs=[qr[1], qr[3]], cargs=[])
-qc.append(iSwapGate(), qargs=[qr[2], qr[0]], cargs=[])
-qc.append(U1Gate(2.5118976499714747), qargs=[qr[2]], cargs=[])
-qc.append(RC3XGate(), qargs=[qr[2], qr[1], qr[3], qr[0]], cargs=[])
-qc.append(U1Gate(5.406194560026072), qargs=[qr[3]], cargs=[])
-qc.append(HGate(), qargs=[qr[3]], cargs=[])
-qc.append(RZZGate(4.385627314003304), qargs=[qr[1], qr[0]], cargs=[])
-qc.append(TdgGate(), qargs=[qr[3]], cargs=[])
-qc.append(RYGate(6.139804541076739), qargs=[qr[3]], cargs=[])
-qc.append(RC3XGate(), qargs=[qr[1], qr[3], qr[0], qr[2]], cargs=[])
-qc.append(UGate(2.7159856050146742, 2.4635653656106844, 5.909205091787408), qargs=[qr[3]], cargs=[])
-qc.append(RYYGate(2.730791138901111), qargs=[qr[1], qr[2]], cargs=[])
-qc.append(RXXGate(5.4691544369544545), qargs=[qr[3], qr[2]], cargs=[])
-qc.append(iSwapGate(), qargs=[qr[2], qr[0]], cargs=[])
-qc.append(SGate(), qargs=[qr[0]], cargs=[])
-qc.append(UGate(1.2541495406941519, 3.6300156777625117, 0.8739290527186184), qargs=[qr[3]], cargs=[])
-qc.append(SXdgGate(), qargs=[qr[1]], cargs=[])
-# SECTION
-# NAME: MEASUREMENT
-
-qc.measure(qr, cr)
-# SECTION
-# NAME: QASM_CONVERSION
-qc = QuantumCircuit.from_qasm_str(qc.qasm())
-# SECTION
-# NAME: OPTIMIZATION_LEVEL
-
-from qiskit import transpile
-qc = transpile(qc, basis_gates=None, optimization_level=2, coupling_map=None)
-# SECTION
-# NAME: EXECUTION
-
-from qiskit import Aer, transpile, execute
-backend_e1e30142c35d4d72a6e6051b22e81691 = Aer.get_backend('qasm_simulator')
-counts = execute(qc, backend=backend_e1e30142c35d4d72a6e6051b22e81691, shots=692).result().get_counts(qc)
-RESULT = counts
-"""
-    c = CirqCircuit(code)
-    a, b = c.get_follow_up()
-    print(b)
-    print(a)
-
-
-class QuantumCircuit:
-    pass

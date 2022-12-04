@@ -7,10 +7,28 @@ from pathlib import Path
 from termcolor import colored
 from json import dumps
 from lib.detectors import JS_Detector, KS_Detector
+from random import shuffle
+from copy import deepcopy
+from itertools import chain, combinations, permutations
+
 
 import numpy as np
 
 from transpiler import CirqCircuit
+
+
+def linear_subsequences(arr):
+    res = []
+    for i in range(1, len(arr) + 1):
+        res.append(arr[0:i])
+    return res
+
+
+def powerset(iterable):
+    "powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"
+    s = list(iterable)
+    return chain.from_iterable(combinations(s, r) for r in range(len(s) + 1))
+
 
 qiskit_circuits_folder = "data/qmt_v53/programs/source/"
 cirq_circuits_folder = "data/qmt-cirq/cirq-src/"
@@ -34,13 +52,23 @@ def execute_single_py_program(py_content: str):
     return GLOBALS["RESULT"], GLOBALS["UNITARY"]
 
 
-def write_metadata_file(filename, qiskit_res, cirq_res, exec_time, divergence):
+def timed_execute_single_py_program(py_content: str):
+    time_start = perf_counter_ns()
+    res, unitary = execute_single_py_program(py_content)
+    time_end = perf_counter_ns()
+
+    return res, unitary, time_end - time_start
+
+
+def write_metadata_file(filename, qiskit_res, cirq_res, exec_time, divergence, **args):
     metadata = {
         "qiskit_res": qiskit_res,
         "cirq_result": cirq_res,
         "exec_time": exec_time,
         "divergence": divergence,
     }
+
+    metadata.update(args)
 
     filename_without_ext = filename.split(".")[0]
 
@@ -61,6 +89,70 @@ UNITARY = qi.Operator(qc.reverse_bits()).data
 """,
     )
 
+
+def write_file(path, content):
+    with open(path, "w", encoding="ascii") as f:
+        f.write(content)
+
+
+def execute_with_few_optimizations(filename, config, transpiler_obj, res_to_check, write_to_file=False):
+    print(colored(f"===== RUNNING SUBSETS ======", "red", attrs=["bold"]))
+    # subsets = list(powerset(config["transformations"]))[1:]
+    subsets = permutations(config["transformations"])
+    subset_metadata = {}
+    count = 0
+    for i, subset in enumerate(subsets):
+        count += 1
+        if count > 100:
+            break
+        # transpiler_obj = CirqCircuit(qiskit_source)
+        subset_followup_metadata, subset_followup = transpiler_obj.get_follow_up(
+            {"transformations": list(subset)}
+        )
+        subset_metadata[i] = {
+            "subset": subset_followup_metadata["transformations_order"]
+        }
+        print(colored(f"Executing SUBSET FOLLOWUP {i}", "blue", attrs=["bold"]))
+        try:
+            (
+                res_followup,
+                _,
+                time_followup,
+            ) = timed_execute_single_py_program(subset_followup)
+        except:
+            write_file(f"cirq_followup_temp_subset_{i}_filename", subset_followup)
+            raise
+        subset_metadata[i].update(
+            {
+                "subset_res": res_followup,
+                "divergence_from_qiskit": detect_divergence(
+                    {"res_A": res_to_check, "res_B": res_followup},
+                    KS_Detector(),
+                ),
+            }
+        )
+        if write_to_file:
+            with open(f"{cirq_circuits_folder}subset_{i}_{filename}", "w") as f:
+                f.write(subset_followup)
+
+    return subset_metadata
+
+
+base_config = {
+    "add_unitary": True,
+    "transformations": [
+        "defer_measurements",
+        "merge_k_qubit_unitaries",
+        "drop_empty_moments",
+        "eject_z",
+        "eject_phased_paulis",
+        "drop_negligible_operations",
+        "stratified_circuit",
+        "synchronize_terminal_measurements",
+    ],
+}
+
+
 def execute():
     count = 0
     files = os.listdir(qiskit_circuits_folder)
@@ -75,54 +167,111 @@ def execute():
         with open(qiskit_circuit_fullpath) as file:
             print(colored(f"Opening QISKIT {filename}", "green"))
             qiskit_source = file.read()
-            cirq_source = CirqCircuit.from_qiskit_source(qiskit_source)
+            transpiler_obj = CirqCircuit(qiskit_source)
+            cirq_source = transpiler_obj.get_equivalent()
 
-        qiskit_time_start = perf_counter_ns()
+            config = deepcopy(base_config)
+            shuffle(config["transformations"])
+
+            followup_metadata, cirq_source_follow_up = transpiler_obj.get_follow_up(
+                config
+            )
+
         instrumented_qiskit_source = add_unitary_measurements_to_qiskit_source(
             qiskit_source
         )
-        qiskit_res, qiskit_unitary = execute_single_py_program(
-            instrumented_qiskit_source
-        )
-        qiskit_time_end = perf_counter_ns()
+        # qiskit_time_start = perf_counter_ns()
+        # qiskit_res, qiskit_unitary = execute_single_py_program(
+        #     instrumented_qiskit_source
+        # )
+        # qiskit_time_end = perf_counter_ns()
+        print(colored(f"Executing QISKIT", "yellow", attrs=["bold"]))
+        try:
+            qiskit_res, qiskit_unitary, qiskit_time = timed_execute_single_py_program(
+                instrumented_qiskit_source
+            )
+        except:
+            write_file("qiskit_temp_" + filename, instrumented_qiskit_source)
+            raise
 
-        cirq_time_start = perf_counter_ns()
-        cirq_res, cirq_unitary = execute_single_py_program(cirq_source)
-        cirq_time_end = perf_counter_ns()
+        # cirq_time_start = perf_counter_ns()
+        # cirq_res, cirq_unitary = execute_single_py_program(cirq_source)
+        # cirq_time_end = perf_counter_ns()
+        print(colored(f"Executing CIRQ", "yellow", attrs=["bold"]))
+        try:
+            cirq_res, cirq_unitary, cirq_time = timed_execute_single_py_program(
+                cirq_source
+            )
+        except:
+            write_file("cirq_temp_" + filename, cirq_source)
+            raise
+
+        print(colored(f"Executing CIRQ FOLLOWUP", "yellow", attrs=["bold"]))
+        try:
+            (
+                cirq_res_followup,
+                cirq_unitary_followup,
+                cirq_time_followup,
+            ) = timed_execute_single_py_program(cirq_source_follow_up)
+        except:
+            write_file("cirq_followup_temp_" + filename, cirq_source_follow_up)
+            raise
 
         if not np.allclose(qiskit_unitary, cirq_unitary):
             print(colored(f"allclose = False", "red", attrs=["bold"]))
             raise
 
+        ks_qiskit_cirq_followup = detect_divergence(
+            {"res_A": qiskit_res, "res_B": cirq_res_followup}, KS_Detector()
+        )
+        ks_cirq_cirq_followup = detect_divergence(
+            {"res_A": cirq_res, "res_B": cirq_res_followup}, KS_Detector()
+        )
+
         divergence_metadata = {
-            "ks": detect_divergence(
+            "ks_qiskit_cirq": detect_divergence(
                 {"res_A": qiskit_res, "res_B": cirq_res}, KS_Detector()
             ),
-            "js": detect_divergence(
-                {"res_A": qiskit_res, "res_B": cirq_res}, JS_Detector()
-            ),
+            "ks_qiskit_cirq_followup": ks_qiskit_cirq_followup,
+            "ks_cirq_cirq_followup": ks_cirq_cirq_followup,
         }
+        subset_metadata = None
+        if ks_qiskit_cirq_followup["p-value"] <= 1:
+            subset_metadata = execute_with_few_optimizations(
+                filename, config, transpiler_obj, qiskit_res
+            )
 
         cirq_filepath = cirq_circuits_folder + filename
         with open(cirq_filepath, "w") as cirq_file:
             cirq_file.write(cirq_source)
+
+        cirq_filepath = cirq_circuits_folder + "followup_" + filename
+        with open(cirq_filepath, "w") as cirq_file:
+            cirq_file.write(cirq_source_follow_up)
 
         write_metadata_file(
             filename,
             qiskit_res,
             cirq_res,
             {
-                "qiskit": f"{(qiskit_time_end - qiskit_time_start) / 10 ** 6} ms",
-                "cirq": f"{(cirq_time_end - cirq_time_start) / 10 ** 6} ms",
+                "qiskit": f"{(qiskit_time) / 10 ** 6} ms",
+                "cirq": f"{(cirq_time) / 10 ** 6} ms",
+                "cirq_followup": f"{(cirq_time_followup) / 10 ** 6} ms",
             },
             divergence_metadata,
+            cirq_res_followup=cirq_res_followup,
+            followup_metadata=followup_metadata,
+            subset_metadata=subset_metadata,
         )
         count += 1
+        break
 
-        if divergence_metadata["ks"]['p-value'] < 0.05:
-            print(colored(f"DIVERGENCE {filename}", 'red', attrs=["bold"]))
-            break
+        for key in divergence_metadata:
+            if divergence_metadata[key]["p-value"] < 0.05:
+                print(colored(f"DIVERGENCE {filename}", "red", attrs=["bold"]))
+
     print(colored(f"Count = {count}", "red", attrs=["bold"]))
+
 
 if __name__ == "__main__":
     execute()
