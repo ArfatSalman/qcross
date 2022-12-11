@@ -1,9 +1,11 @@
 import os
+import re
 
 
 from time import perf_counter_ns
 from pathlib import Path
-
+from datetime import datetime
+import cirq
 from termcolor import colored
 from json import dumps
 from lib.detectors import JS_Detector, KS_Detector
@@ -13,6 +15,9 @@ from itertools import chain, combinations, permutations
 
 
 import numpy as np
+
+np.seterr(divide="ignore")
+np.seterr(invalid="ignore")
 
 from transpiler import CirqCircuit
 
@@ -31,8 +36,8 @@ def powerset(iterable):
 
 
 qiskit_circuits_folder = "data/qmt_v53/programs/source/"
-cirq_circuits_folder = "data/qmt-cirq/cirq-src/"
-exec_metadata_path = "data/qmt-cirq/exec-metadata/"
+cirq_circuits_folder = "data/qmt-cirq-new-check/cirq-src/"
+exec_metadata_path = "data/qmt-cirq-new-check/exec-metadata/"
 
 Path(cirq_circuits_folder).mkdir(parents=True, exist_ok=True)
 Path(exec_metadata_path).mkdir(parents=True, exist_ok=True)
@@ -89,6 +94,7 @@ UNITARY = qi.Operator(qc.reverse_bits()).data
 """,
     )
 
+QasmUGate_Pattern = re.compile(r'QasmUGate\(.*\)')
 
 def write_file(path, content):
     with open(path, "w", encoding="ascii") as f:
@@ -97,7 +103,7 @@ def write_file(path, content):
 
 def execute_with_few_optimizations(filename, config, transpiler_obj, res_to_check, write_to_file=False):
     print(colored(f"===== RUNNING SUBSETS ======", "red", attrs=["bold"]))
-    # subsets = list(powerset(config["transformations"]))[1:]
+
     subsets = permutations(config["transformations"])
     subset_metadata = {}
     count = 0
@@ -112,7 +118,7 @@ def execute_with_few_optimizations(filename, config, transpiler_obj, res_to_chec
         subset_metadata[i] = {
             "subset": subset_followup_metadata["transformations_order"]
         }
-        print(colored(f"Executing SUBSET FOLLOWUP {i}", "blue", attrs=["bold"]))
+        # print(colored(f"Executing SUBSET FOLLOWUP {i}", "blue", attrs=["bold"]))
         try:
             (
                 res_followup,
@@ -140,22 +146,21 @@ def execute_with_few_optimizations(filename, config, transpiler_obj, res_to_chec
 
 base_config = {
     "add_unitary": True,
-    "transformations": [
-        "defer_measurements",
-        "merge_k_qubit_unitaries",
-        "drop_empty_moments",
-        "eject_z",
-        "eject_phased_paulis",
-        "drop_negligible_operations",
-        "stratified_circuit",
-        "synchronize_terminal_measurements",
-    ],
+    "transformations": None # [
+    #     "defer_measurements",
+    #     "merge_k_qubit_unitaries",
+    #     "drop_empty_moments",
+    #     "eject_z",
+    #     "eject_phased_paulis",
+    #     "drop_negligible_operations",
+    #     "stratified_circuit",
+    #     "synchronize_terminal_measurements",
+    # ],
 }
 
 
-def execute():
+def execute(files):
     count = 0
-    files = os.listdir(qiskit_circuits_folder)
     for filename in files:
         qiskit_circuit_fullpath = qiskit_circuits_folder + filename
         filename_without_ext = filename.split(".")[0]
@@ -171,7 +176,7 @@ def execute():
             cirq_source = transpiler_obj.get_equivalent()
 
             config = deepcopy(base_config)
-            shuffle(config["transformations"])
+            # shuffle(config["transformations"])
 
             followup_metadata, cirq_source_follow_up = transpiler_obj.get_follow_up(
                 config
@@ -218,8 +223,17 @@ def execute():
             raise
 
         if not np.allclose(qiskit_unitary, cirq_unitary):
-            print(colored(f"allclose = False", "red", attrs=["bold"]))
-            raise
+            if re.search(QasmUGate_Pattern, cirq_source) is None:
+                print(colored(f"allclose = False and NO qasm gate found", "yellow", attrs=["bold"]))
+                raise
+
+            if not cirq.equal_up_to_global_phase(qiskit_unitary, cirq_unitary):
+                print(colored(f"equal_up_to_global_phase = False", "red", attrs=["bold"]))
+                raise
+            else:
+                print(colored("equal_up_to_global_phase = True", "green", attrs=["bold"]))
+        else:
+            print(colored("allclose = True", "green", attrs=["bold"]))
 
         ks_qiskit_cirq_followup = detect_divergence(
             {"res_A": qiskit_res, "res_B": cirq_res_followup}, KS_Detector()
@@ -236,10 +250,12 @@ def execute():
             "ks_cirq_cirq_followup": ks_cirq_cirq_followup,
         }
         subset_metadata = None
-        if ks_qiskit_cirq_followup["p-value"] <= 1:
+        if False and ks_qiskit_cirq_followup["p-value"] <= 1:
+            print(f"START: {datetime.now()}")
             subset_metadata = execute_with_few_optimizations(
                 filename, config, transpiler_obj, qiskit_res
             )
+            print(f"END: {datetime.now()}")
 
         cirq_filepath = cirq_circuits_folder + filename
         with open(cirq_filepath, "w") as cirq_file:
@@ -264,7 +280,6 @@ def execute():
             subset_metadata=subset_metadata,
         )
         count += 1
-        break
 
         for key in divergence_metadata:
             if divergence_metadata[key]["p-value"] < 0.05:
@@ -274,4 +289,5 @@ def execute():
 
 
 if __name__ == "__main__":
-    execute()
+    files = os.listdir(qiskit_circuits_folder)
+    execute(files)

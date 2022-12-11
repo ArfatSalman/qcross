@@ -64,7 +64,7 @@ class CU1Gate(cirq.Gate):
         "U1Gate"
     ]
 
-    C3SXGate = """
+    C3SXGate__not_needed = """
 class C3SXGate(cirq.Gate):
     def __init__(self):
         '''QASM -> c3sqrtx'''
@@ -111,7 +111,7 @@ class C3SXGate(cirq.Gate):
         "CU1Gate"
     ]
 
-    C4XGate = """
+    C4XGate__not_needed = """
 class C4XGate(cirq.Gate):
     def __init__(self):
         super(C4XGate, self)
@@ -221,7 +221,7 @@ class RYYGate(cirq.Gate):
         return "@", "RYY"
     """
 
-    SXGate = """
+    SXGate_not_needed = """
 class SXGate(cirq.Gate):
     def __init__(self):
         super(SXGate, self)
@@ -237,7 +237,7 @@ class SXGate(cirq.Gate):
         return "SX"
     """
 
-    CSXGate = """
+    CSXGate__not_needed = """
 class CSXGate(cirq.Gate):
     def __init__(self):
         super(CSXGate, self)
@@ -375,7 +375,7 @@ class RXXGate(cirq.Gate):
         return '@', f"RXX({self.theta:.2f})"
     """
 
-    iSwapGate = """
+    iSwapGate_NOT_NEEDED = """
 class iSwapGate(cirq.Gate):
     def __init__(self):
         super(iSwapGate, self)
@@ -610,10 +610,39 @@ class CirqCircuit:
         assert len(qubit_pos) == 1
         return f"cirq.T( {self._qubits_args(qubit_pos)} )"
 
+    # PAULI GATES
     def XGate(self, qubit_pos, args=None):
         assert len(qubit_pos) == 1
         return f"cirq.X( {self._qubits_args(qubit_pos)} )"
 
+    def YGate(self, qubit_pos, args=None):
+        assert len(qubit_pos) == 1
+        return f"cirq.Y( {self._qubits_args(qubit_pos)} )"
+
+    def ZGate(self, qubit_pos, args):
+        assert len(qubit_pos) == 1
+        return f"cirq.Z({self._qubits_args(qubit_pos)})"
+
+    # STANDARD ROTATIONS
+    def RXGate(self, qubit_pos, args=None):
+        assert len(qubit_pos) == 1
+        assert len(args) == 1
+        return f'cirq.rx({", ".join(map(str, args))})({ self._qubits_args(qubit_pos) })'
+
+    def RYGate(self, qubit_pos, args):
+        assert len(qubit_pos) == 1
+        assert len(args) == 1
+
+        return (
+            f'cirq.ry( {", ".join(map(str, args))} )({ self._qubits_args(qubit_pos) })'
+        )
+
+    def RZGate(self, qubit_pos, args):
+        assert len(qubit_pos) == 1
+        assert len(args) == 1
+        return f'cirq.rz({", ".join(map(str, args))})({ self._qubits_args(qubit_pos) })'
+
+    # HADAMARD
     def HGate(self, qubit_pos, args=None):
         assert len(qubit_pos) == 1
         return f"cirq.H( {self._qubits_args(qubit_pos)} )"
@@ -635,14 +664,17 @@ class CirqCircuit:
         assert len(args) == 1
         return f'CPhaseGate({", ".join(map(str,args))})({self._qubits_args(qubit_pos)})'
 
-    def iSwapGate(self, qubit_pos, args):
+    def iSwapGate(self, qubit_pos, args=None):
         assert len(qubit_pos) == 2
-        return f"iSwapGate()( {self._qubits_args(qubit_pos)}  )"
+        return f"cirq.ISWAP( {self._qubits_args(qubit_pos)}  )"
+        # return f"iSwapGate()( {self._qubits_args(qubit_pos)}  )"
 
     def UGate(self, qubit_pos, args):
         assert len(qubit_pos) == 1
         assert len(args) == 3
-        return f'UGate({", ".join(map(str,args))})({self._qubits_args(qubit_pos)})'
+        half_turns = [f"{el} / np.pi" for el in map(str, args)]
+        return f'QasmUGate( {", ".join(half_turns)})({self._qubits_args(qubit_pos)})'
+        # return f'UGate({", ".join(map(str,args))})({self._qubits_args(qubit_pos)})'
 
     def CUGate(self, qubit_pos, args):
         assert len(qubit_pos) == 2
@@ -652,15 +684,6 @@ class CirqCircuit:
     def CXGate(self, qubit_pos, args):
         assert len(qubit_pos) == 2
         return f"cirq.CX( {self._qubits_args(qubit_pos)}  )"
-
-    def YGate(self, qubit_pos, args=None):
-        assert len(qubit_pos) == 1
-        return f"cirq.Y( {self._qubits_args(qubit_pos)} )"
-
-    def ZGate(self, qubit_pos, args):
-        assert len(qubit_pos) == 1
-
-        return f"cirq.Z({self._qubits_args(qubit_pos)})"
 
     def CCXGate(self, qubit_pos, args=None):
         assert len(qubit_pos) == 3
@@ -682,23 +705,10 @@ class CirqCircuit:
         assert len(qubit_pos) == 2
         return f"cirq.Y.controlled().on({ self._qubits_args(qubit_pos)})"
 
-    def RYGate(self, qubit_pos, args):
-        assert len(qubit_pos) == 1
-        assert len(args) == 1
-
-        return (
-            f'cirq.ry( {", ".join(map(str, args))} )({ self._qubits_args(qubit_pos) })'
-        )
-
     def CRYGate(self, qubit_pos, args):
         assert len(qubit_pos) == 2
         assert len(args) == 1
         return f'cirq.ry( {", ".join(map(str, args))} ).controlled().on({ self._qubits_args(qubit_pos) })'
-
-    def RXGate(self, qubit_pos, args=None):
-        assert len(qubit_pos) == 1
-        assert len(args) == 1
-        return f'cirq.rx({", ".join(map(str, args))})({ self._qubits_args(qubit_pos) })'
 
     def RXXGate(self, qubit_pos, args=None):
         assert len(qubit_pos) == 2
@@ -718,9 +728,6 @@ class CirqCircuit:
         assert len(args) == 1
         return f'cirq.rx( {", ".join(map(str, args))} ).controlled().on({ self._qubits_args(qubit_pos) })'
 
-    def RZGate(self, qubit_pos, args):
-        return f'cirq.rz({", ".join(map(str, args))})({ self._qubits_args(qubit_pos) })'
-
     def CRZGate(self, qubit_pos, args):
         assert len(qubit_pos) == 2
         assert len(args) == 1
@@ -739,8 +746,11 @@ class CirqCircuit:
     def U2Gate(self, qubit_pos, args):
         assert len(qubit_pos) == 1
         assert len(args) == 2
-        return f'U2Gate({", ".join(map(str,args))})({self._qubits_args(qubit_pos)})'
-        # return f'QasmUGate(np.pi/2, {", ".join(map(str,args))})({self._qubits_args(qubit_pos)})'
+        half_turns = [f"{el} / np.pi" for el in map(str, args)]
+        # return f'U2Gate({", ".join(map(str,args))})({self._qubits_args(qubit_pos)})'
+        return (
+            f'QasmUGate(1/2, {", ".join(half_turns)})({self._qubits_args(qubit_pos)})'
+        )
 
     def U3Gate(self, qubit_pos, args):
         # assert len(qubit_pos) == 1
@@ -758,11 +768,13 @@ class CirqCircuit:
 
     def SXGate(self, qubit_pos, args=None):
         assert len(qubit_pos) == 1
-        return f"SXGate()({self._qubits_args(qubit_pos)})"
+        return f"(cirq.X ** 0.5)({self._qubits_args(qubit_pos)})"
+        # return f"SXGate()({self._qubits_args(qubit_pos)})"
 
     def CSXGate(self, qubit_pos, args=None):
         assert len(qubit_pos) == 2
-        return f"CSXGate()({self._qubits_args(qubit_pos)})"
+        return f"(cirq.X.controlled() ** 0.5)({self._qubits_args(qubit_pos)})"
+        # return f"CSXGate()({self._qubits_args(qubit_pos)})"
 
     def SdgGate(self, qubit_pos, args=None):
         assert len(qubit_pos) == 1
@@ -797,11 +809,14 @@ class CirqCircuit:
 
     def C3SXGate(self, qubit_pos, args=None):
         assert len(qubit_pos) == 4
-        return f"C3SXGate()({self._qubits_args(qubit_pos)})"
+        assert (args is None or len(args) == 0)
+        return f"(cirq.X.controlled(num_controls=3)**0.5)({self._qubits_args(qubit_pos)})"
 
     def C4XGate(self, qubit_pos, args=None):
         assert len(qubit_pos) == 5
-        return f"C4XGate()({self._qubits_args(qubit_pos)})"
+        assert (args is None or len(args) == 0)
+        return f"cirq.X.controlled(num_controls=4)({self._qubits_args(qubit_pos)})"
+        # return f"C4XGate()({self._qubits_args(qubit_pos)})"
 
     def RC3XGate(self, qubit_pos, args=None):
         assert len(qubit_pos) == 4
