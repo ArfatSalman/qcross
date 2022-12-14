@@ -182,7 +182,7 @@ def execute(lb, ub):
     print('Executing ', lb, ub)
     with open("choices.txt", encoding="utf-8") as f:
         files = f.readlines()
-    
+
     files = files[lb:ub]
 
     start_time = datetime.now()

@@ -1,22 +1,23 @@
 import random
+from datetime import datetime
 import re
+import os
+from pathlib import Path
 from json import loads, dumps
+from multiprocessing import Pool
+
 from typing import List
 from pygments import highlight
 from pygments.lexers.data import JsonLexer
 from pygments.formatters.terminal import TerminalFormatter
 
-from jmetal.algorithm.multiobjective import NSGAII
-from jmetal.algorithm.singleobjective.evolution_strategy import EvolutionStrategy
 from jmetal.algorithm.singleobjective.genetic_algorithm import GeneticAlgorithm
-from jmetal.core.problem import BinaryProblem, PermutationProblem
-from jmetal.core.solution import BinarySolution, PermutationSolution
-from jmetal.operator import BestSolutionSelection, BinaryTournamentSelection
-from jmetal.operator.crossover import PMXCrossover, SBXCrossover, SPXCrossover
+from jmetal.core.problem import PermutationProblem
+from jmetal.core.solution import PermutationSolution
+from jmetal.operator import BinaryTournamentSelection
+from jmetal.operator.crossover import PMXCrossover
 from jmetal.operator.mutation import (
-    BitFlipMutation,
     PermutationSwapMutation,
-    PolynomialMutation,
 )
 from jmetal.util.observer import ProgressBarObserver
 from jmetal.util.termination_criterion import StoppingByEvaluations
@@ -25,16 +26,20 @@ from termcolor import colored
 from executor import detect_divergence, execute_single_py_program
 from transpiler import CirqCircuit
 
-cs = 0
-
 
 def get_circuit(program_id: str):
-    with open(f"data/qmt_v52/programs/source/{program_id}.py", encoding="utf-8") as f:
-        content = f.read()
-        instrumented_qiskit_source = re.sub(
-            r"qc.append\(C3XGate\(.*\)", "\n", content
-        )
-        return CirqCircuit(instrumented_qiskit_source)
+    for i in range(2):
+        try:
+            with open(
+                f"data/qmt_v5{i+2}/programs/source/{program_id}.py", encoding="utf-8"
+            ) as f:
+                content = f.read()
+                instrumented_qiskit_source = re.sub(
+                    r"qc.append\(C3XGate\(.*\)", "\n", content
+                )
+                return CirqCircuit(instrumented_qiskit_source)
+        except Exception:
+            continue
 
 
 def get_divergence_from_stored_metadata(program_id: str, given_perm):
@@ -64,7 +69,7 @@ def perm_from_encoding(encoding):
     return [OPTS[i] for i in encoding]
 
 
-class Problem(PermutationProblem):
+class OptimizationProblem(PermutationProblem):
     def __init__(self, optimizations: List[str], circuit: CirqCircuit):
         super().__init__()
 
@@ -84,10 +89,6 @@ class Problem(PermutationProblem):
         self.number_of_constraints: int = 0
 
     def create_solution(self) -> PermutationSolution:
-        global cs
-        cs += 1
-        # print("create_solution ", cs)
-
         new_solution = PermutationSolution(
             number_of_variables=self.number_of_variables,
             number_of_objectives=self.number_of_objectives,
@@ -101,7 +102,6 @@ class Problem(PermutationProblem):
     def evaluate(self, solution: PermutationSolution) -> PermutationSolution:
         # print("evaluate called with ", solution.objectives)
         # Evaluate the current permutation
-        # print(self._perm_from_encoding(solution.variables))
         metadata, source = self.circuit.get_follow_up(
             {"transformations": perm_from_encoding(solution.variables)}
         )
@@ -111,44 +111,89 @@ class Problem(PermutationProblem):
         self.divergence_calculated = detect_divergence(
             {"res_A": result, "res_B": self.non_optimized_result}
         )
-        # print(divergence["statistic"])
 
+        # Maximize
         solution.objectives[0] = -1.0 * self.divergence_calculated["statistic"]
 
         return result
+
+    def toJSON(self):
+        return "OptimizationSearch"
 
     def get_name(self):
         return "QSearch"
 
 
-if __name__ == "__main__":
-    program_id = "3b5ad11802e74ddb839ec4bf2f2ad189"
-    print(colored(f"Working with Program {program_id}", color="red", attrs=["bold"]))
-    problem = Problem(OPTS, get_circuit(program_id))
+def run_algorithm(program_id: str):
+    print(colored(f"STARTING {program_id}", "green"))
+    problem = OptimizationProblem(OPTS, get_circuit(program_id))
 
-    max_evaluations = 500
+    max_evaluations = 50
     progress_bar = ProgressBarObserver(max=max_evaluations)
 
     algorithm = GeneticAlgorithm(
         problem=problem,
-        population_size=100,
-        offspring_population_size=100,
+        population_size=10,
+        offspring_population_size=10,
         mutation=PermutationSwapMutation(probability=1.0 / problem.number_of_variables),
         crossover=PMXCrossover(probability=0.8),
         selection=BinaryTournamentSelection(),
         termination_criterion=StoppingByEvaluations(max_evaluations=max_evaluations),
     )
+
     algorithm.observable.register(progress_bar)
     algorithm.run()
     result = algorithm.get_result()
-    print(result)
     found_perm = perm_from_encoding(result.variables)
-    print(colored("RESULT FROM SEARCH:", color="blue", attrs=["bold"]))
-    print(colored(f"Perm: {found_perm}", color="green"))
-    print(colored("RESULT FROM SEARCH:", color="blue", attrs=["bold"]))
-
     given_perm = ["expand_composite"] + found_perm
 
     metadata = get_divergence_from_stored_metadata(program_id, given_perm)
-    json_str = dumps(metadata, indent=4, sort_keys=True)
-    print(highlight(json_str, JsonLexer(), TerminalFormatter()))
+    data = algorithm.get_observable_data()
+    del data['PROBLEM']
+    out = {
+        "program_id": program_id,
+        "timestamp": str(datetime.now()),
+        "jmetal": {
+            "result": str(result),
+            "found_perm": found_perm,
+            "algo_name": algorithm.get_name(),
+            "total_compute_time": algorithm.total_computing_time,
+            "data": str(data),
+        },
+        "stored_perm_info": metadata,
+    }
+    return out
+
+
+def run_for_files(lb, ub):
+    dir_path = "data/qmt-cirq-permutations/exec-metadata/"
+    files = os.listdir(dir_path)
+    files = list(map(lambda x: x.split(".")[0], files))
+    output_path = "data/jmetal-search-data/"
+    files = files[lb:ub]
+
+    Path(output_path).mkdir(parents=True, exist_ok=True)
+
+    with Pool() as pool:
+        res = pool.imap(run_algorithm, files)
+        for data, prog_id in zip(res, files):
+            with open(f"{output_path}{prog_id}.json", "a", encoding="utf-8") as f:
+                f.write('\n')
+                f.write(dumps(data, indent=4))
+                print(colored(f"DONE {prog_id}", "red"))
+
+
+if __name__ == "__main__":
+    import sys
+
+    args = sys.argv[1]
+    lb, ub = args.split(":")
+    run_for_files(int(lb), int(ub))
+
+    # found_perm = result['found_perm']
+    # print(colored("RESULT FROM SEARCH:", color="blue", attrs=["bold"]))
+    # print(colored(f"Perm: {found_perm}", color="green"))
+    # print(colored("Store Result:", color="blue", attrs=["bold"]))
+
+    # json_str = dumps(result['stored_perm_info'], indent=4, sort_keys=True)
+    # print(highlight(json_str, JsonLexer(), TerminalFormatter()))
