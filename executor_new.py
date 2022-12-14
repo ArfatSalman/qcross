@@ -274,7 +274,7 @@ def execute(lb, ub):
         write_metadata_file(
             filename,
             qiskit_res,
-            cirq_res,c
+            cirq_res,
             {
                 "qiskit": f"{(qiskit_time) / 10 ** 6} ms",
                 "cirq": f"{(cirq_time) / 10 ** 6} ms",
