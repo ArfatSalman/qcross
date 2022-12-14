@@ -20,8 +20,8 @@ from itertools import chain, combinations, permutations
 
 import numpy as np
 
-np.seterr(divide="ignore")
-np.seterr(invalid="ignore")
+# np.seterr(divide="ignore")
+# np.seterr(invalid="ignore")
 
 from transpiler import CirqCircuit
 
@@ -123,7 +123,6 @@ def pool_helper(chunk):
     except Exception as e:
         metadata["exception"] = str(e)
 
-    print(res_followup)
     metadata.update(
         {
             "res_followup": res_followup,
@@ -141,7 +140,10 @@ def execute_with_few_optimizations(
     with Pool() as pool:
         res = pool.imap(
             pool_helper,
-            ((transpiler_obj, perm, i) for i, perm in enumerate(subsets)),
+            (
+                (transpiler_obj, perm, i)
+                for i, perm in enumerate(subsets)
+            ),
         )
         for i, metadata in enumerate(res):
             metadata.update(
@@ -177,10 +179,10 @@ base_config = {
 
 def execute(lb, ub):
     count = 0
-    print("Executing ", lb, ub)
+    print('Executing ', lb, ub)
     with open("choices.txt", encoding="utf-8") as f:
         files = f.readlines()
-
+    
     files = files[lb:ub]
 
     start_time = datetime.now()
@@ -188,7 +190,7 @@ def execute(lb, ub):
         folder, program_id = filedata.split(", ")
         program_id = program_id.strip()
         folder = folder.strip()
-        filename = f"{program_id.strip()}.py"
+        filename = f'{program_id.strip()}.py'
         qiskit_circuit_fullpath = (
             f"data/{folder.strip()}/programs/source/{program_id.strip()}.py"
         )
@@ -210,7 +212,11 @@ def execute(lb, ub):
             r"qc.append\(C3XGate\(.*\)", "\n", instrumented_qiskit_source
         )
         transpiler_obj = CirqCircuit(instrumented_qiskit_source)
-        cirq_source = transpiler_obj.get_follow_up({})
+        try:
+            cirq_source = transpiler_obj.get_equivalent()
+        except Exception:
+            print(colored(f"Skipping {filename}", "yellow", attrs=["bold"]))
+            continue
 
         metadata = {}
 
@@ -268,7 +274,7 @@ def execute(lb, ub):
         write_metadata_file(
             filename,
             qiskit_res,
-            cirq_res,
+            cirq_res,c
             {
                 "qiskit": f"{(qiskit_time) / 10 ** 6} ms",
                 "cirq": f"{(cirq_time) / 10 ** 6} ms",
@@ -285,5 +291,5 @@ def execute(lb, ub):
 
 if __name__ == "__main__":
     args = sys.argv[1]
-    lb, ub = args.split(":")
+    lb, ub = args.split(':')
     execute(int(lb), int(ub))
