@@ -1,5 +1,6 @@
 import os
 import re
+from random import sample
 
 
 from time import perf_counter_ns
@@ -35,7 +36,7 @@ def powerset(iterable):
     return chain.from_iterable(combinations(s, r) for r in range(len(s) + 1))
 
 
-qiskit_circuits_folder = "data/qmt_v53/programs/source/"
+qiskit_circuits_folder = "data/qmt_v52/programs/source/"
 cirq_circuits_folder = "data/qmt-cirq-new-check/cirq-src/"
 exec_metadata_path = "data/qmt-cirq-new-check/exec-metadata/"
 
@@ -43,7 +44,7 @@ Path(cirq_circuits_folder).mkdir(parents=True, exist_ok=True)
 Path(exec_metadata_path).mkdir(parents=True, exist_ok=True)
 
 
-def detect_divergence(exec_metadata, detector):
+def detect_divergence(exec_metadata, detector=KS_Detector()):
     stat, pval = detector.check(
         result_A=exec_metadata["res_A"], result_B=exec_metadata["res_B"]
     )
@@ -94,14 +95,18 @@ UNITARY = qi.Operator(qc.reverse_bits()).data
 """,
     )
 
-QasmUGate_Pattern = re.compile(r'QasmUGate\(.*\)')
+
+QasmUGate_Pattern = re.compile(r"QasmUGate\(.*\)")
+
 
 def write_file(path, content):
     with open(path, "w", encoding="ascii") as f:
         f.write(content)
 
 
-def execute_with_few_optimizations(filename, config, transpiler_obj, res_to_check, write_to_file=False):
+def execute_with_few_optimizations(
+    filename, config, transpiler_obj, res_to_check, write_to_file=False
+):
     print(colored(f"===== RUNNING SUBSETS ======", "red", attrs=["bold"]))
 
     subsets = permutations(config["transformations"])
@@ -146,7 +151,7 @@ def execute_with_few_optimizations(filename, config, transpiler_obj, res_to_chec
 
 base_config = {
     "add_unitary": True,
-    "transformations": None # [
+    "transformations": None  # [
     #     "defer_measurements",
     #     "merge_k_qubit_unitaries",
     #     "drop_empty_moments",
@@ -173,7 +178,11 @@ def execute(files):
             print(colored(f"Opening QISKIT {filename}", "green"))
             qiskit_source = file.read()
             transpiler_obj = CirqCircuit(qiskit_source)
-            cirq_source = transpiler_obj.get_equivalent()
+            try:
+                _, cirq_source = transpiler_obj.get_follow_up({"add_unitary": True})
+            except Exception as e:
+                print(str(e))
+                continue
 
             config = deepcopy(base_config)
             # shuffle(config["transformations"])
@@ -224,14 +233,24 @@ def execute(files):
 
         if not np.allclose(qiskit_unitary, cirq_unitary):
             if re.search(QasmUGate_Pattern, cirq_source) is None:
-                print(colored(f"allclose = False and NO qasm gate found", "yellow", attrs=["bold"]))
+                print(
+                    colored(
+                        f"allclose = False and NO qasm gate found",
+                        "yellow",
+                        attrs=["bold"],
+                    )
+                )
                 raise
 
             if not cirq.equal_up_to_global_phase(qiskit_unitary, cirq_unitary):
-                print(colored(f"equal_up_to_global_phase = False", "red", attrs=["bold"]))
+                print(
+                    colored(f"equal_up_to_global_phase = False", "red", attrs=["bold"])
+                )
                 raise
             else:
-                print(colored("equal_up_to_global_phase = True", "green", attrs=["bold"]))
+                print(
+                    colored("equal_up_to_global_phase = True", "green", attrs=["bold"])
+                )
         else:
             print(colored("allclose = True", "green", attrs=["bold"]))
 
@@ -290,4 +309,5 @@ def execute(files):
 
 if __name__ == "__main__":
     files = os.listdir(qiskit_circuits_folder)
-    execute(files)
+    print(len(files))
+    execute(sample(files, k=500))

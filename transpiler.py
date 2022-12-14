@@ -2,6 +2,15 @@ from lib import metamorph
 import re
 import random
 from json import dumps
+from typing import List
+
+
+def get_U2Gate(args: List[str], qubit_pos: List[str]):
+    assert len(qubit_pos) == 1
+    assert len(args) == 2
+    half_turns = ", ".join([f"{el} / np.pi" for el in map(str, args)])
+    qubit_pos = ",".join(qubit_pos)
+    return f"QasmUGate(1/2, {half_turns})({qubit_pos})"
 
 
 class GateDefinition:
@@ -24,7 +33,7 @@ class U1Gate(cirq.Gate):
         "PhaseGate"
     ]
 
-    SXdgGate = """
+    SXdgGate__not_needed = """
 class SXdgGate(cirq.Gate):
     def __init__(self):
         super(SXdgGate, self)
@@ -169,9 +178,7 @@ class UGate(cirq.Gate):
         return "U"
     """
 
-    U3Gate = UGate
-
-    U2Gate = """
+    U2Gate__not_needed = """
 class U2Gate(cirq.Gate):
     def __init__(self, phi, lam):
         super(U2Gate, self)
@@ -337,7 +344,7 @@ class RZXGate(cirq.Gate):
         return '@', "RZX"
     """
 
-    SdgGate = """
+    SdgGate__not_needed = """
 class SdgGate(cirq.Gate):
     def __init__(self):
         super(SdgGate, self)
@@ -390,7 +397,7 @@ class iSwapGate(cirq.Gate):
         return "@", "iSwap"
     """
 
-    RC3XGate = """
+    RC3XGate = f"""
 class RC3XGate(cirq.Gate):
     def __init__(self):
         super(RC3XGate, self)
@@ -401,11 +408,11 @@ class RC3XGate(cirq.Gate):
     def _decompose_(self, qubits):
         pi = np.pi
         a, b, c, d = qubits
-        yield U2Gate(0,pi)(d)
+        yield {get_U2Gate(['0','pi'],['d'])}
         yield U1Gate(pi/4)(d)
         yield cirq.CX(c,d)
         yield U1Gate(-pi/4)(d)
-        yield U2Gate(0,pi)(d)
+        yield {get_U2Gate(['0','pi'],['d'])}
         yield cirq.CX(a,d)
         yield U1Gate(pi/4)(d)
         yield cirq.CX(b,d)
@@ -414,20 +421,19 @@ class RC3XGate(cirq.Gate):
         yield U1Gate(pi/4)(d)
         yield cirq.CX(b,d)
         yield U1Gate(-pi/4)(d)
-        yield U2Gate(0,pi)(d)
+        yield {get_U2Gate(['0','pi'],['d'])}
         yield U1Gate(pi/4)(d)
         yield cirq.CX(c,d)
         yield U1Gate(-pi/4)(d)
-        yield U2Gate(0,pi)(d)
-    
+        yield {get_U2Gate(['0','pi'],['d'])}
+
     def _circuit_diagram_info_(self, args):
         return '@', '@', '@', 'RC3X'
     """, [
         "U1Gate",
-        "U2Gate",
     ]
 
-    RC3XGate_inv = """
+    RC3XGate_inv = f"""
 class RC3XGate_inv(cirq.Gate):
     def __init__(self):
         super(RC3XGate_inv, self)
@@ -439,11 +445,11 @@ class RC3XGate_inv(cirq.Gate):
         pi = np.pi
         a, b, c, d = qubits
 
-        yield U2Gate(-2*pi,pi)(d)
+        yield {get_U2Gate(['-2*pi', 'pi'], ['d'])}
         yield U1Gate(pi/4)(d)
         yield cirq.CX(c,d)
         yield U1Gate(-pi/4)(d)
-        yield U2Gate(-2*pi,pi)(d)
+        yield {get_U2Gate(['-2*pi','pi'], ['d'])}
         yield U1Gate(pi/4)(d)
         yield cirq.CX(b,d)
         yield U1Gate(-pi/4)(d)
@@ -452,17 +458,17 @@ class RC3XGate_inv(cirq.Gate):
         yield cirq.CX(b,d)
         yield U1Gate(-pi/4)(d)
         yield cirq.CX(a,d)
-        yield U2Gate(-2*pi,pi)(d)
+        yield {get_U2Gate(['-2*pi','pi'], ['d'])}
         yield U1Gate(pi/4)(d)
         yield cirq.CX(c,d)
         yield U1Gate(-pi/4)(d)
-        yield U2Gate(-2*pi,pi)(d)
+        yield {get_U2Gate(['-2*pi','pi'],['d'])}
 
     def _circuit_diagram_info_(self, args):
         return '@', '@', '@', 'RC3X_inv'
 """
 
-    RCCXGate = """
+    RCCXGate = f"""
 class RCCXGate(cirq.Gate):
     def __init__(self):
         super(RCCXGate, self)
@@ -474,7 +480,7 @@ class RCCXGate(cirq.Gate):
         pi = np.pi
         a,b,c = qubits
 
-        yield U2Gate(0,pi)(c)
+        yield {get_U2Gate(['0','pi'],['c'])}
         yield U1Gate(pi/4)(c)
         yield cirq.CX(b, c)
         yield U1Gate(-pi/4)(c)
@@ -482,13 +488,12 @@ class RCCXGate(cirq.Gate):
         yield U1Gate(pi/4)(c)
         yield cirq.CX(b, c)
         yield U1Gate(-pi/4)(c)
-        yield U2Gate(0,pi)(c)
+        yield {get_U2Gate(['0','pi'],['c'])}
 
     def _circuit_diagram_info_(self, args):
         return '@', '@', 'RC3X'
     """, [
         "U1Gate",
-        "U2Gate",
     ]
 
     RZZGate = """
@@ -538,16 +543,43 @@ class CUGate(cirq.Gate):
         yield PhaseGate((lam+phi)/2)(c)
         yield PhaseGate((lam-phi)/2)(t)
         yield cirq.CX(c, t)
-        yield UGate(-theta/2, 0, -(phi+lam)/2)(t)
+        yield QasmUGate((-theta/2) / np.pi, 0, (-(phi+lam)/2) / np.pi)(t)
         yield cirq.CX(c, t)
-        yield UGate(theta/2, phi, 0)(t)
+        yield QasmUGate((theta/2) / np.pi, phi / np.pi, 0)(t)
 
     def _circuit_diagram_info_(self, args):
         return  '@', f"CU"
 
     """, [
-        "PhaseGate",
-        "UGate",
+        "PhaseGate"
+    ]
+
+    CU3Gate = """
+class CU3Gate(cirq.Gate):
+    def __init__(self, theta, phi, lam):
+        super(CU3Gate, self)
+        self.theta = theta
+        self.phi = phi
+        self.lam = lam
+
+    def _num_qubits_(self):
+        return 2
+
+    def _decompose_(self, qubits):
+        theta, phi, lam = self.theta, self.phi, self.lam
+        c, t = qubits
+
+        yield U1Gate((lam+phi)/2)(c)
+        yield U1Gate((lam-phi)/2)(t)
+        yield cirq.CX(c,t)
+        yield QasmUGate((-theta/2) / np.pi, 0,(-(phi+lam)/2) / np.pi)(t);
+        yield cirq.CX(c,t);
+        yield QasmUGate((theta/2) / np.pi, phi / np.pi, 0)(t);
+
+    def _circuit_diagram_info_(self, args):
+        return  '@', f"CU3"
+    """, [
+        "U1Gate"
     ]
 
     ECRGate = """
@@ -675,6 +707,11 @@ class CirqCircuit:
         half_turns = [f"{el} / np.pi" for el in map(str, args)]
         return f'QasmUGate( {", ".join(half_turns)})({self._qubits_args(qubit_pos)})'
         # return f'UGate({", ".join(map(str,args))})({self._qubits_args(qubit_pos)})'
+    
+    def CU3Gate(self, qubit_pos, args):
+        assert len(qubit_pos) == 2
+        assert len(args) == 3
+        return f'CU3Gate({", ".join(map(str,args))})({self._qubits_args(qubit_pos)})'
 
     def CUGate(self, qubit_pos, args):
         assert len(qubit_pos) == 2
@@ -778,7 +815,7 @@ class CirqCircuit:
 
     def SdgGate(self, qubit_pos, args=None):
         assert len(qubit_pos) == 1
-        return f"SdgGate()({self._qubits_args(qubit_pos)})"
+        return f"(cirq.S**-1)({self._qubits_args(qubit_pos)})"
 
     def TdgGate(self, qubit_pos, args=None):
         assert len(qubit_pos) == 1
@@ -809,12 +846,14 @@ class CirqCircuit:
 
     def C3SXGate(self, qubit_pos, args=None):
         assert len(qubit_pos) == 4
-        assert (args is None or len(args) == 0)
-        return f"(cirq.X.controlled(num_controls=3)**0.5)({self._qubits_args(qubit_pos)})"
+        assert args is None or len(args) == 0
+        return (
+            f"(cirq.X.controlled(num_controls=3)**0.5)({self._qubits_args(qubit_pos)})"
+        )
 
     def C4XGate(self, qubit_pos, args=None):
         assert len(qubit_pos) == 5
-        assert (args is None or len(args) == 0)
+        assert args is None or len(args) == 0
         return f"cirq.X.controlled(num_controls=4)({self._qubits_args(qubit_pos)})"
         # return f"C4XGate()({self._qubits_args(qubit_pos)})"
 
@@ -915,7 +954,7 @@ from functools import reduce
                 measurement_keys.append(f"'cr{str(i)}'")
 
         return f"""
-{ self.add_unitary() if True else ''}
+{ self.add_unitary() if len(self.followup_config) == 0 or self.followup_config.get('add_unitary') else ''}
 
 { self.qasm_roundtrip() if self.followup_config.get('qasm_roundtrip') else ''}
 
@@ -974,7 +1013,7 @@ lattice = cirq.GridQubit.square(qubits_num + 1 if qubits_num == 1 else qubits_nu
             if selected_backend not in backends:
                 raise ValueError(f"{selected_backend} is not a valid backend")
 
-        return f"simulator = cirq.{selected_backend}()"
+        return f"simulator = cirq.{selected_backend}(seed=np.random.RandomState())"
 
     def null_ciruit_injector_prologue(self):
         return f"""
@@ -1036,7 +1075,7 @@ qasm_output = cirq.qasm(cirq.expand_composite(circuit))
 circuit = circuit_from_qasm(qasm_output) # new circuit
 """
 
-    def get_equivalent(self):
+    def _get_equivalent(self):
         cirq_source = self.prologue()
 
         cirq_source += self.get_transformations()
@@ -1066,7 +1105,7 @@ circuit = circuit_from_qasm(qasm_output) # new circuit
         self.followup_config = config
         self.followup_metadata = {}
 
-        source = self.get_equivalent()
+        source = self._get_equivalent()
         metadata = self.followup_metadata
 
         self.followup_config = {}
@@ -1110,3 +1149,13 @@ circuit = circuit_from_qasm(qasm_output) # new circuit
         cirq_source += cirq_ciruit.epilogue(shots)
 
         return cirq_source
+
+
+if __name__ == "__main__":
+    import sys
+
+    program_id = sys.argv[1]
+    with open(f"data/qmt_v52/programs/source/{program_id}.py", encoding="utf-8") as f:
+        content = f.read()
+        a, b = CirqCircuit(content).get_follow_up({"add_unitary": False})
+        print(b)

@@ -1,5 +1,6 @@
 import os
 import cirq
+import sys
 
 from datetime import datetime
 from multiprocessing import Pool
@@ -19,8 +20,8 @@ from itertools import chain, combinations, permutations
 
 import numpy as np
 
-# np.seterr(divide="ignore")
-# np.seterr(invalid="ignore")
+np.seterr(divide="ignore")
+np.seterr(invalid="ignore")
 
 from transpiler import CirqCircuit
 
@@ -39,7 +40,7 @@ def powerset(iterable):
 
 
 qiskit_circuits_folder = "data/qmt_v53/programs/source/"
-cirq_circuits_folder = "data/qmt-cirq/cirq-src/"
+cirq_circuits_folder = "data/qmt-cirq-permutations/cirq-src/"
 exec_metadata_path = "data/qmt-cirq-permutations/exec-metadata/"
 
 Path(cirq_circuits_folder).mkdir(parents=True, exist_ok=True)
@@ -104,7 +105,7 @@ def write_file(path, content):
 
 
 def pool_helper(chunk):
-    (transpiler_obj, res_to_check, perm, i) = chunk
+    (transpiler_obj, perm, i) = chunk
 
     subset_followup_metadata, subset_followup = transpiler_obj.get_follow_up(
         {"transformations": perm, "add_unitary": False}
@@ -122,6 +123,7 @@ def pool_helper(chunk):
     except Exception as e:
         metadata["exception"] = str(e)
 
+    print(res_followup)
     metadata.update(
         {
             "res_followup": res_followup,
@@ -139,12 +141,9 @@ def execute_with_few_optimizations(
     with Pool() as pool:
         res = pool.imap(
             pool_helper,
-            (
-                (transpiler_obj, perm, i)
-                for i, perm in itertools.islice(enumerate(subsets), 50)
-            ),
+            ((transpiler_obj, perm, i) for i, perm in enumerate(subsets)),
         )
-        for metadata in res:
+        for i, metadata in enumerate(res):
             metadata.update(
                 {
                     "divergence_from_cirq": detect_divergence(
@@ -157,7 +156,7 @@ def execute_with_few_optimizations(
                     ),
                 }
             )
-            subset_metadata.append(metadata)
+            subset_metadata.append({i: metadata})
 
     return subset_metadata
 
@@ -176,28 +175,32 @@ base_config = {
 }
 
 
-def execute():
+def execute(lb, ub):
     count = 0
-
+    print("Executing ", lb, ub)
     with open("choices.txt", encoding="utf-8") as f:
         files = f.readlines()
 
+    files = files[lb:ub]
+
     start_time = datetime.now()
-    for filename in files:
-        folder, program_id = filename.split(", ")
+    for i, filedata in enumerate(files):
+        folder, program_id = filedata.split(", ")
+        program_id = program_id.strip()
+        folder = folder.strip()
+        filename = f"{program_id.strip()}.py"
         qiskit_circuit_fullpath = (
             f"data/{folder.strip()}/programs/source/{program_id.strip()}.py"
         )
 
         if os.path.exists(exec_metadata_path + f"{program_id}.json"):
+            print(colored(f" {i+lb}: already done {filename}", "red"))
             count += 1
             continue
 
         with open(qiskit_circuit_fullpath, encoding="utf-8") as file:
-            print(colored(f"Opening QISKIT {filename}", "green"))
+            print(colored(f" {i+lb}: Opening QISKIT {filename}", "green"))
             qiskit_source = file.read()
-            transpiler_obj = CirqCircuit(qiskit_source)
-            cirq_source = transpiler_obj.get_equivalent()
 
         instrumented_qiskit_source = add_unitary_measurements_to_qiskit_source(
             qiskit_source
@@ -206,6 +209,8 @@ def execute():
         instrumented_qiskit_source = re.sub(
             r"qc.append\(C3XGate\(.*\)", "\n", instrumented_qiskit_source
         )
+        transpiler_obj = CirqCircuit(instrumented_qiskit_source)
+        cirq_source = transpiler_obj.get_follow_up({})
 
         metadata = {}
 
@@ -240,7 +245,10 @@ def execute():
             )
         }
         subset_metadata = {}
-        if "cirq_exception" not in metadata and 'equal_up_to_global_phase' not in metadata:
+        if (
+            "cirq_exception" not in metadata
+            and "equal_up_to_global_phase" not in metadata
+        ):
             subset_metadata = execute_with_few_optimizations(
                 filename, base_config, transpiler_obj, cirq_res, qiskit_res
             )
@@ -268,7 +276,7 @@ def execute():
             divergence_metadata,
             subset_metadata=subset_metadata,
             metadata=metadata,
-            time={"total_time_taken": str(datetime.now - start_time)},
+            time={"total_time_taken": str(datetime.now() - start_time)},
         )
         count += 1
 
@@ -276,4 +284,6 @@ def execute():
 
 
 if __name__ == "__main__":
-    execute()
+    args = sys.argv[1]
+    lb, ub = args.split(":")
+    execute(int(lb), int(ub))
