@@ -4,7 +4,6 @@ import re
 import os
 from pathlib import Path
 from json import loads, dumps
-from multiprocessing import Pool
 
 from typing import List
 from pygments import highlight
@@ -108,12 +107,12 @@ class OptimizationProblem(PermutationProblem):
         # print(metadata)
         result, _ = execute_single_py_program(source)
 
-        self.divergence_calculated = detect_divergence(
+        solution.divergence_calculated = detect_divergence(
             {"res_A": result, "res_B": self.non_optimized_result}
         )
 
         # Maximize
-        solution.objectives[0] = -1.0 * self.divergence_calculated["statistic"]
+        solution.objectives[0] = -1.0 * solution.divergence_calculated["statistic"]
 
         return result
 
@@ -128,13 +127,13 @@ def run_algorithm(program_id: str):
     print(colored(f"STARTING {program_id}", "green"))
     problem = OptimizationProblem(OPTS, get_circuit(program_id))
 
-    max_evaluations = 50
+    max_evaluations = 4000
     progress_bar = ProgressBarObserver(max=max_evaluations)
 
     algorithm = GeneticAlgorithm(
         problem=problem,
-        population_size=10,
-        offspring_population_size=10,
+        population_size=100,
+        offspring_population_size=100,
         mutation=PermutationSwapMutation(probability=1.0 / problem.number_of_variables),
         crossover=PMXCrossover(probability=0.8),
         selection=BinaryTournamentSelection(),
@@ -145,10 +144,12 @@ def run_algorithm(program_id: str):
     algorithm.run()
     result = algorithm.get_result()
     found_perm = perm_from_encoding(result.variables)
+    
     given_perm = ["expand_composite"] + found_perm
 
     metadata = get_divergence_from_stored_metadata(program_id, given_perm)
     data = algorithm.get_observable_data()
+    solution_stats = data['SOLUTIONS'].divergence_calculated
     del data['PROBLEM']
     out = {
         "program_id": program_id,
@@ -159,36 +160,36 @@ def run_algorithm(program_id: str):
             "algo_name": algorithm.get_name(),
             "total_compute_time": algorithm.total_computing_time,
             "data": str(data),
+            "solution_stats": solution_stats
         },
         "stored_perm_info": metadata,
     }
     return out
 
 
-def run_for_files(lb, ub):
+def run_for_files(lb):
     dir_path = "data/qmt-cirq-permutations/exec-metadata/"
     files = os.listdir(dir_path)
     files = list(map(lambda x: x.split(".")[0], files))
     output_path = "data/jmetal-search-data/"
-    files = files[lb:ub]
+    # files = files[lb:ub]
 
     Path(output_path).mkdir(parents=True, exist_ok=True)
+    prog_id = files[lb]
 
-    with Pool() as pool:
-        res = pool.imap(run_algorithm, files)
-        for data, prog_id in zip(res, files):
-            with open(f"{output_path}{prog_id}.json", "a", encoding="utf-8") as f:
-                f.write('\n')
-                f.write(dumps(data, indent=4))
-                print(colored(f"DONE {prog_id}", "red"))
+    with open(f"{output_path}{prog_id}.json", "a", encoding="utf-8") as f:
+        data = run_algorithm(prog_id)
+        f.write('\n')
+        f.write(dumps(data, indent=4))
+        print(colored(f"DONE {prog_id}", "red"))
 
 
 if __name__ == "__main__":
     import sys
 
     args = sys.argv[1]
-    lb, ub = args.split(":")
-    run_for_files(int(lb), int(ub))
+    # lb, ub = args.split(":")
+    run_for_files(int(args))
 
     # found_perm = result['found_perm']
     # print(colored("RESULT FROM SEARCH:", color="blue", attrs=["bold"]))
