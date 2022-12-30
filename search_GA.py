@@ -13,6 +13,7 @@ from pygments.formatters.terminal import TerminalFormatter
 from jmetal.algorithm.singleobjective.genetic_algorithm import GeneticAlgorithm
 from jmetal.core.problem import PermutationProblem
 from jmetal.core.solution import PermutationSolution
+from jmetal.util.evaluator import MultiprocessEvaluator
 from jmetal.operator import BinaryTournamentSelection
 from jmetal.operator.crossover import PMXCrossover
 from jmetal.operator.mutation import (
@@ -142,6 +143,7 @@ def run_algorithm(program_id: str, max_eval, pop_size, offspring):
         crossover=PMXCrossover(probability=0.8),
         selection=BinaryTournamentSelection(),
         termination_criterion=StoppingByEvaluations(max_evaluations=max_evaluations),
+        population_evaluator=MultiprocessEvaluator(4)
     )
 
     algorithm.observable.register(progress_bar)
@@ -165,6 +167,7 @@ def run_algorithm(program_id: str, max_eval, pop_size, offspring):
             "data": str(data),
             "solution_stats": solution_stats,
         },
+        "pop-size": pop_size,
         "stored_perm_info": metadata,
     }
     return out

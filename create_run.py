@@ -11,4 +11,4 @@ for file in files:
     div = content['divergence']
     if div['ks_qiskit_cirq']['statistic'] == 0:
         continue
-    print(f'python search_GA.py --prog {f} --max_eval 4000 --pop_size 20 --offspring_size 40')
+    print(f'python search_GA.py --prog {f} --max_eval 4000 --pop_size 20 --offspring_size 20')
