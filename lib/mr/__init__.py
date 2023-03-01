@@ -2,16 +2,16 @@
 
 from .base import MetamorphicTransformation
 
-from .change_qubit_order import ChangeQubitOrder
-from .change_opt_level import ChangeOptLevel
+from .change_qubit_order import ChangeQubitOrder # support
+from .change_opt_level import ChangeOptLevel # support
 from .change_coupling_map import ChangeCouplingMap
 from .run_independent_partitions import RunIndependentPartitions
-from .change_backend import ChangeBackend
+from .change_backend import ChangeBackend # support
 from .change_target_basis import ChangeTargetBasis
-from .inject_null_effect import InjectNullEffect
+from .inject_null_effect import InjectNullEffect # support
 from .add_unused_register import AddUnusedRegister
-from .inject_parameters import InjectParameters
-from .to_qasm_and_back import ToQasmAndBack
+from .inject_parameters import InjectParameters # support
+from .to_qasm_and_back import ToQasmAndBack # support
 
 # QDIFF transformations
 

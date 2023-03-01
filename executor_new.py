@@ -7,7 +7,7 @@ from multiprocessing import Pool
 import itertools
 
 import re
-from time import perf_counter_ns
+
 from pathlib import Path
 
 from termcolor import colored
@@ -47,7 +47,7 @@ Path(cirq_circuits_folder).mkdir(parents=True, exist_ok=True)
 Path(exec_metadata_path).mkdir(parents=True, exist_ok=True)
 
 
-def detect_divergence(exec_metadata, detector):
+def detect_divergence(exec_metadata, detector=KS_Detector()):
     stat, pval = detector.check(
         result_A=exec_metadata["res_A"], result_B=exec_metadata["res_B"]
     )
@@ -289,7 +289,7 @@ def execute(lb, ub):
     print(colored(f"Count = {count}", "red", attrs=["bold"]))
 
 
-if __name__ == "__main__":
-    args = sys.argv[1]
-    lb, ub = args.split(':')
-    execute(int(lb), int(ub))
+# if __name__ == "__main__":
+#     args = sys.argv[1]
+#     lb, ub = args.split(':')
+#     execute(int(lb), int(ub))

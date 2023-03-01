@@ -25,11 +25,12 @@ cirq_folder_path = "data/qmt_v55/programs/cirq/"
 
 files = os.listdir(path)
 
-file_path = '48fe12d5150d4d0bbb6b82dedc39141c.py'
+file_path = '/Users/arfat/Desktop/qc-test/data/qmt_v53/programs/followup/0a3d48f93dbc418baf938627300020e8.py'
 print(f'opening {file_path}')
-py_content = open(path + file_path, "r").read()
+py_content = open(file_path, "r").read()
 
-cirq_content = CirqCircuit.from_qiskit_source(py_content)
+m, cirq_content = CirqCircuit(py_content).get_follow_up({})
+
 with open('temp_cirq.py', 'w') as f:
     f.write(cirq_content)
 
@@ -39,20 +40,16 @@ import qiskit.quantum_info as qi
 UNITARY = qi.Operator(qc.reverse_bits()).data
 """)
 
+# print(py_content)
+
 Q = execute_single_py_program_unitary(py_content)
-C = execute_single_py_program_unitary(cirq_content)
-if allclose(Q, C):
-    print(f'allclose = {colored(True, "green", attrs=["bold"])}')
-else:
-    print(f'allclose = {colored(False, "red", attrs=["bold"])}')
-    with printoptions(threshold=200):
-        print(len(Q))
-        print(len(C))
-        print(Q == C)
-        print('qiskit')
-        print(colored(Q, 'red'))
-        print('cirq')
-        print(colored(C, 'yellow'))
+# C = execute_single_py_program_unitary(cirq_content)
+
+# if allclose(Q, C):
+#     print(f'allclose = {colored(True, "green", attrs=["bold"])}')
+# else:
+#     print(f'allclose = {colored(False, "red", attrs=["bold"])}')
+
 
 
 

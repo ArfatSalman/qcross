@@ -450,6 +450,7 @@ def start_loop(
 @click.command()
 @click.argument('config_file')
 def qmtl(config_file):
+    print(config_file)
     """Run Quantum Metamorphic Testing loop."""
     config = load_config_and_check(config_file)
     setup_environment(

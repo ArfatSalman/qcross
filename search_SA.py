@@ -10,17 +10,17 @@ from pygments import highlight
 from pygments.lexers.data import JsonLexer
 from pygments.formatters.terminal import TerminalFormatter
 
-from jmetal.algorithm.singleobjective.genetic_algorithm import GeneticAlgorithm
+from jmetal.algorithm.singleobjective.simulated_annealing import SimulatedAnnealing
 from jmetal.core.problem import PermutationProblem
 from jmetal.core.solution import PermutationSolution
 from jmetal.util.evaluator import MultiprocessEvaluator
 from jmetal.operator import BinaryTournamentSelection
 from jmetal.operator.crossover import PMXCrossover
 from jmetal.operator.mutation import (
-    PermutationSwapMutation,
+    ScrambleMutation,
 )
 from jmetal.util.observer import ProgressBarObserver
-from jmetal.util.termination_criterion import StoppingByEvaluations
+from jmetal.util.termination_criterion import StoppingByTime
 from termcolor import colored
 
 from executor import detect_divergence, execute_single_py_program
@@ -77,17 +77,8 @@ class OptimizationProblem(PermutationProblem):
         self.circuit = circuit
         metadata, source = circuit.get_follow_up({"add_unitary": False})
         # print(metadata)
-        # result, _ = execute_single_py_program(source)
-        self.non_optimized_result = {
-            "11000": 409,
-            "11100": 251,
-            "00100": 146,
-            "01000": 79,
-            "00000": 34,
-            "01100": 55,
-            "10000": 3,
-            "10100": 2,
-        }
+        result, _ = execute_single_py_program(source)
+        self.non_optimized_result = result
 
         self.optimizations = optimizations
 
@@ -144,15 +135,14 @@ def run_algorithm(program_id: str, max_eval, pop_size, offspring):
     max_evaluations = max_eval
     progress_bar = ProgressBarObserver(max=max_evaluations)
 
-    algorithm = GeneticAlgorithm(
+    algorithm = SimulatedAnnealing(
         problem=problem,
-        population_size=pop_size,
-        offspring_population_size=offspring,
-        mutation=PermutationSwapMutation(probability=1.0 / problem.number_of_variables),
-        crossover=PMXCrossover(probability=0.8),
-        selection=BinaryTournamentSelection(),
-        termination_criterion=StoppingByEvaluations(max_evaluations=max_evaluations),
-        population_evaluator=MultiprocessEvaluator(os.cpu_count()),
+        # mu=1,
+        # lambda_=1,
+        # elitist=True,
+        mutation=ScrambleMutation(probability=1.0 / problem.number_of_variables),
+        termination_criterion=StoppingByTime(max_seconds=max_eval),
+        # population_evaluator=MultiprocessEvaluator(os.cpu_count())
     )
 
     algorithm.observable.register(progress_bar)
@@ -186,7 +176,7 @@ def run_for_files(prog_id, max_eval, pop_size, offspring):
     # dir_path = "data/qmt-cirq-permutations/exec-metadata/"
     # files = os.listdir(dir_path)
     # files = list(map(lambda x: x.split(".")[0], files))
-    output_path = f"data/jmetal-GA-{max_eval}-{pop_size}-{offspring}/"
+    output_path = f"data/jmetal-SA-{max_eval}-{pop_size}-{offspring}/"
 
     Path(output_path).mkdir(parents=True, exist_ok=True)
 
@@ -194,9 +184,7 @@ def run_for_files(prog_id, max_eval, pop_size, offspring):
     current = [prog_id for el in saved_files if prog_id in el]
     data = run_algorithm(prog_id, max_eval, pop_size, offspring)
 
-    with open(
-        f"{output_path}{prog_id}.{len(current)}.json", "a", encoding="utf-8"
-    ) as f:
+    with open(f"{output_path}{prog_id}.{len(current)}.json", "a", encoding="utf-8") as f:
         f.write("\n")
         f.write(dumps(data, indent=4))
         print(colored(f"DONE {prog_id}", "red"))
@@ -208,7 +196,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="CLI args")
 
     parser.add_argument("--prog", action="store", required=True)
-    parser.add_argument("--max_eval", action="store", required=True, type=int)
+    parser.add_argument("--max_eval_time", action="store", required=True, type=int)
     parser.add_argument("--pop_size", action="store", required=True, type=int)
     parser.add_argument("--offspring_size", action="store", required=True, type=int)
 

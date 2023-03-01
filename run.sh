@@ -1,1 +1,1 @@
-python search.py --prog 0e5e1ffd567d473cb86daa619ef0dbcd --max_eval 400 --pop_size 10 --offspring_size 10
+python search_GA.py --prog c510fe2798dd4acf947724f4048652da --max_eval 1000 --pop_size 10 --offspring_size 10

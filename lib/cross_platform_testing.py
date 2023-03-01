@@ -19,9 +19,9 @@ as specified by the is_benchmark flag in the congig.yaml file.
 
 import click
 import os
-from utils import iterate_parallel, load_config_and_check
-from utils import iterate_parallel_n
-from utils import iterate_over
+from qcross.utils import iterate_parallel, load_config_and_check
+from qcross.utils import iterate_parallel_n
+from qcross.utils import iterate_over
 from pathlib import Path
 import shutil
 import random

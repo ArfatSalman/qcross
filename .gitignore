@@ -34,6 +34,7 @@ data/qfl_v01/*
 data/qfl_v02/*
 data/qfl_v03/*
 data/qfl_v04/*
+qcross-data
 
 data/fuzzying_via_notebook/nb29/*
 warnings/old_sample_distribution_differences

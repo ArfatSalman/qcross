@@ -242,6 +242,7 @@ class RunIndependentPartitions(MetamorphicTransformation):
             k2 + k1: v1 * v2 for k1, v1 in counts_1.items()
             for k2, v2 in counts_2.items()
         }, counts)
+        print(result_concatenated)
         result_b = {
             self._read_str_with_mapping(bitstring, self.full_mapping): freq
             for bitstring, freq in result_concatenated.items()
