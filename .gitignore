@@ -2,6 +2,7 @@
 __pycache__
 *-checkpoint.ipynb
 *.pyc
+.env
 
 venv/*
 old-venv/*
