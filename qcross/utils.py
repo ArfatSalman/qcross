@@ -29,9 +29,13 @@ def detect_divergence(a, b, detector=KS_Detector()):
 
 CX3_REGEX = r"^(qc\.append\(C3XGate\()[\d+.]+(\),.*\))$"
 
+C3X_REGEX_param = r"^(qc\.append\(C3XGate\().+(\),.*\))\s?#\s*.*$"
+
 
 def fix_cx3(src):
-    return re.sub(CX3_REGEX, r"\1\2", src, flags=re.MULTILINE)
+    if re.search(CX3_REGEX, src, flags=re.MULTILINE):
+        return re.sub(CX3_REGEX, r"\1\2", src, flags=re.MULTILINE)
+    return re.sub(C3X_REGEX_param, r"\1\2", src, flags=re.MULTILINE)
 
 
 def add_unitary_to_qiskit(src):

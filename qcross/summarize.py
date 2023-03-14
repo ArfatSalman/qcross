@@ -10,6 +10,7 @@ from termcolor import colored
 from jsonpath_ng import parse
 
 from qcross.utils import Log
+import numpy as np
 
 load_dotenv()  # take environment variables from .env.
 
@@ -53,21 +54,19 @@ def search_github_issues(repository_name, query):
     token = os.environ.get("GITHUB_ACCESS_TOKEN")
     g = Github(token, per_page=5)
 
-    query = f"{query}"
+    query = f"{query} is:issue"
     issues = g.search_issues(query, repo=repository_name, sort="created", order="desc")
 
     return list(issues.get_page(0))
 
 
-def get_exception_data():
+def get_exception_data(folder="qcross-data/completed-execs"):
     df_data = []
     jsonpath_expr = parse("$..exception")
-    for filename in os.listdir("qcross-data/completed-execs"):
+    for filename in os.listdir(folder):
         try:
             with open(
-                os.path.join(
-                    "qcross-data/completed-execs", filename, "exec-metadata.json"
-                ),
+                os.path.join(folder, filename, "exec-metadata.json"),
                 encoding="utf-8",
             ) as f:
                 data = json.load(f)
@@ -94,6 +93,10 @@ def get_groups_for(df, column, excluded_columns=None):
 
     if excluded_columns is None:
         excluded_columns = [col for col in df.columns if col != column]
+    else:
+        excluded_columns = [
+            col for col in df.columns if col != column and col not in excluded_columns
+        ]
 
     def _filter(row, test_col, cols):
         for col in cols:
@@ -110,6 +113,9 @@ def get_groups_for(df, column, excluded_columns=None):
         )
     ]
 
+    if df.empty:
+        return []
+
     groups = group_strings_by_similarity({sanitize_string(el) for el in df[column]}, 70)
     return groups
 
@@ -117,24 +123,110 @@ def get_groups_for(df, column, excluded_columns=None):
 def summarize_groups():
     df = get_exception_data()
 
+    all_columns_dict = {
+        "qiskit": [
+            "qiskit.qiskit_source.exception",
+            "qiskit.qiskit_followup.exception",
+            "qiskit.qasm3_roundtrip.exception",
+            "qiskit.qpy_roundtrip.exception",
+        ],
+        "cirq": [
+            "cirq.cirq_source.exception",
+            "cirq.cirq_followup.exception",
+            "cirq.cirq_qasm_qiskit.exception",
+        ],
+        "pyquil": [
+            "pyquil.pyquil_source.exception",
+            "pyquil.pyquil_followup.exception",
+        ],
+    }
+
+    # flatten a list of lists
+
+    all_columns = [name for l in all_columns_dict.values() for name in l]
+    for column in all_columns:
+        if column not in df.columns:
+            # add a column with all NaNs
+            df[column] = np.nan
+
+    qiskit_columns = df[all_columns_dict["qiskit"] + ["prog_id"]]
+
+    cirq_columns = df[all_columns_dict["cirq"] + ["prog_id"]]
+
     exceptions = {
-        "qasm3_exceptions": {
-            "groups": get_groups_for(df, "qiskit.qasm3_roundtrip.exception"),
-            "repo": ["Qiskit/qiskit-terra", "Qiskit/qiskit-qasm3-import"],
-        },
-        "qpy_exceptions": {
-            "groups": get_groups_for(df, "qiskit.qpy_roundtrip.exception"),
-            "repo": ["Qiskit/qiskit-terra"],
-        },
-        "qiskit_followup_exceptions": {
+        "qiskit.qiskit_source.exception": {
             "groups": get_groups_for(
-                df,
-                "qiskit.qiskit_followup.exception",
-                # ["qiskit.qiskit_source.exception"],
+                qiskit_columns,
+                "qiskit.qiskit_source.exception",
+                excluded_columns=[
+                    "qiskit.qiskit_followup.exception",
+                    "qiskit.qasm3_roundtrip.exception",
+                    "qiskit.qpy_roundtrip.exception",
+                ],
             ),
             "repo": ["Qiskit/qiskit-terra"],
         },
+        "qiskit.qiskit_followup.exception": {
+            "groups": get_groups_for(
+                qiskit_columns,
+                "qiskit.qiskit_followup.exception",
+                excluded_columns=[
+                    "qiskit.qasm3_roundtrip.exception",
+                    "qiskit.qpy_roundtrip.exception",
+                ],
+            ),
+            "repo": ["Qiskit/qiskit-terra"],
+        },
+        "qiskit.qasm3_roundtrip.exception": {
+            "groups": get_groups_for(
+                qiskit_columns,
+                "qiskit.qasm3_roundtrip.exception",
+                excluded_columns=["qiskit.qpy_roundtrip.exception"],
+            ),
+            "repo": ["Qiskit/qiskit-terra", "Qiskit/qiskit-qasm3-import"],
+        },
+        "qiskit.qpy_roundtrip.exception": {
+            "groups": get_groups_for(qiskit_columns, "qiskit.qpy_roundtrip.exception"),
+            "repo": ["Qiskit/qiskit-terra"],
+        },
+        "pyquil.pyquil_source.exception": {
+            "groups": get_groups_for(
+                df,
+                "pyquil.pyquil_source.exception",
+                excluded_columns=["pyquil.pyquil_followup.exception"],
+            ),
+            "repo": ["rigetti/pyquil"],
+        },
+        "pyquil.pyquil_followup.exception": {
+            "groups": get_groups_for(df, "pyquil.pyquil_followup.exception"),
+            "repo": ["rigetti/pyquil"],
+        },
+        "cirq.cirq_source.exception": {
+            "groups": get_groups_for(
+                cirq_columns,
+                "cirq.cirq_source.exception",
+                excluded_columns=["cirq.cirq_followup.exception"],
+            ),
+            "repo": ["quantumlib/Cirq"],
+        },
+        "cirq.cirq_followup.exception": {
+            "groups": get_groups_for(
+                cirq_columns,
+                "cirq.cirq_followup.exception",
+                excluded_columns=["cirq.cirq_qasm_qiskit.exception"],
+            ),
+            "repo": ["quantumlib/Cirq"],
+        },
+        "cirq.cirq_qasm_qiskit.exception": {
+            "groups": get_groups_for(
+                cirq_columns,
+                "cirq.cirq_qasm_qiskit.exception",
+            ),
+            "repo": ["quantumlib/Cirq"],
+        },
     }
+
+    return exceptions
 
     def _get_issues_for_group(group):
         for exception in group:
@@ -156,6 +248,10 @@ def summarize_groups():
         for exception_group in data["groups"]:
             _get_issues_for_group(exception_group)
     return exceptions
+
+
+def get_prog_ids_with_error(err: str):
+    pass
 
 
 if __name__ == "__main__":

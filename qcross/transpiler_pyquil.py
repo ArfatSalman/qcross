@@ -363,25 +363,17 @@ defns = get_custom_get_definitions({', '.join([f'"{el}"' for el in self.gates_to
 from pyquil import Program, get_qc
 from pyquil.gates import MEASURE
 from pyquil.quil import Pragma
+from pyquil.parser import parse_program
 
 from bloqs.ext.pyquil import Gates, get_custom_get_definitions
 from bloqs.ext.pyquil.utils import get_qiskit_like_output
         """
 
     def epilogue(self, shots):
-        opt = True
-        if opt:
-            pass
 
         measurement_keys = []
-        qasm = self.followup_config.get("qasm_roundtrip")
-        if qasm:
-            self.log("QASM Roundtip")
-            for i in range(self.qubits):
-                measurement_keys.append(f"'m_cr{str(i)}_0'")
-        else:
-            for i in range(self.qubits):
-                measurement_keys.append(f"'cr{str(i)}'")
+        for i in range(self.qubits):
+            measurement_keys.append(f"'cr{str(i)}'")
 
         return f"""
 { self.add_unitary() if self.followup_config.get('add_unitary', False) else ''}
@@ -393,6 +385,8 @@ from bloqs.ext.pyquil.utils import get_qiskit_like_output
 executable = qc.compile({self.main_circuit}, protoquil=True)
 
 { self.get_inject_parameters_end()  }
+
+{ self.qasm_roundtrip() if self.followup_config.get('qasm_roundtrip') else ''}
 
 {'result' if self.result == 'RESULT' else self.result.lower() } = qc.run(executable).readout_data.get('ro')
 
@@ -422,7 +416,10 @@ if __name__ == '__main__':
         return ""
 
     def add_unitary(self):
-        return ""
+        return f"""
+from pyquil.simulation.tools import program_unitary
+UNITARY = program_unitary({self.main_circuit}, {self.qubits})
+"""
 
     def generate_named_qubit_registers(self):
         return f"{self.qubit_id} = [cirq.NamedQubit('q' + str(i)) for i in range({self.qubits})]"
@@ -531,9 +528,9 @@ def apply_transformations(circuit, context=None):
             return match.group(1)
 
     def qasm_roundtrip(self):
-        return """
-qasm_output = cirq.qasm(cirq.expand_composite(circuit))
-circuit = circuit_from_qasm(qasm_output) # new circuit
+        return f"""
+quil_out = {self.main_circuit}.out()
+{self.main_circuit} = parse_program(quil_out) # new circuit
 """
 
     def _get_equivalent(self, shots=None):
@@ -648,12 +645,13 @@ if __name__ == "__main__":
     import sys
 
     # program_id = sys.argv[1]
-    # data = convert_morphq_metadata(
-    #     "data/qmt_v53/programs/metadata/e60bcaf384e8490c965065103dd8028d.json"
-    # )
     data = {}
+    data = convert_morphq_metadata(
+        "data/qmt_v53/programs/metadata/0a41cd2d8c8d4a2683ae7700d707d275.json"
+    )
+
     with open(
-        f"data/qmt_v53/programs/source/e60bcaf384e8490c965065103dd8028d.py",
+        f"data/qmt_v53/programs/followup/0a41cd2d8c8d4a2683ae7700d707d275.py",
         encoding="utf-8",
     ) as f:
         content = fix_cx3(f.read())

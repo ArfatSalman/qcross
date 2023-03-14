@@ -6,6 +6,7 @@ from json import dumps
 from typing import List
 from pprint import pprint
 from termcolor import colored
+from qcross.utils import convert_morphq_metadata
 
 
 def get_U2Gate(args: List[str], qubit_pos: List[str]):
@@ -54,10 +55,21 @@ class CirqCircuit:
             self.shots = qiskit_source["shots"]
 
         for register in self.registers:
-            if register["name"] == "qr":
+            if register["type"] == "QuantumRegister":
                 self.qubits = register["size"]
                 self.qubit_id = register["name"]
                 break
+
+        for register in self.registers:
+            if register["type"] == "QuantumRegister" and register["name"].startswith(
+                "qr_"
+            ):
+                self.unused_qubits = register["size"]
+                self.unused_qubit_id = register["name"]
+                break
+        else:
+            self.unused_qubits = None
+            self.unused_qubit_id = None
 
         self.subcircuit = {
             "instructions": [
@@ -93,12 +105,12 @@ class CirqCircuit:
             return [
                 {
                     "circuit_name": "qc_1",
-                    "regs": [el for el in registers if el["name"] == "qr_1"],
+                    "registers": [el for el in registers if el["name"] == "qr_1"],
                     "instructions": qc_1,
                 },
                 {
                     "circuit_name": "qc_2",
-                    "regs": [el for el in registers if el["name"] == "qr_2"],
+                    "registers": [el for el in registers if el["name"] == "qr_2"],
                     "instructions": qc_2,
                 },
             ]
@@ -367,7 +379,7 @@ import numpy as np
 
 { self.add_unitary() if self.followup_config.get('add_unitary') else ''}
 
-{ f'{self.main_circuit} = apply_transformations({self.main_circuit})' if self.followup_config.get('transformations') is not None else ''}
+{ f'{self.main_circuit} = apply_transformations({self.main_circuit})' if self.followup_config.get('opt_level') is not None else ''}
 
 { self.qasm_roundtrip() if self.followup_config.get('qasm_roundtrip') else ''}
 
@@ -377,16 +389,34 @@ import numpy as np
 {self.backend_selection()}
 
 
-result = simulator.run({self.main_circuit}, repetitions={shots})
+{'result' if self.result == 'RESULT' else self.result.lower() } = simulator.run({self.main_circuit}, repetitions={shots})
 # result_dict = dict(result.multi_measurement_histogram()
 # keys = list(map(lambda arr: reduce(lambda x, y: str(x) + str(y), arr[::-1]), result_dict.keys()))
-counts = get_qiskit_like_output(result, keys=[{', '.join(measurement_keys)}])
+counts = get_qiskit_like_output({'result' if self.result == 'RESULT' else self.result.lower() }, keys=[{', '.join(measurement_keys)}])
+
 {self.result} = counts
 
-if __name__ == '__main__':
-    import json
-    print(json.dumps({self.result}, sort_keys=True))
+{self.get_print_result()}
 """
+
+    def get_print_result(self):
+        if self.result == "RESULT":
+            return f"""
+if __name__ == '__main__':
+    from qcross.utils import display_results
+    display_results( {{"result": {self.result} }})
+"""
+        if self.result == "RESULT_2":
+            return """
+RESULT = [RESULT_1, RESULT_2]
+
+if __name__ == '__main__':
+    from qcross.utils import display_results
+    for i in RESULT:
+        display_results( {"result": i })
+
+"""
+        return ""
 
     def add_unitary(self):
         return f"UNITARY = cirq.unitary({self.main_circuit})"
@@ -546,36 +576,42 @@ circuit = circuit_from_qasm(qasm_output) # new circuit
         self.followup_config = config
         self.followup_metadata = {}
 
-        #         if self.followup_config.get("independent_circuits", None):
-        #             del config["independent_circuits"]
-        #             shots = self.get_shots()
+        if self.followup_config.get("independent_circuits"):
+            self.log("INDENTED CIRCUITS FOUND - SPLITTING")
+            out = ""
+            del config["independent_circuits"]
+            shots = self.get_shots()
 
-        #             independent_circuits = CirqCircuit.find_independent_circuits(
-        #                 self.qiskit_source
-        #             )
-        #             out = ""
-        #             skip_import = False
-        #             for el in independent_circuits:
-        #                 a, b = CirqCircuit(
-        #                     {
-        #                         "registers": el["regs"],
-        #                         "instructions": el["instructions"],
-        #                         "shots": shots,
-        #                     },
-        #                     skip_imports=skip_import,
-        #                     result=f'RESULT_{el["circuit_name"]}',
-        #                     main_circuit=el["circuit_name"],
-        #                 ).get_follow_up(config)
-        #                 if skip_import is False:
-        #                     skip_import = True
-        #                 out += b
+            independent_circuits = CirqCircuit.find_independent_circuits(
+                self.qiskit_source
+            )
 
-        #             out += """
-        # RESULT = [RESULT_qc_1, RESULT_qc_2]
-        # """
-        #             return a, out
+            independent_circuits[0].update({"shots": shots})
+            independent_circuits[1].update({"shots": shots})
 
-        # else:
+            _, qc_1_out = CirqCircuit(
+                independent_circuits[0],
+                main_circuit="qc_1",
+                result="RESULT_1",
+            ).get_follow_up(config)
+            _, qc_2_out = CirqCircuit(
+                independent_circuits[1],
+                skip_imports=True,
+                result="RESULT_2",
+                main_circuit="qc_2",
+            ).get_follow_up(config)
+
+            out += (
+                qc_1_out
+                + """
+
+# Circuit 2
+
+            """
+                + qc_2_out
+            )
+            return _, out
+
         source = self._get_equivalent()
         metadata = self.followup_metadata
 
@@ -626,10 +662,14 @@ if __name__ == "__main__":
     import sys
 
     # program_id = sys.argv[1]
+    data = {}
+    data = convert_morphq_metadata(
+        "data/qmt_v53/programs/metadata/0a41cd2d8c8d4a2683ae7700d707d275.json"
+    )
     with open(
-        f"data/qmt_v53/programs/followup/341aa727bf924bdfa578c6247b781c66.py",
+        f"data/qmt_v53/programs/followup/0a41cd2d8c8d4a2683ae7700d707d275.py",
         encoding="utf-8",
     ) as f:
         content = f.read()
-        a, b = CirqCircuit(content).get_follow_up({"add_unitary": False, "seed": 1223})
+        a, b = CirqCircuit(content).get_follow_up(data)
         print(b)

@@ -1,23 +1,38 @@
-import os
 import json
-import sys
-import uuid
-
+import os
+import sqlite3 as sl
+from functools import reduce
 from os.path import join
 from pathlib import Path
+from random import uniform
 
-import sqlite3 as sl
+import cirq
+import numpy as np
 import pandas as pd
+from jsonpath_ng import parse
 
-from qcross.transpiler_pyquil import PyQuilCircuit
+from qcross.morphq import MorphQAdaptor
 from qcross.transpiler_cirq import CirqCircuit
-from qcross.utils import (
-    timed_execute_single_py_program,
-    Log,
-    detect_divergence,
-    convert_morphq_metadata,
-    fix_cx3,
-)
+from qcross.transpiler_pyquil import PyQuilCircuit
+from qcross.utils import Log, convert_morphq_metadata
+from qcross.utils import detect_divergence as _detect_divergence
+from qcross.utils import fix_cx3, timed_execute_single_py_program
+
+morphq_adaptor = MorphQAdaptor()
+
+
+def add_unitary_in_qiskit(py_content: str):
+    py_content = py_content.replace(
+        "# NAME: MEASUREMENT",
+        """
+# NAME: MEASUREMENT
+# Execute the circuit and obtain the unitary matrix
+from qiskit import Aer, transpile, execute
+result = execute(qc.reverse_bits(), backend=Aer.get_backend('unitary_simulator')).result()
+UNITARY = result.get_unitary(qc).data
+""",
+    )
+    return py_content
 
 
 class DB:
@@ -41,23 +56,33 @@ class DB:
         df_single.to_sql(self.table_name, self.con, if_exists="append")
 
 
-def execute_with_log(source: str, label: str):
+def execute_with_log(source: str, label: str, add_unitary: bool = False):
     metadata = {
         "result": None,
         "time_taken": None,
         "exception": None,
     }
     try:
-        Log.yellow(f"Executing {label} source")
-        res, _unitary, time = timed_execute_single_py_program(source)
+        Log.yellow(f"Executing {label}")
+        res, unitary, time = timed_execute_single_py_program(source)
         metadata["result"] = res
         metadata["time_taken"] = f"{time / 10 ** 6} ms"
+        if add_unitary:
+            if unitary is None:
+                raise ValueError("Unitary not calculated but required")
+            metadata["unitary"] = unitary
         Log.green(f"Execution of {label} source successful")
     except Exception as error:
         Log.red(f"Execution of {label} failed with error: {str(error)}")
         metadata["exception"] = str(error).strip("'\"")
 
     return metadata
+
+
+def detect_divergence(a, b):
+    if isinstance(a, list) or isinstance(b, list):
+        raise ValueError("results should be a dict")
+    return _detect_divergence(a, b)
 
 
 def write_content_to_file(data: dict, path: str):
@@ -182,6 +207,50 @@ def qpy_roundtrip(source: str, metadata: dict):
     return new_source, metadata
 
 
+def recontruct_partitioned_result_if_needed(
+    followup_source_metadata: dict, source_metadata: dict
+):
+    jsonpath_expr = parse("$..mapping")
+
+    full_mapping = (
+        len(jsonpath_expr.find(source_metadata)) == 1
+        and "RunIndependentPartitions"
+        in source_metadata["followup"]["metamorphic_transformations"]
+        and "ChangeQubitOrder"
+        not in source_metadata["followup"]["metamorphic_transformations"]
+    )
+
+    if full_mapping:
+        followup_source_metadata[
+            "result"
+        ] = morphq_adaptor.reconstruct_partitioned_results(
+            followup_source_metadata["result"],
+            jsonpath_expr.find(source_metadata)[0].value,
+        )
+
+
+def reconstruct_change_qubit_order_results_if_needed(
+    followup_source_metadata: dict, source_metadata: dict
+):
+    jsonpath_expr = parse("$..mapping")
+
+    full_mapping = (
+        len(jsonpath_expr.find(source_metadata)) == 1
+        and "ChangeQubitOrder"
+        in source_metadata["followup"]["metamorphic_transformations"]
+        and "RunIndependentPartitions"
+        not in source_metadata["followup"]["metamorphic_transformations"]
+    )
+
+    if full_mapping:
+        followup_source_metadata[
+            "result"
+        ] = morphq_adaptor.reconstruct_changed_qubit_order_result(
+            followup_source_metadata["result"],
+            eval(jsonpath_expr.find(source_metadata)[0].value),
+        )
+
+
 def qiskit_related_execs(
     qiskit_source: str, followup_source: str, source_metadata: dict
 ):
@@ -195,6 +264,13 @@ def qiskit_related_execs(
 
     # Qiskit followup
     followup_source_metadata = execute_with_log(followup_source, "Qiskit Followup")
+
+    recontruct_partitioned_result_if_needed(followup_source_metadata, source_metadata)
+    reconstruct_change_qubit_order_results_if_needed(
+        followup_source_metadata, source_metadata
+    )
+    followup_result = followup_source_metadata["result"]
+
     qiskit_metadata["qiskit_followup"] = followup_source_metadata
 
     qiskit_metadata["source_followup_divergence"] = None
@@ -203,7 +279,7 @@ def qiskit_related_execs(
         and followup_source_metadata["result"] is not None
     ):
         qiskit_metadata["source_followup_divergence"] = detect_divergence(
-            qiskit_source_metadata["result"], followup_source_metadata["result"]
+            qiskit_source_metadata["result"], followup_result
         )
 
     sources = {}
@@ -224,12 +300,9 @@ def qiskit_related_execs(
             )
 
         qiskit_metadata["qasm3_followup_divergence"] = None
-        if (
-            qasm3_metadata["result"] is not None
-            and followup_source_metadata["result"] is not None
-        ):
+        if qasm3_metadata["result"] is not None and followup_result is not None:
             qiskit_metadata["qasm3_followup_divergence"] = detect_divergence(
-                qasm3_metadata["result"], followup_source_metadata["result"]
+                qasm3_metadata["result"], followup_result
             )
 
         # QPY roundtrip
@@ -247,12 +320,9 @@ def qiskit_related_execs(
             )
 
         qiskit_metadata["qpy_followup_divergence"] = None
-        if (
-            qpy_metadata["result"] is not None
-            and followup_source_metadata["result"] is not None
-        ):
+        if qpy_metadata["result"] is not None and followup_result is not None:
             qiskit_metadata["qpy_followup_divergence"] = detect_divergence(
-                qpy_metadata["result"], followup_source_metadata["result"]
+                qpy_metadata["result"], followup_result
             )
 
     return {
@@ -280,10 +350,26 @@ def cirq_related_execs(qiskit_source: str, followup_source: str, source_metadata
     followup_metadata = execute_with_log(followup_cirq, "Cirq followup")
     metadata["cirq_followup"] = followup_metadata
 
+    jsonpath_expr = parse("$..mapping")
+
+    full_mapping = (
+        len(jsonpath_expr.find(source_metadata)) == 1
+        and "RunIndependentPartitions"
+        in source_metadata["followup"]["metamorphic_transformations"]
+        and "ChangeQubitOrder"
+        not in source_metadata["followup"]["metamorphic_transformations"]
+    )
+    followup_result = followup_metadata["result"]
+    print(followup_result)
+    if full_mapping:
+        followup_result = morphq_adaptor.reconstruct_partitioned_results(
+            followup_metadata["result"], jsonpath_expr.find(source_metadata)[0].value
+        )
+
     metadata["source_followup_divergence"] = None
-    if exec_metadata["result"] is not None and followup_metadata["result"] is not None:
+    if exec_metadata["result"] is not None and followup_result is not None:
         metadata["source_followup_divergence"] = detect_divergence(
-            exec_metadata["result"], followup_metadata["result"]
+            exec_metadata["result"], followup_result
         )
 
     sources = {}
@@ -311,11 +397,11 @@ def cirq_related_execs(qiskit_source: str, followup_source: str, source_metadata
 
         metadata["followup_cirq_qasm_qiskit_divergence"] = None
         if (
-            followup_metadata["result"] is not None
+            followup_result is not None
             and cirq_qasm_qiskit_metadata["result"] is not None
         ):
             metadata["followup_cirq_qasm_qiskit_divergence"] = detect_divergence(
-                followup_metadata["result"], cirq_qasm_qiskit_metadata["result"]
+                followup_result, cirq_qasm_qiskit_metadata["result"]
             )
 
     return {
@@ -326,10 +412,6 @@ def cirq_related_execs(qiskit_source: str, followup_source: str, source_metadata
             **sources,
         },
     }
-
-
-def execute_cirq_qasm_qiskit(qiskit_source: str, source_metadata: dict):
-    pass
 
 
 def pyquil_related_execs(
@@ -346,12 +428,29 @@ def pyquil_related_execs(
 
     _, followup_pyquil = PyQuilCircuit(followup_source).get_follow_up(config)
     followup_metadata = execute_with_log(followup_pyquil, "PyQuil followup")
+
+    jsonpath_expr = parse("$..mapping")
+
+    full_mapping = (
+        len(jsonpath_expr.find(source_metadata)) == 1
+        and "RunIndependentPartitions"
+        in source_metadata["followup"]["metamorphic_transformations"]
+        and "ChangeQubitOrder"
+        not in source_metadata["followup"]["metamorphic_transformations"]
+    )
+
+    followup_result = followup_metadata["result"]
+    if full_mapping:
+        followup_result = morphq_adaptor.reconstruct_partitioned_results(
+            followup_metadata["result"], jsonpath_expr.find(source_metadata)[0].value
+        )
+
     metadata["pyquil_followup"] = followup_metadata
 
     metadata["source_followup_divergence"] = None
-    if exec_metadata["result"] is not None and followup_metadata["result"] is not None:
+    if exec_metadata["result"] is not None and followup_result is not None:
         metadata["source_followup_divergence"] = detect_divergence(
-            exec_metadata["result"], followup_metadata["result"]
+            exec_metadata["result"], followup_result
         )
 
     return {
@@ -363,11 +462,81 @@ def pyquil_related_execs(
     }
 
 
-def main(prog_id: str, qiskit_source: str, followup_source: str, source_metadata: dict):
-    saved_location_folder = "qcross-data/completed-execs/"
+def unitary_related_checks(qiskit_followup: str, source_metadata: dict):
+    metadata = {}
+
+    instrumented_circuit = add_unitary_in_qiskit(qiskit_followup)
+
+    qiskit_unitary_metadata = execute_with_log(
+        instrumented_circuit, "Qiskit followup with unitary", add_unitary=True
+    )
+
+    config = convert_morphq_metadata(source_metadata)
+
+    config.update({"add_unitary": True})
+    _, followup_cirq = CirqCircuit(qiskit_followup).get_follow_up(config)
+
+    cirq_unitary_metadata = execute_with_log(
+        followup_cirq, "Cirq followup with unitary", add_unitary=True
+    )
+
+    _, followup_pyquil = PyQuilCircuit(qiskit_followup).get_follow_up(config)
+    pyquil_unitary_metadata = execute_with_log(
+        followup_pyquil, "PyQuil followup with unitary", add_unitary=True
+    )
+
+    if (
+        qiskit_unitary_metadata["exception"] is None
+        and cirq_unitary_metadata["exception"] is None
+    ):
+        if cirq.equal_up_to_global_phase(
+            qiskit_unitary_metadata["unitary"], cirq_unitary_metadata["unitary"]
+        ):
+            Log.green('Unitary check: "Qiskit" and "Cirq" unitaries are equal')
+            if pyquil_unitary_metadata[
+                "exception"
+            ] is None and cirq.equal_up_to_global_phase(
+                cirq_unitary_metadata["unitary"], pyquil_unitary_metadata["unitary"]
+            ):
+                Log.green('Unitary check: "Cirq" and "PyQuil" unitaries are equal')
+                metadata["unitary"] = True
+            else:
+                metadata["unitary"] = False
+        else:
+            Log.red('Unitary check: "Qiskit" and "Cirq" unitaries are not equal')
+
+    for d in [qiskit_unitary_metadata, cirq_unitary_metadata, pyquil_unitary_metadata]:
+        if "unitary" in d:
+            del d["unitary"]
+
+    metadata["qiskit_unitary"] = qiskit_unitary_metadata
+    metadata["cirq_unitary"] = cirq_unitary_metadata
+    metadata["pyquil_unitary"] = pyquil_unitary_metadata
+
+    return {
+        "unitary_metadata": metadata,
+        "sources": {
+            "qiskit_followup": instrumented_circuit,
+            "cirq_followup": followup_cirq,
+            "pyquil_followup": followup_pyquil,
+        },
+    }
+
+
+def main(
+    prog_id: str,
+    qiskit_source: str,
+    followup_source: str,
+    source_metadata: dict,
+    folder="qcross-data/completed-execs/",
+):
+    saved_location_folder = folder
     metadata = {
         "prog_id": prog_id,
     }
+
+    print("Listed Transformations: ")
+    print(source_metadata["followup"]["metamorphic_transformations"])
 
     execute_qiskit = True
     execute_cirq = True
@@ -383,6 +552,15 @@ def main(prog_id: str, qiskit_source: str, followup_source: str, source_metadata
         )
 
         metadata["qiskit"] = qiskit_metadata["qiskit_metadata"]
+
+    if uniform(0, 1) < 0.1:  # 10% chance of executing unitary checks
+        unitary_metadata = unitary_related_checks(followup_source, source_metadata)
+        write_content_to_file(
+            unitary_metadata["sources"],
+            os.path.join(saved_location_folder, prog_id, "unitary"),
+        )
+
+        metadata["unitary"] = unitary_metadata["unitary_metadata"]
 
     if execute_cirq:
         cirq_metadata = cirq_related_execs(
@@ -449,11 +627,16 @@ def get_all_content(folder, prog_id):
 
 
 def should_execute(prog_id: str) -> bool:
-    manual_exlusions = ["e3a4d2dff93e4dc39349b2d17471723c"]
+    manual_exlusions = [
+        "e3a4d2dff93e4dc39349b2d17471723c",
+        "aa8c369525a64cbf81de991e58101ee4",
+        "ae3bbf48e2c44b47b7dacd5ce3f1ea86",
+        "b8c0da5d20a34b3c85b7886a2fe6426d",
+    ]
     if prog_id in manual_exlusions or prog_id in os.listdir(
         join("qcross-data", "completed-execs")
     ):
-        Log.yellow(f"Skipping {prog_id} since it is already executed")
+        # Log.yellow(f"Skipping {prog_id} since it is already executed")
         return False
     return True
 
@@ -470,7 +653,7 @@ def use_morphq_data(folder):
         if i == 20:
             break
 
-        Log.blue(f"Processing '{os.path.join(folder, file)}' ...")
+        Log.blue(f"{i} Processing '{os.path.join(folder, 'source', file)}' ...")
         result = get_all_content(folder, file)
         if result is None:
             continue
@@ -479,7 +662,40 @@ def use_morphq_data(folder):
 
         main(prog_id, fix_cx3(qiskit_source), fix_cx3(followup_source), source_metadata)
         i += 1
+        break
+
+
+def run_new_programs(count: int = 20):
+    saved_location_folder = join("qcross-data", "new-completed-execs")
+    Path(saved_location_folder).mkdir(parents=True, exist_ok=True)
+    for _ in range(count):
+        result = morphq_adaptor.produce_qiskit_program_couple()
+        print(f'Processing {result["program_id"]}')
+        main(
+            result["program_id"],
+            result["qiskit_source_code"],
+            result["qiskit_followup_code"],
+            result["all_metadata"],
+            saved_location_folder,
+        )
 
 
 if __name__ == "__main__":
-    use_morphq_data("data/qmt_v56/programs")
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        prog="QCross",
+        description="QCross is a tool to cross-check the correctness of quantum stacks",
+    )
+    parser.add_argument(
+        "--run-new-programs",
+        default=False,
+        dest="new",
+        action="store_true",
+        help="Use this flag to run the new programs",
+    )
+    args = parser.parse_args()
+    if args.new:
+        run_new_programs(1)
+    else:
+        use_morphq_data("data/qmt_v53/programs")

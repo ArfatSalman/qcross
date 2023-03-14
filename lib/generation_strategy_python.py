@@ -107,6 +107,7 @@ class QiskitFuzzer(Fuzzer):
             "from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister\n"
         )
         prologue += "from qiskit.circuit.library.standard_gates import *\n"
+        prologue += "from qiskit.circuit.library import RVGate\n"
         prologue += "from qiskit.circuit import Parameter\n"
         return prologue
 
