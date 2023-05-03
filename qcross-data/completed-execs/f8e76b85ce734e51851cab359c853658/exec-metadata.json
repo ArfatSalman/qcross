@@ -1,0 +1,139 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 252,
+                "001": 12,
+                "010": 4,
+                "011": 33,
+                "100": 56,
+                "101": 17,
+                "110": 34,
+                "111": 81
+            },
+            "time_taken": "106.884875 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 253,
+                "001": 18,
+                "010": 2,
+                "011": 32,
+                "100": 59,
+                "101": 16,
+                "110": 39,
+                "111": 70
+            },
+            "time_taken": "6.702083 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_6e1f78": 0.05525155902669336,
+                "p_749cd6": 3.2287759437031154,
+                "p_804a66": 4.167661441102218,
+                "p_84a600": 5.987304452123941,
+                "p_938ba1": 5.398622178940033,
+                "p_cee3c3": 1.6723037552953224,
+                "p_cfb5e0": 6.163759533339787
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "InjectParameters",
+                "AddUnusedRegister",
+                "ChangeBackend"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9996782013225001,
+            "statistic": 0.022494887525562373
+        }
+    },
+    "prog_id": "f8e76b85ce734e51851cab359c853658",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_6e1f78": 0.05525155902669336,
+                "p_749cd6": 3.2287759437031154,
+                "p_804a66": 4.167661441102218,
+                "p_84a600": 5.987304452123941,
+                "p_938ba1": 5.398622178940033,
+                "p_cee3c3": 1.6723037552953224,
+                "p_cfb5e0": 6.163759533339787
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "InjectParameters",
+                "AddUnusedRegister",
+                "ChangeBackend"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 77,
+                "001": 23,
+                "010": 3,
+                "011": 14,
+                "100": 129,
+                "101": 57,
+                "110": 81,
+                "111": 105
+            },
+            "time_taken": "871.859959 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 253,
+                "001": 14,
+                "010": 5,
+                "011": 25,
+                "100": 56,
+                "101": 10,
+                "110": 36,
+                "111": 90
+            },
+            "time_taken": "57.995333 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 251,
+                "001": 22,
+                "010": 8,
+                "011": 23,
+                "100": 56,
+                "101": 17,
+                "110": 34,
+                "111": 78
+            },
+            "time_taken": "33.153625 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9882744111175525,
+            "statistic": 0.028629856850715747
+        }
+    }
+}

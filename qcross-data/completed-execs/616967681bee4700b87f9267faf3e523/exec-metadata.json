@@ -1,0 +1,101 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 35,
+                "001": 89,
+                "010": 21,
+                "011": 104,
+                "100": 3,
+                "101": 26,
+                "110": 160,
+                "111": 51
+            },
+            "time_taken": "101.267 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 39,
+                "001": 90,
+                "010": 29,
+                "011": 102,
+                "101": 15,
+                "110": 157,
+                "111": 57
+            },
+            "time_taken": "7.96625 ms"
+        },
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "relations": [
+                "ChangeOptLevel"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9952983606963471,
+            "statistic": 0.026584867075664622
+        }
+    },
+    "prog_id": "616967681bee4700b87f9267faf3e523",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "relations": [
+                "ChangeOptLevel"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 39,
+                "001": 102,
+                "010": 32,
+                "011": 93,
+                "100": 3,
+                "101": 33,
+                "110": 152,
+                "111": 35
+            },
+            "time_taken": "62.972416 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 39,
+                "001": 76,
+                "010": 36,
+                "011": 101,
+                "100": 1,
+                "101": 33,
+                "110": 165,
+                "111": 38
+            },
+            "time_taken": "30.982625 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.494438005631411,
+            "statistic": 0.053169734151329244
+        }
+    }
+}

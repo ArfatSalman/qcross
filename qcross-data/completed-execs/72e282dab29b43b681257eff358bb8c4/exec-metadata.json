@@ -1,0 +1,169 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "125.078334 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "1383.090625 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "214.80275 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_03a56d": 4.2641612072511235,
+                "p_a3a14d": 6.163759533339787
+            },
+            "qubit_order": {
+                "0": 2,
+                "1": 7,
+                "2": 9,
+                "3": 6,
+                "4": 0,
+                "5": 5,
+                "6": 10,
+                "7": 4,
+                "8": 8,
+                "9": 1,
+                "10": 3
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "InjectParameters",
+                "ChangeTargetBasis",
+                "ChangeQubitOrder"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "72e282dab29b43b681257eff358bb8c4",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_03a56d": 4.2641612072511235,
+                "p_a3a14d": 6.163759533339787
+            },
+            "qasm_roundtrip": true,
+            "qubit_order": {
+                "0": 2,
+                "1": 7,
+                "2": 9,
+                "3": 6,
+                "4": 0,
+                "5": 5,
+                "6": 10,
+                "7": 4,
+                "8": 8,
+                "9": 1,
+                "10": 3
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "InjectParameters",
+                "ChangeTargetBasis",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "1513.039792 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "1370.735875 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "result_original": {
+                "00000000000": 7838
+            },
+            "time_taken": "25.904875 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "result_original": {
+                "00000000000": 7838
+            },
+            "time_taken": "43.662125 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "29.529583 ms"
+        },
+        "qpy_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "result_original": {
+                "00000000000": 7838
+            },
+            "time_taken": "20.8565 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

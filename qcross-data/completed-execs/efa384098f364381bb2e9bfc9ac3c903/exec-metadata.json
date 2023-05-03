@@ -1,0 +1,89 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 1964,
+                "000100001": 957,
+                "000100101": 998
+            },
+            "time_taken": "36.9625 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1906,
+                "000100001": 995,
+                "000100101": 1018
+            },
+            "time_taken": "36.460417 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_3f9d0c": 5.987304452123941,
+                "p_5f6e00": 1.4112277317699358,
+                "p_6274c7": 0.5112149185250571,
+                "p_8b3e71": 3.2142159669963557,
+                "p_b444cc": 2.3864521352475245,
+                "p_df034d": 5.897054719225356,
+                "p_fa6b38": 6.163759533339787
+            },
+            "relations": [
+                "InjectParameters",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7840984637508694,
+            "statistic": 0.014799693799438633
+        }
+    },
+    "prog_id": "efa384098f364381bb2e9bfc9ac3c903",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_3f9d0c": 5.987304452123941,
+                "p_5f6e00": 1.4112277317699358,
+                "p_6274c7": 0.5112149185250571,
+                "p_8b3e71": 3.2142159669963557,
+                "p_b444cc": 2.3864521352475245,
+                "p_df034d": 5.897054719225356,
+                "p_fa6b38": 6.163759533339787
+            },
+            "relations": [
+                "InjectParameters",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_3f9d0c), Parameter(p_6274c7), Parameter(p_b444cc), Parameter(p_df034d)])]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1923,
+                "000100001": 1014,
+                "000100101": 982
+            },
+            "time_taken": "709.021 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

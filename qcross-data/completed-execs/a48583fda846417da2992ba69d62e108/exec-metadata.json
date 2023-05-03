@@ -1,0 +1,124 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "unsupported format string passed to Mul.__format__",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_qasm_qiskit": {
+            "exception": "unsupported format string passed to Mul.__format__",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 3937,
+                "10010000000": 3901
+            },
+            "time_taken": "93.480834 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_0e1639": 5.5146057452272546,
+                "p_22f003": 4.2641612072511235,
+                "p_2ab273": 0.4827903095199283,
+                "p_74570c": 4.229610589867865,
+                "p_b0e1f1": 4.6235667602042065
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeCouplingMap",
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": null,
+        "source_cirq_qasm_qiskit_divergence": null,
+        "source_followup_divergence": null
+    },
+    "prog_id": "a48583fda846417da2992ba69d62e108",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_0e1639": 5.5146057452272546,
+                "p_22f003": 4.2641612072511235,
+                "p_2ab273": 0.4827903095199283,
+                "p_74570c": 4.229610589867865,
+                "p_b0e1f1": 4.6235667602042065
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeCouplingMap",
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "60,2: name '$0' is not defined in this scope",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 3990,
+                "10010000000": 3848
+            },
+            "time_taken": "45.81975 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "00010000000": 3915,
+                "10010000000": 3923
+            },
+            "time_taken": "99.404584 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.8656051892227197,
+            "statistic": 0.009568767542740495
+        },
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": "cirq.apply_unitaries failed. There was a non-unitary value in the `unitary_values` list.\n\nnon-unitary value type: <class 'cirq.ops.gate_operation.GateOperation'>\nnon-unitary value: <bloqs.ext.cirq.gates.U2Gate object at 0x2840f8f70>.on(cirq.NamedQubit('q10'))",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: DECLARE ro BIT[11]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_0e1639), Parameter(p_22f003), Parameter(p_2ab273), Parameter(p_74570c), Parameter(p_b0e1f1)])]",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

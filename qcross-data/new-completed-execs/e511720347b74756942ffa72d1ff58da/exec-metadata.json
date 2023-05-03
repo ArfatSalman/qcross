@@ -1,0 +1,115 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0001": 1,
+                "0011": 3,
+                "0100": 143,
+                "0101": 27,
+                "0110": 73,
+                "0111": 11,
+                "1000": 2,
+                "1010": 47,
+                "1011": 93,
+                "1100": 72,
+                "1101": 138,
+                "1110": 28,
+                "1111": 54
+            },
+            "time_taken": "7.076792 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0011": 1,
+                "0100": 157,
+                "0101": 25,
+                "0110": 86,
+                "0111": 6,
+                "1000": 1,
+                "1001": 1,
+                "1010": 45,
+                "1011": 73,
+                "1100": 69,
+                "1101": 136,
+                "1110": 36,
+                "1111": 56
+            },
+            "time_taken": "7.418 ms"
+        },
+        "config": {
+            "relations": [
+                "ChangeTargetBasis"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8758580997749421,
+            "statistic": 0.031791907514450865
+        }
+    },
+    "prog_id": "e511720347b74756942ffa72d1ff58da",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "ChangeTargetBasis"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "inner() missing 2 required positional arguments: 'v_y' and 'v_z",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "inner() missing 2 required positional arguments: 'v_y' and 'v_z",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0001": 5,
+                "0011": 3,
+                "0100": 148,
+                "0101": 22,
+                "0110": 80,
+                "0111": 8,
+                "1001": 2,
+                "1010": 45,
+                "1011": 90,
+                "1100": 79,
+                "1101": 130,
+                "1110": 28,
+                "1111": 52
+            },
+            "time_taken": "184.589125 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0001": 3,
+                "0011": 2,
+                "0100": 135,
+                "0101": 19,
+                "0110": 76,
+                "0111": 19,
+                "1000": 3,
+                "1001": 1,
+                "1010": 63,
+                "1011": 71,
+                "1100": 62,
+                "1101": 154,
+                "1110": 24,
+                "1111": 60
+            },
+            "time_taken": "116.797917 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.6230795796376228,
+            "statistic": 0.04046242774566474
+        }
+    }
+}

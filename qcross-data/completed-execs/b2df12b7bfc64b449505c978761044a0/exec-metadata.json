@@ -1,0 +1,99 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000000000": 2,
+                "0000000100": 12,
+                "0000000110": 5,
+                "0000100001": 119,
+                "0000100011": 66,
+                "0000100101": 3758,
+                "0000100111": 1576,
+                "0001000100": 2,
+                "0001000110": 2
+            },
+            "time_taken": "54.596041 ms"
+        },
+        "config": {
+            "relations": [
+                "ChangeTargetBasis",
+                "InjectNullEffect",
+                "ChangeTargetBasis"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "b2df12b7bfc64b449505c978761044a0",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "ChangeTargetBasis",
+                "InjectNullEffect",
+                "ChangeTargetBasis"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0000000000": 1,
+                "0000000100": 22,
+                "0000000110": 9,
+                "0000100001": 148,
+                "0000100101": 3621,
+                "0000110011": 57,
+                "0000110111": 1680,
+                "0001000010": 1,
+                "0001000110": 3
+            },
+            "time_taken": "59333.416125 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000000100": 14,
+                "0000000110": 8,
+                "0000100001": 132,
+                "0000100101": 3623,
+                "0000110011": 67,
+                "0000110111": 1695,
+                "0001000110": 2,
+                "0011010110": 1
+            },
+            "time_taken": "31678.937666 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999835531699,
+            "statistic": 0.004691447130999639
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Unable to map source basis {('p', 1), ('cz', 2), ('rx', 1), ('ecr', 2), ('h', 1), ('sx', 1), ('rzx', 2), ('cx', 2), ('cu', 2), ('u1', 1), ('rccx', 3), ('cy', 2), ('sdg', 1), ('measure', 1), ('u', 1), ('s', 1), ('sxdg', 1), ('x', 1), ('rxx', 2), ('cu1', 2), ('z', 1), ('crx', 2), ('u2', 1), ('dcx', 2), ('cu3', 2)} to target basis {'snapshot', 'barrier', 'reset', 't', 'delay', 'h', 'cx', 's', 'measure'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x13170bc40>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000000010": 2,
+                "0000000100": 24,
+                "0000000110": 12,
+                "0000010110": 1,
+                "0000100001": 135,
+                "0000100011": 60,
+                "0000100101": 3697,
+                "0000100111": 1607,
+                "0001000000": 1,
+                "0001000100": 3
+            },
+            "time_taken": "23.935042 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

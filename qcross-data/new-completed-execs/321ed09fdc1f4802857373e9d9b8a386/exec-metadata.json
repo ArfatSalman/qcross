@@ -1,0 +1,119 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00": 87,
+                "01": 74,
+                "10": 103,
+                "11": 82
+            },
+            "time_taken": "86.0565 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00": 86,
+                "01": 88,
+                "10": 87,
+                "11": 85
+            },
+            "time_taken": "98.615417 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00": 85,
+                "01": 85,
+                "10": 75,
+                "11": 101
+            },
+            "time_taken": "3.224208 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9679288733867641,
+            "statistic": 0.03757225433526012
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.8539364652860598,
+            "statistic": 0.046242774566473986
+        },
+        "source_followup_divergence": {
+            "p-value": 0.6746723899684844,
+            "statistic": 0.05491329479768786
+        }
+    },
+    "prog_id": "321ed09fdc1f4802857373e9d9b8a386",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00": 79,
+                "01": 95,
+                "10": 90,
+                "11": 82
+            },
+            "time_taken": "403.006416 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00": 92,
+                "01": 83,
+                "10": 85,
+                "11": 86
+            },
+            "time_taken": "246.00525 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9679288733867641,
+            "statistic": 0.03757225433526012
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'r' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00": 83,
+                "01": 86,
+                "10": 89,
+                "11": 88
+            },
+            "time_taken": "47.378292 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Cannot apply instruction with classical bits: subcircuit",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

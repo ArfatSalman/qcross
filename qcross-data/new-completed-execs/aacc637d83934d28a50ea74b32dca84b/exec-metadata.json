@@ -1,0 +1,118 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00": 263,
+                "01": 83
+            },
+            "time_taken": "42.146041 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00": 270,
+                "01": 76
+            },
+            "time_taken": "79.398291 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00": 266,
+                "01": 80
+            },
+            "time_taken": "3.192917 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999997796186213,
+            "statistic": 0.02023121387283237
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999999999999,
+            "statistic": 0.011560693641618497
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.008670520231213872
+        }
+    },
+    "prog_id": "aacc637d83934d28a50ea74b32dca84b",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "inner() missing 2 required positional arguments: 'v_y' and 'v_z",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "inner() missing 2 required positional arguments: 'v_y' and 'v_z",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Cannot find gate definition for 'cs', line 3 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00": 262,
+                "01": 84
+            },
+            "time_taken": "17.237042 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Cannot apply instruction with classical bits: subcircuit",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "00": 256,
+                "01": 90
+            },
+            "time_taken": "45.167875 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "inner() missing 2 required positional arguments: 'v_y' and 'v_z",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Cannot find gate definition for 'cs', line 3 file ",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

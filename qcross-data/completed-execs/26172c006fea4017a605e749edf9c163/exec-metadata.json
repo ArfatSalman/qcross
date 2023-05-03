@@ -1,0 +1,143 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 38,
+                "001": 21,
+                "010": 12,
+                "011": 34,
+                "100": 222,
+                "101": 28,
+                "110": 127,
+                "111": 7
+            },
+            "time_taken": "4.713291 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 40,
+                "001": 20,
+                "010": 18,
+                "011": 38,
+                "100": 212,
+                "101": 40,
+                "110": 116,
+                "111": 5
+            },
+            "time_taken": "4.216166 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_137b9d": 1.6723037552953224,
+                "p_191018": 6.163759533339787,
+                "p_d06829": 5.987304452123941
+            },
+            "relations": [
+                "InjectParameters",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9952983606963471,
+            "statistic": 0.026584867075664622
+        }
+    },
+    "prog_id": "26172c006fea4017a605e749edf9c163",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_137b9d": 1.6723037552953224,
+                "p_191018": 6.163759533339787,
+                "p_d06829": 5.987304452123941
+            },
+            "relations": [
+                "InjectParameters",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 42,
+                "001": 16,
+                "010": 10,
+                "011": 42,
+                "100": 231,
+                "101": 37,
+                "110": 110,
+                "111": 1
+            },
+            "time_taken": "469.263208 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 35,
+                "001": 13,
+                "010": 12,
+                "011": 43,
+                "100": 233,
+                "101": 32,
+                "110": 119,
+                "111": 2
+            },
+            "time_taken": "21.998917 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 48,
+                "001": 15,
+                "010": 18,
+                "011": 37,
+                "100": 202,
+                "101": 46,
+                "110": 120,
+                "111": 3
+            },
+            "time_taken": "21.769709 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.758549383533953,
+            "statistic": 0.04294478527607362
+        }
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "000": 35,
+                "001": 17,
+                "010": 14,
+                "011": 34,
+                "100": 237,
+                "101": 40,
+                "110": 105,
+                "111": 7
+            },
+            "time_taken": "6.88675 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: DECLARE ro BIT[3]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_137b9d), Parameter(p_191018), Parameter(p_d06829)])]",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

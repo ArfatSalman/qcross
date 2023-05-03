@@ -1,0 +1,72 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "1.854875 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "2.064625 ms"
+        },
+        "config": {
+            "relations": [
+                "ChangeTargetBasis",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "ccf333551a5d4a7192ec15eca8daa328",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "ChangeTargetBasis",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "136.983333 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "164.082708 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Unable to map source basis {('measure', 1), ('rzz', 2), ('x', 1)} to target basis {'barrier', 'h', 'cx', 's', 'delay', 'snapshot', 'measure', 'reset', 't'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x12548c0a0>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "5.486167 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

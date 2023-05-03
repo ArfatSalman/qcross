@@ -1,0 +1,119 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "100000": 464,
+                "100001": 239,
+                "100100": 422,
+                "100101": 260
+            },
+            "time_taken": "39.270417 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "100000": 421,
+                "100001": 290,
+                "100100": 428,
+                "100101": 246
+            },
+            "time_taken": "103.1695 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "100000": 427,
+                "100001": 255,
+                "100100": 447,
+                "100101": 256
+            },
+            "time_taken": "20.518167 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeTargetBasis"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.5168829927772843,
+            "statistic": 0.03104693140794224
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9219488778235922,
+            "statistic": 0.020938628158844765
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7064116147491307,
+            "statistic": 0.026714801444043323
+        }
+    },
+    "prog_id": "d7d8d2c06b1345e890b75181f331f95c",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeTargetBasis"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "100000": 433,
+                "100001": 262,
+                "100100": 412,
+                "100101": 278
+            },
+            "time_taken": "6102.782083 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "100000": 447,
+                "100001": 248,
+                "100100": 453,
+                "100101": 237
+            },
+            "time_taken": "6430.786625 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.5788080291344877,
+            "statistic": 0.0296028880866426
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "Unable to map source basis {('ry', 1), ('cp', 2), ('rz', 1), ('sdg', 1), ('ch', 2), ('sxdg', 1), ('rccx', 3), ('measure', 1), ('z', 1)} to target basis {'measure', 's', 'snapshot', 'h', 'delay', 'reset', 't', 'cx', 'barrier'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x11c213ac0>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Unable to map source basis {('ry', 1), ('cp', 2), ('rz', 1), ('sdg', 1), ('ch', 2), ('sxdg', 1), ('rccx', 3), ('measure', 1), ('z', 1)} to target basis {'measure', 's', 'snapshot', 'h', 'delay', 'reset', 't', 'cx', 'barrier'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x11c213ac0>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "100000": 436,
+                "100001": 251,
+                "100100": 442,
+                "100101": 256
+            },
+            "time_taken": "55.337334 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Unable to map source basis {('ry', 1), ('cp', 2), ('rz', 1), ('sdg', 1), ('ch', 2), ('sxdg', 1), ('rccx', 3), ('measure', 1), ('z', 1)} to target basis {'measure', 's', 'snapshot', 'h', 'delay', 'reset', 't', 'cx', 'barrier'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x11c213ac0>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

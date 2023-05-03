@@ -1,0 +1,91 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 2812,
+                "0100000100": 1383,
+                "0100000101": 1347
+            },
+            "time_taken": "143.810417 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2749,
+                "0100000100": 1391,
+                "0100000101": 1402
+            },
+            "time_taken": "58.249875 ms"
+        },
+        "config": {
+            "relations": [
+                "InjectNullEffect",
+                "AddUnusedRegister",
+                "ChangeTargetBasis"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8664376540994027,
+            "statistic": 0.011367737278960665
+        }
+    },
+    "prog_id": "2e7920e917b444b9bcec2ed0fd0074f9",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "InjectNullEffect",
+                "AddUnusedRegister",
+                "ChangeTargetBasis"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 2716,
+                "0100000100": 1434,
+                "0100000101": 1392
+            },
+            "time_taken": "3520.318292 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2756,
+                "0100000100": 1426,
+                "0100000101": 1360
+            },
+            "time_taken": "2872.982459 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.998721346230494,
+            "statistic": 0.007217610970768676
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 2730,
+                "0100000100": 1377,
+                "0100000101": 1435
+            },
+            "time_taken": "239.354459 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2750,
+                "0100000100": 1370,
+                "0100000101": 1422
+            },
+            "time_taken": "57.4525 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.999999999999982,
+            "statistic": 0.003608805485384338
+        }
+    }
+}

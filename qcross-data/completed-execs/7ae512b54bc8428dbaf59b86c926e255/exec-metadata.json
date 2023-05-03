@@ -1,0 +1,91 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000010": 534,
+                "01000011": 566,
+                "01010010": 24,
+                "01010011": 17,
+                "10000010": 836,
+                "10000011": 794
+            },
+            "time_taken": "47.658916 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000010": 544,
+                "01000011": 553,
+                "01010010": 19,
+                "01010011": 9,
+                "10000010": 819,
+                "10000011": 827
+            },
+            "time_taken": "50.027417 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "InjectNullEffect",
+                "AddUnusedRegister",
+                "ChangeBackend"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9894141011715281,
+            "statistic": 0.011909058101768314
+        }
+    },
+    "prog_id": "7ae512b54bc8428dbaf59b86c926e255",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "InjectNullEffect",
+                "AddUnusedRegister",
+                "ChangeBackend"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x29336dac0>",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000010": 528,
+                "01000011": 590,
+                "01010010": 20,
+                "01010011": 14,
+                "10000010": 839,
+                "10000011": 780
+            },
+            "time_taken": "58008.826208 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000010": 577,
+                "01000011": 557,
+                "01010010": 13,
+                "01010011": 16,
+                "10000010": 831,
+                "10000011": 777
+            },
+            "time_taken": "56.705167 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

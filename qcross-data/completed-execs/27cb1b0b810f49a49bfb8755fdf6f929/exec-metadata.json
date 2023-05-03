@@ -1,0 +1,72 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000000000": 3919
+            },
+            "time_taken": "47.484333 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000000": 3919
+            },
+            "time_taken": "48.40125 ms"
+        },
+        "config": {
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeTargetBasis"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "27cb1b0b810f49a49bfb8755fdf6f929",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeTargetBasis"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000000000": 3919
+            },
+            "time_taken": "461.336416 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000000000": 3919
+            },
+            "time_taken": "1336.738291 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Unable to map source basis {('measure', 1), ('rz', 1)} to target basis {'snapshot', 'h', 'barrier', 'measure', 'ccx', 'delay', 'reset'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x15f282820>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000000": 3919
+            },
+            "time_taken": "9.274875 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

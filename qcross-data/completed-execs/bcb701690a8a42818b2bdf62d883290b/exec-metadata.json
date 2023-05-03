@@ -1,0 +1,157 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 39,
+                "001": 69,
+                "010": 36,
+                "011": 100,
+                "100": 3,
+                "101": 50,
+                "110": 168,
+                "111": 24
+            },
+            "time_taken": "80.744375 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 42,
+                "001": 90,
+                "010": 30,
+                "011": 107,
+                "101": 40,
+                "110": 157,
+                "111": 23
+            },
+            "time_taken": "5.912375 ms"
+        },
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "relations": [
+                "ChangeOptLevel"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.5455615645536515,
+            "statistic": 0.05112474437627812
+        }
+    },
+    "prog_id": "bcb701690a8a42818b2bdf62d883290b",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "relations": [
+                "ChangeOptLevel"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000": 45,
+                "001": 85,
+                "010": 140,
+                "011": 114,
+                "100": 24,
+                "101": 40,
+                "110": 4,
+                "111": 37
+            },
+            "time_taken": "613.914208 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 45,
+                "001": 90,
+                "010": 159,
+                "011": 92,
+                "100": 30,
+                "101": 48,
+                "111": 25
+            },
+            "time_taken": "693.735292 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.5984096532139881,
+            "statistic": 0.049079754601226995
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 41,
+                "001": 79,
+                "010": 37,
+                "011": 100,
+                "100": 5,
+                "101": 47,
+                "110": 153,
+                "111": 27
+            },
+            "time_taken": "46.666875 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 49,
+                "001": 99,
+                "010": 29,
+                "011": 96,
+                "100": 4,
+                "101": 42,
+                "110": 139,
+                "111": 31
+            },
+            "time_taken": "26.146625 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.3995270704311289,
+            "statistic": 0.05725971370143149
+        }
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "000": 33,
+                "001": 80,
+                "010": 38,
+                "011": 87,
+                "100": 2,
+                "101": 51,
+                "110": 153,
+                "111": 45
+            },
+            "time_taken": "87.580458 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: PRAGMA INITIAL_REWIRING \"GREEDY",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": null,
+            "result": {
+                "000": 38,
+                "001": 91,
+                "010": 37,
+                "011": 99,
+                "100": 1,
+                "101": 37,
+                "110": 165,
+                "111": 21
+            },
+            "time_taken": "65.083 ms"
+        },
+        "unitary": false
+    }
+}

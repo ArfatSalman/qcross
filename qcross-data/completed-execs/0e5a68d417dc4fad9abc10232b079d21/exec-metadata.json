@@ -1,0 +1,81 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000": 426,
+                "01101": 553
+            },
+            "time_taken": "7.654917 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000": 437,
+                "01101": 542
+            },
+            "time_taken": "7.673875 ms"
+        },
+        "config": {
+            "relations": [
+                "ChangeTargetBasis",
+                "ChangeTargetBasis"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.999999979863412,
+            "statistic": 0.011235955056179775
+        }
+    },
+    "prog_id": "0e5a68d417dc4fad9abc10232b079d21",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "ChangeTargetBasis",
+                "ChangeTargetBasis"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "01000": 454,
+                "01101": 525
+            },
+            "time_taken": "645.162959 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000": 438,
+                "01101": 541
+            },
+            "time_taken": "713.319791 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9994550199341308,
+            "statistic": 0.01634320735444331
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "01000": 448,
+                "01101": 531
+            },
+            "time_taken": "28.820583 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000": 466,
+                "01101": 513
+            },
+            "time_taken": "16.01425 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9964700076325497,
+            "statistic": 0.018386108273748723
+        }
+    }
+}

@@ -1,0 +1,107 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01001": 451,
+                "01100": 66,
+                "01101": 417,
+                "11001": 18,
+                "11100": 4,
+                "11101": 23
+            },
+            "time_taken": "12.671916 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01001": 471,
+                "01100": 71,
+                "01101": 409,
+                "11001": 12,
+                "11100": 4,
+                "11101": 12
+            },
+            "time_taken": "9.476084 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_2d39db": 2.0099472182748075,
+                "p_2ea8c6": 5.708725119517347,
+                "p_37d8a3": 0.07157463504881167,
+                "p_40b755": 3.2142159669963557,
+                "p_6111e9": 4.623446645668956,
+                "p_b0a2c5": 1.0296448789776642,
+                "p_f98f00": 6.163759533339787,
+                "p_fa847a": 4.167661441102218
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeBackend"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9072133947286779,
+            "statistic": 0.02553626149131767
+        }
+    },
+    "prog_id": "705cac9eb37244ad8f76589972997bd2",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_2d39db": 2.0099472182748075,
+                "p_2ea8c6": 5.708725119517347,
+                "p_37d8a3": 0.07157463504881167,
+                "p_40b755": 3.2142159669963557,
+                "p_6111e9": 4.623446645668956,
+                "p_b0a2c5": 1.0296448789776642,
+                "p_f98f00": 6.163759533339787,
+                "p_fa847a": 4.167661441102218
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01001": 446,
+                "01100": 71,
+                "01101": 427,
+                "11001": 17,
+                "11100": 1,
+                "11101": 17
+            },
+            "time_taken": "984.131291 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_2ea8c6), Parameter(p_6111e9), Parameter(p_fa847a)])]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01001": 465,
+                "01100": 65,
+                "01101": 417,
+                "11001": 16,
+                "11100": 1,
+                "11101": 15
+            },
+            "time_taken": "22.7585 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

@@ -1,0 +1,115 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 1012,
+                "1001000": 947
+            },
+            "time_taken": "166.776583 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "1000000": 960,
+                "1001000": 999
+            },
+            "time_taken": "202.769167 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 957,
+                "1001000": 1002
+            },
+            "time_taken": "17.291833 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_780b72": 2.0099472182748075,
+                "p_b653f2": 3.2142159669963557
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "InjectParameters",
+                "ChangeTargetBasis",
+                "ChangeBackend"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.4951190911431865,
+            "statistic": 0.026544155181214904
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999999999997,
+            "statistic": 0.0015313935681470138
+        },
+        "source_followup_divergence": {
+            "p-value": 0.4229198812512868,
+            "statistic": 0.02807554874936192
+        }
+    },
+    "prog_id": "82763e2c8bb64f0c8d040771e8ef4d13",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_780b72": 2.0099472182748075,
+                "p_b653f2": 3.2142159669963557
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectParameters",
+                "ChangeTargetBasis",
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 974,
+                "1001000": 985
+            },
+            "time_taken": "40231.149292 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "Unable to map source basis {('rz', 1), ('cx', 2), ('h', 1), ('rccx', 3), ('ecr', 2), ('ch', 2), ('z', 1), ('crx', 2), ('measure', 1), ('x', 1), ('s', 1), ('u1', 1), ('sdg', 1)} to target basis {'s', 'measure', 'cx', 'snapshot', 'barrier', 'delay', 'h', 'reset', 't'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x160903850>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 990,
+                "1001000": 969
+            },
+            "time_taken": "445.2235 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Unable to map source basis {('rz', 1), ('cx', 2), ('h', 1), ('cu1', 2), ('rccx', 3), ('ecr', 2), ('ch', 2), ('z', 1), ('crx', 2), ('measure', 1), ('x', 1), ('s', 1), ('sdg', 1)} to target basis {'s', 'measure', 'cx', 'snapshot', 'barrier', 'delay', 'h', 'reset', 't'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x160903850>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

@@ -1,0 +1,159 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000010": 519,
+                "01000011": 553,
+                "01010010": 10,
+                "01010011": 18,
+                "10000010": 861,
+                "10000011": 810
+            },
+            "time_taken": "249.045708 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "01000010": 594,
+                "01000011": 573,
+                "01010010": 8,
+                "01010011": 21,
+                "10000010": 775,
+                "10000011": 800
+            },
+            "time_taken": "468.407792 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000010": 590,
+                "01000011": 519,
+                "01010010": 14,
+                "01010011": 16,
+                "10000010": 787,
+                "10000011": 845
+            },
+            "time_taken": "26.665042 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_0aa758": 4.167661441102218,
+                "p_296b91": 3.2142159669963557,
+                "p_2f614c": 5.94477504571567,
+                "p_31eb9a": 6.163759533339787,
+                "p_704f8c": 1.0296448789776642,
+                "p_98af8b": 1.740253089260498
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "InjectParameters",
+                "ToQasmAndBack",
+                "ChangeOptLevel",
+                "InjectNullEffect"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.07187410559396633,
+            "statistic": 0.03464453265968964
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.5785711857213077,
+            "statistic": 0.020931071815229157
+        },
+        "source_followup_divergence": {
+            "p-value": 0.3229730769125913,
+            "statistic": 0.025622518946228797
+        }
+    },
+    "prog_id": "dd64edaabaee4a8b90616b525cb16207",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_0aa758": 4.167661441102218,
+                "p_296b91": 3.2142159669963557,
+                "p_2f614c": 5.94477504571567,
+                "p_31eb9a": 6.163759533339787,
+                "p_704f8c": 1.0296448789776642,
+                "p_98af8b": 1.740253089260498
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectParameters",
+                "ToQasmAndBack",
+                "ChangeOptLevel",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000010": 554,
+                "01000011": 527,
+                "01010010": 12,
+                "01010011": 18,
+                "10000010": 839,
+                "10000011": 821
+            },
+            "time_taken": "16842.067959 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Cannot find gate definition for 'c3sx', line 14 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000010": 524,
+                "01000011": 632,
+                "01010010": 18,
+                "01010011": 14,
+                "10000010": 806,
+                "10000011": 777
+            },
+            "time_taken": "58.653875 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "01000010": 551,
+                "01000011": 564,
+                "01010010": 14,
+                "01010011": 13,
+                "10000010": 811,
+                "10000011": 818
+            },
+            "time_taken": "58.90675 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.8398119054849544,
+            "statistic": 0.016600505232767952
+        },
+        "source_followup_divergence": null
+    }
+}

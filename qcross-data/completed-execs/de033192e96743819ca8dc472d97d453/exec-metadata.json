@@ -1,0 +1,143 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000000": 676,
+                "000001": 651,
+                "100000": 24,
+                "100001": 34
+            },
+            "time_taken": "115.723917 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "000000": 671,
+                "000001": 655,
+                "100000": 28,
+                "100001": 31
+            },
+            "time_taken": "180.652083 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000": 649,
+                "000001": 675,
+                "100000": 37,
+                "100001": 24
+            },
+            "time_taken": "12.832958 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_02e598": 3.2142159669963557,
+                "p_1a3b94": 5.1829934776392745,
+                "p_2d35e2": 4.229610589867865,
+                "p_5ed9e5": 4.833923139882297,
+                "p_6849dc": 5.897054719225356,
+                "p_6a555a": 6.163759533339787,
+                "p_72af2c": 1.4112277317699358,
+                "p_7d8767": 5.987304452123941,
+                "p_7fd6f3": 4.2641612072511235,
+                "p_84dd61": 4.028174522740928,
+                "p_86b1e1": 0.07157463504881167,
+                "p_ba2c5d": 5.887184334931191,
+                "p_c6dce3": 0.5112149185250571,
+                "p_d7cead": 2.3864521352475245
+            },
+            "relations": [
+                "InjectParameters",
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999999999996,
+            "statistic": 0.0036101083032490976
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9948838917220704,
+            "statistic": 0.01588447653429603
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9551251229044139,
+            "statistic": 0.019494584837545126
+        }
+    },
+    "prog_id": "de033192e96743819ca8dc472d97d453",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_02e598": 3.2142159669963557,
+                "p_1a3b94": 5.1829934776392745,
+                "p_2d35e2": 4.229610589867865,
+                "p_5ed9e5": 4.833923139882297,
+                "p_6849dc": 5.897054719225356,
+                "p_6a555a": 6.163759533339787,
+                "p_72af2c": 1.4112277317699358,
+                "p_7d8767": 5.987304452123941,
+                "p_7fd6f3": 4.2641612072511235,
+                "p_84dd61": 4.028174522740928,
+                "p_86b1e1": 0.07157463504881167,
+                "p_ba2c5d": 5.887184334931191,
+                "p_c6dce3": 0.5112149185250571,
+                "p_d7cead": 2.3864521352475245
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectParameters",
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000000": 656,
+                "000001": 680,
+                "100000": 24,
+                "100001": 25
+            },
+            "time_taken": "8548.513917 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_6849dc), Parameter(p_7d8767), Parameter(p_c6dce3), Parameter(p_d7cead)])]",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Cannot represent circuits with unbound parameters in OpenQASM 2.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000": 692,
+                "000001": 654,
+                "100000": 16,
+                "100001": 23
+            },
+            "time_taken": "266.724292 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "ParameterExpression with unbound parameters ({Parameter(p_c6dce3)}) cannot be cast to a float.",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

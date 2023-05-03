@@ -1,0 +1,80 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 3672,
+                "0100000100": 325,
+                "0100100001": 7,
+                "0100100101": 4,
+                "0110000000": 1399,
+                "0110000100": 133,
+                "0110100001": 2
+            },
+            "time_taken": "59.27 ms"
+        },
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "cddb4bef5f93449888ce43a27f320c17",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "inner() missing 2 required positional arguments: 'v_y' and 'v_z",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 3676,
+                "0100000100": 318,
+                "0100100001": 24,
+                "0110000000": 1390,
+                "0110000100": 124,
+                "0110100001": 8,
+                "0110100101": 2
+            },
+            "time_taken": "42.029666 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 3711,
+                "0100000100": 314,
+                "0100100001": 25,
+                "0100100101": 1,
+                "0110000000": 1354,
+                "0110000100": 133,
+                "0110100001": 3,
+                "0110100101": 1
+            },
+            "time_taken": "33.529458 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9998933791386712,
+            "statistic": 0.0063154095994225916
+        }
+    }
+}

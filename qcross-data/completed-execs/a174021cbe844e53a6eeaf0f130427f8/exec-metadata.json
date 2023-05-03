@@ -1,0 +1,176 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 34,
+                "001": 15,
+                "010": 10,
+                "011": 43,
+                "100": 220,
+                "101": 29,
+                "110": 134,
+                "111": 4
+            },
+            "time_taken": "74.076125 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "000": 42,
+                "001": 15,
+                "010": 13,
+                "011": 41,
+                "100": 199,
+                "101": 39,
+                "110": 137,
+                "111": 3
+            },
+            "time_taken": "116.570125 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 42,
+                "001": 23,
+                "010": 12,
+                "011": 41,
+                "100": 226,
+                "101": 33,
+                "110": 110,
+                "111": 2
+            },
+            "time_taken": "4.154792 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_dadf3e": 5.987304452123941
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "InjectParameters",
+                "ChangeOptLevel",
+                "ChangeCouplingMap"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9985349688638121,
+            "statistic": 0.024539877300613498
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.18802837051759036,
+            "statistic": 0.06952965235173825
+        },
+        "source_followup_divergence": {
+            "p-value": 0.494438005631411,
+            "statistic": 0.053169734151329244
+        }
+    },
+    "prog_id": "a174021cbe844e53a6eeaf0f130427f8",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_dadf3e": 5.987304452123941
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectParameters",
+                "ChangeOptLevel",
+                "ChangeCouplingMap"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 28,
+                "001": 24,
+                "010": 14,
+                "011": 50,
+                "100": 236,
+                "101": 27,
+                "110": 103,
+                "111": 7
+            },
+            "time_taken": "481.016958 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "38,3: name '$1' is not defined in this scope",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 40,
+                "001": 9,
+                "010": 19,
+                "011": 26,
+                "100": 243,
+                "101": 38,
+                "110": 110,
+                "111": 4
+            },
+            "time_taken": "51.071375 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 27,
+                "001": 21,
+                "010": 17,
+                "011": 36,
+                "100": 218,
+                "101": 41,
+                "110": 125,
+                "111": 4
+            },
+            "time_taken": "18.826375 ms"
+        },
+        "qpy_followup_divergence": {
+            "p-value": 0.3564213946877876,
+            "statistic": 0.05930470347648262
+        },
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "000": 63,
+                "001": 13,
+                "010": 13,
+                "011": 34,
+                "100": 222,
+                "101": 34,
+                "110": 107,
+                "111": 3
+            },
+            "time_taken": "30.647334 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.14125534842243237,
+            "statistic": 0.0736196319018405
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8953471843132854,
+            "statistic": 0.03680981595092025
+        }
+    }
+}

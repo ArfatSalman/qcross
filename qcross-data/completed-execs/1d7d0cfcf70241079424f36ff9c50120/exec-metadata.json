@@ -1,0 +1,103 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 1925,
+                "000100001": 992,
+                "000100101": 1002
+            },
+            "time_taken": "36.664917 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1999,
+                "000100001": 1003,
+                "000100101": 917
+            },
+            "time_taken": "37.290792 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 2,
+                "1": 0,
+                "2": 5,
+                "3": 4,
+                "4": 1,
+                "5": 8,
+                "6": 6,
+                "7": 7,
+                "8": 3
+            },
+            "relations": [
+                "ChangeCouplingMap",
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.31527519720832453,
+            "statistic": 0.02168920643021179
+        }
+    },
+    "prog_id": "1d7d0cfcf70241079424f36ff9c50120",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 2,
+                "1": 0,
+                "2": 5,
+                "3": 4,
+                "4": 1,
+                "5": 8,
+                "6": 6,
+                "7": 7,
+                "8": 3
+            },
+            "relations": [
+                "ChangeCouplingMap",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x16ca98430>",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 1981,
+                "000100001": 973,
+                "000100101": 965
+            },
+            "result_original": {
+                "100000000": 1981,
+                "100000100": 973,
+                "100100100": 965
+            },
+            "time_taken": "39.063083 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1963,
+                "000100001": 1003,
+                "000100101": 953
+            },
+            "time_taken": "574.599 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999987034,
+            "statistic": 0.0045930084205154376
+        }
+    }
+}

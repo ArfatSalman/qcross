@@ -1,0 +1,79 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0000": 345,
+                "0100": 347
+            },
+            "time_taken": "5.465167 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000": 331,
+                "0100": 361
+            },
+            "time_taken": "5.968417 ms"
+        },
+        "config": {
+            "relations": [
+                "ChangeTargetBasis"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9989227539541838,
+            "statistic": 0.02023121387283237
+        }
+    },
+    "prog_id": "f8f6b9ed1a4a4885808b2596e42048a7",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "ChangeTargetBasis"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0000": 356,
+                "0100": 336
+            },
+            "time_taken": "3885.444583 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000": 345,
+                "0100": 347
+            },
+            "time_taken": "4064.940042 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999939877861364,
+            "statistic": 0.015895953757225433
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0000": 359,
+                "0100": 333
+            },
+            "time_taken": "67.517666 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000": 335,
+                "0100": 357
+            },
+            "time_taken": "57.257 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7999114257876411,
+            "statistic": 0.03468208092485549
+        }
+    }
+}

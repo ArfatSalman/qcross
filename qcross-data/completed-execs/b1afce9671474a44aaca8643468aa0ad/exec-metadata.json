@@ -1,0 +1,83 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "011": 120,
+                "100": 244,
+                "110": 124,
+                "111": 1
+            },
+            "time_taken": "4.128875 ms"
+        },
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "b1afce9671474a44aaca8643468aa0ad",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "011": 126,
+                "100": 235,
+                "110": 122,
+                "111": 6
+            },
+            "time_taken": "1146.390709 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "011": 115,
+                "100": 244,
+                "110": 126,
+                "111": 4
+            },
+            "time_taken": "492.127708 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9996782013225001,
+            "statistic": 0.022494887525562373
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "011": 122,
+                "100": 254,
+                "110": 108,
+                "111": 5
+            },
+            "time_taken": "25.913667 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "011": 147,
+                "100": 224,
+                "110": 115,
+                "111": 3
+            },
+            "time_taken": "16.490209 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.5455615645536515,
+            "statistic": 0.05112474437627812
+        }
+    }
+}

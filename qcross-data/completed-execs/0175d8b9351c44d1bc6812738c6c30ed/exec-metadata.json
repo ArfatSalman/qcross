@@ -1,0 +1,115 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "010": 24,
+                "011": 87,
+                "100": 128,
+                "101": 112,
+                "110": 26,
+                "111": 112
+            },
+            "time_taken": "3.9595 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 2,
+                "1": 0,
+                "2": 1
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeCouplingMap",
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "0175d8b9351c44d1bc6812738c6c30ed",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 2,
+                "1": 0,
+                "2": 1
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeCouplingMap",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "010": 36,
+                "011": 73,
+                "100": 133,
+                "101": 113,
+                "110": 23,
+                "111": 111
+            },
+            "time_taken": "996.555959 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "010": 29,
+                "011": 74,
+                "100": 134,
+                "101": 124,
+                "110": 31,
+                "111": 97
+            },
+            "time_taken": "508.375125 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9882744111175525,
+            "statistic": 0.028629856850715747
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "010": 23,
+                "011": 90,
+                "100": 101,
+                "101": 126,
+                "110": 39,
+                "111": 110
+            },
+            "result_original": {
+                "001": 23,
+                "010": 101,
+                "011": 39,
+                "101": 90,
+                "110": 126,
+                "111": 110
+            },
+            "time_taken": "47.724375 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "010": 29,
+                "011": 76,
+                "100": 113,
+                "101": 126,
+                "110": 32,
+                "111": 113
+            },
+            "time_taken": "19.301417 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999436890225,
+            "statistic": 0.016359918200409
+        }
+    }
+}

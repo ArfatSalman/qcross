@@ -1,0 +1,149 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 797,
+                "0100000001": 352,
+                "0100000100": 1336,
+                "0100000101": 318,
+                "1100000000": 797,
+                "1100000001": 333,
+                "1100000100": 1242,
+                "1100000101": 367
+            },
+            "time_taken": "54.369709 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 790,
+                "0100000001": 360,
+                "0100000100": 1262,
+                "0100000101": 333,
+                "1100000000": 799,
+                "1100000001": 385,
+                "1100000100": 1258,
+                "1100000101": 355
+            },
+            "time_taken": "53.371458 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_36cc41": 4.229610589867865,
+                "p_5bb468": 2.586208953975239
+            },
+            "relations": [
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.722265734692726,
+            "statistic": 0.013172140021652833
+        }
+    },
+    "prog_id": "611429c9d70e4941a7911de50fdce749",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_36cc41": 4.229610589867865,
+                "p_5bb468": 2.586208953975239
+            },
+            "relations": [
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 888,
+                "0100000001": 323,
+                "0100000100": 1212,
+                "0100000101": 403,
+                "1100000000": 794,
+                "1100000001": 335,
+                "1100000100": 1248,
+                "1100000101": 339
+            },
+            "time_taken": "2452.181583 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 812,
+                "0100000001": 363,
+                "0100000100": 1298,
+                "0100000101": 373,
+                "1100000000": 759,
+                "1100000001": 349,
+                "1100000100": 1222,
+                "1100000101": 366
+            },
+            "time_taken": "2750.555167 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.6746170444437252,
+            "statistic": 0.013713460844460484
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 805,
+                "0100000001": 331,
+                "0100000100": 1292,
+                "0100000101": 328,
+                "1100000000": 888,
+                "1100000001": 334,
+                "1100000100": 1256,
+                "1100000101": 308
+            },
+            "time_taken": "75.466458 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 817,
+                "0100000001": 330,
+                "0100000100": 1264,
+                "0100000101": 343,
+                "1100000000": 836,
+                "1100000001": 340,
+                "1100000100": 1281,
+                "1100000101": 331
+            },
+            "time_taken": "75.661541 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9551069117505683,
+            "statistic": 0.009743774810537712
+        }
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "0100000000": 775,
+                "0100000001": 349,
+                "0100000100": 1306,
+                "0100000101": 359,
+                "1100000000": 786,
+                "1100000001": 353,
+                "1100000100": 1260,
+                "1100000101": 354
+            },
+            "time_taken": "130.05325 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: DECLARE ro BIT[10]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_36cc41), Parameter(p_5bb468)])]",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

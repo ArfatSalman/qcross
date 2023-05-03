@@ -1,0 +1,111 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 2773,
+                "0100000100": 2769
+            },
+            "time_taken": "108.104208 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "0100000000": 2801,
+                "0100000100": 2741
+            },
+            "time_taken": "1254.204458 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2704,
+                "0100000100": 2838
+            },
+            "time_taken": "456.952833 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ChangeTargetBasis",
+                "AddUnusedRegister",
+                "ToQasmAndBack"
+            ],
+            "unused_registers": true
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999997514264778,
+            "statistic": 0.005052327679538073
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.36396443082467383,
+            "statistic": 0.01750270660411404
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7836636787929674,
+            "statistic": 0.012450378924575966
+        }
+    },
+    "prog_id": "f0af1f826e00479f8a80db679f8b6ce3",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ChangeTargetBasis",
+                "AddUnusedRegister",
+                "ToQasmAndBack"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 2826,
+                "0100000100": 2716
+            },
+            "time_taken": "13598.060916 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2730,
+                "0100000100": 2812
+            },
+            "time_taken": "16534.073334 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.37660686090890294,
+            "statistic": 0.01732226632984482
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "Unable to map source basis {('measure', 1), ('z', 1), ('cx', 2), ('crx', 2), ('csx', 2), ('ccx', 3), ('rz', 1), ('t', 1), ('h', 1), ('x', 1), ('u1', 1), ('crz', 2), ('sx', 1)} to target basis {'h', 'reset', 'ccx', 'barrier', 'measure', 'snapshot', 'delay'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x117ffd070>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Cannot find gate definition for 'c3sx', line 18 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2769,
+                "0100000100": 2773
+            },
+            "time_taken": "181.610125 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Unable to map source basis {('measure', 1), ('z', 1), ('cx', 2), ('crx', 2), ('csx', 2), ('cu1', 2), ('ccx', 3), ('rz', 1), ('t', 1), ('h', 1), ('x', 1), ('crz', 2), ('sx', 1)} to target basis {'h', 'reset', 'ccx', 'barrier', 'measure', 'snapshot', 'delay'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x117ffd070>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

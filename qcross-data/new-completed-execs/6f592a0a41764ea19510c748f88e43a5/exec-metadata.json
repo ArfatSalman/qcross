@@ -1,0 +1,130 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00": 13,
+                "01": 132,
+                "10": 57,
+                "11": 144
+            },
+            "time_taken": "119.14625 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00": 5,
+                "01": 54,
+                "10": 128,
+                "11": 159
+            },
+            "time_taken": "4.564667 ms"
+        },
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "qubit_order": {
+                "0": 1,
+                "1": 0
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 8.579758034133974e-10,
+            "statistic": 0.24855491329479767
+        }
+    },
+    "prog_id": "6f592a0a41764ea19510c748f88e43a5",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "qubit_order": {
+                "0": 1,
+                "1": 0
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00": 7,
+                "01": 136,
+                "10": 51,
+                "11": 152
+            },
+            "result_original": {
+                "00": 7,
+                "01": 51,
+                "10": 136,
+                "11": 152
+            },
+            "time_taken": "24.127958 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00": 3,
+                "01": 53,
+                "10": 125,
+                "11": 165
+            },
+            "time_taken": "31.326 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 5.151817757216705e-10,
+            "statistic": 0.2514450867052023
+        }
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "00": 5,
+                "01": 130,
+                "10": 48,
+                "11": 163
+            },
+            "time_taken": "122.337959 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: PRAGMA INITIAL_REWIRING \"NAIVE",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": null,
+            "result": {
+                "00": 4,
+                "01": 47,
+                "10": 148,
+                "11": 147
+            },
+            "time_taken": "41.238333 ms"
+        },
+        "unitary": false
+    }
+}

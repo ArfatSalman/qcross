@@ -1,0 +1,185 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000010": 569,
+                "01000011": 286,
+                "01000111": 285,
+                "01010010": 14,
+                "01010011": 14,
+                "01010111": 6,
+                "10000010": 790,
+                "10000011": 402,
+                "10000111": 405
+            },
+            "time_taken": "72.00075 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "01000010": 579,
+                "01000011": 289,
+                "01000111": 277,
+                "01010010": 17,
+                "01010011": 6,
+                "01010111": 9,
+                "10000010": 827,
+                "10000011": 390,
+                "10000111": 377
+            },
+            "time_taken": "188.931042 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000010": 557,
+                "01000011": 278,
+                "01000111": 270,
+                "01010010": 17,
+                "01010011": 9,
+                "01010111": 7,
+                "10000010": 816,
+                "10000011": 398,
+                "10000111": 419
+            },
+            "time_taken": "36.497334 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_1c4575": 1.740253089260498,
+                "p_464996": 5.94477504571567,
+                "p_883ff5": 6.163759533339787,
+                "p_93f2a9": 4.229610589867865,
+                "p_a8d127": 5.987304452123941,
+                "p_ac7c01": 3.775592041307464,
+                "p_cbd7c7": 3.2142159669963557,
+                "p_cdc516": 4.167661441102218,
+                "p_dcc7c3": 5.1829934776392745,
+                "p_f56c05": 1.0296448789776642
+            },
+            "relations": [
+                "ChangeTargetBasis",
+                "AddUnusedRegister",
+                "InjectParameters",
+                "ToQasmAndBack"
+            ],
+            "unused_registers": true
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9350520754031014,
+            "statistic": 0.014435221941537351
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.7578750502445355,
+            "statistic": 0.01804402742692169
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9658727543792797,
+            "statistic": 0.01335258029592205
+        }
+    },
+    "prog_id": "c346a44e8eb947afba4ce4d774acc2ed",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_1c4575": 1.740253089260498,
+                "p_464996": 5.94477504571567,
+                "p_883ff5": 6.163759533339787,
+                "p_93f2a9": 4.229610589867865,
+                "p_a8d127": 5.987304452123941,
+                "p_ac7c01": 3.775592041307464,
+                "p_cbd7c7": 3.2142159669963557,
+                "p_cdc516": 4.167661441102218,
+                "p_dcc7c3": 5.1829934776392745,
+                "p_f56c05": 1.0296448789776642
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ChangeTargetBasis",
+                "AddUnusedRegister",
+                "InjectParameters",
+                "ToQasmAndBack"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "67,3: type error",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "01000010": 580,
+                "01000011": 283,
+                "01000111": 261,
+                "01010010": 18,
+                "01010011": 10,
+                "01010111": 4,
+                "10000010": 785,
+                "10000011": 431,
+                "10000111": 399
+            },
+            "time_taken": "93.276583 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000010": 525,
+                "01000011": 303,
+                "01000111": 279,
+                "01010010": 32,
+                "01010011": 11,
+                "01010111": 11,
+                "10000010": 800,
+                "10000011": 408,
+                "10000111": 402
+            },
+            "time_taken": "84.209416 ms"
+        },
+        "qpy_followup_divergence": {
+            "p-value": 0.9989176512761523,
+            "statistic": 0.010104655359076146
+        },
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "01000010": 563,
+                "01000011": 272,
+                "01000111": 280,
+                "01010010": 18,
+                "01010011": 11,
+                "01010111": 5,
+                "10000010": 819,
+                "10000011": 391,
+                "10000111": 412
+            },
+            "time_taken": "122.05075 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.9569234882723224,
+            "statistic": 0.013713460844460484
+        },
+        "source_followup_divergence": {
+            "p-value": 0.6461288704311485,
+            "statistic": 0.019848430169613858
+        }
+    }
+}

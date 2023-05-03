@@ -1,0 +1,89 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000000": 1326,
+                "100000": 59
+            },
+            "time_taken": "18.298375 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000": 1324,
+                "100000": 61
+            },
+            "time_taken": "12.0165 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_2ded38": 5.887184334931191,
+                "p_5fc981": 2.3864521352475245,
+                "p_636ed6": 5.897054719225356,
+                "p_68a976": 4.229610589867865,
+                "p_752feb": 6.163759533339787,
+                "p_8e5ab7": 0.07157463504881167,
+                "p_c6e6fc": 5.1829934776392745
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeCouplingMap",
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.001444043321299639
+        }
+    },
+    "prog_id": "c1dcc181f82741a29fd3922d4fc4dbde",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_2ded38": 5.887184334931191,
+                "p_5fc981": 2.3864521352475245,
+                "p_636ed6": 5.897054719225356,
+                "p_68a976": 4.229610589867865,
+                "p_752feb": 6.163759533339787,
+                "p_8e5ab7": 0.07157463504881167,
+                "p_c6e6fc": 5.1829934776392745
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeCouplingMap",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000000": 1327,
+                "100000": 58
+            },
+            "time_taken": "8437.9075 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_5fc981), Parameter(p_636ed6)])]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000": 1343,
+                "100000": 42
+            },
+            "time_taken": "117.890167 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

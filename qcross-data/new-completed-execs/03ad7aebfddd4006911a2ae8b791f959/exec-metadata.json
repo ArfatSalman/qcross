@@ -1,0 +1,111 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "Simulator doesn't support <bloqs.ext.cirq.gates.U2Gate object at 0x16b1b5a30>.on(cirq.NamedQubit('q6'))",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000000": 54,
+                "000000001": 1904,
+                "000010100": 33,
+                "000010101": 1,
+                "001000000": 58,
+                "001000001": 1831,
+                "001010100": 38
+            },
+            "time_taken": "36.345709 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_13526e": 5.6536210846521495,
+                "p_13b576": 3.583928898313607,
+                "p_15dc74": 5.548043373759139,
+                "p_1c2d80": 5.070978145808224,
+                "p_74b502": 0.6916556361503159,
+                "p_958665": 3.891803045839442,
+                "p_9a487a": 1.0200536425931515,
+                "p_9d695e": 5.195347791320497,
+                "p_ca2ee7": 4.861997899593006,
+                "p_fc122e": 3.345954529034082
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "AddUnusedRegister",
+                "InjectParameters",
+                "InjectParameters"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "03ad7aebfddd4006911a2ae8b791f959",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_13526e": 5.6536210846521495,
+                "p_13b576": 3.583928898313607,
+                "p_15dc74": 5.548043373759139,
+                "p_1c2d80": 5.070978145808224,
+                "p_74b502": 0.6916556361503159,
+                "p_958665": 3.891803045839442,
+                "p_9a487a": 1.0200536425931515,
+                "p_9d695e": 5.195347791320497,
+                "p_ca2ee7": 4.861997899593006,
+                "p_fc122e": 3.345954529034082
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "AddUnusedRegister",
+                "InjectParameters",
+                "InjectParameters"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000000000": 76,
+                "000000001": 1819,
+                "000010100": 43,
+                "000010101": 1,
+                "001000000": 50,
+                "001000001": 1890,
+                "001010100": 40
+            },
+            "time_taken": "18.622208 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000000": 61,
+                "000000001": 1796,
+                "000010100": 40,
+                "000010101": 1,
+                "001000000": 58,
+                "001000001": 1925,
+                "001010100": 38
+            },
+            "time_taken": "22.6365 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9828372930251251,
+            "statistic": 0.010461852513396274
+        }
+    }
+}

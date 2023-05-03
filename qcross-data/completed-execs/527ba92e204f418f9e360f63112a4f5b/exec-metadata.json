@@ -1,0 +1,138 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "cirq.apply_unitaries failed. There was a non-unitary value in the `unitary_values` list.\n\nnon-unitary value type: <class 'cirq.ops.gate_operation.GateOperation'>\nnon-unitary value: <bloqs.ext.cirq.gates.U2Gate object at 0x1761fb220>.on(cirq.NamedQubit('q0'))",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 163,
+                "1000100": 146,
+                "1001000": 146,
+                "1001100": 154,
+                "1010000": 344,
+                "1010100": 328,
+                "1011000": 313,
+                "1011100": 365
+            },
+            "time_taken": "24.215542 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_07b864": 3.2142159669963557,
+                "p_12832b": 2.0099472182748075,
+                "p_431464": 5.94477504571567,
+                "p_5f4a74": 2.586208953975239,
+                "p_6afe18": 4.229610589867865,
+                "p_6d8eba": 2.5163050709890156,
+                "p_96609c": 3.950837470808744,
+                "p_990bb6": 6.163759533339787,
+                "p_aa27f8": 1.9669252191306448,
+                "p_c41e19": 2.1276323672732023,
+                "p_d0f83e": 4.833923139882297
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "qubit_order": {
+                "0": 2,
+                "1": 6,
+                "2": 0,
+                "3": 1,
+                "4": 5,
+                "5": 3,
+                "6": 4
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeOptLevel",
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "527ba92e204f418f9e360f63112a4f5b",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_07b864": 3.2142159669963557,
+                "p_12832b": 2.0099472182748075,
+                "p_431464": 5.94477504571567,
+                "p_5f4a74": 2.586208953975239,
+                "p_6afe18": 4.229610589867865,
+                "p_6d8eba": 2.5163050709890156,
+                "p_96609c": 3.950837470808744,
+                "p_990bb6": 6.163759533339787,
+                "p_aa27f8": 1.9669252191306448,
+                "p_c41e19": 2.1276323672732023,
+                "p_d0f83e": 4.833923139882297
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "qubit_order": {
+                "0": 2,
+                "1": 6,
+                "2": 0,
+                "3": 1,
+                "4": 5,
+                "5": 3,
+                "6": 4
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeOptLevel",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x280bb7880>",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 145,
+                "1000100": 154,
+                "1001000": 154,
+                "1001100": 157,
+                "1010000": 339,
+                "1010100": 300,
+                "1011000": 351,
+                "1011100": 359
+            },
+            "time_taken": "35.63875 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 155,
+                "1000100": 176,
+                "1001000": 142,
+                "1001100": 136,
+                "1010000": 321,
+                "1010100": 333,
+                "1011000": 348,
+                "1011100": 348
+            },
+            "time_taken": "1197.6425 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.956383183285417,
+            "statistic": 0.01633486472690148
+        }
+    }
+}

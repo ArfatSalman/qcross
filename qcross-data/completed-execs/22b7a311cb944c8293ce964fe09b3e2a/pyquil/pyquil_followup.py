@@ -1,0 +1,94 @@
+
+from pyquil import Program, get_qc
+from pyquil.gates import MEASURE
+from pyquil.quil import Pragma
+from pyquil.parser import parse_program
+
+from bloqs.ext.pyquil import Gates, get_custom_get_definitions
+from bloqs.ext.pyquil.utils import get_qiskit_like_output
+        
+
+
+
+circuit = Program()
+
+qr = circuit.declare("ro", "BIT", 8)
+
+p_1b6af5 = circuit.declare('p_1b6af5', 'REAL')
+p_224ae5 = circuit.declare('p_224ae5', 'REAL')
+p_e5c76f = circuit.declare('p_e5c76f', 'REAL')
+p_88b560 = circuit.declare('p_88b560', 'REAL')
+p_772597 = circuit.declare('p_772597', 'REAL')
+p_7edefd = circuit.declare('p_7edefd', 'REAL')
+p_b289d6 = circuit.declare('p_b289d6', 'REAL')
+
+defns = get_custom_get_definitions("C3SXGate", "RYYGate", "SXGate", "CRXGate", "CU1Gate", "CSXGate", "ZGate", "XGate", "RZZGate", "CRZGate", "RZGate")
+
+circuit += defns
+
+circuit.inst(Gates.RZGate(p_772597, 4 ))
+circuit.inst(Gates.ZGate( 6 ))
+circuit.inst(Gates.XGate( 6 ))
+circuit.inst(Gates.CRXGate(p_7edefd, 0, 6 ))
+circuit.inst(Gates.CRZGate(1.0296448789776642, 1, 6 ))
+circuit.inst(Gates.C3SXGate( 0, 7, 6, 3 ))
+circuit.inst(Gates.ZGate( 2 ))
+circuit.inst(Gates.XGate( 1 ))
+circuit.inst(Gates.RYYGate(1.740253089260498)( 6, 7 ))
+circuit.inst(Gates.CRZGate(p_1b6af5, 1, 7 ))
+circuit.inst(Gates.RZGate(4.229610589867865, 1 ))
+circuit.inst(Gates.SXGate( 0 ))
+circuit.inst(Gates.CU1Gate(3.2142159669963557, 4, 0 ))
+circuit.inst(Gates.CRXGate(p_e5c76f, 6, 4 ))
+circuit.inst(Gates.RZZGate(p_88b560)( 7, 0 ))
+circuit.inst(Gates.CSXGate( 0, 2 ))
+circuit.inst(Gates.ZGate( 6 ))
+circuit.inst(Gates.RZGate(p_b289d6, 4 ))
+circuit.inst(Gates.CRXGate(p_224ae5, 0, 3 ))
+
+circuit += MEASURE(0, qr[0])
+circuit += MEASURE(1, qr[1])
+circuit += MEASURE(2, qr[2])
+circuit += MEASURE(3, qr[3])
+circuit += MEASURE(4, qr[4])
+circuit += MEASURE(5, qr[5])
+circuit += MEASURE(6, qr[6])
+circuit += MEASURE(7, qr[7])
+
+
+
+
+circuit.wrap_in_numshots_loop(2771)
+
+qc = get_qc("9q-square-qvm", execution_timeout=60, compiler_timeout=60)
+
+executable = qc.compile(circuit, protoquil=True)
+
+
+
+params = {
+    "p_1b6af5": 4.167661441102218,
+    "p_224ae5": 0.7279391018916035,
+    "p_e5c76f": 5.94477504571567,
+    "p_88b560": 5.1829934776392745,
+    "p_772597": 6.163759533339787,
+    "p_7edefd": 5.987304452123941,
+    "p_b289d6": 3.775592041307464
+}
+
+for param, value in params.items():
+    executable.write_memory(region_name=param, value=value)
+        
+
+
+
+result = qc.run(executable).readout_data.get('ro')
+
+counts = get_qiskit_like_output(result)
+RESULT = counts
+
+
+if __name__ == '__main__':
+    from utils import display_results
+    display_results( {"result": RESULT })
+

@@ -1,0 +1,127 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00000": 708,
+                "00100": 141,
+                "01000": 130
+            },
+            "time_taken": "95.227542 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00000": 711,
+                "00100": 146,
+                "01000": 122
+            },
+            "time_taken": "159.305458 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00000": 719,
+                "00100": 137,
+                "01000": 123
+            },
+            "time_taken": "8.070875 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999999999996,
+            "statistic": 0.008171603677221655
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999999999996,
+            "statistic": 0.008171603677221655
+        },
+        "source_followup_divergence": {
+            "p-value": 0.999999979863412,
+            "statistic": 0.011235955056179775
+        }
+    },
+    "prog_id": "2785871fcdbe46c8bdbb97273321975d",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nRequested to rewire U(0.2569619900931398, 1.0491793193019947, -1.0491793193019947) 4, but we don't know how to do this.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00000": 707,
+                "00100": 135,
+                "01000": 137
+            },
+            "time_taken": "434.759083 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'r' at line 6, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00000": 689,
+                "00100": 135,
+                "01000": 155
+            },
+            "time_taken": "14.261042 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Cannot apply instruction with classical bits: subcircuit",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "00000": 715,
+                "00100": 127,
+                "01000": 137
+            },
+            "time_taken": "106.766666 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "RZZ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Duplicate declaration for gate 'r' at line 6, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

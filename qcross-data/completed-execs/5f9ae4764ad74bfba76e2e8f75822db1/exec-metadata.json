@@ -1,0 +1,79 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0000000": 1959
+            },
+            "time_taken": "18.402583 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000000": 1959
+            },
+            "time_taken": "18.925459 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "5f9ae4764ad74bfba76e2e8f75822db1",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0000000": 1959
+            },
+            "time_taken": "162.475875 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000000": 1959
+            },
+            "time_taken": "161.327208 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0000000": 1959
+            },
+            "time_taken": "4.639708 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000000": 1959
+            },
+            "time_taken": "6.380792 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

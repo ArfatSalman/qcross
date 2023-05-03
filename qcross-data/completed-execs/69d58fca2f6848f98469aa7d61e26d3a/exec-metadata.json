@@ -1,0 +1,80 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000": 979
+            },
+            "time_taken": "7.83025 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000": 979
+            },
+            "time_taken": "8.085041 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 1,
+                "1": 4,
+                "2": 0,
+                "3": 2,
+                "4": 3
+            },
+            "relations": [
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "69d58fca2f6848f98469aa7d61e26d3a",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 1,
+                "1": 4,
+                "2": 0,
+                "3": 2,
+                "4": 3
+            },
+            "relations": [
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00100": 979
+            },
+            "time_taken": "8.232792 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000": 979
+            },
+            "time_taken": "8.13325 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.0,
+            "statistic": 1.0
+        }
+    }
+}

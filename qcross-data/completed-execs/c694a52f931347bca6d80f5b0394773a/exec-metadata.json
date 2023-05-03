@@ -1,0 +1,38 @@
+{
+    "prog_id": "c694a52f931347bca6d80f5b0394773a",
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "000": 177,
+                "001": 47,
+                "010": 1,
+                "011": 30,
+                "100": 32,
+                "101": 99,
+                "110": 27,
+                "111": 76
+            },
+            "time_taken": "163.598583 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: DECLARE ro BIT[3]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": null,
+            "result": {
+                "000": 169,
+                "001": 32,
+                "010": 4,
+                "011": 28,
+                "100": 46,
+                "101": 100,
+                "110": 40,
+                "111": 70
+            },
+            "time_taken": "91.123834 ms"
+        }
+    }
+}

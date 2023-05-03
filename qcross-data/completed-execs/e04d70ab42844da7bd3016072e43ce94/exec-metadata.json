@@ -1,0 +1,143 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000000": 630,
+                "000001": 691,
+                "100000": 35,
+                "100001": 29
+            },
+            "time_taken": "438.390542 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "000000": 685,
+                "000001": 658,
+                "100000": 17,
+                "100001": 25
+            },
+            "time_taken": "688.904291 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000": 684,
+                "000001": 655,
+                "100000": 18,
+                "100001": 28
+            },
+            "time_taken": "15.523208 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_0e7163": 3.2142159669963557,
+                "p_44a409": 6.163759533339787,
+                "p_492eef": 1.4112277317699358,
+                "p_796fab": 2.586208953975239,
+                "p_8270ff": 4.2641612072511235,
+                "p_8d288b": 2.3864521352475245,
+                "p_96c96a": 4.028174522740928,
+                "p_facb1d": 4.167661441102218
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "InjectParameters",
+                "ToQasmAndBack",
+                "ChangeOptLevel",
+                "ChangeCouplingMap"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.224883525231097,
+            "statistic": 0.039711191335740074
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.002888086642599278
+        },
+        "source_followup_divergence": {
+            "p-value": 0.24320776189466853,
+            "statistic": 0.03898916967509025
+        }
+    },
+    "prog_id": "e04d70ab42844da7bd3016072e43ce94",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_0e7163": 3.2142159669963557,
+                "p_44a409": 6.163759533339787,
+                "p_492eef": 1.4112277317699358,
+                "p_796fab": 2.586208953975239,
+                "p_8270ff": 4.2641612072511235,
+                "p_8d288b": 2.3864521352475245,
+                "p_96c96a": 4.028174522740928,
+                "p_facb1d": 4.167661441102218
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectParameters",
+                "ToQasmAndBack",
+                "ChangeOptLevel",
+                "ChangeCouplingMap"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000000": 665,
+                "000001": 662,
+                "100000": 25,
+                "100001": 33
+            },
+            "time_taken": "14519.048042 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "220,21: name '$1' is not defined in this scope",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Cannot represent circuits with unbound parameters in OpenQASM 2.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000": 668,
+                "000001": 671,
+                "100000": 23,
+                "100001": 23
+            },
+            "time_taken": "584.538625 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "ParameterExpression with unbound parameters ({Parameter(p_8d288b)}) cannot be cast to a float.",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

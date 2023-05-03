@@ -1,0 +1,111 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000000": 675,
+                "100000": 710
+            },
+            "time_taken": "78.967541 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "000000": 682,
+                "100000": 703
+            },
+            "time_taken": "140.09225 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000": 697,
+                "100000": 688
+            },
+            "time_taken": "13.103208 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.005054151624548736
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999978321739276,
+            "statistic": 0.010830324909747292
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9948838917220704,
+            "statistic": 0.01588447653429603
+        }
+    },
+    "prog_id": "83c982ab406440b19ca801ed82148231",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000000": 697,
+                "100000": 688
+            },
+            "time_taken": "30355.5595 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000000": 698,
+                "100000": 687
+            },
+            "time_taken": "29776.200708 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0007220216606498195
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "38,5: type error",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Cannot find gate definition for 'c3sx', line 5 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000": 703,
+                "100000": 682
+            },
+            "time_taken": "230.998334 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "000000": 669,
+                "100000": 716
+            },
+            "time_taken": "229.979917 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.7983593731163475,
+            "statistic": 0.02454873646209386
+        },
+        "source_followup_divergence": null
+    }
+}

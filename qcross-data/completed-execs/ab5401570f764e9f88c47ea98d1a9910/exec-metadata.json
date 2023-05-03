@@ -1,0 +1,70 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 981,
+                "000100001": 155,
+                "000100100": 984,
+                "000100101": 1799
+            },
+            "time_taken": "49.712583 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 951,
+                "000100001": 139,
+                "000100100": 978,
+                "000100101": 1851
+            },
+            "time_taken": "50.427667 ms"
+        },
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8806311370011657,
+            "statistic": 0.013268690992600153
+        }
+    },
+    "prog_id": "ab5401570f764e9f88c47ea98d1a9910",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 950,
+                "000100001": 149,
+                "000100100": 1002,
+                "000100101": 1818
+            },
+            "time_taken": "719.617958 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

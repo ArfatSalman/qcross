@@ -1,0 +1,148 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_qasm_qiskit": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 593,
+                "00000000001": 252,
+                "00000100100": 749,
+                "00000100101": 364,
+                "00010000000": 629,
+                "00010000001": 257,
+                "00010100100": 737,
+                "00010100101": 334,
+                "01000000000": 836,
+                "01000000001": 31,
+                "01000100100": 1044,
+                "01000100101": 45,
+                "01010000000": 823,
+                "01010000001": 29,
+                "01010100100": 1069,
+                "01010100101": 46
+            },
+            "time_taken": "81.374792 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": null,
+        "source_cirq_qasm_qiskit_divergence": null,
+        "source_followup_divergence": null
+    },
+    "prog_id": "f8153755bdf84f8eaaa8c1c5d87c1820",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00000000000": 566,
+                "00000000001": 265,
+                "00000100100": 762,
+                "00000100101": 334,
+                "00010000000": 602,
+                "00010000001": 277,
+                "00010100100": 766,
+                "00010100101": 351,
+                "01000000000": 812,
+                "01000000001": 26,
+                "01000100100": 1087,
+                "01000100101": 52,
+                "01010000000": 826,
+                "01010000001": 27,
+                "01010100100": 1045,
+                "01010100101": 40
+            },
+            "time_taken": "7591.226833 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 577,
+                "00000000001": 282,
+                "00000100100": 792,
+                "00000100101": 325,
+                "00010000000": 601,
+                "00010000001": 253,
+                "00010100100": 776,
+                "00010100101": 310,
+                "01000000000": 827,
+                "01000000001": 41,
+                "01000100100": 1062,
+                "01000100101": 32,
+                "01010000000": 858,
+                "01010000001": 27,
+                "01010100100": 1049,
+                "01010100101": 26
+            },
+            "time_taken": "7716.645 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9827717520159999,
+            "statistic": 0.007399846899719316
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Gate or opaque call to 'subcircuit' uses 22 qubits but is declared for 11 qubits line 14 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 626,
+                "00000000001": 297,
+                "00000100100": 805,
+                "00000100101": 342,
+                "00010000000": 574,
+                "00010000001": 264,
+                "00010100100": 750,
+                "00010100101": 330,
+                "01000000000": 787,
+                "01000000001": 33,
+                "01000100100": 1045,
+                "01000100101": 45,
+                "01010000000": 840,
+                "01010000001": 22,
+                "01010100100": 1041,
+                "01010100101": 37
+            },
+            "time_taken": "41.11375 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Cannot apply instruction with classical bits: subcircuit",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

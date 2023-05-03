@@ -1,0 +1,71 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "Wrong number of qubits for <cirq.ControlledGate(sub_gate=cirq.X, num_controls=3)>. Expected 4 qubits but got <(5.94477504571567,)>.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 987,
+                "1001000": 972
+            },
+            "time_taken": "15.499792 ms"
+        },
+        "config": {
+            "relations": [
+                "AddUnusedRegister",
+                "InjectNullEffect"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "f1c6541c64394a5e9ca8f6570fabaab3",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "AddUnusedRegister",
+                "InjectNullEffect"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 918,
+                "1001000": 1041
+            },
+            "time_taken": "56598.975417 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 959,
+                "1001000": 1000
+            },
+            "time_taken": "25623.6345 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.784341574795359,
+            "statistic": 0.02092904543134252
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 1004,
+                "1001000": 955
+            },
+            "time_taken": "222.835167 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

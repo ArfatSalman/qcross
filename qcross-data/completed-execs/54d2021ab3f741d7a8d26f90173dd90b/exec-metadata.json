@@ -1,0 +1,130 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00": 67,
+                "01": 112,
+                "10": 53,
+                "11": 114
+            },
+            "time_taken": "106.006 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00": 62,
+                "01": 121,
+                "10": 55,
+                "11": 108
+            },
+            "time_taken": "58.706375 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00": 55,
+                "01": 129,
+                "10": 49,
+                "11": 113
+            },
+            "time_taken": "4.557041 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "qubit_order": {
+                "0": 0,
+                "1": 1
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeQubitOrder"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999995809722,
+            "statistic": 0.017341040462427744
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999997796186213,
+            "statistic": 0.02023121387283237
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9856131263450217,
+            "statistic": 0.03468208092485549
+        }
+    },
+    "prog_id": "54d2021ab3f741d7a8d26f90173dd90b",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "qubit_order": {
+                "0": 0,
+                "1": 1
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "00": 44,
+                "01": 133,
+                "10": 48,
+                "11": 121
+            },
+            "time_taken": "157.730042 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 0.9999997796186213,
+            "statistic": 0.02023121387283237
+        },
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00": 50,
+                "01": 132,
+                "10": 50,
+                "11": 114
+            },
+            "time_taken": "15.161166 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "00": 55,
+                "01": 109,
+                "10": 61,
+                "11": 121
+            },
+            "time_taken": "25.522959 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.7380419319171385,
+            "statistic": 0.05202312138728324
+        },
+        "source_followup_divergence": null
+    }
+}

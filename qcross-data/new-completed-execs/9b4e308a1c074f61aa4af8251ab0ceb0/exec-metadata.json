@@ -1,0 +1,167 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0000100000": 810,
+                "0000100001": 871,
+                "0000100100": 336,
+                "0000100101": 343,
+                "0000101100": 1572,
+                "0000101101": 1530,
+                "0001110000": 14,
+                "0001110001": 16,
+                "0001110100": 2,
+                "0001110101": 6,
+                "0001111100": 27,
+                "0001111101": 15
+            },
+            "time_taken": "92.725041 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "0000100000": 832,
+                "0000100001": 861,
+                "0000100100": 311,
+                "0000100101": 336,
+                "0000101100": 1578,
+                "0000101101": 1550,
+                "0001110000": 11,
+                "0001110001": 8,
+                "0001110100": 8,
+                "0001110101": 5,
+                "0001111100": 26,
+                "0001111101": 16
+            },
+            "time_taken": "1386.996291 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000100000": 833,
+                "0000100001": 801,
+                "0000100100": 328,
+                "0000100101": 320,
+                "0000101100": 1604,
+                "0000101101": 1566,
+                "0001110000": 8,
+                "0001110001": 15,
+                "0001110100": 7,
+                "0001110101": 6,
+                "0001111100": 28,
+                "0001111101": 26
+            },
+            "time_taken": "57.695417 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "InjectNullEffect",
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999999937107,
+            "statistic": 0.003969686033922772
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9120238833260843,
+            "statistic": 0.010645976181883796
+        },
+        "source_followup_divergence": {
+            "p-value": 0.6425860332261162,
+            "statistic": 0.014074341392998917
+        }
+    },
+    "prog_id": "9b4e308a1c074f61aa4af8251ab0ceb0",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectNullEffect",
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0000100000": 834,
+                "0000100001": 888,
+                "0000100100": 359,
+                "0000100101": 356,
+                "0000101100": 1514,
+                "0000101101": 1509,
+                "0001110000": 10,
+                "0001110001": 16,
+                "0001110100": 3,
+                "0001110101": 6,
+                "0001111100": 21,
+                "0001111101": 26
+            },
+            "time_taken": "1787.520792 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000100000": 804,
+                "0000100001": 866,
+                "0000100100": 348,
+                "0000100101": 360,
+                "0000101100": 1524,
+                "0000101101": 1570,
+                "0001110000": 13,
+                "0001110001": 9,
+                "0001110100": 5,
+                "0001110101": 4,
+                "0001111100": 15,
+                "0001111101": 24
+            },
+            "time_taken": "1398.517125 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8664376540994027,
+            "statistic": 0.011367737278960665
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Gate or opaque call to 'subcircuit' uses 20 qubits but is declared for 10 qubits line 25 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000100000": 907,
+                "0000100001": 842,
+                "0000100100": 321,
+                "0000100101": 321,
+                "0000101100": 1481,
+                "0000101101": 1589,
+                "0001110000": 15,
+                "0001110001": 11,
+                "0001110100": 9,
+                "0001110101": 4,
+                "0001111100": 24,
+                "0001111101": 18
+            },
+            "time_taken": "21.362875 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Cannot apply instruction with classical bits: subcircuit",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

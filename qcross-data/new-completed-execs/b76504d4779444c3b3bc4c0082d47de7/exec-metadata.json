@@ -1,0 +1,143 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_qasm_qiskit": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000": 29,
+                "000001": 119,
+                "000010": 51,
+                "000011": 113,
+                "001000": 22,
+                "001001": 48,
+                "001010": 37,
+                "001011": 98,
+                "010000": 97,
+                "010001": 30,
+                "010010": 110,
+                "010011": 51,
+                "011000": 63,
+                "011001": 20,
+                "011010": 84,
+                "011011": 33,
+                "100000": 10,
+                "100001": 34,
+                "100010": 19,
+                "100011": 61,
+                "101000": 4,
+                "101001": 22,
+                "101010": 12,
+                "101011": 42,
+                "110000": 37,
+                "110001": 13,
+                "110010": 53,
+                "110011": 11,
+                "111000": 19,
+                "111001": 7,
+                "111010": 24,
+                "111011": 12
+            },
+            "time_taken": "14.479458 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "InjectNullEffect",
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": null,
+        "source_cirq_qasm_qiskit_divergence": null,
+        "source_followup_divergence": null
+    },
+    "prog_id": "b76504d4779444c3b3bc4c0082d47de7",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectNullEffect",
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "inner() missing 2 required positional arguments: 'v_y' and 'v_z",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "inner() missing 2 required positional arguments: 'v_y' and 'v_z",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000": 38,
+                "000001": 99,
+                "000010": 38,
+                "000011": 123,
+                "001000": 15,
+                "001001": 55,
+                "001010": 26,
+                "001011": 72,
+                "010000": 97,
+                "010001": 35,
+                "010010": 129,
+                "010011": 65,
+                "011000": 66,
+                "011001": 31,
+                "011010": 96,
+                "011011": 21,
+                "100000": 12,
+                "100001": 39,
+                "100010": 17,
+                "100011": 38,
+                "101000": 13,
+                "101001": 27,
+                "101010": 14,
+                "101011": 26,
+                "110000": 37,
+                "110001": 7,
+                "110010": 57,
+                "110011": 11,
+                "111000": 32,
+                "111001": 6,
+                "111010": 27,
+                "111011": 16
+            },
+            "time_taken": "46.759417 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Cannot apply instruction with classical bits: subcircuit",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

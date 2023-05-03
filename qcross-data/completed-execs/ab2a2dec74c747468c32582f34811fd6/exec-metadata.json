@@ -1,0 +1,95 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01001": 439,
+                "01100": 540
+            },
+            "time_taken": "7.9735 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_219d62": 1.6723037552953224,
+                "p_7ec521": 3.5173414605326783,
+                "p_b9edf2": 3.865496458458116,
+                "p_c04ae3": 6.163759533339787,
+                "p_cac0af": 4.501598818751339,
+                "p_f67f84": 5.091930552861214
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "ab2a2dec74c747468c32582f34811fd6",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_219d62": 1.6723037552953224,
+                "p_7ec521": 3.5173414605326783,
+                "p_b9edf2": 3.865496458458116,
+                "p_c04ae3": 6.163759533339787,
+                "p_cac0af": 4.501598818751339,
+                "p_f67f84": 5.091930552861214
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01001": 422,
+                "01100": 557
+            },
+            "time_taken": "599.994625 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "01001": 442,
+                "01100": 537
+            },
+            "time_taken": "25.536417 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01001": 451,
+                "01100": 528
+            },
+            "time_taken": "15.465875 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999988172,
+            "statistic": 0.009193054136874362
+        }
+    }
+}

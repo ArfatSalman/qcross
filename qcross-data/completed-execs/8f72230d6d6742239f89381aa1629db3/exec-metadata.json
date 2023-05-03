@@ -1,0 +1,90 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 479,
+                "1000100": 504,
+                "1001000": 488,
+                "1001100": 488
+            },
+            "time_taken": "25.232541 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 492,
+                "1000100": 499,
+                "1001000": 499,
+                "1001100": 469
+            },
+            "time_taken": "21.126416 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 4,
+                "1": 2,
+                "2": 0,
+                "3": 6,
+                "4": 1,
+                "5": 3,
+                "6": 5
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999875480085445,
+            "statistic": 0.009698825931597753
+        }
+    },
+    "prog_id": "8f72230d6d6742239f89381aa1629db3",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 4,
+                "1": 2,
+                "2": 0,
+                "3": 6,
+                "4": 1,
+                "5": 3,
+                "6": 5
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "array is too big; `arr.size * arr.dtype.itemsize` is larger than the maximum possible size.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 518,
+                "1000100": 477,
+                "1001000": 496,
+                "1001100": 468
+            },
+            "time_taken": "1006.151459 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

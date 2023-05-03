@@ -1,0 +1,513 @@
+{
+    "program_id": "f1ad00cb8d6e45ce9b582b4a6591e71e",
+    "source": {
+        "program_id": "f1ad00cb8d6e45ce9b582b4a6591e71e",
+        "selected_gate_set": [
+            "CHGate",
+            "RZZGate",
+            "YGate",
+            "CPhaseGate",
+            "CRZGate",
+            "CRYGate",
+            "SXGate",
+            "UGate",
+            "RVGate",
+            "U1Gate",
+            "CU1Gate",
+            "ECRGate",
+            "CSXGate",
+            "PhaseGate",
+            "SwapGate",
+            "U3Gate",
+            "TdgGate",
+            "HGate",
+            "CCZGate",
+            "DCXGate",
+            "RZXGate",
+            "CXGate",
+            "CSdgGate",
+            "CSwapGate"
+        ],
+        "selected_optimization": [],
+        "shots": 979,
+        "n_qubits": 5,
+        "n_ops": 11,
+        "opt_level": 2,
+        "target_gates": null,
+        "py_file_path": "qcross-data/qmt_v57/programs/source/f1ad00cb8d6e45ce9b582b4a6591e71e.py",
+        "time_generation": 0.0009515829999999781,
+        "circuit_id": "qc",
+        "id_quantum_reg": "qr",
+        "id_classical_reg": "cr",
+        "gate_set": [
+            {
+                "name": "CHGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "ch"
+            },
+            {
+                "name": "RZZGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "rzz"
+            },
+            {
+                "name": "YGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "y"
+            },
+            {
+                "name": "CPhaseGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "cp"
+            },
+            {
+                "name": "CRZGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "crz"
+            },
+            {
+                "name": "CRYGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "cry"
+            },
+            {
+                "name": "SXGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "sx"
+            },
+            {
+                "name": "UGate",
+                "n_bits": 1,
+                "n_params": 3,
+                "shortname": "u"
+            },
+            {
+                "name": "RVGate",
+                "n_bits": 1,
+                "n_params": 3,
+                "shortname": "rv"
+            },
+            {
+                "name": "U1Gate",
+                "n_bits": 1,
+                "n_params": 1,
+                "shortname": "u1"
+            },
+            {
+                "name": "CU1Gate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "cu1"
+            },
+            {
+                "name": "ECRGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "ecr"
+            },
+            {
+                "name": "CSXGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "csx"
+            },
+            {
+                "name": "PhaseGate",
+                "n_bits": 1,
+                "n_params": 1,
+                "shortname": "p"
+            },
+            {
+                "name": "SwapGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "swap"
+            },
+            {
+                "name": "U3Gate",
+                "n_bits": 1,
+                "n_params": 3,
+                "shortname": "u3"
+            },
+            {
+                "name": "TdgGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "tdg"
+            },
+            {
+                "name": "HGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "h"
+            },
+            {
+                "name": "CCZGate",
+                "n_bits": 3,
+                "n_params": 0,
+                "shortname": "ccz"
+            },
+            {
+                "name": "DCXGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "dcx"
+            },
+            {
+                "name": "RZXGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "rzx"
+            },
+            {
+                "name": "CXGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "cx"
+            },
+            {
+                "name": "CSdgGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "csdg"
+            },
+            {
+                "name": "CSwapGate",
+                "n_bits": 3,
+                "n_params": 0,
+                "shortname": "cswap"
+            }
+        ],
+        "gates_in_circuit": [
+            "CPhaseGate",
+            "CU1Gate",
+            "UGate",
+            "SXGate",
+            "TdgGate",
+            "CRYGate",
+            "CCZGate"
+        ]
+    },
+    "followup": {
+        "program_id": "f1ad00cb8d6e45ce9b582b4a6591e71e",
+        "selected_gate_set": [
+            "CHGate",
+            "RZZGate",
+            "YGate",
+            "CPhaseGate",
+            "CRZGate",
+            "CRYGate",
+            "SXGate",
+            "UGate",
+            "RVGate",
+            "U1Gate",
+            "CU1Gate",
+            "ECRGate",
+            "CSXGate",
+            "PhaseGate",
+            "SwapGate",
+            "U3Gate",
+            "TdgGate",
+            "HGate",
+            "CCZGate",
+            "DCXGate",
+            "RZXGate",
+            "CXGate",
+            "CSdgGate",
+            "CSwapGate"
+        ],
+        "selected_optimization": [],
+        "shots": 979,
+        "n_qubits": 5,
+        "n_ops": 11,
+        "opt_level": 2,
+        "target_gates": null,
+        "py_file_path": "qcross-data/qmt_v57/programs/followup/f1ad00cb8d6e45ce9b582b4a6591e71e.py",
+        "time_generation": 0.0009515829999999781,
+        "circuit_id": "qc",
+        "id_quantum_reg": "qr",
+        "id_classical_reg": "cr",
+        "gate_set": [
+            {
+                "name": "CHGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "ch"
+            },
+            {
+                "name": "RZZGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "rzz"
+            },
+            {
+                "name": "YGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "y"
+            },
+            {
+                "name": "CPhaseGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "cp"
+            },
+            {
+                "name": "CRZGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "crz"
+            },
+            {
+                "name": "CRYGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "cry"
+            },
+            {
+                "name": "SXGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "sx"
+            },
+            {
+                "name": "UGate",
+                "n_bits": 1,
+                "n_params": 3,
+                "shortname": "u"
+            },
+            {
+                "name": "RVGate",
+                "n_bits": 1,
+                "n_params": 3,
+                "shortname": "rv"
+            },
+            {
+                "name": "U1Gate",
+                "n_bits": 1,
+                "n_params": 1,
+                "shortname": "u1"
+            },
+            {
+                "name": "CU1Gate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "cu1"
+            },
+            {
+                "name": "ECRGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "ecr"
+            },
+            {
+                "name": "CSXGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "csx"
+            },
+            {
+                "name": "PhaseGate",
+                "n_bits": 1,
+                "n_params": 1,
+                "shortname": "p"
+            },
+            {
+                "name": "SwapGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "swap"
+            },
+            {
+                "name": "U3Gate",
+                "n_bits": 1,
+                "n_params": 3,
+                "shortname": "u3"
+            },
+            {
+                "name": "TdgGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "tdg"
+            },
+            {
+                "name": "HGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "h"
+            },
+            {
+                "name": "CCZGate",
+                "n_bits": 3,
+                "n_params": 0,
+                "shortname": "ccz"
+            },
+            {
+                "name": "DCXGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "dcx"
+            },
+            {
+                "name": "RZXGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "rzx"
+            },
+            {
+                "name": "CXGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "cx"
+            },
+            {
+                "name": "CSdgGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "csdg"
+            },
+            {
+                "name": "CSwapGate",
+                "n_bits": 3,
+                "n_params": 0,
+                "shortname": "cswap"
+            }
+        ],
+        "gates_in_circuit": [
+            "CPhaseGate",
+            "CU1Gate",
+            "UGate",
+            "SXGate",
+            "TdgGate",
+            "CRYGate",
+            "CCZGate"
+        ],
+        "metamorphic_info": {
+            "0": {
+                "edge_density": 0.07073746653799935,
+                "new_coupling_map": [
+                    [
+                        0,
+                        1
+                    ],
+                    [
+                        0,
+                        2
+                    ],
+                    [
+                        1,
+                        0
+                    ],
+                    [
+                        1,
+                        5
+                    ],
+                    [
+                        2,
+                        0
+                    ],
+                    [
+                        3,
+                        4
+                    ],
+                    [
+                        4,
+                        3
+                    ],
+                    [
+                        4,
+                        5
+                    ],
+                    [
+                        5,
+                        1
+                    ],
+                    [
+                        5,
+                        4
+                    ]
+                ]
+            },
+            "1": {
+                "n_ops": 8,
+                "fuzzer_object": "QiskitFuzzer"
+            },
+            "2": {
+                "before_section": "OPTIMIZATION_LEVEL"
+            },
+            "3": {
+                "edge_density": 0.06247607451202629,
+                "new_coupling_map": [
+                    [
+                        0,
+                        1
+                    ],
+                    [
+                        1,
+                        0
+                    ],
+                    [
+                        1,
+                        2
+                    ],
+                    [
+                        1,
+                        5
+                    ],
+                    [
+                        1,
+                        6
+                    ],
+                    [
+                        2,
+                        1
+                    ],
+                    [
+                        2,
+                        4
+                    ],
+                    [
+                        3,
+                        6
+                    ],
+                    [
+                        4,
+                        2
+                    ],
+                    [
+                        5,
+                        1
+                    ],
+                    [
+                        6,
+                        1
+                    ],
+                    [
+                        6,
+                        3
+                    ]
+                ]
+            }
+        },
+        "metamorphic_transformations": [
+            "ChangeCouplingMap",
+            "InjectNullEffect",
+            "ToQasmAndBack",
+            "ChangeCouplingMap"
+        ],
+        "time_metamorph": 0.015594832999999753,
+        "metamorphic_transformations_times": [
+            0.0026051670000000193,
+            0.0025418749999999157,
+            0.0015268749999997056,
+            0.002696124999999938
+        ]
+    }
+}

@@ -1,0 +1,147 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 214,
+                "011": 14,
+                "100": 212,
+                "111": 49
+            },
+            "time_taken": "23.697333 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "000": 207,
+                "011": 27,
+                "100": 199,
+                "111": 56
+            },
+            "time_taken": "54.496 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 205,
+                "011": 34,
+                "100": 203,
+                "111": 47
+            },
+            "time_taken": "4.732458 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999998161845,
+            "statistic": 0.014314928425357873
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999972593426544,
+            "statistic": 0.018404907975460124
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9996782013225001,
+            "statistic": 0.022494887525562373
+        }
+    },
+    "prog_id": "10faddf8043240e6bd5590925b812c71",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000": 207,
+                "011": 27,
+                "100": 203,
+                "111": 52
+            },
+            "time_taken": "485.937458 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 200,
+                "011": 32,
+                "100": 210,
+                "111": 47
+            },
+            "time_taken": "419.772041 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999998161845,
+            "statistic": 0.014314928425357873
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": {
+            "p-value": 0.854644581075704,
+            "statistic": 0.03885480572597137
+        },
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "000": 211,
+                "011": 34,
+                "100": 191,
+                "111": 53
+            },
+            "time_taken": "131.18025 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 0.16331508722898458,
+            "statistic": 0.07157464212678936
+        },
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 197,
+                "011": 29,
+                "100": 200,
+                "111": 63
+            },
+            "time_taken": "27.057875 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 183,
+                "011": 27,
+                "100": 222,
+                "111": 57
+            },
+            "time_taken": "6.893791 ms"
+        },
+        "qpy_followup_divergence": {
+            "p-value": 0.9952983606963471,
+            "statistic": 0.026584867075664622
+        },
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "000": 194,
+                "011": 23,
+                "100": 222,
+                "111": 50
+            },
+            "time_taken": "13.709083 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.9996782013225001,
+            "statistic": 0.022494887525562373
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9563412670147141,
+            "statistic": 0.032719836400818
+        }
+    }
+}

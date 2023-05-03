@@ -1,0 +1,126 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 157,
+                "1000100": 141,
+                "1001000": 146,
+                "1001100": 159,
+                "1010000": 345,
+                "1010100": 350,
+                "1011000": 326,
+                "1011100": 335
+            },
+            "time_taken": "326.447333 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "1000000": 135,
+                "1000100": 149,
+                "1001000": 149,
+                "1001100": 144,
+                "1010000": 400,
+                "1010100": 355,
+                "1011000": 304,
+                "1011100": 323
+            },
+            "time_taken": "432.64475 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 152,
+                "1000100": 138,
+                "1001000": 130,
+                "1001100": 157,
+                "1010000": 366,
+                "1010100": 349,
+                "1011000": 355,
+                "1011100": 312
+            },
+            "time_taken": "19.186709 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ChangeTargetBasis",
+                "InjectNullEffect",
+                "ToQasmAndBack",
+                "ChangeTargetBasis"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9295975067921026,
+            "statistic": 0.017355793772332824
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.8089098211296321,
+            "statistic": 0.02041858090862685
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9952855976437609,
+            "statistic": 0.013272077590607452
+        }
+    },
+    "prog_id": "015c477fb55f4a2384858ed200aa293a",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ChangeTargetBasis",
+                "InjectNullEffect",
+                "ToQasmAndBack",
+                "ChangeTargetBasis"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x17b84dd90>",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x17fe6a970>",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 117,
+                "1000100": 153,
+                "1001000": 159,
+                "1001100": 131,
+                "1010000": 346,
+                "1010100": 327,
+                "1011000": 359,
+                "1011100": 367
+            },
+            "time_taken": "1227.625709 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Cannot apply instruction with classical bits: subcircuit",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

@@ -1,0 +1,127 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000000": 682,
+                "000001": 655,
+                "100000": 27,
+                "100001": 21
+            },
+            "time_taken": "338.013334 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000": 651,
+                "000001": 680,
+                "100000": 22,
+                "100001": 32
+            },
+            "time_taken": "13.477417 ms"
+        },
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "relations": [
+                "ChangeOptLevel"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8786669207835013,
+            "statistic": 0.022382671480144403
+        }
+    },
+    "prog_id": "c338449738bd4acf99d8b1aa7a13fd92",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "relations": [
+                "ChangeOptLevel"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000000": 665,
+                "000001": 674,
+                "100000": 29,
+                "100001": 17
+            },
+            "time_taken": "14960.44675 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000000": 661,
+                "000001": 677,
+                "100000": 23,
+                "100001": 24
+            },
+            "time_taken": "15330.704792 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.005054151624548736
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000000": 675,
+                "000001": 647,
+                "100000": 37,
+                "100001": 26
+            },
+            "time_taken": "25.315666 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000": 641,
+                "000001": 686,
+                "100000": 30,
+                "100001": 28
+            },
+            "time_taken": "416.930625 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7983593731163475,
+            "statistic": 0.02454873646209386
+        }
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "000000": 687,
+                "000001": 651,
+                "100000": 24,
+                "100001": 23
+            },
+            "time_taken": "443.915958 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: DECLARE ro BIT[6]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": null,
+            "result": {
+                "000000": 656,
+                "000001": 679,
+                "100000": 28,
+                "100001": 22
+            },
+            "time_taken": "52.824459 ms"
+        },
+        "unitary": false
+    }
+}

@@ -1,0 +1,107 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 1606,
+                "0100000001": 702,
+                "0100000100": 2608,
+                "0100000101": 626
+            },
+            "time_taken": "1975.861791 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 1588,
+                "0100000001": 688,
+                "0100000100": 2532,
+                "0100000101": 734
+            },
+            "time_taken": "60.117791 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_56f09a": 5.987304452123941,
+                "p_921885": 4.2641612072511235,
+                "p_e307f6": 4.167661441102218
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeOptLevel",
+                "ChangeTargetBasis",
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.2433483450922524,
+            "statistic": 0.019487549621075424
+        }
+    },
+    "prog_id": "479c06dc00e94ff18fb0873422b3ab82",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_56f09a": 5.987304452123941,
+                "p_921885": 4.2641612072511235,
+                "p_e307f6": 4.167661441102218
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeOptLevel",
+                "ChangeTargetBasis",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 1610,
+                "0100000001": 710,
+                "0100000100": 2575,
+                "0100000101": 647
+            },
+            "time_taken": "3209.784291 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 1653,
+                "0100000001": 687,
+                "0100000100": 2465,
+                "0100000101": 737
+            },
+            "time_taken": "93.622834 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 1608,
+                "0100000001": 725,
+                "0100000100": 2510,
+                "0100000101": 699
+            },
+            "time_taken": "52.941084 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9931616116386319,
+            "statistic": 0.00811981234211476
+        }
+    }
+}

@@ -1,0 +1,122 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01001": 65,
+                "01011": 74,
+                "01100": 64,
+                "01101": 67,
+                "01111": 63,
+                "11001": 174,
+                "11011": 159,
+                "11100": 3,
+                "11101": 150,
+                "11111": 160
+            },
+            "time_taken": "13.913292 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01001": 71,
+                "01011": 73,
+                "01100": 69,
+                "01101": 65,
+                "01111": 65,
+                "11001": 167,
+                "11011": 170,
+                "11100": 1,
+                "11101": 144,
+                "11111": 154
+            },
+            "time_taken": "10.181208 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "qubit_order": {
+                "0": 0,
+                "1": 1,
+                "2": 3,
+                "3": 2,
+                "4": 4
+            },
+            "relations": [
+                "ChangeTargetBasis",
+                "ChangeBackend",
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999657050962639,
+            "statistic": 0.014300306435137897
+        }
+    },
+    "prog_id": "8503ceaf8c21406c85b823532429624e",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "qubit_order": {
+                "0": 0,
+                "1": 1,
+                "2": 3,
+                "3": 2,
+                "4": 4
+            },
+            "relations": [
+                "ChangeTargetBasis",
+                "ChangeBackend",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00101": 65,
+                "00111": 60,
+                "01100": 68,
+                "01101": 60,
+                "01111": 71,
+                "10101": 204,
+                "10111": 166,
+                "11100": 3,
+                "11101": 119,
+                "11111": 163
+            },
+            "time_taken": "50.311084 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01001": 57,
+                "01011": 53,
+                "01100": 66,
+                "01101": 62,
+                "01111": 62,
+                "11001": 173,
+                "11011": 176,
+                "11100": 4,
+                "11101": 161,
+                "11111": 165
+            },
+            "time_taken": "24.480208 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 3.0483614632961412e-71,
+            "statistic": 0.4024514811031665
+        }
+    }
+}

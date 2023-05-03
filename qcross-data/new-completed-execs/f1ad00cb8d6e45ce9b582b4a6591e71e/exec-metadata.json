@@ -1,0 +1,102 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00000": 559,
+                "00100": 420
+            },
+            "time_taken": "61.128708 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00000": 517,
+                "00100": 462
+            },
+            "time_taken": "106.265708 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00000": 528,
+                "00100": 451
+            },
+            "time_taken": "13.508458 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ChangeCouplingMap",
+                "InjectNullEffect",
+                "ToQasmAndBack",
+                "ChangeCouplingMap"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.32863743773948234,
+            "statistic": 0.04290091930541369
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.999999979863412,
+            "statistic": 0.011235955056179775
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7105505696594764,
+            "statistic": 0.031664964249233915
+        }
+    },
+    "prog_id": "f1ad00cb8d6e45ce9b582b4a6591e71e",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ChangeCouplingMap",
+                "InjectNullEffect",
+                "ToQasmAndBack",
+                "ChangeCouplingMap"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00000": 503,
+                "00100": 476
+            },
+            "time_taken": "31.398958 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Cannot apply instruction with classical bits: subcircuit",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

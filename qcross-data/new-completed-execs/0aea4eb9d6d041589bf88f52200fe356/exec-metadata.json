@@ -1,0 +1,106 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00": 8,
+                "01": 141,
+                "10": 179,
+                "11": 18
+            },
+            "time_taken": "51.600625 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00": 13,
+                "01": 164,
+                "10": 143,
+                "11": 26
+            },
+            "time_taken": "94.042333 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00": 11,
+                "01": 155,
+                "10": 155,
+                "11": 25
+            },
+            "time_taken": "4.648542 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.20741512882743907,
+            "statistic": 0.08092485549132948
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9949504516701309,
+            "statistic": 0.031791907514450865
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7985843866692599,
+            "statistic": 0.049132947976878616
+        }
+    },
+    "prog_id": "0aea4eb9d6d041589bf88f52200fe356",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nRequested to rewire U(5.88245539296814, 3.7425411853117545, -3.7425411853117545) 1, but we don't know how to do this.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nRequested to rewire U(5.88245539296814, 3.7425411853117545, -3.7425411853117545) 1, but we don't know how to do this.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00": 7,
+                "01": 158,
+                "10": 159,
+                "11": 22
+            },
+            "time_taken": "20.250917 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Cannot apply instruction with classical bits: subcircuit",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

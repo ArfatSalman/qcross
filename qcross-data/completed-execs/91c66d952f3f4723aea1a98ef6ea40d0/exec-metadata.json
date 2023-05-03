@@ -1,0 +1,100 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 4001,
+                "10010000000": 3837
+            },
+            "time_taken": "87.056375 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 3953,
+                "10010000000": 3885
+            },
+            "time_taken": "86.91775 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 10,
+                "1": 1,
+                "2": 6,
+                "3": 9,
+                "4": 7,
+                "5": 5,
+                "6": 2,
+                "7": 3,
+                "8": 8,
+                "9": 4,
+                "10": 0
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9985229048634668,
+            "statistic": 0.0061240112273539165
+        }
+    },
+    "prog_id": "91c66d952f3f4723aea1a98ef6ea40d0",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 10,
+                "1": 1,
+                "2": 6,
+                "3": 9,
+                "4": 7,
+                "5": 5,
+                "6": 2,
+                "7": 3,
+                "8": 8,
+                "9": 4,
+                "10": 0
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "timed out",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "timed out",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00000001000": 3908,
+                "00000001001": 3930
+            },
+            "time_taken": "29.114958 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 3908,
+                "10010000000": 3930
+            },
+            "time_taken": "31.548959 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.0,
+            "statistic": 1.0
+        }
+    }
+}

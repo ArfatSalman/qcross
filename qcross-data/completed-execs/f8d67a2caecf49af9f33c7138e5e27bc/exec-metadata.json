@@ -1,0 +1,239 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_qasm_qiskit": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00110000000": 226,
+                "00110000001": 236,
+                "00110000010": 238,
+                "00110000011": 253,
+                "00110000100": 238,
+                "00110000101": 259,
+                "00110000110": 242,
+                "00110000111": 286,
+                "00110100000": 248,
+                "00110100001": 262,
+                "00110100010": 251,
+                "00110100011": 238,
+                "00110100100": 244,
+                "00110100101": 239,
+                "00110100110": 228,
+                "00110100111": 260,
+                "10110000000": 235,
+                "10110000001": 238,
+                "10110000010": 270,
+                "10110000011": 264,
+                "10110000100": 213,
+                "10110000101": 203,
+                "10110000110": 244,
+                "10110000111": 237,
+                "10110100000": 256,
+                "10110100001": 233,
+                "10110100010": 246,
+                "10110100011": 259,
+                "10110100100": 256,
+                "10110100101": 246,
+                "10110100110": 252,
+                "10110100111": 238
+            },
+            "time_taken": "90.952834 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect",
+                "ChangeOptLevel"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": null,
+        "source_cirq_qasm_qiskit_divergence": null,
+        "source_followup_divergence": null
+    },
+    "prog_id": "f8d67a2caecf49af9f33c7138e5e27bc",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect",
+                "ChangeOptLevel"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00110000000": 234,
+                "00110000001": 236,
+                "00110000010": 255,
+                "00110000011": 235,
+                "00110000100": 240,
+                "00110000101": 248,
+                "00110000110": 258,
+                "00110000111": 250,
+                "00110100000": 224,
+                "00110100001": 233,
+                "00110100010": 238,
+                "00110100011": 244,
+                "00110100100": 253,
+                "00110100101": 252,
+                "00110100110": 241,
+                "00110100111": 252,
+                "10110000000": 272,
+                "10110000001": 236,
+                "10110000010": 236,
+                "10110000011": 247,
+                "10110000100": 253,
+                "10110000101": 244,
+                "10110000110": 238,
+                "10110000111": 225,
+                "10110100000": 251,
+                "10110100001": 223,
+                "10110100010": 252,
+                "10110100011": 256,
+                "10110100100": 258,
+                "10110100101": 263,
+                "10110100110": 250,
+                "10110100111": 241
+            },
+            "time_taken": "5104.194667 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00110000000": 256,
+                "00110000001": 272,
+                "00110000010": 245,
+                "00110000011": 249,
+                "00110000100": 243,
+                "00110000101": 220,
+                "00110000110": 261,
+                "00110000111": 257,
+                "00110100000": 264,
+                "00110100001": 232,
+                "00110100010": 227,
+                "00110100011": 244,
+                "00110100100": 235,
+                "00110100101": 230,
+                "00110100110": 238,
+                "00110100111": 250,
+                "10110000000": 250,
+                "10110000001": 232,
+                "10110000010": 233,
+                "10110000011": 240,
+                "10110000100": 258,
+                "10110000101": 244,
+                "10110000110": 252,
+                "10110000111": 238,
+                "10110100000": 239,
+                "10110100001": 260,
+                "10110100010": 246,
+                "10110100011": 252,
+                "10110100100": 247,
+                "10110100101": 226,
+                "10110100110": 231,
+                "10110100111": 267
+            },
+            "time_taken": "2563.492041 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7197970700995976,
+            "statistic": 0.011099770349578974
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 5, file .\\nPrevious occurrence at line 4, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00110000000": 283,
+                "00110000001": 233,
+                "00110000010": 235,
+                "00110000011": 252,
+                "00110000100": 224,
+                "00110000101": 233,
+                "00110000110": 238,
+                "00110000111": 254,
+                "00110100000": 251,
+                "00110100001": 246,
+                "00110100010": 233,
+                "00110100011": 249,
+                "00110100100": 220,
+                "00110100101": 250,
+                "00110100110": 241,
+                "00110100111": 244,
+                "10110000000": 230,
+                "10110000001": 253,
+                "10110000010": 270,
+                "10110000011": 241,
+                "10110000100": 256,
+                "10110000101": 253,
+                "10110000110": 249,
+                "10110000111": 272,
+                "10110100000": 235,
+                "10110100001": 221,
+                "10110100010": 246,
+                "10110100011": 287,
+                "10110100100": 204,
+                "10110100101": 247,
+                "10110100110": 255,
+                "10110100111": 233
+            },
+            "time_taken": "47.294625 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Cannot apply instruction with classical bits: subcircuit",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: PRAGMA INITIAL_REWIRING \"NAIVE",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 5, file .\\nPrevious occurrence at line 4, file ",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

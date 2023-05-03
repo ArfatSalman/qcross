@@ -1,0 +1,427 @@
+{
+    "program_id": "f8153755bdf84f8eaaa8c1c5d87c1820",
+    "source": {
+        "program_id": "f8153755bdf84f8eaaa8c1c5d87c1820",
+        "selected_gate_set": [
+            "CYGate",
+            "CZGate",
+            "CCZGate",
+            "RGate",
+            "CRZGate",
+            "U2Gate",
+            "IGate",
+            "ZGate",
+            "CRXGate",
+            "SGate",
+            "HGate",
+            "RXGate",
+            "iSwapGate",
+            "CU1Gate",
+            "RCCXGate",
+            "U3Gate",
+            "CHGate",
+            "CXGate",
+            "RC3XGate",
+            "CSGate",
+            "CCXGate",
+            "PhaseGate",
+            "RZXGate",
+            "CRYGate"
+        ],
+        "selected_optimization": [],
+        "shots": 7838,
+        "n_qubits": 11,
+        "n_ops": 24,
+        "opt_level": 1,
+        "target_gates": null,
+        "py_file_path": "qcross-data/qmt_v57/programs/source/f8153755bdf84f8eaaa8c1c5d87c1820.py",
+        "time_generation": 0.0006377919999991377,
+        "circuit_id": "qc",
+        "id_quantum_reg": "qr",
+        "id_classical_reg": "cr",
+        "gate_set": [
+            {
+                "name": "CYGate",
+                "n_bits": 2,
+                "n_params": 0
+            },
+            {
+                "name": "CZGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "cz"
+            },
+            {
+                "name": "CCZGate",
+                "n_bits": 3,
+                "n_params": 0,
+                "shortname": "ccz"
+            },
+            {
+                "name": "RGate",
+                "n_bits": 1,
+                "n_params": 2,
+                "shortname": "r"
+            },
+            {
+                "name": "CRZGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "crz"
+            },
+            {
+                "name": "U2Gate",
+                "n_bits": 1,
+                "n_params": 2,
+                "shortname": "u2"
+            },
+            {
+                "name": "IGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "id"
+            },
+            {
+                "name": "ZGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "z"
+            },
+            {
+                "name": "CRXGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "crx"
+            },
+            {
+                "name": "SGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "s"
+            },
+            {
+                "name": "HGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "h"
+            },
+            {
+                "name": "RXGate",
+                "n_bits": 1,
+                "n_params": 1,
+                "shortname": "rx"
+            },
+            {
+                "name": "iSwapGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "iswap"
+            },
+            {
+                "name": "CU1Gate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "cu1"
+            },
+            {
+                "name": "RCCXGate",
+                "n_bits": 3,
+                "n_params": 0,
+                "shortname": "rccx"
+            },
+            {
+                "name": "U3Gate",
+                "n_bits": 1,
+                "n_params": 3,
+                "shortname": "u3"
+            },
+            {
+                "name": "CHGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "ch"
+            },
+            {
+                "name": "CXGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "cx"
+            },
+            {
+                "name": "RC3XGate",
+                "n_bits": 4,
+                "n_params": 0,
+                "shortname": "rcccx"
+            },
+            {
+                "name": "CSGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "cs"
+            },
+            {
+                "name": "CCXGate",
+                "n_bits": 3,
+                "n_params": 0,
+                "shortname": "ccx"
+            },
+            {
+                "name": "PhaseGate",
+                "n_bits": 1,
+                "n_params": 1,
+                "shortname": "p"
+            },
+            {
+                "name": "RZXGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "rzx"
+            },
+            {
+                "name": "CRYGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "cry"
+            }
+        ],
+        "gates_in_circuit": [
+            "CHGate",
+            "CSGate",
+            "RC3XGate",
+            "CRXGate",
+            "IGate",
+            "U2Gate",
+            "CRYGate",
+            "RCCXGate",
+            "iSwapGate",
+            "CCZGate",
+            "U3Gate",
+            "CZGate",
+            "RZXGate",
+            "CYGate",
+            "RGate",
+            "SGate"
+        ]
+    },
+    "followup": {
+        "program_id": "f8153755bdf84f8eaaa8c1c5d87c1820",
+        "selected_gate_set": [
+            "CYGate",
+            "CZGate",
+            "CCZGate",
+            "RGate",
+            "CRZGate",
+            "U2Gate",
+            "IGate",
+            "ZGate",
+            "CRXGate",
+            "SGate",
+            "HGate",
+            "RXGate",
+            "iSwapGate",
+            "CU1Gate",
+            "RCCXGate",
+            "U3Gate",
+            "CHGate",
+            "CXGate",
+            "RC3XGate",
+            "CSGate",
+            "CCXGate",
+            "PhaseGate",
+            "RZXGate",
+            "CRYGate"
+        ],
+        "selected_optimization": [],
+        "shots": 7838,
+        "n_qubits": 11,
+        "n_ops": 24,
+        "opt_level": 1,
+        "target_gates": null,
+        "py_file_path": "qcross-data/qmt_v57/programs/followup/f8153755bdf84f8eaaa8c1c5d87c1820.py",
+        "time_generation": 0.0006377919999991377,
+        "circuit_id": "qc",
+        "id_quantum_reg": "qr",
+        "id_classical_reg": "cr",
+        "gate_set": [
+            {
+                "name": "CYGate",
+                "n_bits": 2,
+                "n_params": 0
+            },
+            {
+                "name": "CZGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "cz"
+            },
+            {
+                "name": "CCZGate",
+                "n_bits": 3,
+                "n_params": 0,
+                "shortname": "ccz"
+            },
+            {
+                "name": "RGate",
+                "n_bits": 1,
+                "n_params": 2,
+                "shortname": "r"
+            },
+            {
+                "name": "CRZGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "crz"
+            },
+            {
+                "name": "U2Gate",
+                "n_bits": 1,
+                "n_params": 2,
+                "shortname": "u2"
+            },
+            {
+                "name": "IGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "id"
+            },
+            {
+                "name": "ZGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "z"
+            },
+            {
+                "name": "CRXGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "crx"
+            },
+            {
+                "name": "SGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "s"
+            },
+            {
+                "name": "HGate",
+                "n_bits": 1,
+                "n_params": 0,
+                "shortname": "h"
+            },
+            {
+                "name": "RXGate",
+                "n_bits": 1,
+                "n_params": 1,
+                "shortname": "rx"
+            },
+            {
+                "name": "iSwapGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "iswap"
+            },
+            {
+                "name": "CU1Gate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "cu1"
+            },
+            {
+                "name": "RCCXGate",
+                "n_bits": 3,
+                "n_params": 0,
+                "shortname": "rccx"
+            },
+            {
+                "name": "U3Gate",
+                "n_bits": 1,
+                "n_params": 3,
+                "shortname": "u3"
+            },
+            {
+                "name": "CHGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "ch"
+            },
+            {
+                "name": "CXGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "cx"
+            },
+            {
+                "name": "RC3XGate",
+                "n_bits": 4,
+                "n_params": 0,
+                "shortname": "rcccx"
+            },
+            {
+                "name": "CSGate",
+                "n_bits": 2,
+                "n_params": 0,
+                "shortname": "cs"
+            },
+            {
+                "name": "CCXGate",
+                "n_bits": 3,
+                "n_params": 0,
+                "shortname": "ccx"
+            },
+            {
+                "name": "PhaseGate",
+                "n_bits": 1,
+                "n_params": 1,
+                "shortname": "p"
+            },
+            {
+                "name": "RZXGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "rzx"
+            },
+            {
+                "name": "CRYGate",
+                "n_bits": 2,
+                "n_params": 1,
+                "shortname": "cry"
+            }
+        ],
+        "gates_in_circuit": [
+            "CHGate",
+            "CSGate",
+            "RC3XGate",
+            "CRXGate",
+            "IGate",
+            "U2Gate",
+            "CRYGate",
+            "RCCXGate",
+            "iSwapGate",
+            "CCZGate",
+            "U3Gate",
+            "CZGate",
+            "RZXGate",
+            "CYGate",
+            "RGate",
+            "SGate"
+        ],
+        "metamorphic_info": {
+            "0": {
+                "before_section": "EXECUTION"
+            },
+            "1": {
+                "n_ops": 9,
+                "fuzzer_object": "QiskitFuzzer"
+            }
+        },
+        "metamorphic_transformations": [
+            "ToQasmAndBack",
+            "InjectNullEffect"
+        ],
+        "time_metamorph": 0.007134957999998193,
+        "metamorphic_transformations_times": [
+            0.001619417000000567,
+            0.003817666999999858
+        ]
+    }
+}

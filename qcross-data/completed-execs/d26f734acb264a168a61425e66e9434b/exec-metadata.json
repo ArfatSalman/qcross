@@ -1,0 +1,85 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 468,
+                "1000100": 497,
+                "1001000": 479,
+                "1001100": 515
+            },
+            "time_taken": "18.264083 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 501,
+                "1000100": 502,
+                "1001000": 494,
+                "1001100": 462
+            },
+            "time_taken": "19.59025 ms"
+        },
+        "config": {
+            "relations": [
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.4704039507854081,
+            "statistic": 0.027054619703930576
+        }
+    },
+    "prog_id": "d26f734acb264a168a61425e66e9434b",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x15766a6d0>",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 485,
+                "1000100": 474,
+                "1001000": 495,
+                "1001100": 505
+            },
+            "time_taken": "65839.592833 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 490,
+                "1000100": 481,
+                "1001000": 501,
+                "1001100": 487
+            },
+            "time_taken": "1184.148333 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 484,
+                "1000100": 499,
+                "1001000": 469,
+                "1001100": 507
+            },
+            "time_taken": "1214.756709 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999562317749745,
+            "statistic": 0.010209290454313425
+        }
+    }
+}

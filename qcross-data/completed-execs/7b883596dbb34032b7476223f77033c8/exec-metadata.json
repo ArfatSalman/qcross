@@ -1,0 +1,122 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000000": 148,
+                "01000010": 131,
+                "01010000": 155,
+                "01010010": 135,
+                "01100000": 551,
+                "01100010": 580,
+                "01110000": 556,
+                "01110010": 515
+            },
+            "time_taken": "56.27275 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "01000000": 163,
+                "01000010": 133,
+                "01010000": 150,
+                "01010010": 144,
+                "01100000": 500,
+                "01100010": 517,
+                "01110000": 539,
+                "01110010": 625
+            },
+            "time_taken": "223.335167 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000000": 166,
+                "01000010": 137,
+                "01010000": 140,
+                "01010010": 152,
+                "01100000": 501,
+                "01100010": 577,
+                "01110000": 532,
+                "01110010": 566
+            },
+            "time_taken": "26.471208 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeTargetBasis"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.025378101888576,
+            "statistic": 0.039696860339227716
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.4116059238575073,
+            "statistic": 0.02381811620353663
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7360172411642083,
+            "statistic": 0.018404907975460124
+        }
+    },
+    "prog_id": "7b883596dbb34032b7476223f77033c8",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeTargetBasis"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "timed out",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "timed out",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "Unable to map source basis {('rx', 1), ('ecr', 2), ('sxdg', 1), ('swap', 2), ('measure', 1), ('p', 1), ('cp', 2), ('cswap', 3), ('s', 1)} to target basis {'h', 'snapshot', 'barrier', 'delay', 'measure', 'ccx', 'reset'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x1368a7d00>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000000": 152,
+                "01000010": 161,
+                "01010000": 148,
+                "01010010": 126,
+                "01100000": 538,
+                "01100010": 548,
+                "01110000": 562,
+                "01110010": 536
+            },
+            "time_taken": "11.820833 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Unable to map source basis {('rx', 1), ('ecr', 2), ('sxdg', 1), ('swap', 2), ('measure', 1), ('p', 1), ('cp', 2), ('cswap', 3), ('s', 1)} to target basis {'h', 'snapshot', 'barrier', 'delay', 'measure', 'ccx', 'reset'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x1368a7d00>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

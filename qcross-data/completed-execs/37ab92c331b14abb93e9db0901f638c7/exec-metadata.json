@@ -1,0 +1,157 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 41,
+                "001": 19,
+                "010": 14,
+                "011": 38,
+                "100": 226,
+                "101": 34,
+                "110": 116,
+                "111": 1
+            },
+            "time_taken": "76.017416 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "000": 38,
+                "001": 18,
+                "010": 18,
+                "011": 33,
+                "100": 201,
+                "101": 46,
+                "110": 130,
+                "111": 5
+            },
+            "time_taken": "118.098792 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 35,
+                "001": 13,
+                "010": 16,
+                "011": 43,
+                "100": 204,
+                "101": 44,
+                "110": 132,
+                "111": 2
+            },
+            "time_taken": "3.905 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeOptLevel"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.3164542820627613,
+            "statistic": 0.06134969325153374
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999570800658317,
+            "statistic": 0.02044989775051125
+        },
+        "source_followup_divergence": {
+            "p-value": 0.4456221007762617,
+            "statistic": 0.05521472392638037
+        }
+    },
+    "prog_id": "37ab92c331b14abb93e9db0901f638c7",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeOptLevel"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "46,7: type error",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 36,
+                "001": 12,
+                "010": 15,
+                "011": 28,
+                "100": 231,
+                "101": 33,
+                "110": 131,
+                "111": 3
+            },
+            "time_taken": "60.132917 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 37,
+                "001": 16,
+                "010": 14,
+                "011": 35,
+                "100": 216,
+                "101": 34,
+                "110": 130,
+                "111": 7
+            },
+            "time_taken": "30.031125 ms"
+        },
+        "qpy_followup_divergence": {
+            "p-value": 0.808580389524743,
+            "statistic": 0.0408997955010225
+        },
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "000": 37,
+                "001": 21,
+                "010": 16,
+                "011": 34,
+                "100": 234,
+                "101": 33,
+                "110": 105,
+                "111": 9
+            },
+            "time_taken": "36.316708 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.5984096532139881,
+            "statistic": 0.049079754601226995
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9996782013225001,
+            "statistic": 0.022494887525562373
+        }
+    }
+}

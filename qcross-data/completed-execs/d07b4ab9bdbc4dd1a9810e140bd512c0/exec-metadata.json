@@ -1,0 +1,150 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 171,
+                "001": 54,
+                "010": 4,
+                "011": 25,
+                "100": 24,
+                "101": 108,
+                "110": 30,
+                "111": 73
+            },
+            "time_taken": "93.48925 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 160,
+                "001": 37,
+                "010": 4,
+                "011": 26,
+                "100": 23,
+                "101": 120,
+                "110": 28,
+                "111": 91
+            },
+            "time_taken": "6.514041 ms"
+        },
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "qubit_order": {
+                "0": 0,
+                "1": 2,
+                "2": 1
+            },
+            "relations": [
+                "ChangeTargetBasis",
+                "ChangeOptLevel",
+                "AddUnusedRegister",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.3995270704311289,
+            "statistic": 0.05725971370143149
+        }
+    },
+    "prog_id": "d07b4ab9bdbc4dd1a9810e140bd512c0",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "qubit_order": {
+                "0": 0,
+                "1": 2,
+                "2": 1
+            },
+            "relations": [
+                "ChangeTargetBasis",
+                "ChangeOptLevel",
+                "AddUnusedRegister",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000": 27,
+                "010": 27,
+                "011": 38,
+                "100": 169,
+                "101": 90,
+                "110": 47,
+                "111": 91
+            },
+            "time_taken": "803.781292 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 46,
+                "001": 1,
+                "010": 27,
+                "011": 41,
+                "100": 144,
+                "101": 105,
+                "110": 36,
+                "111": 89
+            },
+            "time_taken": "768.242583 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.6522079795891383,
+            "statistic": 0.04703476482617587
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 157,
+                "001": 49,
+                "010": 7,
+                "011": 29,
+                "100": 31,
+                "101": 100,
+                "110": 31,
+                "111": 85
+            },
+            "result_original": {
+                "000": 157,
+                "001": 49,
+                "010": 31,
+                "011": 100,
+                "100": 7,
+                "101": 29,
+                "110": 31,
+                "111": 85
+            },
+            "time_taken": "35.60425 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 155,
+                "001": 59,
+                "010": 4,
+                "011": 32,
+                "100": 31,
+                "101": 102,
+                "110": 35,
+                "111": 71
+            },
+            "time_taken": "32.540084 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9882744111175525,
+            "statistic": 0.028629856850715747
+        }
+    }
+}

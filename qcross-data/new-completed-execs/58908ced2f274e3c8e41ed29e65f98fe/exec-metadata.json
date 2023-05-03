@@ -1,0 +1,156 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00000": 20,
+                "00001": 8,
+                "00100": 48,
+                "00101": 17,
+                "01000": 25,
+                "01001": 8,
+                "01100": 35,
+                "01101": 21,
+                "10000": 67,
+                "10001": 86,
+                "10100": 123,
+                "10101": 127,
+                "11000": 93,
+                "11001": 87,
+                "11100": 108,
+                "11101": 106
+            },
+            "time_taken": "84.816416 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00000": 28,
+                "00001": 6,
+                "00100": 33,
+                "00101": 11,
+                "01000": 29,
+                "01001": 7,
+                "01100": 37,
+                "01101": 12,
+                "10000": 85,
+                "10001": 79,
+                "10100": 130,
+                "10101": 102,
+                "11000": 84,
+                "11001": 91,
+                "11100": 138,
+                "11101": 107
+            },
+            "time_taken": "244.857834 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00000": 25,
+                "00001": 11,
+                "00100": 49,
+                "00101": 11,
+                "01000": 26,
+                "01001": 8,
+                "01100": 30,
+                "01101": 16,
+                "01110": 1,
+                "10000": 97,
+                "10001": 63,
+                "10100": 140,
+                "10101": 89,
+                "11000": 92,
+                "11001": 77,
+                "11100": 136,
+                "11101": 108
+            },
+            "time_taken": "8.899041 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "InjectNullEffect",
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.5591326769516264,
+            "statistic": 0.03575076608784474
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.8805333962787787,
+            "statistic": 0.026557711950970377
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7477925007881794,
+            "statistic": 0.030643513789581207
+        }
+    },
+    "prog_id": "58908ced2f274e3c8e41ed29e65f98fe",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectNullEffect",
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "inner() missing 2 required positional arguments: 'v_y' and 'v_z",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "inner() missing 2 required positional arguments: 'v_y' and 'v_z",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 5, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00000": 19,
+                "00001": 6,
+                "00100": 33,
+                "00101": 13,
+                "01000": 23,
+                "01001": 14,
+                "01100": 39,
+                "01101": 14,
+                "10000": 103,
+                "10001": 79,
+                "10010": 1,
+                "10100": 135,
+                "10101": 127,
+                "11000": 94,
+                "11001": 77,
+                "11100": 103,
+                "11101": 99
+            },
+            "time_taken": "22.743667 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Cannot apply instruction with classical bits: subcircuit",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

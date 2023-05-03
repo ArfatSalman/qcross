@@ -1,0 +1,74 @@
+
+import cirq
+
+from bloqs.ext.cirq import Gates
+from bloqs.ext.cirq.utils import get_qiskit_like_output
+from sympy import Symbol
+from cirq.contrib.qasm_import import circuit_from_qasm
+import numpy as np
+
+
+qr = [cirq.NamedQubit('q' + str(i)) for i in range(2)]
+
+
+
+circuit = cirq.Circuit()
+
+circuit.append(Gates.IGate( qr[1] ))
+circuit.append(Gates.SwapGate( qr[0], qr[1] ))
+circuit.append(Gates.SwapGate( qr[1], qr[0] ))
+circuit.append(Gates.RYGate(1.1002993512000188)( qr[1] ))
+circuit.append(Gates.CPhaseGate(1.9632220362422863)( qr[1], qr[0] ))
+circuit.append(Gates.RYYGate(1.9181567063153306)( qr[1], qr[0] ))
+circuit.append(Gates.CRXGate(2.4590168324579773)( qr[0], qr[1] ))
+circuit.append(Gates.PhaseGate(0.7665475532378738)( qr[0] ))
+circuit.append(Gates.RYYGate(1.153606269131821)( qr[1], qr[0] ))
+circuit.append(Gates.CPhaseGate(1.1100132636552245)( qr[1], qr[0] ))
+circuit.append(Gates.iSwapGate( qr[0], qr[1] ))
+circuit.append(Gates.UGate(3.8572757475580413, 1.8831270698344038, 5.011779985191158)( qr[1] ))
+circuit.append(Gates.CRXGate(2.1827683748032527)( qr[0], qr[1] ))
+circuit.append(Gates.IGate( qr[0] ))
+circuit.append(Gates.RYGate(0.5934420994921776)( qr[0] ))
+circuit.append(Gates.RYGate(0.5479105491667954)( qr[1] ))
+circuit.append(Gates.SXGate( qr[1] ))
+circuit.append(Gates.UGate(6.2496149710424405, 5.8205761472087545, 5.829068520224341)( qr[1] ))
+circuit.append(Gates.DCXGate( qr[0], qr[1] ))
+circuit.append(Gates.CSXGate( qr[1], qr[0] ))
+circuit.append(Gates.RZZGate(4.338194291975017)( qr[0], qr[1] ))
+circuit.append(Gates.SXGate( qr[1] ))
+circuit.append(Gates.CPhaseGate(1.7974397830964004)( qr[1], qr[0] ))
+circuit.append(Gates.DCXGate( qr[0], qr[1] ))
+circuit.append(Gates.SXGate( qr[0] ))
+circuit.append(Gates.IGate( qr[0] ))
+circuit.append(Gates.CRXGate(4.404558705198131)( qr[0], qr[1] ))
+circuit.append(Gates.TdgGate( qr[0] ))
+circuit.append(cirq.measure(qr[0], key='cr0'))
+circuit.append(cirq.measure(qr[1], key='cr1'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+simulator = cirq.Simulator(seed=np.random.RandomState())
+
+
+result = simulator.run(circuit, repetitions=346)
+# result_dict = dict(result.multi_measurement_histogram()
+# keys = list(map(lambda arr: reduce(lambda x, y: str(x) + str(y), arr[::-1]), result_dict.keys()))
+counts = get_qiskit_like_output(result, keys=['cr0', 'cr1'])
+
+RESULT = counts
+
+
+if __name__ == '__main__':
+    from qcross.utils import display_results
+    display_results( {"result": RESULT })
+

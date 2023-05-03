@@ -1,0 +1,94 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 35,
+                "001": 74,
+                "010": 29,
+                "011": 107,
+                "100": 2,
+                "101": 56,
+                "110": 156,
+                "111": 30
+            },
+            "time_taken": "7.56375 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 49,
+                "001": 81,
+                "010": 33,
+                "011": 97,
+                "100": 3,
+                "101": 54,
+                "110": 143,
+                "111": 29
+            },
+            "time_taken": "6.21675 ms"
+        },
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.5455615645536515,
+            "statistic": 0.05112474437627812
+        }
+    },
+    "prog_id": "780ba9d0512447c2b751f5d84f13dbb8",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 38,
+                "001": 74,
+                "010": 30,
+                "011": 111,
+                "100": 3,
+                "101": 48,
+                "110": 151,
+                "111": 34
+            },
+            "time_taken": "60.641084 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 49,
+                "001": 69,
+                "010": 26,
+                "011": 104,
+                "100": 5,
+                "101": 52,
+                "110": 162,
+                "111": 22
+            },
+            "time_taken": "31.940917 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9985349688638121,
+            "statistic": 0.024539877300613498
+        }
+    }
+}

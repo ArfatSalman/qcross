@@ -1,0 +1,92 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000": 449,
+                "01101": 530
+            },
+            "time_taken": "8.909917 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000": 436,
+                "01101": 543
+            },
+            "time_taken": "8.287625 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "qubit_order": {
+                "0": 3,
+                "1": 4,
+                "2": 1,
+                "3": 2,
+                "4": 0
+            },
+            "relations": [
+                "ChangeBackend",
+                "AddUnusedRegister",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.999994890284133,
+            "statistic": 0.013278855975485188
+        }
+    },
+    "prog_id": "6b8f6f2f189b45daaf36129780f9f937",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "qubit_order": {
+                "0": 3,
+                "1": 4,
+                "2": 1,
+                "3": 2,
+                "4": 0
+            },
+            "relations": [
+                "ChangeBackend",
+                "AddUnusedRegister",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00100": 446,
+                "01110": 533
+            },
+            "time_taken": "172.785292 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000": 419,
+                "01101": 560
+            },
+            "time_taken": "15.507792 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.7546622736107289e-133,
+            "statistic": 0.5444330949948928
+        }
+    }
+}

@@ -1,0 +1,111 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00100000000": 983,
+                "00100000010": 968,
+                "00100000100": 993,
+                "00100000110": 934,
+                "00101000000": 949,
+                "00101000010": 986,
+                "00101000100": 1016,
+                "00101000110": 1009
+            },
+            "time_taken": "100.628209 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00100000000": 965,
+                "00100000010": 1013,
+                "00100000100": 989,
+                "00100000110": 972,
+                "00101000000": 998,
+                "00101000010": 982,
+                "00101000100": 954,
+                "00101000110": 965
+            },
+            "time_taken": "93.223167 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend",
+                "ChangeTargetBasis",
+                "ChangeTargetBasis",
+                "ChangeBackend"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.4230151596944263,
+            "statistic": 0.014034192396019394
+        }
+    },
+    "prog_id": "83127562864143869ec609b0967c343a",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend",
+                "ChangeTargetBasis",
+                "ChangeTargetBasis",
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00100000000": 978,
+                "00100000010": 995,
+                "00100000100": 969,
+                "00100000110": 987,
+                "00101000000": 956,
+                "00101000010": 986,
+                "00101000100": 966,
+                "00101000110": 1001
+            },
+            "time_taken": "11704.347584 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00100000000": 1014,
+                "00100000010": 924,
+                "00100000100": 990,
+                "00100000110": 931,
+                "00101000000": 967,
+                "00101000010": 989,
+                "00101000100": 1022,
+                "00101000110": 1001
+            },
+            "time_taken": "12067.831292 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.913426682473066,
+            "statistic": 0.008930849706557796
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Unable to map source basis {('p', 1), ('cry', 2), ('h', 1), ('u1', 1), ('ch', 2), ('x', 1), ('cswap', 3), ('tdg', 1), ('measure', 1), ('cp', 2), ('ecr', 2), ('cu1', 2)} to target basis {'snapshot', 'reset', 'ccx', 'delay', 'barrier', 'h', 'measure'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x13170bc40>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00100000000": 974,
+                "00100000010": 973,
+                "00100000100": 974,
+                "00100000110": 947,
+                "00101000000": 1001,
+                "00101000010": 964,
+                "00101000100": 1000,
+                "00101000110": 1005
+            },
+            "time_taken": "22.452625 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

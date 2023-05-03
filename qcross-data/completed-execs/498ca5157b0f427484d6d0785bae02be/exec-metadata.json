@@ -1,0 +1,78 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 1971,
+                "00010000100": 1940,
+                "10010000000": 1957,
+                "10010000100": 1970
+            },
+            "time_taken": "103.1365 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1928,
+                "00010000100": 1984,
+                "10010000000": 1994,
+                "10010000100": 1932
+            },
+            "time_taken": "99.646583 ms"
+        },
+        "config": {
+            "relations": [
+                "ChangeTargetBasis"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9997911849614837,
+            "statistic": 0.005486093391171217
+        }
+    },
+    "prog_id": "498ca5157b0f427484d6d0785bae02be",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "ChangeTargetBasis"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 1903,
+                "00010000100": 2012,
+                "10010000000": 1974,
+                "10010000100": 1949
+            },
+            "time_taken": "58.503542 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1995,
+                "00010000100": 1884,
+                "10010000000": 2031,
+                "10010000100": 1928
+            },
+            "time_taken": "39.655542 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.6528205192636973,
+            "statistic": 0.011737688185761675
+        }
+    }
+}

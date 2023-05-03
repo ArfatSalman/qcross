@@ -1,0 +1,97 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000": 205,
+                "0001": 139,
+                "0100": 204,
+                "0101": 144
+            },
+            "time_taken": "7.903666 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 2,
+                "1": 0,
+                "2": 3,
+                "3": 1
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "21bcb32b7f2a473984b38e8ec7e82a49",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 2,
+                "1": 0,
+                "2": 3,
+                "3": 1
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0000": 218,
+                "0001": 134,
+                "0100": 194,
+                "0101": 146
+            },
+            "time_taken": "6625.630792 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000": 200,
+                "0001": 130,
+                "0100": 204,
+                "0101": 158
+            },
+            "time_taken": "6231.556916 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8758580997749421,
+            "statistic": 0.031791907514450865
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0000": 201,
+                "0100": 152,
+                "1000": 219,
+                "1100": 120
+            },
+            "time_taken": "117.885792 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000": 192,
+                "0001": 146,
+                "0100": 209,
+                "0101": 145
+            },
+            "time_taken": "102.229542 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0796082507680171e-75,
+            "statistic": 0.48988439306358383
+        }
+    }
+}

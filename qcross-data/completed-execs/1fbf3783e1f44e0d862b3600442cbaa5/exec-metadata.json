@@ -1,0 +1,117 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 969,
+                "1001000": 990
+            },
+            "time_taken": "720.084375 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "1000000": 1000,
+                "1001000": 959
+            },
+            "time_taken": "682.745916 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 993,
+                "1001000": 966
+            },
+            "time_taken": "19.447709 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeOptLevel",
+                "ChangeTargetBasis"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9669677657223752,
+            "statistic": 0.01582440020418581
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0035732516590096988
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9985265007237669,
+            "statistic": 0.01225114854517611
+        }
+    },
+    "prog_id": "1fbf3783e1f44e0d862b3600442cbaa5",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeOptLevel",
+                "ChangeTargetBasis"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 948,
+                "1001000": 1011
+            },
+            "time_taken": "52589.202083 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 1014,
+                "1001000": 945
+            },
+            "time_taken": "49441.531292 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.21619991735587432,
+            "statistic": 0.033690658499234305
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "Unable to map source basis {('rz', 1), ('crx', 2), ('sdg', 1), ('x', 1), ('csx', 2), ('measure', 1), ('z', 1), ('cx', 2), ('u2', 1), ('ch', 2), ('s', 1), ('h', 1), ('u1', 1), ('ecr', 2)} to target basis {'delay', 'snapshot', 'reset', 'measure', 'barrier', 'h', 'ccx'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x15812e7c0>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 984,
+                "1001000": 975
+            },
+            "time_taken": "630.506541 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Unable to map source basis {('rz', 1), ('crx', 2), ('sdg', 1), ('x', 1), ('csx', 2), ('measure', 1), ('z', 1), ('cx', 2), ('u2', 1), ('ch', 2), ('s', 1), ('cu1', 2), ('h', 1), ('u1', 1), ('ecr', 2)} to target basis {'delay', 'snapshot', 'reset', 'measure', 'barrier', 'h', 'ccx'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x15812e7c0>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

@@ -1,0 +1,98 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0000000000": 87,
+                "0000000001": 1122,
+                "0000000010": 211,
+                "0000000011": 3526,
+                "1000000000": 9,
+                "1000000001": 141,
+                "1000000010": 27,
+                "1000000011": 419
+            },
+            "time_taken": "129.532042 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000000000": 86,
+                "0000000001": 1181,
+                "0000000010": 219,
+                "0000000011": 3484,
+                "1000000000": 12,
+                "1000000001": 138,
+                "1000000010": 24,
+                "1000000011": 398
+            },
+            "time_taken": "63.828792 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "QdiffG4ZtoSS",
+                "ChangeBackend"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8268430557528237,
+            "statistic": 0.011909058101768314
+        }
+    },
+    "prog_id": "87894b0299ee4ae58996d1f3ae757f66",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "QdiffG4ZtoSS",
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0000000000": 80,
+                "0000000001": 1201,
+                "0000000010": 208,
+                "0000000011": 3453,
+                "1000000000": 10,
+                "1000000001": 152,
+                "1000000010": 31,
+                "1000000011": 407
+            },
+            "time_taken": "82.309958 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000000000": 91,
+                "0000000001": 1199,
+                "0000000010": 239,
+                "0000000011": 3444,
+                "1000000000": 12,
+                "1000000001": 120,
+                "1000000010": 22,
+                "1000000011": 415
+            },
+            "time_taken": "109.82375 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.998721346230494,
+            "statistic": 0.007217610970768676
+        }
+    }
+}

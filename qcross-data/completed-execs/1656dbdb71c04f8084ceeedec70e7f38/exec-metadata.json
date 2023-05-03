@@ -1,0 +1,147 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 1978,
+                "00010000100": 1940,
+                "10010000000": 1974,
+                "10010000100": 1946
+            },
+            "time_taken": "123.992084 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00010000000": 1903,
+                "00010000100": 1989,
+                "10010000000": 1975,
+                "10010000100": 1971
+            },
+            "time_taken": "3977.756875 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1975,
+                "00010000100": 1987,
+                "10010000000": 1954,
+                "10010000100": 1922
+            },
+            "time_taken": "89.955791 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.8656051892227197,
+            "statistic": 0.009568767542740495
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.8955112635578397,
+            "statistic": 0.009186016841030875
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9996734150910647,
+            "statistic": 0.005613676958407757
+        }
+    },
+    "prog_id": "1656dbdb71c04f8084ceeedec70e7f38",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 1929,
+                "00010000100": 1922,
+                "10010000000": 1990,
+                "10010000100": 1997
+            },
+            "time_taken": "2571.342708 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1863,
+                "00010000100": 1996,
+                "10010000000": 1996,
+                "10010000100": 1983
+            },
+            "time_taken": "2305.727875 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9439164277529826,
+            "statistic": 0.008420515437611636
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": {
+            "p-value": 0.9999998169056241,
+            "statistic": 0.004210257718805818
+        },
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "00010000000": 1949,
+                "00010000100": 1941,
+                "10010000000": 1960,
+                "10010000100": 1988
+            },
+            "time_taken": "67.780708 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 0.5077822265806177,
+            "statistic": 0.013141107425363613
+        },
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 1957,
+                "00010000100": 1966,
+                "10010000000": 1936,
+                "10010000100": 1979
+            },
+            "time_taken": "66.367166 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1846,
+                "00010000100": 2011,
+                "10010000000": 1941,
+                "10010000100": 2040
+            },
+            "time_taken": "39.701459 ms"
+        },
+        "qpy_followup_divergence": {
+            "p-value": 0.9999999999999998,
+            "statistic": 0.0028068384792038787
+        },
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "00010000000": 1941,
+                "00010000100": 2004,
+                "10010000000": 1905,
+                "10010000100": 1988
+            },
+            "time_taken": "52.335667 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.6124679421743633,
+            "statistic": 0.012120438887471293
+        },
+        "source_followup_divergence": {
+            "p-value": 0.41158212176262976,
+            "statistic": 0.014161775963255933
+        }
+    }
+}

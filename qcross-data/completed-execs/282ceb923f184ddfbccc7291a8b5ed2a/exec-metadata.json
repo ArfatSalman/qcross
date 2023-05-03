@@ -1,0 +1,106 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_qasm_qiskit": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000": 207,
+                "0001": 152,
+                "0100": 198,
+                "0101": 135
+            },
+            "time_taken": "7.189792 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "AddUnusedRegister",
+                "InjectNullEffect",
+                "ToQasmAndBack",
+                "ChangeTargetBasis"
+            ],
+            "unused_registers": true
+        },
+        "followup_cirq_qasm_qiskit_divergence": null,
+        "source_cirq_qasm_qiskit_divergence": null,
+        "source_followup_divergence": null
+    },
+    "prog_id": "282ceb923f184ddfbccc7291a8b5ed2a",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "AddUnusedRegister",
+                "InjectNullEffect",
+                "ToQasmAndBack",
+                "ChangeTargetBasis"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0000": 207,
+                "0001": 139,
+                "0100": 203,
+                "0101": 143
+            },
+            "time_taken": "5774.371208 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000": 214,
+                "0001": 133,
+                "0100": 208,
+                "0101": 137
+            },
+            "time_taken": "4731.164625 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.999999999999993,
+            "statistic": 0.010115606936416185
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Cannot find gate definition for 'rzx', line 3 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000": 189,
+                "0001": 147,
+                "0100": 202,
+                "0101": 154
+            },
+            "time_taken": "101.9615 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Cannot apply instruction with classical bits: subcircuit",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

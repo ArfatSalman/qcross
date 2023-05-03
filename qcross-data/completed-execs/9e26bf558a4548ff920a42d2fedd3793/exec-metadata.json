@@ -1,0 +1,124 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00010": 4,
+                "00011": 5,
+                "01011": 4,
+                "01110": 25,
+                "01111": 23,
+                "10000": 27,
+                "10001": 32,
+                "10010": 69,
+                "10011": 84,
+                "10100": 356,
+                "10101": 350
+            },
+            "time_taken": "12.766583 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00010": 7,
+                "00011": 6,
+                "01010": 2,
+                "01011": 2,
+                "01110": 18,
+                "01111": 15,
+                "10000": 31,
+                "10001": 33,
+                "10010": 80,
+                "10011": 82,
+                "10100": 360,
+                "10101": 343
+            },
+            "time_taken": "10.024209 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeTargetBasis",
+                "ChangeBackend"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.999999979863412,
+            "statistic": 0.011235955056179775
+        }
+    },
+    "prog_id": "9e26bf558a4548ff920a42d2fedd3793",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeTargetBasis",
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00010": 6,
+                "00011": 9,
+                "01010": 2,
+                "01011": 1,
+                "01110": 20,
+                "01111": 20,
+                "10000": 28,
+                "10001": 41,
+                "10010": 86,
+                "10011": 83,
+                "10100": 338,
+                "10101": 345
+            },
+            "time_taken": "7162.570834 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00010": 6,
+                "00011": 2,
+                "01010": 3,
+                "01110": 24,
+                "01111": 21,
+                "10000": 29,
+                "10001": 26,
+                "10010": 88,
+                "10011": 86,
+                "10100": 346,
+                "10101": 348
+            },
+            "time_taken": "7309.839375 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9994550199341308,
+            "statistic": 0.01634320735444331
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Cannot unroll the circuit to the given basis, ['rx', 'ry', 'rz', 'p', 'cx']. Instruction id not found in equivalence library and no rule found to expand.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00010": 4,
+                "00011": 7,
+                "01010": 2,
+                "01110": 16,
+                "01111": 17,
+                "10000": 22,
+                "10001": 29,
+                "10010": 77,
+                "10011": 84,
+                "10100": 372,
+                "10101": 349
+            },
+            "time_taken": "14.671083 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

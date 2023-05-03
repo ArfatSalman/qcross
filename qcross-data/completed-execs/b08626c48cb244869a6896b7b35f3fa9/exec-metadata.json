@@ -1,0 +1,85 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000000": 683,
+                "000001": 649,
+                "100000": 33,
+                "100001": 20
+            },
+            "time_taken": "14.336584 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000": 661,
+                "000001": 675,
+                "100000": 24,
+                "100001": 25
+            },
+            "time_taken": "13.965583 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_4c273c": 1.4112277317699358,
+                "p_9c8979": 4.833923139882297,
+                "p_a7164b": 2.3864521352475245
+            },
+            "relations": [
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9948838917220704,
+            "statistic": 0.01588447653429603
+        }
+    },
+    "prog_id": "b08626c48cb244869a6896b7b35f3fa9",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_4c273c": 1.4112277317699358,
+                "p_9c8979": 4.833923139882297,
+                "p_a7164b": 2.3864521352475245
+            },
+            "relations": [
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000000": 628,
+                "000001": 692,
+                "100000": 30,
+                "100001": 35
+            },
+            "time_taken": "9389.168375 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_a7164b)])]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000": 678,
+                "000001": 656,
+                "100000": 24,
+                "100001": 27
+            },
+            "time_taken": "268.645792 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

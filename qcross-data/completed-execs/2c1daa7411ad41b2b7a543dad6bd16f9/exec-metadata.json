@@ -1,0 +1,114 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 165,
+                "001": 108,
+                "010": 22,
+                "011": 4,
+                "100": 14,
+                "101": 62,
+                "110": 105,
+                "111": 9
+            },
+            "time_taken": "6.266167 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 131,
+                "001": 110,
+                "010": 24,
+                "011": 6,
+                "100": 15,
+                "101": 70,
+                "110": 112,
+                "111": 21
+            },
+            "time_taken": "6.432708 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 1,
+                "1": 2,
+                "2": 0
+            },
+            "relations": [
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.18802837051759036,
+            "statistic": 0.06952965235173825
+        }
+    },
+    "prog_id": "2c1daa7411ad41b2b7a543dad6bd16f9",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 1,
+                "1": 2,
+                "2": 0
+            },
+            "relations": [
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 136,
+                "001": 116,
+                "010": 26,
+                "011": 6,
+                "100": 15,
+                "101": 71,
+                "110": 105,
+                "111": 14
+            },
+            "result_original": {
+                "000": 136,
+                "001": 15,
+                "010": 116,
+                "011": 71,
+                "100": 26,
+                "101": 105,
+                "110": 6,
+                "111": 14
+            },
+            "time_taken": "32.967834 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 147,
+                "001": 122,
+                "010": 24,
+                "011": 4,
+                "100": 12,
+                "101": 80,
+                "110": 87,
+                "111": 13
+            },
+            "time_taken": "56.762916 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.854644581075704,
+            "statistic": 0.03885480572597137
+        }
+    }
+}

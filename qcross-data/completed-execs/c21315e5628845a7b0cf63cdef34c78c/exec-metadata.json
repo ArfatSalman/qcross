@@ -1,0 +1,70 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 1534,
+                "0100000001": 691,
+                "0100000100": 2595,
+                "0100000101": 722
+            },
+            "time_taken": "59.604666 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 1596,
+                "0100000001": 696,
+                "0100000100": 2529,
+                "0100000101": 721
+            },
+            "time_taken": "89.643 ms"
+        },
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8127984522991962,
+            "statistic": 0.012089498376037532
+        }
+    },
+    "prog_id": "c21315e5628845a7b0cf63cdef34c78c",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 1631,
+                "0100000001": 722,
+                "0100000100": 2504,
+                "0100000101": 685
+            },
+            "time_taken": "60.597333 ms"
+        },
+        "source_followup_divergence": null
+    }
+}
