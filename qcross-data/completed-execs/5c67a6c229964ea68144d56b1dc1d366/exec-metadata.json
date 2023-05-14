@@ -1,0 +1,125 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 990,
+                "1001000": 969
+            },
+            "time_taken": "124.591042 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "1000000": 950,
+                "1001000": 1009
+            },
+            "time_taken": "263.816875 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 1010,
+                "1001000": 949
+            },
+            "time_taken": "18.13375 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_1477d5": 6.163759533339787,
+                "p_1fb36c": 4.028174522740928,
+                "p_42a4f3": 2.0099472182748075,
+                "p_c22ee3": 4.229610589867865,
+                "p_d41fd7": 5.94477504571567,
+                "p_dd3917": 4.833923139882297,
+                "p_ef9572": 3.2142159669963557
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeTargetBasis",
+                "ToQasmAndBack",
+                "InjectParameters"
+            ],
+            "unused_registers": true
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.8089098211296321,
+            "statistic": 0.02041858090862685
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.3171522733961194,
+            "statistic": 0.030627871362940276
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999562317749745,
+            "statistic": 0.010209290454313425
+        }
+    },
+    "prog_id": "5c67a6c229964ea68144d56b1dc1d366",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_1477d5": 6.163759533339787,
+                "p_1fb36c": 4.028174522740928,
+                "p_42a4f3": 2.0099472182748075,
+                "p_c22ee3": 4.229610589867865,
+                "p_d41fd7": 5.94477504571567,
+                "p_dd3917": 4.833923139882297,
+                "p_ef9572": 3.2142159669963557
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeTargetBasis",
+                "ToQasmAndBack",
+                "InjectParameters"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 996,
+                "1001000": 963
+            },
+            "time_taken": "66240.189291 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "Unable to map source basis {('crz', 2), ('s', 1), ('csx', 2), ('z', 1), ('rz', 1), ('measure', 1), ('h', 1), ('sdg', 1), ('ch', 2), ('crx', 2), ('u1', 1), ('x', 1), ('cx', 2), ('rccx', 3), ('ecr', 2)} to target basis {'measure', 'delay', 'h', 'barrier', 'snapshot', 'ccx', 'reset'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x15fdc3790>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 966,
+                "1001000": 993
+            },
+            "time_taken": "781.40625 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Unable to map source basis {('crz', 2), ('s', 1), ('csx', 2), ('z', 1), ('cu1', 2), ('rz', 1), ('measure', 1), ('h', 1), ('sdg', 1), ('ch', 2), ('crx', 2), ('cx', 2), ('x', 1), ('rccx', 3), ('ecr', 2)} to target basis {'measure', 'delay', 'h', 'barrier', 'snapshot', 'ccx', 'reset'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x15fdc3790>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

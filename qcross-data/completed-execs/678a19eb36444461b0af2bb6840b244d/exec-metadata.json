@@ -1,0 +1,79 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": [
+                {
+                    "000000000": 7838
+                },
+                {
+                    "00": 7838
+                }
+            ],
+            "time_taken": "108.650792 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "399.539125 ms"
+        },
+        "config": {
+            "relations": [
+                "RunIndependentPartitions"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "678a19eb36444461b0af2bb6840b244d",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "RunIndependentPartitions"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00000000000": 61434244
+            },
+            "result_original": [
+                {
+                    "000000000": 7838
+                },
+                {
+                    "00": 7838
+                }
+            ],
+            "time_taken": "23.192125 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "27.800333 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

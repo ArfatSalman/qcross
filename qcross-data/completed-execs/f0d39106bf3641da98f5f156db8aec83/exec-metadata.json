@@ -1,0 +1,110 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 992,
+                "000100001": 163,
+                "000100100": 982,
+                "000100101": 1782
+            },
+            "time_taken": "35.719334 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 922,
+                "000100001": 163,
+                "000100100": 1005,
+                "000100101": 1829
+            },
+            "time_taken": "37.054625 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 1,
+                "1": 8,
+                "2": 2,
+                "3": 6,
+                "4": 5,
+                "5": 0,
+                "6": 4,
+                "7": 3,
+                "8": 7
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.5594530063957313,
+            "statistic": 0.017861699413115592
+        }
+    },
+    "prog_id": "f0d39106bf3641da98f5f156db8aec83",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 1,
+                "1": 8,
+                "2": 2,
+                "3": 6,
+                "4": 5,
+                "5": 0,
+                "6": 4,
+                "7": 3,
+                "8": 7
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 942,
+                "000100001": 146,
+                "000100100": 1067,
+                "000100101": 1764
+            },
+            "result_original": {
+                "000000001": 942,
+                "000000011": 146,
+                "000000101": 1067,
+                "000000111": 1764
+            },
+            "time_taken": "693.174042 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1016,
+                "000100001": 157,
+                "000100100": 984,
+                "000100101": 1762
+            },
+            "time_taken": "736.671542 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.31527519720832453,
+            "statistic": 0.02168920643021179
+        }
+    }
+}

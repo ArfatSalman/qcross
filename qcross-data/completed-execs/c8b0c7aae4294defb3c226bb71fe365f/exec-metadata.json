@@ -1,0 +1,84 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 992,
+                "000100001": 166,
+                "000100100": 942,
+                "000100101": 1819
+            },
+            "time_taken": "74.148083 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 945,
+                "000100001": 160,
+                "000100100": 1054,
+                "000100101": 1760
+            },
+            "time_taken": "36.394167 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7662235235285442,
+            "statistic": 0.015054860933911712
+        }
+    },
+    "prog_id": "c8b0c7aae4294defb3c226bb71fe365f",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 934,
+                "000100001": 143,
+                "000100100": 1010,
+                "000100101": 1832
+            },
+            "time_taken": "692.266792 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1026,
+                "000100001": 124,
+                "000100100": 989,
+                "000100101": 1780
+            },
+            "time_taken": "737.014 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.2303758582981299,
+            "statistic": 0.02347537637152335
+        }
+    }
+}

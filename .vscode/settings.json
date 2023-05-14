@@ -1,6 +1,9 @@
 {
-  "python.formatting.provider": "black",
+  "python.formatting.provider": "none",
   "python.formatting.autopep8Path": "autopep8",
   "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "file"
+  "editor.formatOnSaveMode": "file",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
 }

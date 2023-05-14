@@ -1,0 +1,76 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00": 346
+            },
+            "time_taken": "2.735667 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00": 346
+            },
+            "time_taken": "2.638792 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_a22d56": 6.163759533339787
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeCouplingMap"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "013f7075de9f460c93534b5efe175f9d",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_a22d56": 6.163759533339787
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeCouplingMap"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00": 346
+            },
+            "time_taken": "148.747667 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00": 346
+            },
+            "time_taken": "6.336 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00": 346
+            },
+            "time_taken": "5.817375 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

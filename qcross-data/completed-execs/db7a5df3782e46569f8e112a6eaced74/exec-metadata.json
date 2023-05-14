@@ -1,0 +1,111 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "1486.366625 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "2839.487375 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "129.496667 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "ChangeTargetBasis",
+                "ToQasmAndBack",
+                "ChangeOptLevel"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "db7a5df3782e46569f8e112a6eaced74",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ChangeTargetBasis",
+                "ToQasmAndBack",
+                "ChangeOptLevel"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "1357.075792 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "1268.1655 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "Unable to map source basis {('crz', 2), ('rz', 1), ('measure', 1)} to target basis {'reset', 'h', 'measure', 'delay', 'snapshot', 'ccx', 'barrier'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x16d398820>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Unable to map source basis {('crz', 2), ('rz', 1), ('measure', 1)} to target basis {'reset', 'h', 'measure', 'delay', 'snapshot', 'ccx', 'barrier'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x16d398820>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "13.278917 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Unable to map source basis {('crz', 2), ('rz', 1), ('measure', 1)} to target basis {'reset', 'h', 'measure', 'delay', 'snapshot', 'ccx', 'barrier'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x16d398820>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

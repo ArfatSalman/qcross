@@ -1,0 +1,141 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00": 104,
+                "01": 105,
+                "10": 75,
+                "11": 62
+            },
+            "time_taken": "121.877083 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00": 113,
+                "01": 94,
+                "10": 74,
+                "11": 65
+            },
+            "time_taken": "160.613791 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00": 106,
+                "01": 99,
+                "10": 68,
+                "11": 73
+            },
+            "time_taken": "4.365666 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "cirq_qasm_qiskit": true,
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "ChangeBackend",
+                "ToQasmAndBack",
+                "ChangeBackend"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9998162332319306,
+            "statistic": 0.02601156069364162
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999878276083077,
+            "statistic": 0.023121387283236993
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9949504516701309,
+            "statistic": 0.031791907514450865
+        }
+    },
+    "prog_id": "7de3bc6cfa0f4d58ab9fa31c336c9fe9",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ChangeOptLevel",
+                "ChangeBackend",
+                "ToQasmAndBack",
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00": 108,
+                "01": 96,
+                "10": 77,
+                "11": 65
+            },
+            "time_taken": "407.154959 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00": 102,
+                "01": 105,
+                "10": 84,
+                "11": 55
+            },
+            "time_taken": "420.267334 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9987517849671945,
+            "statistic": 0.028901734104046242
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "102,16: type error",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00": 89,
+                "01": 111,
+                "10": 81,
+                "11": 65
+            },
+            "time_taken": "20.720416 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "00": 92,
+                "01": 113,
+                "10": 78,
+                "11": 63
+            },
+            "time_taken": "41.725625 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.9999999999999889,
+            "statistic": 0.014450867052023121
+        },
+        "source_followup_divergence": null
+    }
+}

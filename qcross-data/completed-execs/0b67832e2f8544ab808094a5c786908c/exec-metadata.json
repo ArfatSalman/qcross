@@ -1,0 +1,77 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00": 346
+            },
+            "time_taken": "1.740416 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00": 346
+            },
+            "time_taken": "1.99375 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_c748d9": 6.163759533339787
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeCouplingMap",
+                "ChangeTargetBasis",
+                "ChangeBackend"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "0b67832e2f8544ab808094a5c786908c",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_c748d9": 6.163759533339787
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeCouplingMap",
+                "ChangeTargetBasis",
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00": 346
+            },
+            "time_taken": "133.965833 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Unable to map source basis {('measure', 1), ('rzz', 2)} to target basis {'h', 't', 'snapshot', 'cx', 'delay', 'barrier', 's', 'reset', 'measure'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x14eceb820>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00": 346
+            },
+            "time_taken": "3.548375 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

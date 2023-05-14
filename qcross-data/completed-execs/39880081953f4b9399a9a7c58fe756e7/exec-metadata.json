@@ -1,0 +1,127 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00": 46,
+                "01": 122,
+                "10": 50,
+                "11": 128
+            },
+            "time_taken": "35.4795 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00": 62,
+                "01": 101,
+                "10": 67,
+                "11": 116
+            },
+            "time_taken": "56.692459 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00": 52,
+                "01": 118,
+                "10": 56,
+                "11": 120
+            },
+            "time_taken": "2.822834 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_695128": 1.977559237989846
+            },
+            "relations": [
+                "InjectParameters",
+                "InjectNullEffect",
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.8539364652860598,
+            "statistic": 0.046242774566473986
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9987517849671945,
+            "statistic": 0.028901734104046242
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999878276083077,
+            "statistic": 0.023121387283236993
+        }
+    },
+    "prog_id": "39880081953f4b9399a9a7c58fe756e7",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_695128": 1.977559237989846
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectParameters",
+                "InjectNullEffect",
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00": 52,
+                "01": 140,
+                "10": 56,
+                "11": 98
+            },
+            "time_taken": "406.18 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00": 53,
+                "01": 112,
+                "10": 45,
+                "11": 136
+            },
+            "time_taken": "10.779042 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "00": 52,
+                "01": 111,
+                "10": 58,
+                "11": 125
+            },
+            "time_taken": "29.009375 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.9949504516701309,
+            "statistic": 0.031791907514450865
+        },
+        "source_followup_divergence": null
+    }
+}

@@ -1,0 +1,123 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "41.811792 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "95.491208 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "28.850125 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_26297d": 5.987304452123941
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "InjectParameters"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "9dbda1b77a27404d99200723fb53727e",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_26297d": 5.987304452123941
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "325.155083 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "123.180667 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "37.797416 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "12.367292 ms"
+        },
+        "qpy_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "25.355917 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

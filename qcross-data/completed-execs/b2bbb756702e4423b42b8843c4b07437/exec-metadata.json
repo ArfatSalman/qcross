@@ -1,0 +1,103 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 993,
+                "1001000": 966
+            },
+            "time_taken": "27.33525 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 996,
+                "1001000": 963
+            },
+            "time_taken": "19.353375 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "qubit_order": {
+                "0": 5,
+                "1": 0,
+                "2": 6,
+                "3": 3,
+                "4": 1,
+                "5": 2,
+                "6": 4
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeBackend",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999997,
+            "statistic": 0.0015313935681470138
+        }
+    },
+    "prog_id": "b2bbb756702e4423b42b8843c4b07437",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "qubit_order": {
+                "0": 5,
+                "1": 0,
+                "2": 6,
+                "3": 3,
+                "4": 1,
+                "5": 2,
+                "6": 4
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeBackend",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x156bf1fd0>",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 979,
+                "1001000": 980
+            },
+            "time_taken": "63444.74325 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 988,
+                "1001000": 971
+            },
+            "result_original": {
+                "0010000": 988,
+                "0011000": 971
+            },
+            "time_taken": "498.396625 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 945,
+                "1001000": 1014
+            },
+            "time_taken": "460.958166 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7329453291056233,
+            "statistic": 0.021949974476773864
+        }
+    }
+}

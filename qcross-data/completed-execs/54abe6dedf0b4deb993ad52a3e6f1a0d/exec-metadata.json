@@ -1,0 +1,72 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000000000": 5542
+            },
+            "time_taken": "65.220791 ms"
+        },
+        "config": {
+            "relations": [
+                "ChangeCouplingMap",
+                "InjectNullEffect",
+                "ChangeTargetBasis"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "54abe6dedf0b4deb993ad52a3e6f1a0d",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "ChangeCouplingMap",
+                "InjectNullEffect",
+                "ChangeTargetBasis"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0000000000": 5542
+            },
+            "time_taken": "1064.544042 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000000000": 5542
+            },
+            "time_taken": "858.941709 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0000000000": 5542
+            },
+            "time_taken": "51.299958 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000000000": 5542
+            },
+            "time_taken": "16.37025 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

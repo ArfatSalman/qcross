@@ -1,0 +1,82 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00": 93,
+                "01": 78,
+                "11": 175
+            },
+            "time_taken": "6.658917 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00": 116,
+                "01": 74,
+                "11": 156
+            },
+            "time_taken": "4.685041 ms"
+        },
+        "config": {
+            "relations": [
+                "InjectNullEffect",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.42964381800204454,
+            "statistic": 0.06647398843930635
+        }
+    },
+    "prog_id": "383996c0e5fc44ad91a980f13f02916b",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "InjectNullEffect",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00": 102,
+                "01": 84,
+                "11": 160
+            },
+            "time_taken": "1478.110125 ms"
+        },
+        "pyquil_source": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x28a5c6b80>",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00": 100,
+                "01": 76,
+                "11": 170
+            },
+            "time_taken": "25.68 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00": 113,
+                "01": 86,
+                "11": 147
+            },
+            "time_taken": "21.068458 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.42964381800204454,
+            "statistic": 0.06647398843930635
+        }
+    }
+}

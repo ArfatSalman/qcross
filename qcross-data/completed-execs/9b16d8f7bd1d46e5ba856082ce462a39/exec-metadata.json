@@ -1,0 +1,119 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01": 231,
+                "10": 115
+            },
+            "time_taken": "15.86775 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "01": 252,
+                "10": 94
+            },
+            "time_taken": "49.688125 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01": 241,
+                "10": 105
+            },
+            "time_taken": "2.740875 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_dcee58": 1.977559237989846
+            },
+            "relations": [
+                "InjectParameters",
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.5475654578814508,
+            "statistic": 0.06069364161849711
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9949504516701309,
+            "statistic": 0.031791907514450865
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9987517849671945,
+            "statistic": 0.028901734104046242
+        }
+    },
+    "prog_id": "9b16d8f7bd1d46e5ba856082ce462a39",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_dcee58": 1.977559237989846
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectParameters",
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01": 245,
+                "10": 101
+            },
+            "time_taken": "1269.1765 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "01": 257,
+                "10": 89
+            },
+            "time_taken": "25.991084 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.008670520231213872
+        },
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01": 254,
+                "10": 92
+            },
+            "time_taken": "11.106291 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "01": 230,
+                "10": 116
+            },
+            "time_taken": "20.097167 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.37635130932309535,
+            "statistic": 0.06936416184971098
+        },
+        "source_followup_divergence": null
+    }
+}

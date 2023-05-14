@@ -1,0 +1,135 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 34,
+                "001": 13,
+                "010": 15,
+                "011": 32,
+                "100": 222,
+                "101": 35,
+                "110": 131,
+                "111": 7
+            },
+            "time_taken": "3.9595 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 49,
+                "001": 17,
+                "010": 15,
+                "011": 28,
+                "100": 221,
+                "101": 43,
+                "110": 112,
+                "111": 4
+            },
+            "time_taken": "4.345584 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 2,
+                "1": 0,
+                "2": 1
+            },
+            "relations": [
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7059793347858871,
+            "statistic": 0.044989775051124746
+        }
+    },
+    "prog_id": "7a80e702b4434b488ca145ac414bd6c1",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 2,
+                "1": 0,
+                "2": 1
+            },
+            "relations": [
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000": 46,
+                "001": 18,
+                "010": 13,
+                "011": 31,
+                "100": 223,
+                "101": 32,
+                "110": 123,
+                "111": 3
+            },
+            "time_taken": "509.978084 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 36,
+                "001": 30,
+                "010": 16,
+                "011": 37,
+                "100": 206,
+                "101": 41,
+                "110": 120,
+                "111": 3
+            },
+            "time_taken": "662.448833 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9996782013225001,
+            "statistic": 0.022494887525562373
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 55,
+                "001": 15,
+                "010": 16,
+                "011": 28,
+                "100": 212,
+                "101": 45,
+                "110": 110,
+                "111": 8
+            },
+            "result_original": {
+                "000": 55,
+                "001": 16,
+                "010": 212,
+                "011": 110,
+                "100": 15,
+                "101": 28,
+                "110": 45,
+                "111": 8
+            },
+            "time_taken": "21.226 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 52,
+                "001": 23,
+                "010": 16,
+                "011": 33,
+                "100": 211,
+                "101": 32,
+                "110": 116,
+                "111": 6
+            },
+            "time_taken": "21.031166 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999570800658317,
+            "statistic": 0.02044989775051125
+        }
+    }
+}

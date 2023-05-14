@@ -1,0 +1,65 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000010": 1156,
+                "10000010": 1615
+            },
+            "time_taken": "51.2255 ms"
+        },
+        "config": {
+            "relations": [
+                "InjectNullEffect",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "055640bb134c44dbae64163e71e44813",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "InjectNullEffect",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x1741b1610>",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000010": 1171,
+                "10000010": 1600
+            },
+            "time_taken": "18098.458542 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000010": 1144,
+                "10000010": 1627
+            },
+            "time_taken": "24.497583 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

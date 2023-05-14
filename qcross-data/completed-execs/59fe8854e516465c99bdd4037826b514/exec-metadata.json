@@ -1,0 +1,105 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 1941,
+                "00010000100": 1985,
+                "10010000000": 2016,
+                "10010000100": 1896
+            },
+            "time_taken": "4356.536041 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1966,
+                "00010000100": 1982,
+                "10010000000": 1920,
+                "10010000100": 1970
+            },
+            "time_taken": "80.946 ms"
+        },
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "InjectNullEffect",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8759554665249341,
+            "statistic": 0.009441183975503956
+        }
+    },
+    "prog_id": "59fe8854e516465c99bdd4037826b514",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "InjectNullEffect",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 1947,
+                "00010000100": 1964,
+                "10010000000": 1955,
+                "10010000100": 1972
+            },
+            "time_taken": "3091.31025 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1951,
+                "00010000100": 1939,
+                "10010000000": 1970,
+                "10010000100": 1978
+            },
+            "time_taken": "2198.48375 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0026792549119673387
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 2026,
+                "00010000100": 1935,
+                "10010000000": 1962,
+                "10010000100": 1915
+            },
+            "time_taken": "26.661041 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1942,
+                "00010000100": 1975,
+                "10010000000": 1963,
+                "10010000100": 1958
+            },
+            "time_taken": "29.209292 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7589947098676568,
+            "statistic": 0.010717019647869355
+        }
+    }
+}

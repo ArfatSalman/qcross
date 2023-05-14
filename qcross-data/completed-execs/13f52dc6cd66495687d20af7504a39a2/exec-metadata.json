@@ -1,0 +1,103 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 246,
+                "100": 243
+            },
+            "time_taken": "2.7695 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 231,
+                "100": 258
+            },
+            "time_taken": "2.892834 ms"
+        },
+        "config": {
+            "relations": [
+                "ChangeCouplingMap"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9757276166479697,
+            "statistic": 0.03067484662576687
+        }
+    },
+    "prog_id": "13f52dc6cd66495687d20af7504a39a2",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "ChangeCouplingMap"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000": 255,
+                "100": 234
+            },
+            "time_taken": "280.259458 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 249,
+                "100": 240
+            },
+            "time_taken": "1259.435417 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999757,
+            "statistic": 0.012269938650306749
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 261,
+                "100": 228
+            },
+            "time_taken": "8.393084 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 256,
+                "100": 233
+            },
+            "time_taken": "10.977083 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999999,
+            "statistic": 0.010224948875255624
+        }
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "000": 254,
+                "100": 235
+            },
+            "time_taken": "4.178042 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "SX",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": null,
+            "result": {
+                "000": 243,
+                "100": 246
+            },
+            "time_taken": "12.851917 ms"
+        },
+        "unitary": false
+    }
+}

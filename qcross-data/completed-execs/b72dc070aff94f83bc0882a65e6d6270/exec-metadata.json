@@ -1,0 +1,112 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 37,
+                "001": 101,
+                "010": 36,
+                "011": 118,
+                "100": 1,
+                "101": 27,
+                "110": 130,
+                "111": 39
+            },
+            "time_taken": "21.425958 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 41,
+                "001": 79,
+                "010": 37,
+                "011": 89,
+                "100": 3,
+                "101": 27,
+                "110": 174,
+                "111": 39
+            },
+            "time_taken": "6.258958 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_0a0a4b": 5.974354952564585,
+                "p_0ecc7a": 6.163759533339787,
+                "p_78601e": 4.167661441102218,
+                "p_91bcc8": 5.987304452123941
+            },
+            "relations": [
+                "ChangeBackend",
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.026357121839413068,
+            "statistic": 0.09406952965235174
+        }
+    },
+    "prog_id": "b72dc070aff94f83bc0882a65e6d6270",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_0a0a4b": 5.974354952564585,
+                "p_0ecc7a": 6.163759533339787,
+                "p_78601e": 4.167661441102218,
+                "p_91bcc8": 5.987304452123941
+            },
+            "relations": [
+                "ChangeBackend",
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x28da859d0>",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 45,
+                "001": 79,
+                "010": 40,
+                "011": 81,
+                "100": 1,
+                "101": 28,
+                "110": 163,
+                "111": 52
+            },
+            "time_taken": "27.452459 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 49,
+                "001": 83,
+                "010": 30,
+                "011": 110,
+                "100": 5,
+                "101": 31,
+                "110": 145,
+                "111": 36
+            },
+            "time_taken": "26.2135 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.18802837051759036,
+            "statistic": 0.06952965235173825
+        }
+    }
+}

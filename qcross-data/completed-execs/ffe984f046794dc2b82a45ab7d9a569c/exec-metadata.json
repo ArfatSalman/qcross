@@ -1,0 +1,83 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 1013,
+                "1001000": 946
+            },
+            "time_taken": "23.52625 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 965,
+                "1001000": 994
+            },
+            "time_taken": "18.413291 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_03ad92": 5.017245588344839,
+                "p_1464bc": 2.008796895454228,
+                "p_72766f": 3.2142159669963557,
+                "p_d5daad": 2.0099472182748075,
+                "p_fa5922": 4.229610589867865
+            },
+            "relations": [
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.5990178508259612,
+            "statistic": 0.02450229709035222
+        }
+    },
+    "prog_id": "ffe984f046794dc2b82a45ab7d9a569c",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_03ad92": 5.017245588344839,
+                "p_1464bc": 2.008796895454228,
+                "p_72766f": 3.2142159669963557,
+                "p_d5daad": 2.0099472182748075,
+                "p_fa5922": 4.229610589867865
+            },
+            "relations": [
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 942,
+                "1001000": 1017
+            },
+            "time_taken": "44896.633625 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "array is too big; `arr.size * arr.dtype.itemsize` is larger than the maximum possible size.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 975,
+                "1001000": 984
+            },
+            "time_taken": "482.236208 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

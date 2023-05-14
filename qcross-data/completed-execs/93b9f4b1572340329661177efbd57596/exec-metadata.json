@@ -1,0 +1,133 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0000": 313,
+                "0001": 48,
+                "0100": 290,
+                "0101": 41
+            },
+            "time_taken": "123.665167 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "0000": 292,
+                "0001": 61,
+                "0100": 289,
+                "0101": 50
+            },
+            "time_taken": "233.482667 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000": 299,
+                "0001": 49,
+                "0100": 283,
+                "0101": 61
+            },
+            "time_taken": "8.165583 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_0c155d": 5.897054719225356,
+                "p_201117": 6.163759533339787,
+                "p_3f3854": 4.066449154047175,
+                "p_47be8d": 5.154187354656876,
+                "p_8ca533": 2.3864521352475245,
+                "p_9c95f7": 5.987304452123941,
+                "p_eeece4": 0.5112149185250571
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "InjectParameters",
+                "InjectParameters",
+                "InjectNullEffect"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9078559425040169,
+            "statistic": 0.030346820809248554
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999939877861364,
+            "statistic": 0.015895953757225433
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9349920789826108,
+            "statistic": 0.028901734104046242
+        }
+    },
+    "prog_id": "93b9f4b1572340329661177efbd57596",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_0c155d": 5.897054719225356,
+                "p_201117": 6.163759533339787,
+                "p_3f3854": 4.066449154047175,
+                "p_47be8d": 5.154187354656876,
+                "p_8ca533": 2.3864521352475245,
+                "p_9c95f7": 5.987304452123941,
+                "p_eeece4": 0.5112149185250571
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectParameters",
+                "InjectParameters",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000": 303,
+                "0001": 41,
+                "0100": 292,
+                "0101": 56
+            },
+            "time_taken": "8811.939959 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "p_eeece4' is not defined in the current context",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Gate or opaque call to 'subcircuit' uses 8 qubits but is declared for 4 qubits line 11 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000": 289,
+                "0001": 58,
+                "0100": 296,
+                "0101": 49
+            },
+            "time_taken": "108.820166 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_0c155d), Parameter(p_8ca533), Parameter(p_9c95f7), Parameter(p_eeece4)])]",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

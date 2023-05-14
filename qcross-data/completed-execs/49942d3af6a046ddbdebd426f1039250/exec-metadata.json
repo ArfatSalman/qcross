@@ -1,0 +1,125 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01001": 162,
+                "01100": 68,
+                "01101": 139,
+                "11001": 337,
+                "11100": 5,
+                "11101": 268
+            },
+            "time_taken": "17.105125 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01001": 140,
+                "01100": 76,
+                "01101": 142,
+                "11001": 303,
+                "11100": 2,
+                "11101": 316
+            },
+            "time_taken": "8.371 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_1bb590": 1.0296448789776642,
+                "p_42b602": 5.708725119517347,
+                "p_98dc6e": 4.623446645668956,
+                "p_a8532b": 6.163759533339787,
+                "p_ac58f5": 0.07157463504881167,
+                "p_ce61f1": 4.229610589867865,
+                "p_d9b1ff": 3.865496458458116,
+                "p_dda1d3": 2.0099472182748075,
+                "p_e3b9a1": 5.398622178940033
+            },
+            "relations": [
+                "ChangeBackend",
+                "InjectParameters",
+                "InjectNullEffect",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.18997451041152855,
+            "statistic": 0.049029622063329927
+        }
+    },
+    "prog_id": "49942d3af6a046ddbdebd426f1039250",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_1bb590": 1.0296448789776642,
+                "p_42b602": 5.708725119517347,
+                "p_98dc6e": 4.623446645668956,
+                "p_a8532b": 6.163759533339787,
+                "p_ac58f5": 0.07157463504881167,
+                "p_ce61f1": 4.229610589867865,
+                "p_d9b1ff": 3.865496458458116,
+                "p_dda1d3": 2.0099472182748075,
+                "p_e3b9a1": 5.398622178940033
+            },
+            "relations": [
+                "ChangeBackend",
+                "InjectParameters",
+                "InjectNullEffect",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01001": 148,
+                "01100": 80,
+                "01101": 149,
+                "11001": 305,
+                "11100": 2,
+                "11101": 295
+            },
+            "time_taken": "1636.233167 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "01001": 159,
+                "01100": 67,
+                "01101": 150,
+                "11001": 305,
+                "11100": 2,
+                "11101": 296
+            },
+            "time_taken": "58.652542 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01001": 134,
+                "01100": 66,
+                "01101": 136,
+                "11001": 347,
+                "11100": 7,
+                "11101": 289
+            },
+            "time_taken": "18.800167 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.38743337184088217,
+            "statistic": 0.04085801838610827
+        }
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 1004,
+                "1001000": 955
+            },
+            "time_taken": "17.756584 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 961,
+                "1001000": 998
+            },
+            "time_taken": "17.879958 ms"
+        },
+        "config": {
+            "relations": [
+                "ChangeCouplingMap"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7329453291056233,
+            "statistic": 0.021949974476773864
+        }
+    },
+    "prog_id": "4a02520f51e4453194fd2ef9d6408159",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "ChangeCouplingMap"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 1005,
+                "1001000": 954
+            },
+            "time_taken": "44675.848166 ms"
+        },
+        "pyquil_source": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x1778ddee0>",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 992,
+                "1001000": 967
+            },
+            "time_taken": "55.138709 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 946,
+                "1001000": 1013
+            },
+            "time_taken": "441.298917 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.6527614129198124,
+            "statistic": 0.02348136804492088
+        }
+    }
+}

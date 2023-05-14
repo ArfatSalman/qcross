@@ -1,0 +1,86 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00": 101,
+                "01": 67,
+                "11": 178
+            },
+            "time_taken": "4.778792 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00": 100,
+                "01": 78,
+                "11": 168
+            },
+            "time_taken": "4.256542 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_2a440e": 5.987304452123941
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeCouplingMap"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9987517849671945,
+            "statistic": 0.028901734104046242
+        }
+    },
+    "prog_id": "0e4477e62bfc4459b94c27948fdc0bc4",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_2a440e": 5.987304452123941
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeCouplingMap"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00": 101,
+                "01": 79,
+                "11": 166
+            },
+            "time_taken": "333.339625 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00": 89,
+                "01": 80,
+                "11": 177
+            },
+            "time_taken": "19.366 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00": 102,
+                "01": 75,
+                "11": 169
+            },
+            "time_taken": "18.841875 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9679288733867641,
+            "statistic": 0.03757225433526012
+        }
+    }
+}

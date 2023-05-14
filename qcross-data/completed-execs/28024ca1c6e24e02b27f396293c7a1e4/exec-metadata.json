@@ -1,0 +1,141 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "100": 264,
+                "110": 105,
+                "111": 120
+            },
+            "time_taken": "32.1895 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "100": 247,
+                "110": 123,
+                "111": 119
+            },
+            "time_taken": "67.881708 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "100": 242,
+                "110": 109,
+                "111": 138
+            },
+            "time_taken": "2.837041 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9295014952908248,
+            "statistic": 0.034764826175869123
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.854644581075704,
+            "statistic": 0.03885480572597137
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7059793347858871,
+            "statistic": 0.044989775051124746
+        }
+    },
+    "prog_id": "28024ca1c6e24e02b27f396293c7a1e4",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "100": 253,
+                "110": 123,
+                "111": 113
+            },
+            "time_taken": "485.297459 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "100": 240,
+                "110": 121,
+                "111": 128
+            },
+            "time_taken": "1037.345833 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9757276166479697,
+            "statistic": 0.03067484662576687
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Gate or opaque call to 'subcircuit' uses 6 qubits but is declared for 3 qubits line 11 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "100": 250,
+                "110": 118,
+                "111": 121
+            },
+            "time_taken": "12.437875 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "100": 251,
+                "110": 124,
+                "111": 114
+            },
+            "time_taken": "30.986375 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.9999999998161845,
+            "statistic": 0.014314928425357873
+        },
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "100": 247,
+                "110": 123,
+                "111": 119
+            },
+            "time_taken": "37.854584 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "SX",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Gate or opaque call to 'subcircuit' uses 6 qubits but is declared for 3 qubits line 11 file ",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

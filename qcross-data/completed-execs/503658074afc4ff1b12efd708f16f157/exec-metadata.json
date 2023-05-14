@@ -1,0 +1,171 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01001": 87,
+                "01011": 70,
+                "01100": 63,
+                "01101": 71,
+                "01111": 63,
+                "11001": 155,
+                "11011": 163,
+                "11100": 6,
+                "11101": 146,
+                "11111": 155
+            },
+            "time_taken": "10.362458 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01001": 76,
+                "01011": 75,
+                "01100": 60,
+                "01101": 81,
+                "01111": 61,
+                "11001": 146,
+                "11011": 185,
+                "11100": 2,
+                "11101": 147,
+                "11111": 146
+            },
+            "time_taken": "10.216333 ms"
+        },
+        "config": {
+            "relations": [
+                "AddUnusedRegister",
+                "AddUnusedRegister",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.99999954320319,
+            "statistic": 0.012257405515832482
+        }
+    },
+    "prog_id": "503658074afc4ff1b12efd708f16f157",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "AddUnusedRegister",
+                "AddUnusedRegister",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "01001": 66,
+                "01011": 76,
+                "01100": 72,
+                "01101": 74,
+                "01111": 77,
+                "11001": 159,
+                "11011": 148,
+                "11100": 1,
+                "11101": 144,
+                "11111": 162
+            },
+            "time_taken": "1069.973584 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01001": 79,
+                "01011": 74,
+                "01100": 72,
+                "01101": 58,
+                "01111": 58,
+                "11001": 168,
+                "11011": 168,
+                "11101": 144,
+                "11111": 158
+            },
+            "time_taken": "1120.396166 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9304612314260128,
+            "statistic": 0.024514811031664963
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "01001": 67,
+                "01011": 79,
+                "01100": 92,
+                "01101": 71,
+                "01111": 72,
+                "11001": 140,
+                "11011": 175,
+                "11100": 2,
+                "11101": 139,
+                "11111": 142
+            },
+            "time_taken": "23.612708 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01001": 67,
+                "01011": 65,
+                "01100": 86,
+                "01101": 65,
+                "01111": 66,
+                "11001": 169,
+                "11011": 158,
+                "11100": 2,
+                "11101": 164,
+                "11111": 137
+            },
+            "time_taken": "23.925958 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.6726576189942625,
+            "statistic": 0.03268641470888662
+        }
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "01001": 59,
+                "01011": 76,
+                "01100": 75,
+                "01101": 61,
+                "01111": 92,
+                "11001": 157,
+                "11011": 154,
+                "11100": 1,
+                "11101": 166,
+                "11111": 138
+            },
+            "time_taken": "13.470708 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "SX",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": null,
+            "result": {
+                "01001": 72,
+                "01011": 69,
+                "01100": 79,
+                "01101": 71,
+                "01111": 61,
+                "11001": 155,
+                "11011": 151,
+                "11100": 2,
+                "11101": 136,
+                "11111": 183
+            },
+            "time_taken": "1432.548917 ms"
+        }
+    }
+}

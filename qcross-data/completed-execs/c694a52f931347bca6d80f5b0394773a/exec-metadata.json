@@ -1,38 +1,103 @@
 {
-    "prog_id": "c694a52f931347bca6d80f5b0394773a",
-    "unitary": {
-        "cirq_unitary": {
+    "cirq": {
+        "cirq_followup": {
             "exception": null,
             "result": {
-                "000": 177,
-                "001": 47,
+                "000": 147,
+                "001": 52,
                 "010": 1,
-                "011": 30,
-                "100": 32,
+                "011": 26,
+                "100": 26,
                 "101": 99,
-                "110": 27,
-                "111": 76
+                "110": 54,
+                "111": 84
             },
-            "time_taken": "163.598583 ms"
+            "time_taken": "108.543667 ms"
         },
-        "pyquil_unitary": {
-            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: DECLARE ro BIT[3]",
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 186,
+                "001": 35,
+                "010": 3,
+                "011": 24,
+                "100": 34,
+                "101": 103,
+                "110": 27,
+                "111": 77
+            },
+            "time_taken": "14.876958 ms"
+        },
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeOptLevel"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.0891455465560008,
+            "statistic": 0.07975460122699386
+        }
+    },
+    "prog_id": "c694a52f931347bca6d80f5b0394773a",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeOptLevel"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "[Errno 61] Connection refused",
             "result": null,
             "time_taken": null
         },
-        "qiskit_unitary": {
+        "pyquil_source": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
             "exception": null,
             "result": {
-                "000": 169,
-                "001": 32,
-                "010": 4,
-                "011": 28,
-                "100": 46,
-                "101": 100,
-                "110": 40,
-                "111": 70
+                "000": 166,
+                "001": 52,
+                "011": 33,
+                "100": 31,
+                "101": 94,
+                "110": 30,
+                "111": 83
             },
-            "time_taken": "91.123834 ms"
+            "time_taken": "24.626708 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 172,
+                "001": 49,
+                "010": 2,
+                "011": 27,
+                "100": 33,
+                "101": 91,
+                "110": 29,
+                "111": 86
+            },
+            "time_taken": "69.034709 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999757,
+            "statistic": 0.012269938650306749
         }
     }
 }

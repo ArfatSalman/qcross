@@ -1,0 +1,111 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 2720,
+                "0100000100": 2822
+            },
+            "time_taken": "281.31775 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "0100000000": 2794,
+                "0100000100": 2748
+            },
+            "time_taken": "5376.897958 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2821,
+                "0100000100": 2721
+            },
+            "time_taken": "54.664209 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "InjectNullEffect",
+                "AddUnusedRegister",
+                "ToQasmAndBack"
+            ],
+            "unused_registers": true
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.7064778819803496,
+            "statistic": 0.01335258029592205
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999309545938,
+            "statistic": 0.004871887405268856
+        },
+        "source_followup_divergence": {
+            "p-value": 0.31617445524201737,
+            "statistic": 0.018224467701190905
+        }
+    },
+    "prog_id": "44d396f86b5745eab8311aed2928d9cc",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectNullEffect",
+                "AddUnusedRegister",
+                "ToQasmAndBack"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 2792,
+                "0100000100": 2750
+            },
+            "time_taken": "10883.309333 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2740,
+                "0100000100": 2802
+            },
+            "time_taken": "3200.501834 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9677262223885865,
+            "statistic": 0.009382894261999277
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2735,
+                "0100000100": 2807
+            },
+            "time_taken": "32.58725 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

@@ -1,0 +1,37 @@
+# SECTION
+# NAME: PROLOGUE
+
+import qiskit
+from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
+from qiskit.circuit.library.standard_gates import *
+from qiskit.circuit import Parameter
+# SECTION
+# NAME: CIRCUIT
+
+qr = QuantumRegister(7, name='qr')
+cr = ClassicalRegister(7, name='cr')
+qc = QuantumCircuit(qr, cr, name='qc')
+qc.append(RZGate(6.163759533339787), qargs=[qr[4]], cargs=[])
+qc.append(ZGate(), qargs=[qr[6]], cargs=[])
+qc.append(XGate(), qargs=[qr[3]], cargs=[])
+qc.append(CRXGate(2.0099472182748075), qargs=[qr[2], qr[5]], cargs=[])
+qc.append(C3SXGate(), qargs=[qr[6], qr[0], qr[1], qr[2]], cargs=[])
+qc.append(CHGate(), qargs=[qr[4], qr[6]], cargs=[])
+qc.append(C3SXGate(), qargs=[qr[0], qr[2], qr[1], qr[5]], cargs=[])
+# SECTION
+# NAME: MEASUREMENT
+
+qc.measure(qr, cr)
+# SECTION
+# NAME: OPTIMIZATION_LEVEL
+from qiskit import transpile
+qc = transpile(qc, basis_gates=None, optimization_level=2, coupling_map=[[0,
+    1], [0, 3], [0, 6], [1, 0], [1, 4], [1, 5], [2, 4], [3, 0], [4, 1], [4,
+    2], [5, 1], [5, 7], [6, 0], [7, 5]])
+# SECTION
+# NAME: EXECUTION
+
+from qiskit import Aer, transpile, execute
+backend_bd2968141f974029b04053dbeacc75b4 = Aer.get_backend('aer_simulator')
+counts = execute(qc, backend=backend_bd2968141f974029b04053dbeacc75b4, shots=1959).result().get_counts(qc)
+RESULT = counts

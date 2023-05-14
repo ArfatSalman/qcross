@@ -1,0 +1,83 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "183.680417 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "9.603291 ms"
+        },
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "4cb9b57f99364fc5ab673e7e027586cd",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "14257.460083 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "4902.647458 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "49.035791 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "20.548458 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0000": 151,
+                "0001": 175,
+                "0100": 166,
+                "0101": 200
+            },
+            "time_taken": "8.583542 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000": 143,
+                "0001": 197,
+                "0100": 168,
+                "0101": 184
+            },
+            "time_taken": "8.902542 ms"
+        },
+        "config": {
+            "relations": [
+                "ChangeCouplingMap"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9926828785368897,
+            "statistic": 0.023121387283236993
+        }
+    },
+    "prog_id": "cc24535ed1934abfb726e11a2baafa74",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "ChangeCouplingMap"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0000": 157,
+                "0001": 181,
+                "0100": 160,
+                "0101": 194
+            },
+            "time_taken": "9519.892833 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000": 174,
+                "0001": 205,
+                "0100": 143,
+                "0101": 170
+            },
+            "time_taken": "11922.041083 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.17615647223574657,
+            "statistic": 0.059248554913294796
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0000": 148,
+                "0001": 202,
+                "0100": 146,
+                "0101": 196
+            },
+            "time_taken": "61.492917 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000": 152,
+                "0001": 191,
+                "0100": 149,
+                "0101": 200
+            },
+            "time_taken": "122.763041 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.999999999999993,
+            "statistic": 0.010115606936416185
+        }
+    }
+}

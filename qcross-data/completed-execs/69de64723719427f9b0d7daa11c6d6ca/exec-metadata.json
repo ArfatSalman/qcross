@@ -1,0 +1,195 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 43,
+                "001": 18,
+                "010": 14,
+                "011": 41,
+                "100": 225,
+                "101": 24,
+                "110": 123,
+                "111": 1
+            },
+            "time_taken": "97.64225 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "000": 48,
+                "001": 16,
+                "010": 16,
+                "011": 35,
+                "100": 212,
+                "101": 38,
+                "110": 120,
+                "111": 4
+            },
+            "time_taken": "136.938417 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 40,
+                "001": 13,
+                "010": 18,
+                "011": 32,
+                "100": 225,
+                "101": 37,
+                "110": 121,
+                "111": 3
+            },
+            "time_taken": "3.428708 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeOptLevel",
+                "AddUnusedRegister",
+                "InjectNullEffect"
+            ],
+            "unused_registers": true
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9882744111175525,
+            "statistic": 0.028629856850715747
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9985349688638121,
+            "statistic": 0.024539877300613498
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9952983606963471,
+            "statistic": 0.026584867075664622
+        }
+    },
+    "prog_id": "69de64723719427f9b0d7daa11c6d6ca",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeOptLevel",
+                "AddUnusedRegister",
+                "InjectNullEffect"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000": 35,
+                "001": 12,
+                "010": 16,
+                "011": 34,
+                "100": 241,
+                "101": 37,
+                "110": 108,
+                "111": 6
+            },
+            "time_taken": "779.042792 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 38,
+                "001": 19,
+                "010": 11,
+                "011": 29,
+                "100": 217,
+                "101": 46,
+                "110": 121,
+                "111": 8
+            },
+            "time_taken": "652.462625 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.5984096532139881,
+            "statistic": 0.049079754601226995
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Gate or opaque call to 'subcircuit' uses 6 qubits but is declared for 3 qubits line 16 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 39,
+                "001": 25,
+                "010": 10,
+                "011": 46,
+                "100": 211,
+                "101": 29,
+                "110": 125,
+                "111": 4
+            },
+            "time_taken": "16.068458 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "000": 36,
+                "001": 14,
+                "010": 22,
+                "011": 40,
+                "100": 221,
+                "101": 45,
+                "110": 108,
+                "111": 3
+            },
+            "time_taken": "56.222666 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.8953471843132854,
+            "statistic": 0.03680981595092025
+        },
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "000": 42,
+                "001": 15,
+                "010": 6,
+                "011": 35,
+                "100": 218,
+                "101": 37,
+                "110": 130,
+                "111": 6
+            },
+            "time_taken": "101.535667 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: PRAGMA INITIAL_REWIRING \"GREEDY",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Gate or opaque call to 'subcircuit' uses 6 qubits but is declared for 3 qubits line 16 file ",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

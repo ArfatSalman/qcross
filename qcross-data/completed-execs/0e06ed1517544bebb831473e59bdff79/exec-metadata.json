@@ -1,0 +1,89 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 996,
+                "1001000": 963
+            },
+            "time_taken": "18.526 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 967,
+                "1001000": 992
+            },
+            "time_taken": "18.99525 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_569154": 6.163759533339787,
+                "p_bf1a11": 4.229610589867865,
+                "p_ed6805": 2.0099472182748075
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeTargetBasis",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9827841947805601,
+            "statistic": 0.014803471158754467
+        }
+    },
+    "prog_id": "0e06ed1517544bebb831473e59bdff79",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_569154": 6.163759533339787,
+                "p_bf1a11": 4.229610589867865,
+                "p_ed6805": 2.0099472182748075
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeTargetBasis",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 947,
+                "1001000": 1012
+            },
+            "time_taken": "42733.901541 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 996,
+                "1001000": 963
+            },
+            "time_taken": "98.755041 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 1011,
+                "1001000": 948
+            },
+            "time_taken": "292.409917 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999952948019,
+            "statistic": 0.007656967840735069
+        }
+    }
+}

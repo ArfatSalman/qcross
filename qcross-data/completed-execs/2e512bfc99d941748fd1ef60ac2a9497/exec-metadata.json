@@ -1,0 +1,81 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 262,
+                "100": 227
+            },
+            "time_taken": "3.057 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 266,
+                "100": 223
+            },
+            "time_taken": "3.444667 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeTargetBasis",
+                "ChangeBackend",
+                "ChangeTargetBasis",
+                "ChangeTargetBasis"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999994,
+            "statistic": 0.0081799591002045
+        }
+    },
+    "prog_id": "2e512bfc99d941748fd1ef60ac2a9497",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeTargetBasis",
+                "ChangeBackend",
+                "ChangeTargetBasis",
+                "ChangeTargetBasis"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000": 243,
+                "100": 246
+            },
+            "time_taken": "182.832958 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 242,
+                "100": 247
+            },
+            "time_taken": "212.75425 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999998,
+            "statistic": 0.002044989775051125
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Unable to map source basis {('rz', 1), ('measure', 1), ('ch', 2), ('sxdg', 1)} to target basis {'measure', 'delay', 'h', 'barrier', 'snapshot', 'ccx', 'reset'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x15fdc3790>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 220,
+                "100": 269
+            },
+            "time_taken": "7.594334 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

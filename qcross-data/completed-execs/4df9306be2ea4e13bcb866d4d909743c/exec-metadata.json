@@ -1,0 +1,103 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "Simulator doesn't support <bloqs.ext.cirq.gates.U2Gate object at 0x28ee83e80>.on(cirq.NamedQubit('q10'))",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1932,
+                "00010000100": 1970,
+                "10010000000": 1949,
+                "10010000100": 1987
+            },
+            "time_taken": "84.860042 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_2d91b4": 2.5163050709890156,
+                "p_523a69": 4.028174522740928,
+                "p_6737bd": 4.2641612072511235,
+                "p_7f3871": 4.214504315296764,
+                "p_89415d": 3.950837470808744,
+                "p_9cb6f3": 4.6235667602042065,
+                "p_a51026": 5.0063780207098425,
+                "p_b168d0": 4.229610589867865,
+                "p_c146ca": 6.163759533339787,
+                "p_e5e707": 2.1276323672732023
+            },
+            "relations": [
+                "InjectParameters",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "4df9306be2ea4e13bcb866d4d909743c",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_2d91b4": 2.5163050709890156,
+                "p_523a69": 4.028174522740928,
+                "p_6737bd": 4.2641612072511235,
+                "p_7f3871": 4.214504315296764,
+                "p_89415d": 3.950837470808744,
+                "p_9cb6f3": 4.6235667602042065,
+                "p_a51026": 5.0063780207098425,
+                "p_b168d0": 4.229610589867865,
+                "p_c146ca": 6.163759533339787,
+                "p_e5e707": 2.1276323672732023
+            },
+            "relations": [
+                "InjectParameters",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 2000,
+                "00010000100": 1979,
+                "10010000000": 1902,
+                "10010000100": 1957
+            },
+            "time_taken": "2775.110709 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 1917,
+                "00010000100": 1953,
+                "10010000000": 2000,
+                "10010000100": 1968
+            },
+            "time_taken": "37.85425 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1915,
+                "00010000100": 1998,
+                "10010000000": 1950,
+                "10010000100": 1975
+            },
+            "time_taken": "37.5565 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9997911849614837,
+            "statistic": 0.005486093391171217
+        }
+    }
+}

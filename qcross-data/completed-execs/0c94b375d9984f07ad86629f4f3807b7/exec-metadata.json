@@ -1,0 +1,127 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000010000": 951,
+                "0000010001": 166,
+                "0000010100": 105,
+                "0000010101": 173,
+                "0100010000": 933,
+                "0100010001": 180,
+                "0100010100": 110,
+                "0100010101": 175,
+                "1000010000": 928,
+                "1000010001": 175,
+                "1000010100": 99,
+                "1000010101": 201,
+                "1100010000": 928,
+                "1100010001": 165,
+                "1100010100": 92,
+                "1100010101": 161
+            },
+            "time_taken": "59.739584 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend",
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "0c94b375d9984f07ad86629f4f3807b7",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0000010000": 943,
+                "0000010001": 171,
+                "0000010100": 95,
+                "0000010101": 181,
+                "0100010000": 922,
+                "0100010001": 165,
+                "0100010100": 114,
+                "0100010101": 153,
+                "1000010000": 952,
+                "1000010001": 173,
+                "1000010100": 96,
+                "1000010101": 213,
+                "1100010000": 911,
+                "1100010001": 186,
+                "1100010100": 105,
+                "1100010101": 162
+            },
+            "time_taken": "6501.527875 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000010000": 905,
+                "0000010001": 172,
+                "0000010100": 120,
+                "0000010101": 164,
+                "0100010000": 959,
+                "0100010001": 159,
+                "0100010100": 110,
+                "0100010101": 201,
+                "1000010000": 898,
+                "1000010001": 172,
+                "1000010100": 113,
+                "1000010101": 177,
+                "1100010000": 918,
+                "1100010001": 167,
+                "1100010100": 103,
+                "1100010101": 204
+            },
+            "time_taken": "4584.180375 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9910549923004017,
+            "statistic": 0.008300252616383976
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000010000": 952,
+                "0000010001": 171,
+                "0000010100": 89,
+                "0000010101": 191,
+                "0100010000": 919,
+                "0100010001": 171,
+                "0100010100": 100,
+                "0100010101": 182,
+                "1000010000": 913,
+                "1000010001": 169,
+                "1000010100": 108,
+                "1000010101": 178,
+                "1100010000": 937,
+                "1100010001": 152,
+                "1100010100": 113,
+                "1100010101": 197
+            },
+            "time_taken": "255.075667 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

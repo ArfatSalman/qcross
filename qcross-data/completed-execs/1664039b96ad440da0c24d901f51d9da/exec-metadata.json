@@ -1,0 +1,99 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 478,
+                "1000100": 478,
+                "1001000": 491,
+                "1001100": 512
+            },
+            "time_taken": "28.606291 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 495,
+                "1000100": 493,
+                "1001000": 490,
+                "1001100": 481
+            },
+            "time_taken": "20.033333 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeBackend",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.956383183285417,
+            "statistic": 0.01633486472690148
+        }
+    },
+    "prog_id": "1664039b96ad440da0c24d901f51d9da",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeBackend",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 485,
+                "1000100": 508,
+                "1001000": 478,
+                "1001100": 488
+            },
+            "time_taken": "70048.678083 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 508,
+                "1000100": 470,
+                "1001000": 503,
+                "1001100": 478
+            },
+            "time_taken": "72623.9345 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9992713003518545,
+            "statistic": 0.01174068402246044
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 490,
+                "1000100": 494,
+                "1001000": 466,
+                "1001100": 509
+            },
+            "time_taken": "1239.843 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 508,
+                "1000100": 509,
+                "1001000": 460,
+                "1001100": 482
+            },
+            "time_taken": "1222.616583 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9439279126861227,
+            "statistic": 0.016845329249617153
+        }
+    }
+}

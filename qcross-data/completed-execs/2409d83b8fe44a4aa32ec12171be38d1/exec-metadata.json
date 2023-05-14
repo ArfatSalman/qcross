@@ -1,0 +1,154 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 33,
+                "001": 14,
+                "010": 7,
+                "011": 31,
+                "100": 250,
+                "101": 34,
+                "110": 119,
+                "111": 1
+            },
+            "time_taken": "54.709541 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "000": 49,
+                "001": 19,
+                "010": 13,
+                "011": 29,
+                "100": 230,
+                "101": 38,
+                "110": 108,
+                "111": 3
+            },
+            "time_taken": "74.524416 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 37,
+                "001": 17,
+                "010": 11,
+                "011": 38,
+                "100": 213,
+                "101": 35,
+                "110": 128,
+                "111": 10
+            },
+            "time_taken": "4.324375 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "InjectNullEffect",
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.4456221007762617,
+            "statistic": 0.05521472392638037
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.4456221007762617,
+            "statistic": 0.05521472392638037
+        },
+        "source_followup_divergence": {
+            "p-value": 0.854644581075704,
+            "statistic": 0.03885480572597137
+        }
+    },
+    "prog_id": "2409d83b8fe44a4aa32ec12171be38d1",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectNullEffect",
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000": 41,
+                "001": 13,
+                "010": 9,
+                "011": 39,
+                "100": 235,
+                "101": 36,
+                "110": 109,
+                "111": 7
+            },
+            "time_taken": "636.725709 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 42,
+                "001": 17,
+                "010": 19,
+                "011": 34,
+                "100": 225,
+                "101": 31,
+                "110": 117,
+                "111": 4
+            },
+            "time_taken": "1582.987542 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9757276166479697,
+            "statistic": 0.03067484662576687
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Gate or opaque call to 'subcircuit' uses 6 qubits but is declared for 3 qubits line 11 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 35,
+                "001": 20,
+                "010": 15,
+                "011": 50,
+                "100": 212,
+                "101": 22,
+                "110": 132,
+                "111": 3
+            },
+            "time_taken": "18.524167 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "000": 38,
+                "001": 20,
+                "010": 16,
+                "011": 25,
+                "100": 230,
+                "101": 39,
+                "110": 121
+            },
+            "time_taken": "37.488709 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.758549383533953,
+            "statistic": 0.04294478527607362
+        },
+        "source_followup_divergence": null
+    }
+}

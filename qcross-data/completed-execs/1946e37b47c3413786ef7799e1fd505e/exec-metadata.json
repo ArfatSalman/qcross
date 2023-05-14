@@ -1,0 +1,82 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00000000": 2771
+            },
+            "time_taken": "26.921208 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00000000": 2771
+            },
+            "time_taken": "28.303625 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_97fd86": 6.163759533339787
+            },
+            "relations": [
+                "ChangeCouplingMap",
+                "InjectParameters",
+                "ChangeBackend",
+                "ChangeBackend"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "1946e37b47c3413786ef7799e1fd505e",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_97fd86": 6.163759533339787
+            },
+            "relations": [
+                "ChangeCouplingMap",
+                "InjectParameters",
+                "ChangeBackend",
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00000000": 2771
+            },
+            "time_taken": "1247.675458 ms"
+        },
+        "pyquil_source": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x28ec37510>",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00000000": 2771
+            },
+            "time_taken": "7.408833 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00000000": 2771
+            },
+            "time_taken": "7.684833 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

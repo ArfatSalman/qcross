@@ -1,0 +1,101 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000000": 662,
+                "000001": 673,
+                "100000": 23,
+                "100001": 27
+            },
+            "time_taken": "52.216708 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000": 659,
+                "000001": 674,
+                "100000": 31,
+                "100001": 21
+            },
+            "time_taken": "12.985875 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_384a3b": 5.887184334931191
+            },
+            "qubit_order": {
+                "0": 4,
+                "1": 5,
+                "2": 2,
+                "3": 0,
+                "4": 1,
+                "5": 3
+            },
+            "relations": [
+                "InjectParameters",
+                "InjectNullEffect",
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.004332129963898917
+        }
+    },
+    "prog_id": "988049eb5d4e4c1484f8fac0a7291462",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_384a3b": 5.887184334931191
+            },
+            "qubit_order": {
+                "0": 4,
+                "1": 5,
+                "2": 2,
+                "3": 0,
+                "4": 1,
+                "5": 3
+            },
+            "relations": [
+                "InjectParameters",
+                "InjectNullEffect",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000000": 690,
+                "000001": 633,
+                "100000": 39,
+                "100001": 23
+            },
+            "time_taken": "8381.936917 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "array is too big; `arr.size * arr.dtype.itemsize` is larger than the maximum possible size.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000": 674,
+                "000001": 668,
+                "100000": 21,
+                "100001": 22
+            },
+            "time_taken": "128.429583 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

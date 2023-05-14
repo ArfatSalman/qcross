@@ -1,0 +1,166 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 160,
+                "1000100": 171,
+                "1001000": 136,
+                "1001100": 141,
+                "1010000": 326,
+                "1010100": 340,
+                "1011000": 367,
+                "1011100": 318
+            },
+            "time_taken": "738.4095 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "1000000": 154,
+                "1000100": 156,
+                "1001000": 176,
+                "1001100": 129,
+                "1010000": 344,
+                "1010100": 327,
+                "1011000": 378,
+                "1011100": 295
+            },
+            "time_taken": "389.713208 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 166,
+                "1000100": 150,
+                "1001000": 157,
+                "1001100": 132,
+                "1010000": 366,
+                "1010100": 311,
+                "1011000": 353,
+                "1011100": 324
+            },
+            "time_taken": "16.404584 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect",
+                "ChangeBackend",
+                "ChangeBackend"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9972663599533912,
+            "statistic": 0.012761613067891782
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9827841947805601,
+            "statistic": 0.014803471158754467
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8759522957476942,
+            "statistic": 0.018887187340479835
+        }
+    },
+    "prog_id": "bc2b5814321d4214829697d091557606",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect",
+                "ChangeBackend",
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x2a307b610>",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 6, file .\\nPrevious occurrence at line 5, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 145,
+                "1000100": 164,
+                "1001000": 146,
+                "1001100": 147,
+                "1010000": 366,
+                "1010100": 326,
+                "1011000": 339,
+                "1011100": 326
+            },
+            "time_taken": "65.379541 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "1000000": 146,
+                "1000100": 142,
+                "1001000": 134,
+                "1001100": 148,
+                "1010000": 323,
+                "1010100": 371,
+                "1011000": 348,
+                "1011100": 347
+            },
+            "time_taken": "289.740833 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.11322657577905987,
+            "statistic": 0.03828483920367534
+        },
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "1000000": 152,
+                "1000100": 136,
+                "1001000": 157,
+                "1001100": 130,
+                "1010000": 344,
+                "1010100": 346,
+                "1011000": 350,
+                "1011100": 344
+            },
+            "time_taken": "490.336667 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "SX",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 6, file .\\nPrevious occurrence at line 5, file ",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

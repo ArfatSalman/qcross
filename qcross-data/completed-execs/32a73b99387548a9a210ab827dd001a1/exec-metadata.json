@@ -1,0 +1,151 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "cirq.apply_unitaries failed. There was a non-unitary value in the `unitary_values` list.\n\nnon-unitary value type: <class 'cirq.ops.gate_operation.GateOperation'>\nnon-unitary value: <bloqs.ext.cirq.gates.U2Gate object at 0x28ec33810>.on(cirq.NamedQubit('q8'))",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 840,
+                "0100000001": 356,
+                "0100000100": 1237,
+                "0100000101": 349,
+                "1100000000": 805,
+                "1100000001": 345,
+                "1100000100": 1253,
+                "1100000101": 357
+            },
+            "time_taken": "48.348125 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_532c13": 2.5163050709890156,
+                "p_96cba0": 2.586208953975239,
+                "p_fc0ce7": 4.2641612072511235
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "qubit_order": {
+                "0": 2,
+                "1": 5,
+                "2": 8,
+                "3": 0,
+                "4": 1,
+                "5": 3,
+                "6": 7,
+                "7": 9,
+                "8": 6,
+                "9": 4
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "InjectParameters",
+                "AddUnusedRegister",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "32a73b99387548a9a210ab827dd001a1",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_532c13": 2.5163050709890156,
+                "p_96cba0": 2.586208953975239,
+                "p_fc0ce7": 4.2641612072511235
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "qubit_order": {
+                "0": 2,
+                "1": 5,
+                "2": 8,
+                "3": 0,
+                "4": 1,
+                "5": 3,
+                "6": 7,
+                "7": 9,
+                "8": 6,
+                "9": 4
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "InjectParameters",
+                "AddUnusedRegister",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 837,
+                "0100000001": 349,
+                "0100000100": 1240,
+                "0100000101": 390,
+                "1100000000": 816,
+                "1100000001": 339,
+                "1100000100": 1238,
+                "1100000101": 333
+            },
+            "time_taken": "2863.608875 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 809,
+                "0100000001": 364,
+                "0100000100": 1274,
+                "0100000101": 342,
+                "1100000000": 809,
+                "1100000001": 383,
+                "1100000100": 1195,
+                "1100000101": 366
+            },
+            "result_original": {
+                "0001000000": 809,
+                "0001000100": 364,
+                "0001010000": 809,
+                "0001010100": 383,
+                "0101000000": 1274,
+                "0101000100": 342,
+                "0101010000": 1195,
+                "0101010100": 366
+            },
+            "time_taken": "21.309625 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 780,
+                "0100000001": 363,
+                "0100000100": 1295,
+                "0100000101": 337,
+                "1100000000": 875,
+                "1100000001": 322,
+                "1100000100": 1237,
+                "1100000101": 333
+            },
+            "time_taken": "35.396792 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9677262223885865,
+            "statistic": 0.009382894261999277
+        }
+    }
+}

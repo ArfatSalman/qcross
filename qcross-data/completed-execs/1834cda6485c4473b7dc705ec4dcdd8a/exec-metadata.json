@@ -1,0 +1,147 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 1940,
+                "00010000100": 1962,
+                "10010000000": 1982,
+                "10010000100": 1954
+            },
+            "time_taken": "137.234375 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00010000000": 1973,
+                "00010000100": 1947,
+                "10010000000": 1959,
+                "10010000100": 1959
+            },
+            "time_taken": "3713.64 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 2000,
+                "00010000100": 1910,
+                "10010000000": 1900,
+                "10010000100": 2028
+            },
+            "time_taken": "88.561417 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999998169056241,
+            "statistic": 0.004210257718805818
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9217326313220459,
+            "statistic": 0.008803266139321255
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8759554665249341,
+            "statistic": 0.009441183975503956
+        }
+    },
+    "prog_id": "1834cda6485c4473b7dc705ec4dcdd8a",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 2015,
+                "00010000100": 1951,
+                "10010000000": 1961,
+                "10010000100": 1911
+            },
+            "time_taken": "2955.23325 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1912,
+                "00010000100": 1936,
+                "10010000000": 1971,
+                "10010000100": 2019
+            },
+            "time_taken": "2705.139167 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.33684414601087814,
+            "statistic": 0.015054860933911712
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": {
+            "p-value": 0.5990879376791528,
+            "statistic": 0.012248022454707833
+        },
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "00010000000": 1989,
+                "00010000100": 2030,
+                "10010000000": 1937,
+                "10010000100": 1882
+            },
+            "time_taken": "63.697041 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 0.9999995022063555,
+            "statistic": 0.004337841286042358
+        },
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 2001,
+                "00010000100": 1922,
+                "10010000000": 2034,
+                "10010000100": 1881
+            },
+            "time_taken": "66.297625 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 2001,
+                "00010000100": 1984,
+                "10010000000": 1939,
+                "10010000100": 1914
+            },
+            "time_taken": "37.71975 ms"
+        },
+        "qpy_followup_divergence": {
+            "p-value": 0.9997911849614837,
+            "statistic": 0.005486093391171217
+        },
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "00010000000": 2001,
+                "00010000100": 1917,
+                "10010000000": 1996,
+                "10010000100": 1924
+            },
+            "time_taken": "63.471333 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.9369851796502063,
+            "statistic": 0.008548099004848176
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9669541704475777,
+            "statistic": 0.007910181168665476
+        }
+    }
+}

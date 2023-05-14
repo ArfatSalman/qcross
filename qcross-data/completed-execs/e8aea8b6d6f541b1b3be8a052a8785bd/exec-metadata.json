@@ -1,0 +1,93 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "Wrong number of qubits for <cirq.ControlledGate(sub_gate=cirq.X, num_controls=3)>. Expected 4 qubits but got <(5.94477504571567,)>.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "10.2925 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_830596": 2.3864521352475245,
+                "p_a95f84": 0.5112149185250571,
+                "p_b2df8c": 5.897054719225356,
+                "p_e2029e": 5.987304452123941,
+                "p_fa1a24": 6.163759533339787
+            },
+            "relations": [
+                "InjectParameters",
+                "InjectParameters",
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "e8aea8b6d6f541b1b3be8a052a8785bd",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_830596": 2.3864521352475245,
+                "p_a95f84": 0.5112149185250571,
+                "p_b2df8c": 5.897054719225356,
+                "p_e2029e": 5.987304452123941,
+                "p_fa1a24": 6.163759533339787
+            },
+            "relations": [
+                "InjectParameters",
+                "InjectParameters",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "11471.375542 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "68.982417 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": "Wrong number of qubits for <cirq.ControlledGate(sub_gate=cirq.X, num_controls=3)>. Expected 4 qubits but got <(5.94477504571567,)>.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: DECLARE p_830596 REAL[1]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

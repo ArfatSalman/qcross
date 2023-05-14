@@ -1,0 +1,75 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0000000000": 5542
+            },
+            "time_taken": "76.36875 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000000000": 5542
+            },
+            "time_taken": "74.927125 ms"
+        },
+        "config": {
+            "relations": [
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "17d446fe712443839623de19a5e22375",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0000000000": 5542
+            },
+            "time_taken": "743.046333 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000000000": 5542
+            },
+            "time_taken": "728.854541 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0000000000": 5542
+            },
+            "time_taken": "8.696792 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000000000": 5542
+            },
+            "time_taken": "9.329625 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

@@ -1,0 +1,150 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 1903,
+                "0100000001": 341,
+                "0100000100": 183,
+                "0100000101": 389,
+                "1100000000": 1818,
+                "1100000001": 329,
+                "1100000100": 222,
+                "1100000101": 357
+            },
+            "time_taken": "48.729334 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 1883,
+                "0100000001": 334,
+                "0100000100": 227,
+                "0100000101": 399,
+                "1100000000": 1816,
+                "1100000001": 305,
+                "1100000100": 221,
+                "1100000101": 357
+            },
+            "time_taken": "48.531875 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_1f1cd8": 5.023617931957853,
+                "p_38c5ce": 5.080799300534071,
+                "p_5d06b8": 2.586208953975239,
+                "p_97a6da": 2.271164628944128,
+                "p_9bb2df": 4.229610589867865
+            },
+            "qubit_order": {
+                "0": 9,
+                "1": 6,
+                "2": 5,
+                "3": 7,
+                "4": 0,
+                "5": 3,
+                "6": 8,
+                "7": 4,
+                "8": 2,
+                "9": 1
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "InjectParameters",
+                "ChangeTargetBasis",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999309545938,
+            "statistic": 0.004871887405268856
+        }
+    },
+    "prog_id": "0fbdc455dc6a4ad4a2871ed24c93dee0",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_1f1cd8": 5.023617931957853,
+                "p_38c5ce": 5.080799300534071,
+                "p_5d06b8": 2.586208953975239,
+                "p_97a6da": 2.271164628944128,
+                "p_9bb2df": 4.229610589867865
+            },
+            "qubit_order": {
+                "0": 9,
+                "1": 6,
+                "2": 5,
+                "3": 7,
+                "4": 0,
+                "5": 3,
+                "6": 8,
+                "7": 4,
+                "8": 2,
+                "9": 1
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "InjectParameters",
+                "ChangeTargetBasis",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x17542db10>",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 1882,
+                "0100000001": 307,
+                "0100000100": 174,
+                "0100000101": 402,
+                "1100000000": 1889,
+                "1100000001": 295,
+                "1100000100": 231,
+                "1100000101": 362
+            },
+            "result_original": {
+                "0000000100": 1882,
+                "0000000110": 1889,
+                "0000100100": 174,
+                "0000100110": 231,
+                "1000000100": 307,
+                "1000000110": 295,
+                "1000100100": 402,
+                "1000100110": 362
+            },
+            "time_taken": "75.136458 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 1868,
+                "0100000001": 309,
+                "0100000100": 205,
+                "0100000101": 393,
+                "1100000000": 1937,
+                "1100000001": 288,
+                "1100000100": 192,
+                "1100000101": 350
+            },
+            "time_taken": "40.427416 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9219381591709456,
+            "statistic": 0.010465535907614579
+        }
+    }
+}

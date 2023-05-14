@@ -1,0 +1,113 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "unsupported format string passed to Mul.__format__",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_qasm_qiskit": {
+            "exception": "unsupported format string passed to Mul.__format__",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1022,
+                "000100001": 132,
+                "000100100": 999,
+                "000100101": 1766
+            },
+            "time_taken": "38.757 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_0477e2": 2.586208953975239,
+                "p_31e933": 0.5112149185250571,
+                "p_343721": 6.163759533339787,
+                "p_837a0a": 3.2142159669963557,
+                "p_897886": 5.897054719225356,
+                "p_966369": 2.1276323672732023,
+                "p_a36cb0": 2.3864521352475245,
+                "p_a7959d": 5.987304452123941,
+                "p_b58743": 1.4112277317699358
+            },
+            "relations": [
+                "ChangeCouplingMap",
+                "ToQasmAndBack",
+                "ChangeCouplingMap",
+                "InjectParameters"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": null,
+        "source_cirq_qasm_qiskit_divergence": null,
+        "source_followup_divergence": null
+    },
+    "prog_id": "9b1cfb14a04e4dc091951d34fe1d6bde",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_0477e2": 2.586208953975239,
+                "p_31e933": 0.5112149185250571,
+                "p_343721": 6.163759533339787,
+                "p_837a0a": 3.2142159669963557,
+                "p_897886": 5.897054719225356,
+                "p_966369": 2.1276323672732023,
+                "p_a36cb0": 2.3864521352475245,
+                "p_a7959d": 5.987304452123941,
+                "p_b58743": 1.4112277317699358
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ChangeCouplingMap",
+                "ToQasmAndBack",
+                "ChangeCouplingMap",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "125,2: name '$0' is not defined in this scope",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Cannot represent circuits with unbound parameters in OpenQASM 2.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 985,
+                "000100001": 144,
+                "000100100": 981,
+                "000100101": 1809
+            },
+            "time_taken": "710.750958 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_31e933), Parameter(p_897886), Parameter(p_a36cb0), Parameter(p_a7959d)])]",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

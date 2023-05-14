@@ -3,11 +3,14 @@ __pycache__
 *-checkpoint.ipynb
 *.pyc
 .env
+env
 
 venv/*
 old-venv/*
 venv*
 conda*
+
+.DS_Store
 
 data/experiments_dev_cycle_1/*
 
@@ -35,7 +38,6 @@ data/qfl_v01/*
 data/qfl_v02/*
 data/qfl_v03/*
 data/qfl_v04/*
-qcross-data
 
 data/fuzzying_via_notebook/nb29/*
 warnings/old_sample_distribution_differences

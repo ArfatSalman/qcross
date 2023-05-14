@@ -1,0 +1,194 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "unsupported format string passed to Mul.__format__",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_qasm_qiskit": {
+            "exception": "unsupported format string passed to Mul.__format__",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000010000": 962,
+                "0000010001": 167,
+                "0000010100": 96,
+                "0000010101": 206,
+                "0100010000": 922,
+                "0100010001": 172,
+                "0100010100": 110,
+                "0100010101": 187,
+                "1000010000": 906,
+                "1000010001": 163,
+                "1000010100": 112,
+                "1000010101": 183,
+                "1100010000": 921,
+                "1100010001": 162,
+                "1100010100": 95,
+                "1100010101": 178
+            },
+            "time_taken": "50.253833 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_258753": 5.987304452123941,
+                "p_3d4bf9": 5.023617931957853,
+                "p_42a1d4": 4.2641612072511235,
+                "p_4c8c10": 2.1276323672732023,
+                "p_897fa0": 5.080799300534071,
+                "p_a5e20b": 4.229610589867865,
+                "p_b41b47": 2.5163050709890156,
+                "p_e4a82b": 5.014941143947427,
+                "p_f7f517": 2.586208953975239
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "InjectParameters",
+                "ToQasmAndBack"
+            ],
+            "unused_registers": true
+        },
+        "followup_cirq_qasm_qiskit_divergence": null,
+        "source_cirq_qasm_qiskit_divergence": null,
+        "source_followup_divergence": null
+    },
+    "prog_id": "889ac606e5af4d91a1c63242eed186e8",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_258753": 5.987304452123941,
+                "p_3d4bf9": 5.023617931957853,
+                "p_42a1d4": 4.2641612072511235,
+                "p_4c8c10": 2.1276323672732023,
+                "p_897fa0": 5.080799300534071,
+                "p_a5e20b": 4.229610589867865,
+                "p_b41b47": 2.5163050709890156,
+                "p_e4a82b": 5.014941143947427,
+                "p_f7f517": 2.586208953975239
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "AddUnusedRegister",
+                "InjectParameters",
+                "ToQasmAndBack"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000010000": 893,
+                "0000010001": 183,
+                "0000010100": 107,
+                "0000010101": 184,
+                "0100010000": 957,
+                "0100010001": 160,
+                "0100010100": 101,
+                "0100010101": 204,
+                "1000010000": 921,
+                "1000010001": 172,
+                "1000010100": 107,
+                "1000010101": 170,
+                "1100010000": 960,
+                "1100010001": 156,
+                "1100010100": 102,
+                "1100010101": 165
+            },
+            "time_taken": "3178.341583 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "0000010000": 918,
+                "0000010001": 176,
+                "0000010100": 93,
+                "0000010101": 197,
+                "0100010000": 941,
+                "0100010001": 157,
+                "0100010100": 101,
+                "0100010101": 180,
+                "1000010000": 961,
+                "1000010001": 142,
+                "1000010100": 103,
+                "1000010101": 183,
+                "1100010000": 934,
+                "1100010001": 158,
+                "1100010100": 100,
+                "1100010101": 198
+            },
+            "time_taken": "73.621792 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 0.8536990430793266,
+            "statistic": 0.01154817755322988
+        },
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000010000": 919,
+                "0000010001": 137,
+                "0000010100": 112,
+                "0000010101": 166,
+                "0100010000": 936,
+                "0100010001": 160,
+                "0100010100": 101,
+                "0100010101": 193,
+                "1000010000": 936,
+                "1000010001": 163,
+                "1000010100": 110,
+                "1000010101": 200,
+                "1100010000": 960,
+                "1100010001": 167,
+                "1100010100": 104,
+                "1100010101": 178
+            },
+            "time_taken": "39.339583 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "0000010000": 971,
+                "0000010001": 140,
+                "0000010100": 107,
+                "0000010101": 191,
+                "0100010000": 912,
+                "0100010001": 167,
+                "0100010100": 94,
+                "0100010101": 156,
+                "1000010000": 930,
+                "1000010001": 157,
+                "1000010100": 109,
+                "1000010101": 180,
+                "1100010000": 957,
+                "1100010001": 163,
+                "1100010100": 100,
+                "1100010101": 208
+            },
+            "time_taken": "83.862416 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.6905841275204649,
+            "statistic": 0.013533020570191267
+        },
+        "source_followup_divergence": null
+    }
+}

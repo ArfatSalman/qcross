@@ -72,10 +72,11 @@ def qpy_roundtrip(qiskit_qc):
 old_qc = qc
 qc = qpy_roundtrip(qc)
 
-assert circuit_state_vector_are_equal(
-    old_qc.remove_final_measurements(inplace=False),
-    qc.remove_final_measurements(inplace=False)
-)
+assert old_qc == qc
+# assert circuit_state_vector_are_equal(
+#     old_qc.remove_final_measurements(inplace=False),
+#     qc.remove_final_measurements(inplace=False)
+# )
 
 # SECTION
 # NAME: EXECUTION

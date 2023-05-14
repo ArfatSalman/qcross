@@ -17,6 +17,7 @@ from qcross.transpiler_pyquil import PyQuilCircuit
 from qcross.utils import Log, convert_morphq_metadata
 from qcross.utils import detect_divergence as _detect_divergence
 from qcross.utils import fix_cx3, timed_execute_single_py_program
+from qcross.quilc_wrapper import restart_quilc
 
 morphq_adaptor = MorphQAdaptor()
 
@@ -81,6 +82,8 @@ def execute_with_log(source: str, label: str, add_unitary: bool = False):
 
 def detect_divergence(a, b):
     if isinstance(a, list) or isinstance(b, list):
+        print("a", a)
+        print("b", b)
         raise ValueError("results should be a dict")
     return _detect_divergence(a, b)
 
@@ -155,10 +158,11 @@ def qpy_roundtrip(qiskit_qc):
 old_qc = qc
 qc = qpy_roundtrip(qc)
 
-assert circuit_state_vector_are_equal(
-    old_qc.remove_final_measurements(inplace=False),
-    qc.remove_final_measurements(inplace=False)
-)
+assert old_qc == qc
+# assert circuit_state_vector_are_equal(
+#     old_qc.remove_final_measurements(inplace=False),
+#     qc.remove_final_measurements(inplace=False)
+# )
 """
         return qiskit_src.replace(qasm_2_str, qpy_roundtrip_str)
 
@@ -170,19 +174,22 @@ assert circuit_state_vector_are_equal(
 old_qc_1 = qc_1
 
 qc_1 = qpy_roundtrip(qc_1)
-assert circuit_state_vector_are_equal(
-    old_qc_1.remove_final_measurements(inplace=False),
-    qc_1.remove_final_measurements(inplace=False)
-)
+
+assert old_qc_1 == qc_1
+# assert circuit_state_vector_are_equal(
+#     old_qc_1.remove_final_measurements(inplace=False),
+#     qc_1.remove_final_measurements(inplace=False)
+# )
 """
         qc_2 = """
 old_qc_2 = qc_2
 qc_2 = qpy_roundtrip(qc_2)
 
-assert circuit_state_vector_are_equal(
-    old_qc_2.remove_final_measurements(inplace=False),
-    qc_2.remove_final_measurements(inplace=False)
-)
+assert old_qc_2 == qc_2
+# assert circuit_state_vector_are_equal(
+#     old_qc_2.remove_final_measurements(inplace=False),
+#     qc_2.remove_final_measurements(inplace=False)
+# )
 """
         return qiskit_src.replace(multi_qasm_1, qpy_roundtrip_str).replace(
             multi_qasm_2, qc_2
@@ -220,7 +227,8 @@ def recontruct_partitioned_result_if_needed(
         not in source_metadata["followup"]["metamorphic_transformations"]
     )
 
-    if full_mapping:
+    if full_mapping and followup_source_metadata["result"] is not None:
+        followup_source_metadata["result_original"] = followup_source_metadata["result"]
         followup_source_metadata[
             "result"
         ] = morphq_adaptor.reconstruct_partitioned_results(
@@ -242,7 +250,8 @@ def reconstruct_change_qubit_order_results_if_needed(
         not in source_metadata["followup"]["metamorphic_transformations"]
     )
 
-    if full_mapping:
+    if full_mapping and followup_source_metadata["result"] is not None:
+        followup_source_metadata["result_original"] = followup_source_metadata["result"]
         followup_source_metadata[
             "result"
         ] = morphq_adaptor.reconstruct_changed_qubit_order_result(
@@ -286,6 +295,10 @@ def qiskit_related_execs(
     if "ToQasmAndBack" in source_metadata["followup"]["metamorphic_transformations"]:
         # QASM3 roundtrip
         qasm3_source, qasm3_metadata = qasm3_roundtrip(followup_source)
+        recontruct_partitioned_result_if_needed(qasm3_metadata, source_metadata)
+        reconstruct_change_qubit_order_results_if_needed(
+            qasm3_metadata, source_metadata
+        )
         sources["qasm3_source"] = qasm3_source
         qiskit_metadata["qasm3_roundtrip"] = qasm3_metadata
 
@@ -307,6 +320,8 @@ def qiskit_related_execs(
 
         # QPY roundtrip
         qpy_source, qpy_metadata = qpy_roundtrip(followup_source, source_metadata)
+        recontruct_partitioned_result_if_needed(qpy_metadata, source_metadata)
+        reconstruct_change_qubit_order_results_if_needed(qpy_metadata, source_metadata)
         sources["qpy_source"] = qpy_source
         qiskit_metadata["qpy_roundtrip"] = qpy_metadata
 
@@ -360,8 +375,7 @@ def cirq_related_execs(qiskit_source: str, followup_source: str, source_metadata
         not in source_metadata["followup"]["metamorphic_transformations"]
     )
     followup_result = followup_metadata["result"]
-    print(followup_result)
-    if full_mapping:
+    if full_mapping and followup_metadata["result"] is not None:
         followup_result = morphq_adaptor.reconstruct_partitioned_results(
             followup_metadata["result"], jsonpath_expr.find(source_metadata)[0].value
         )
@@ -423,11 +437,26 @@ def pyquil_related_execs(
     exec_metadata = execute_with_log(source_pyquil, "PyQuil source")
     metadata["pyquil_source"] = exec_metadata
 
+    if exec_metadata["exception"] is not None and (
+        "COMPILER-DOES-NOT-APPLY" in exec_metadata["exception"]
+        or "timed out" in exec_metadata["exception"]
+        or "Timeout" in exec_metadata["exception"]
+    ):
+        print("Restarting quilc")
+        restart_quilc()
+
     config = convert_morphq_metadata(source_metadata)
     metadata["config"] = config
 
     _, followup_pyquil = PyQuilCircuit(followup_source).get_follow_up(config)
     followup_metadata = execute_with_log(followup_pyquil, "PyQuil followup")
+    if followup_metadata["exception"] is not None and (
+        "COMPILER-DOES-NOT-APPLY" in followup_metadata["exception"]
+        or "timed out" in followup_metadata["exception"]
+        or "Timeout" in followup_metadata["exception"]
+    ):
+        print("Restarting quilc")
+        restart_quilc()
 
     jsonpath_expr = parse("$..mapping")
 
@@ -440,7 +469,7 @@ def pyquil_related_execs(
     )
 
     followup_result = followup_metadata["result"]
-    if full_mapping:
+    if full_mapping and followup_metadata["result"] is not None:
         followup_result = morphq_adaptor.reconstruct_partitioned_results(
             followup_metadata["result"], jsonpath_expr.find(source_metadata)[0].value
         )
@@ -538,9 +567,17 @@ def main(
     print("Listed Transformations: ")
     print(source_metadata["followup"]["metamorphic_transformations"])
 
+    if (
+        "QdiffG7CCNOTDecomposition"
+        in source_metadata["followup"]["metamorphic_transformations"]
+    ):
+        print("Skipping QdiffG7CCNOTDecomposition")
+        return
+
     execute_qiskit = True
     execute_cirq = True
     execute_pyquil = True
+    execute_unitary = uniform(0, 1) < 0.1
 
     if execute_qiskit:
         qiskit_metadata = qiskit_related_execs(
@@ -553,7 +590,7 @@ def main(
 
         metadata["qiskit"] = qiskit_metadata["qiskit_metadata"]
 
-    if uniform(0, 1) < 0.1:  # 10% chance of executing unitary checks
+    if execute_unitary:  # 10% chance of executing unitary checks
         unitary_metadata = unitary_related_checks(followup_source, source_metadata)
         write_content_to_file(
             unitary_metadata["sources"],
@@ -627,13 +664,30 @@ def get_all_content(folder, prog_id):
 
 
 def should_execute(prog_id: str) -> bool:
-    manual_exlusions = [
+    manual_exclusions = [
         "e3a4d2dff93e4dc39349b2d17471723c",
         "aa8c369525a64cbf81de991e58101ee4",
         "ae3bbf48e2c44b47b7dacd5ce3f1ea86",
         "b8c0da5d20a34b3c85b7886a2fe6426d",
+        "e72010e17db0408fa9c544b869c64ac2",
+        "3f539042cc0b43fe9813f053c440d658",
+        "f438624aef78412285662ea8b54da3fe",
+        "12df5a179bec4776be5a41c2f0b84f2f",
+        "d0e2789f149c4a2fb4d4c6655c676598",
+        "ac4ef7f04f6947498b9cd84c8b725b81",
+        "2a6ddb3ddeb349a88d8642bbb512da92",
+        "d8c615601f6f4f3694554f89f2535f54",
+        "222939fd09a248069aac58fdd982668d",
+        "9841c515aecf4748b9dc9d8b34cd261e",
+        "69bb6a74058e4c579bc8fa8e4ad97b45",
+        "a9a94ab233134ec38bff6d8ad31018a1",
+        "c4d3359157af43aaa9d51180ce095ef0",
+        "735021e569654163a70ff97b7cc19904",
+        "7a6abd08d5e644229ba551ef5ae8fbdd",
+        "45e4ba1b69634b3295678950e1b0f5bb",
+        "e4485894b2514ba28fa5a01b62fd7c36",
     ]
-    if prog_id in manual_exlusions or prog_id in os.listdir(
+    if prog_id in manual_exclusions or prog_id in os.listdir(
         join("qcross-data", "completed-execs")
     ):
         # Log.yellow(f"Skipping {prog_id} since it is already executed")
@@ -650,7 +704,7 @@ def use_morphq_data(folder):
         if not should_execute(prog_id):
             continue
 
-        if i == 20:
+        if i == 200:
             break
 
         Log.blue(f"{i} Processing '{os.path.join(folder, 'source', file)}' ...")
@@ -662,7 +716,6 @@ def use_morphq_data(folder):
 
         main(prog_id, fix_cx3(qiskit_source), fix_cx3(followup_source), source_metadata)
         i += 1
-        break
 
 
 def run_new_programs(count: int = 20):
@@ -694,8 +747,17 @@ if __name__ == "__main__":
         action="store_true",
         help="Use this flag to run the new programs",
     )
+    parser.add_argument(
+        "--existing-programs-src",
+        default="data/qmt_v53/programs",
+        dest="src",
+        action="store",
+        help="Use this flag to run the new programs",
+    )
     args = parser.parse_args()
+
+    restart_quilc()
     if args.new:
-        run_new_programs(1)
+        run_new_programs(100)
     else:
-        use_morphq_data("data/qmt_v53/programs")
+        use_morphq_data(args.src)

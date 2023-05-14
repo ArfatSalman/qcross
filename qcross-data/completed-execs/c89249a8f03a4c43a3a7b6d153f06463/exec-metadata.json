@@ -1,0 +1,159 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 977,
+                "000100001": 153,
+                "000100100": 996,
+                "000100101": 1793
+            },
+            "time_taken": "518.447541 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "000100000": 972,
+                "000100001": 147,
+                "000100100": 988,
+                "000100101": 1812
+            },
+            "time_taken": "686.098292 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 957,
+                "000100001": 164,
+                "000100100": 1003,
+                "000100101": 1795
+            },
+            "time_taken": "65.978042 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ChangeTargetBasis",
+                "ToQasmAndBack",
+                "ChangeBackend",
+                "InjectNullEffect"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999999736269,
+            "statistic": 0.0048481755549885175
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999999999637,
+            "statistic": 0.004337841286042358
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999996567805,
+            "statistic": 0.0051033426894615975
+        }
+    },
+    "prog_id": "c89249a8f03a4c43a3a7b6d153f06463",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "qasm_roundtrip": true,
+            "relations": [
+                "ChangeTargetBasis",
+                "ToQasmAndBack",
+                "ChangeBackend",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "7,3: type error",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 956,
+                "000100001": 161,
+                "000100100": 946,
+                "000100101": 1856
+            },
+            "time_taken": "148.543208 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 949,
+                "000100001": 141,
+                "000100100": 1001,
+                "000100101": 1828
+            },
+            "time_taken": "741.176417 ms"
+        },
+        "qpy_followup_divergence": {
+            "p-value": 0.9927998501320023,
+            "statistic": 0.009696351109977035
+        },
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "000100000": 942,
+                "000100001": 155,
+                "000100100": 1004,
+                "000100101": 1818
+            },
+            "time_taken": "174.428583 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.9999999999999999,
+            "statistic": 0.0025516713447307987
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999653494806036,
+            "statistic": 0.007144679765246236
+        }
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "000100000": 1015,
+                "000100001": 146,
+                "000100100": 954,
+                "000100101": 1804
+            },
+            "time_taken": "544.003167 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "SX",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": null,
+            "result": {
+                "000100000": 954,
+                "000100001": 162,
+                "000100100": 1035,
+                "000100101": 1768
+            },
+            "time_taken": "182.671459 ms"
+        },
+        "unitary": false
+    }
+}

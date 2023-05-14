@@ -1,0 +1,104 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 2773,
+                "0100000100": 2769
+            },
+            "time_taken": "146.671917 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "0100000000": 2729,
+                "0100000100": 2813
+            },
+            "time_taken": "3018.08275 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2692,
+                "0100000100": 2850
+            },
+            "time_taken": "54.194125 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeTargetBasis",
+                "AddUnusedRegister",
+                "InjectNullEffect"
+            ],
+            "unused_registers": true
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9948732890703001,
+            "statistic": 0.007939372067845544
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9996734372709281,
+            "statistic": 0.006676290147961025
+        },
+        "source_followup_divergence": {
+            "p-value": 0.5947189768015111,
+            "statistic": 0.014615662215806569
+        }
+    },
+    "prog_id": "a9c486e38de7465da9f2a0b3277ea603",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeTargetBasis",
+                "AddUnusedRegister",
+                "InjectNullEffect"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Cannot find gate definition for 'rzx', line 5 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2759,
+                "0100000100": 2783
+            },
+            "time_taken": "49.808333 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Unable to map source basis {('dcx', 2), ('ccx', 3), ('u2', 1), ('csx', 2), ('x', 1), ('sx', 1), ('cx', 2), ('ecr', 2), ('rz', 1), ('t', 1), ('z', 1), ('crx', 2), ('cu1', 2), ('crz', 2), ('measure', 1), ('rxx', 2), ('rzx', 2), ('rccx', 3), ('h', 1), ('u1', 1)} to target basis {'h', 'measure', 'delay', 'reset', 'snapshot', 'barrier', 'ccx'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x156243820>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

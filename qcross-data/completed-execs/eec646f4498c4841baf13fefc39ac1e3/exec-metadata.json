@@ -1,0 +1,181 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 1967,
+                "00010000100": 1964,
+                "10010000000": 1978,
+                "10010000100": 1929
+            },
+            "time_taken": "119.849541 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00010000000": 1943,
+                "00010000100": 1981,
+                "10010000000": 1967,
+                "10010000100": 1947
+            },
+            "time_taken": "3340.192041 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1948,
+                "00010000100": 1959,
+                "10010000000": 1984,
+                "10010000100": 1947
+            },
+            "time_taken": "90.519042 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_7a09ef": 6.163759533339787
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "AddUnusedRegister",
+                "InjectParameters"
+            ],
+            "unused_registers": true
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999999999669,
+            "statistic": 0.0030620056136769582
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.002168920643021179
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999669,
+            "statistic": 0.0030620056136769582
+        }
+    },
+    "prog_id": "eec646f4498c4841baf13fefc39ac1e3",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_7a09ef": 6.163759533339787
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "AddUnusedRegister",
+                "InjectParameters"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 1987,
+                "00010000100": 1963,
+                "10010000000": 1979,
+                "10010000100": 1909
+            },
+            "time_taken": "2868.338792 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 2012,
+                "00010000100": 1921,
+                "10010000000": 1960,
+                "10010000100": 1945
+            },
+            "time_taken": "2692.60925 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999971317391096,
+            "statistic": 0.0045930084205154376
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": {
+            "p-value": 0.9999999999995527,
+            "statistic": 0.003189589180913498
+        },
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "00010000000": 1913,
+                "00010000100": 1983,
+                "10010000000": 1970,
+                "10010000100": 1972
+            },
+            "time_taken": "56.214333 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 0.9563701953820362,
+            "statistic": 0.008165348303138555
+        },
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 1905,
+                "00010000100": 1969,
+                "10010000000": 1967,
+                "10010000100": 1997
+            },
+            "time_taken": "63.313958 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1977,
+                "00010000100": 1975,
+                "10010000000": 1913,
+                "10010000100": 1973
+            },
+            "time_taken": "37.124625 ms"
+        },
+        "qpy_followup_divergence": {
+            "p-value": 0.4230151596944263,
+            "statistic": 0.014034192396019394
+        },
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "00010000000": 2015,
+                "00010000100": 1968,
+                "10010000000": 1866,
+                "10010000100": 1989
+            },
+            "time_taken": "58.583166 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.9999874463988937,
+            "statistic": 0.0048481755549885175
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8325000139167246,
+            "statistic": 0.009951518244450114
+        }
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "00010000000": 1942,
+                "00010000100": 1937,
+                "10010000000": 1989,
+                "10010000100": 1970
+            },
+            "time_taken": "496.445208 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: DECLARE p_7a09ef REAL[1]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_7a09ef)])]",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

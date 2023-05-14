@@ -1,0 +1,82 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 1669,
+                "0100000001": 657,
+                "0100000100": 2545,
+                "0100000101": 671
+            },
+            "time_taken": "405.962292 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 1616,
+                "0100000001": 691,
+                "0100000100": 2510,
+                "0100000101": 725
+            },
+            "time_taken": "58.7545 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeTargetBasis",
+                "ChangeBackend"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9551069117505683,
+            "statistic": 0.009743774810537712
+        }
+    },
+    "prog_id": "c77f12146ff34a299ba229ce11c02334",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeTargetBasis",
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 1669,
+                "0100000001": 620,
+                "0100000100": 2563,
+                "0100000101": 690
+            },
+            "time_taken": "352.129041 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 1643,
+                "0100000001": 654,
+                "0100000100": 2574,
+                "0100000101": 671
+            },
+            "time_taken": "43.853083 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999835531699,
+            "statistic": 0.004691447130999639
+        }
+    }
+}

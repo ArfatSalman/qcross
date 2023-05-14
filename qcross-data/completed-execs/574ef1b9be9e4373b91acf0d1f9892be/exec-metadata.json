@@ -1,0 +1,101 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000000": 640,
+                "000001": 695,
+                "100000": 17,
+                "100001": 33
+            },
+            "time_taken": "12.653292 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000": 671,
+                "000001": 664,
+                "100000": 30,
+                "100001": 20
+            },
+            "time_taken": "12.66975 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_1ada4b": 5.1829934776392745,
+                "p_2b124e": 0.5112149185250571,
+                "p_505de8": 5.887184334931191,
+                "p_845551": 4.028174522740928,
+                "p_b60795": 6.163759533339787,
+                "p_f1397b": 3.2142159669963557,
+                "p_f7bbfa": 2.3864521352475245
+            },
+            "relations": [
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8786669207835013,
+            "statistic": 0.022382671480144403
+        }
+    },
+    "prog_id": "574ef1b9be9e4373b91acf0d1f9892be",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_1ada4b": 5.1829934776392745,
+                "p_2b124e": 0.5112149185250571,
+                "p_505de8": 5.887184334931191,
+                "p_845551": 4.028174522740928,
+                "p_b60795": 6.163759533339787,
+                "p_f1397b": 3.2142159669963557,
+                "p_f7bbfa": 2.3864521352475245
+            },
+            "relations": [
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000000": 695,
+                "000001": 633,
+                "100000": 25,
+                "100001": 32
+            },
+            "time_taken": "19557.581292 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000000": 679,
+                "000001": 645,
+                "100000": 36,
+                "100001": 25
+            },
+            "time_taken": "49.683916 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000": 682,
+                "000001": 652,
+                "100000": 22,
+                "100001": 29
+            },
+            "time_taken": "53.484166 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.999999999999984,
+            "statistic": 0.007220216606498195
+        }
+    }
+}

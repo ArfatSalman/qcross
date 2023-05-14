@@ -1,0 +1,167 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 33,
+                "001": 88,
+                "010": 38,
+                "011": 101,
+                "100": 1,
+                "101": 51,
+                "110": 146,
+                "111": 31
+            },
+            "time_taken": "53.254166 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "000": 40,
+                "001": 85,
+                "010": 29,
+                "011": 107,
+                "100": 3,
+                "101": 47,
+                "110": 149,
+                "111": 29
+            },
+            "time_taken": "124.78925 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 40,
+                "001": 95,
+                "010": 29,
+                "011": 122,
+                "101": 42,
+                "110": 141,
+                "111": 20
+            },
+            "time_taken": "6.61325 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "AddUnusedRegister",
+                "ToQasmAndBack"
+            ],
+            "unused_registers": true
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999998161845,
+            "statistic": 0.014314928425357873
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.5455615645536515,
+            "statistic": 0.05112474437627812
+        },
+        "source_followup_divergence": {
+            "p-value": 0.494438005631411,
+            "statistic": 0.053169734151329244
+        }
+    },
+    "prog_id": "1db4f38f917e4190a827fb9298118ba0",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "AddUnusedRegister",
+                "ToQasmAndBack"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000": 28,
+                "001": 84,
+                "010": 158,
+                "011": 111,
+                "100": 31,
+                "101": 45,
+                "110": 1,
+                "111": 31
+            },
+            "time_taken": "736.712125 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 39,
+                "001": 68,
+                "010": 152,
+                "011": 130,
+                "100": 33,
+                "101": 40,
+                "111": 27
+            },
+            "time_taken": "774.297125 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9996782013225001,
+            "statistic": 0.022494887525562373
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "000": 39,
+                "001": 81,
+                "010": 35,
+                "011": 101,
+                "100": 2,
+                "101": 45,
+                "110": 164,
+                "111": 22
+            },
+            "time_taken": "61.684542 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 0.9882744111175525,
+            "statistic": 0.028629856850715747
+        },
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 31,
+                "001": 103,
+                "010": 29,
+                "011": 85,
+                "100": 6,
+                "101": 54,
+                "110": 152,
+                "111": 29
+            },
+            "time_taken": "29.74975 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "000": 45,
+                "001": 68,
+                "010": 32,
+                "011": 104,
+                "100": 1,
+                "101": 44,
+                "110": 161,
+                "111": 34
+            },
+            "time_taken": "56.455083 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.758549383533953,
+            "statistic": 0.04294478527607362
+        },
+        "source_followup_divergence": null
+    }
+}

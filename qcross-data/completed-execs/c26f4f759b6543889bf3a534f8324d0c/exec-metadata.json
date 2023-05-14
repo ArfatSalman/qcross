@@ -1,0 +1,103 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": [
+                {
+                    "00": 7838
+                },
+                {
+                    "000100000": 1987,
+                    "000100010": 2005,
+                    "100100000": 1924,
+                    "100100010": 1922
+                }
+            ],
+            "time_taken": "93.923708 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1916,
+                "00010000100": 2029,
+                "10010000000": 1996,
+                "10010000100": 1897
+            },
+            "time_taken": "216.805625 ms"
+        },
+        "config": {
+            "relations": [
+                "AddUnusedRegister",
+                "RunIndependentPartitions"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.5379898471131881,
+            "statistic": 0.009058433273794353
+        }
+    },
+    "prog_id": "c26f4f759b6543889bf3a534f8324d0c",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "AddUnusedRegister",
+                "RunIndependentPartitions"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x287335cd0>",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 2005,
+                "00010000100": 1954,
+                "10010000000": 1967,
+                "10010000100": 1912
+            },
+            "time_taken": "2530.935458 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 15495726,
+                "00010000100": 15793570,
+                "10010000000": 14962742,
+                "10010000100": 15182206
+            },
+            "result_original": [
+                {
+                    "00": 7838
+                },
+                {
+                    "000100000": 1977,
+                    "000100010": 2015,
+                    "100100000": 1909,
+                    "100100010": 1937
+                }
+            ],
+            "time_taken": "39.482459 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1971,
+                "00010000100": 1975,
+                "10010000000": 1907,
+                "10010000100": 1985
+            },
+            "time_taken": "34.961834 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9287081460342955,
+            "statistic": 0.006124011227353954
+        }
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000": 979
+            },
+            "time_taken": "7.223833 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000": 979
+            },
+            "time_taken": "7.237333 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_665093": 2.0099472182748075
+            },
+            "relations": [
+                "ChangeCouplingMap",
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "28516955170d4043bfeb845aaf7cdbd3",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_665093": 2.0099472182748075
+            },
+            "relations": [
+                "ChangeCouplingMap",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000": 979
+            },
+            "time_taken": "353.329791 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "01000": 979
+            },
+            "time_taken": "8.6875 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000": 979
+            },
+            "time_taken": "8.380542 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

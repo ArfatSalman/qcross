@@ -1,0 +1,79 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 960,
+                "1001000": 999
+            },
+            "time_taken": "17.821667 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 982,
+                "1001000": 977
+            },
+            "time_taken": "17.18975 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_219b43": 2.0099472182748075
+            },
+            "relations": [
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9996746879531332,
+            "statistic": 0.011230219499744768
+        }
+    },
+    "prog_id": "9cc7a23b72ff46b784553ba6f3d03e8b",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_219b43": 2.0099472182748075
+            },
+            "relations": [
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 981,
+                "1001000": 978
+            },
+            "time_taken": "34001.780916 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 967,
+                "1001000": 992
+            },
+            "time_taken": "425.860958 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 984,
+                "1001000": 975
+            },
+            "time_taken": "424.437167 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999995089844802,
+            "statistic": 0.008677896886166412
+        }
+    }
+}

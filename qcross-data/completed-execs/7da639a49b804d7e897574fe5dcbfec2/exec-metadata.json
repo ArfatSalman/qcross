@@ -1,0 +1,86 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "2.892375 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "3.359791 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 0,
+                "1": 1
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "7da639a49b804d7e897574fe5dcbfec2",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 0,
+                "1": 1
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "152.881458 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "156.485416 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "result_original": {
+                "10": 346
+            },
+            "time_taken": "10.758167 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "9.624125 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

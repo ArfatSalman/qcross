@@ -1,0 +1,109 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "Wrong number of qubits for <cirq.ControlledGate(sub_gate=cirq.X, num_controls=3)>. Expected 4 qubits but got <(5.94477504571567,)>.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_qasm_qiskit": {
+            "exception": "Wrong number of qubits for <cirq.ControlledGate(sub_gate=cirq.X, num_controls=3)>. Expected 4 qubits but got <(5.94477504571567,)>.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 960,
+                "1001000": 999
+            },
+            "time_taken": "21.125375 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": null,
+        "source_cirq_qasm_qiskit_divergence": null,
+        "source_followup_divergence": null
+    },
+    "prog_id": "d69d039a12d44957afd898ab042126c8",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 988,
+                "1001000": 971
+            },
+            "time_taken": "38454.683208 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 994,
+                "1001000": 965
+            },
+            "time_taken": "19301.967292 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999999,
+            "statistic": 0.0030627871362940277
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 964,
+                "1001000": 995
+            },
+            "time_taken": "227.551375 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": "Wrong number of qubits for <cirq.ControlledGate(sub_gate=cirq.X, num_controls=3)>. Expected 4 qubits but got <(5.94477504571567,)>.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_unitary": {
+            "exception": "SX",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

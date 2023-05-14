@@ -1,0 +1,76 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 1943,
+                "000100001": 965,
+                "000100101": 1011
+            },
+            "time_taken": "61.263875 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1976,
+                "000100001": 986,
+                "000100101": 957
+            },
+            "time_taken": "37.333208 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8509108708910054,
+            "statistic": 0.013779025261546313
+        }
+    },
+    "prog_id": "bb18b33d1cf343d19e3795a53cf0e70d",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 1974,
+                "000100001": 982,
+                "000100101": 963
+            },
+            "time_taken": "556.096083 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1990,
+                "000100001": 916,
+                "000100101": 1013
+            },
+            "time_taken": "553.881084 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9072843005323911,
+            "statistic": 0.012758356723653993
+        }
+    }
+}

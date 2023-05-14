@@ -1,0 +1,123 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 53,
+                "001": 9,
+                "010": 16,
+                "011": 33,
+                "100": 221,
+                "101": 25,
+                "110": 130,
+                "111": 2
+            },
+            "time_taken": "3.740167 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 36,
+                "001": 27,
+                "010": 10,
+                "011": 30,
+                "100": 222,
+                "101": 26,
+                "110": 133,
+                "111": 5
+            },
+            "time_taken": "4.683917 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 2,
+                "1": 1,
+                "2": 0
+            },
+            "relations": [
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9295014952908248,
+            "statistic": 0.034764826175869123
+        }
+    },
+    "prog_id": "30de8ef5e7b34896b13e808101e08538",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 2,
+                "1": 1,
+                "2": 0
+            },
+            "relations": [
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000": 58,
+                "001": 18,
+                "010": 21,
+                "011": 32,
+                "100": 204,
+                "101": 40,
+                "110": 112,
+                "111": 4
+            },
+            "time_taken": "1671.092292 ms"
+        },
+        "pyquil_source": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x17fc4d490>",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 42,
+                "001": 15,
+                "010": 13,
+                "011": 35,
+                "100": 237,
+                "101": 42,
+                "110": 103,
+                "111": 2
+            },
+            "result_original": {
+                "000": 42,
+                "001": 237,
+                "010": 13,
+                "011": 103,
+                "100": 15,
+                "101": 42,
+                "110": 35,
+                "111": 2
+            },
+            "time_taken": "19.63775 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 35,
+                "001": 24,
+                "010": 14,
+                "011": 35,
+                "100": 218,
+                "101": 27,
+                "110": 130,
+                "111": 6
+            },
+            "time_taken": "22.039 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.2796793707513511,
+            "statistic": 0.06339468302658487
+        }
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 1970,
+                "000100001": 972,
+                "000100101": 977
+            },
+            "time_taken": "49.643916 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1986,
+                "000100001": 978,
+                "000100101": 955
+            },
+            "time_taken": "73.330208 ms"
+        },
+        "config": {
+            "relations": [
+                "AddUnusedRegister",
+                "InjectNullEffect"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999791208033,
+            "statistic": 0.005613676958407757
+        }
+    },
+    "prog_id": "0c9fa36355aa4ba89bfa0c057ef1ee43",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "AddUnusedRegister",
+                "InjectNullEffect"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1972,
+                "000100001": 956,
+                "000100101": 991
+            },
+            "time_taken": "551.949958 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

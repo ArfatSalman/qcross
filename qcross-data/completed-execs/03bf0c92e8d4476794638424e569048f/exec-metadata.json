@@ -1,0 +1,239 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_qasm_qiskit": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000010": 201,
+                "01000011": 92,
+                "01000110": 77,
+                "01000111": 6,
+                "01001011": 23,
+                "01001111": 2,
+                "01010010": 41,
+                "01010011": 64,
+                "01010110": 270,
+                "01010111": 301,
+                "01011011": 10,
+                "01011111": 16,
+                "01101111": 2,
+                "01111111": 20,
+                "10000010": 124,
+                "10000011": 17,
+                "10000110": 114,
+                "10000111": 218,
+                "10001011": 1,
+                "10001111": 12,
+                "10010010": 273,
+                "10010011": 443,
+                "10010110": 310,
+                "10010111": 49,
+                "10011011": 71,
+                "10011111": 2,
+                "10101111": 11,
+                "10111111": 1
+            },
+            "time_taken": "24.22475 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_023a7d": 4.940217775579305,
+                "p_1a21da": 5.987304452123941,
+                "p_1c6cdf": 4.229610589867865,
+                "p_21ba07": 5.03147076606842,
+                "p_4a69b2": 5.94477504571567,
+                "p_4c04c2": 1.9669252191306448,
+                "p_52c99c": 1.0296448789776642,
+                "p_628297": 5.0063780207098425,
+                "p_66e932": 3.775592041307464,
+                "p_7d7c65": 3.2142159669963557,
+                "p_7fc368": 6.163759533339787,
+                "p_8b6baf": 3.1562533916051736,
+                "p_9ec620": 3.950837470808744,
+                "p_ad4dbb": 2.1276323672732023,
+                "p_b96fd4": 2.5163050709890156,
+                "p_d7b9ee": 1.740253089260498,
+                "p_edb705": 0.7279391018916035,
+                "p_f3b666": 5.1829934776392745
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "InjectParameters",
+                "InjectNullEffect",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "followup_cirq_qasm_qiskit_divergence": null,
+        "source_cirq_qasm_qiskit_divergence": null,
+        "source_followup_divergence": null
+    },
+    "prog_id": "03bf0c92e8d4476794638424e569048f",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_023a7d": 4.940217775579305,
+                "p_1a21da": 5.987304452123941,
+                "p_1c6cdf": 4.229610589867865,
+                "p_21ba07": 5.03147076606842,
+                "p_4a69b2": 5.94477504571567,
+                "p_4c04c2": 1.9669252191306448,
+                "p_52c99c": 1.0296448789776642,
+                "p_628297": 5.0063780207098425,
+                "p_66e932": 3.775592041307464,
+                "p_7d7c65": 3.2142159669963557,
+                "p_7fc368": 6.163759533339787,
+                "p_8b6baf": 3.1562533916051736,
+                "p_9ec620": 3.950837470808744,
+                "p_ad4dbb": 2.1276323672732023,
+                "p_b96fd4": 2.5163050709890156,
+                "p_d7b9ee": 1.740253089260498,
+                "p_edb705": 0.7279391018916035,
+                "p_f3b666": 5.1829934776392745
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectParameters",
+                "InjectNullEffect",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000010": 166,
+                "01000011": 110,
+                "01000110": 74,
+                "01000111": 6,
+                "01001011": 21,
+                "01010010": 41,
+                "01010011": 79,
+                "01010110": 293,
+                "01010111": 334,
+                "01011011": 9,
+                "01011111": 17,
+                "01111111": 24,
+                "10000010": 111,
+                "10000011": 13,
+                "10000110": 139,
+                "10000111": 204,
+                "10001011": 2,
+                "10001111": 11,
+                "10010010": 293,
+                "10010011": 452,
+                "10010110": 258,
+                "10010111": 31,
+                "10011011": 63,
+                "10011111": 4,
+                "10101111": 14,
+                "10111111": 2
+            },
+            "time_taken": "25767.417125 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "p_21ba07' is not defined in the current context",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Cannot find gate definition for 'c3sx', line 16 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000010": 172,
+                "01000011": 107,
+                "01000110": 71,
+                "01000111": 6,
+                "01001011": 19,
+                "01001111": 1,
+                "01010010": 36,
+                "01010011": 66,
+                "01010110": 281,
+                "01010111": 304,
+                "01011011": 8,
+                "01011111": 25,
+                "01101111": 1,
+                "01111111": 20,
+                "10000010": 149,
+                "10000011": 16,
+                "10000110": 115,
+                "10000111": 197,
+                "10001011": 5,
+                "10001111": 12,
+                "10010010": 284,
+                "10010011": 482,
+                "10010110": 271,
+                "10010111": 40,
+                "10011011": 65,
+                "10011111": 1,
+                "10101111": 15,
+                "10111111": 2
+            },
+            "time_taken": "39.413417 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "01000010": 117,
+                "01000011": 4,
+                "01000110": 107,
+                "01000111": 116,
+                "01001011": 4,
+                "01001111": 13,
+                "01010010": 172,
+                "01010011": 288,
+                "01010110": 146,
+                "01010111": 51,
+                "01011011": 50,
+                "01101111": 10,
+                "01111111": 1,
+                "10000010": 125,
+                "10000011": 20,
+                "10000110": 138,
+                "10000111": 231,
+                "10001011": 2,
+                "10001111": 7,
+                "10010010": 273,
+                "10010011": 490,
+                "10010110": 289,
+                "10010111": 35,
+                "10011011": 68,
+                "10011111": 5,
+                "10101111": 6,
+                "10111111": 3
+            },
+            "time_taken": "827.023667 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 6.577508909311931e-19,
+            "statistic": 0.12378202814868279
+        },
+        "source_followup_divergence": null
+    }
+}

@@ -1,0 +1,107 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "Simulator doesn't support <bloqs.ext.cirq.gates.U2Gate object at 0x28da6b6d0>.on(cirq.NamedQubit('q2'))",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000": 170,
+                "0010": 131,
+                "0011": 5,
+                "0100": 191,
+                "0110": 190,
+                "0111": 5
+            },
+            "time_taken": "7.5405 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_1fce1b": 2.3864521352475245,
+                "p_32ce54": 5.897054719225356,
+                "p_3962ff": 5.154187354656876,
+                "p_45f58e": 4.6235667602042065,
+                "p_6530e4": 5.94477504571567,
+                "p_8b617c": 4.214504315296764,
+                "p_a0ca5d": 6.163759533339787,
+                "p_bcda17": 3.2142159669963557
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "InjectParameters"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "1e8ae449ee2b44b1acfe658d03d9fb9d",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_1fce1b": 2.3864521352475245,
+                "p_32ce54": 5.897054719225356,
+                "p_3962ff": 5.154187354656876,
+                "p_45f58e": 4.6235667602042065,
+                "p_6530e4": 5.94477504571567,
+                "p_8b617c": 4.214504315296764,
+                "p_a0ca5d": 6.163759533339787,
+                "p_bcda17": 3.2142159669963557
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "InjectParameters"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000": 154,
+                "0010": 126,
+                "0011": 8,
+                "0100": 194,
+                "0110": 206,
+                "0111": 4
+            },
+            "time_taken": "10067.605708 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0000": 158,
+                "0010": 132,
+                "0011": 2,
+                "0100": 188,
+                "0110": 209,
+                "0111": 3
+            },
+            "time_taken": "39.844916 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000": 162,
+                "0010": 135,
+                "0011": 5,
+                "0100": 185,
+                "0110": 204,
+                "0111": 1
+            },
+            "time_taken": "39.714291 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.999999666023825,
+            "statistic": 0.014450867052023121
+        }
+    }
+}

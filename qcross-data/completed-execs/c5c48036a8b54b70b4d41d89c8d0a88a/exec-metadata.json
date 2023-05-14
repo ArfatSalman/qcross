@@ -1,0 +1,84 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "Wrong number of qubits for <cirq.ControlledGate(sub_gate=cirq.X, num_controls=3)>. Expected 4 qubits but got <(p_089fca,)>.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000000000": 5542
+            },
+            "time_taken": "72.778292 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_089fca": 5.94477504571567,
+                "p_0aa97a": 5.320621737498446,
+                "p_4534a2": 2.6397681660693015,
+                "p_4537df": 1.2128092629174942,
+                "p_63f494": 5.01836135520768,
+                "p_88080a": 6.163759533339787,
+                "p_a25c71": 2.696266694818697,
+                "p_c28457": 3.427505621225153,
+                "p_cab727": 0.6833824466861163,
+                "p_f1630e": 4.229610589867865
+            },
+            "relations": [
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "c5c48036a8b54b70b4d41d89c8d0a88a",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_089fca": 5.94477504571567,
+                "p_0aa97a": 5.320621737498446,
+                "p_4534a2": 2.6397681660693015,
+                "p_4537df": 1.2128092629174942,
+                "p_63f494": 5.01836135520768,
+                "p_88080a": 6.163759533339787,
+                "p_a25c71": 2.696266694818697,
+                "p_c28457": 3.427505621225153,
+                "p_cab727": 0.6833824466861163,
+                "p_f1630e": 4.229610589867865
+            },
+            "relations": [
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000000000": 5542
+            },
+            "time_taken": "729.714166 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000000000": 5542
+            },
+            "time_taken": "12.563916 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

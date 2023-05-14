@@ -1,0 +1,130 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "266.23925 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "360.187542 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "42.450167 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "ChangeTargetBasis",
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "cb3cbbcd34e8463284320ff43e07422b",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ChangeOptLevel",
+                "ChangeTargetBasis",
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "12003.460584 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "12207.654084 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "Unable to map source basis {('u1', 1), ('h', 1), ('crx', 2), ('crz', 2), ('z', 1), ('rz', 1), ('cx', 2), ('measure', 1), ('x', 1)} to target basis {'ccx', 'h', 'delay', 'barrier', 'measure', 'snapshot', 'reset'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x15791c7c0>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Cannot find gate definition for 'c3sx', line 10 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "20.179041 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Unable to map source basis {('h', 1), ('crx', 2), ('crz', 2), ('z', 1), ('rz', 1), ('cu1', 2), ('cx', 2), ('measure', 1), ('x', 1)} to target basis {'ccx', 'h', 'delay', 'barrier', 'measure', 'snapshot', 'reset'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x15791c7c0>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "300.051417 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "SX",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Cannot find gate definition for 'c3sx', line 10 file ",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

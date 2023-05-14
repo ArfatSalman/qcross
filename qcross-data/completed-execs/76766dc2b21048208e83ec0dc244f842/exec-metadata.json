@@ -1,0 +1,107 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "unsupported format string passed to Mul.__format__",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_qasm_qiskit": {
+            "exception": "unsupported format string passed to Mul.__format__",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 5542
+            },
+            "time_taken": "63.990208 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_4a7236": 6.163759533339787,
+                "p_6e47ec": 5.25962645863375,
+                "p_7c75a3": 4.167661441102218,
+                "p_7fdf26": 4.2641612072511235,
+                "p_b0edf1": 0.07157463504881167,
+                "p_b52923": 2.008796895454228,
+                "p_bec6f4": 5.987304452123941,
+                "p_c19a9b": 5.887184334931191,
+                "p_eca484": 4.229610589867865
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": null,
+        "source_cirq_qasm_qiskit_divergence": null,
+        "source_followup_divergence": null
+    },
+    "prog_id": "76766dc2b21048208e83ec0dc244f842",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_4a7236": 6.163759533339787,
+                "p_6e47ec": 5.25962645863375,
+                "p_7c75a3": 4.167661441102218,
+                "p_7fdf26": 4.2641612072511235,
+                "p_b0edf1": 0.07157463504881167,
+                "p_b52923": 2.008796895454228,
+                "p_bec6f4": 5.987304452123941,
+                "p_c19a9b": 5.887184334931191,
+                "p_eca484": 4.229610589867865
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 5542
+            },
+            "time_taken": "866.579875 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "Exporting subroutines with parameters is not yet supported by the OpenQASM 3 exporter. Received this instruction, which appears parameterized:\\nInstruction(name='subcircuit', num_qubits=10, num_clbits=10, params=[ParameterExpression(5.25962645863375), ParameterExpression(0.0715746350488117), ParameterExpression(2.00879689545423), ParameterExpression(5.88718433493119)])",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Gate or opaque call to 'subcircuit' uses 20 qubits but is declared for 10 qubits line 11 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 5542
+            },
+            "time_taken": "21.660417 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

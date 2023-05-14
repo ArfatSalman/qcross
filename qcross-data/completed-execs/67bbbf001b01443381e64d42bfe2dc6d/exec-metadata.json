@@ -1,0 +1,171 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00": 136,
+                "01": 78,
+                "10": 95,
+                "11": 37
+            },
+            "time_taken": "269.147708 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00": 130,
+                "01": 68,
+                "10": 92,
+                "11": 56
+            },
+            "time_taken": "72.669667 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00": 142,
+                "01": 68,
+                "10": 97,
+                "11": 39
+            },
+            "time_taken": "4.141667 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_2be59c": 3.3705408413231095,
+                "p_3b7aea": 1.977559237989846,
+                "p_6142d5": 5.320621737498446,
+                "p_668fde": 5.190931186022931,
+                "p_75d3b5": 2.2498881927557752,
+                "p_ef3ee6": 6.086884486572108
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "InjectParameters",
+                "ChangeCouplingMap",
+                "ChangeBackend"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.6746723899684844,
+            "statistic": 0.05491329479768786
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.7985843866692599,
+            "statistic": 0.049132947976878616
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999995809722,
+            "statistic": 0.017341040462427744
+        }
+    },
+    "prog_id": "67bbbf001b01443381e64d42bfe2dc6d",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_2be59c": 3.3705408413231095,
+                "p_3b7aea": 1.977559237989846,
+                "p_6142d5": 5.320621737498446,
+                "p_668fde": 5.190931186022931,
+                "p_75d3b5": 2.2498881927557752,
+                "p_ef3ee6": 6.086884486572108
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "InjectParameters",
+                "ChangeCouplingMap",
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00": 128,
+                "01": 78,
+                "10": 93,
+                "11": 47
+            },
+            "time_taken": "1119.254166 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "00": 133,
+                "01": 67,
+                "10": 97,
+                "11": 49
+            },
+            "time_taken": "63.592125 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 0.9999997796186213,
+            "statistic": 0.02023121387283237
+        },
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00": 128,
+                "01": 71,
+                "10": 91,
+                "11": 56
+            },
+            "time_taken": "25.169125 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "00": 119,
+                "01": 71,
+                "10": 109,
+                "11": 47
+            },
+            "time_taken": "54.957083 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.9998162332319306,
+            "statistic": 0.02601156069364162
+        },
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "00": 130,
+                "01": 72,
+                "10": 96,
+                "11": 48
+            },
+            "time_taken": "45.406 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: DECLARE p_6142d5 REAL[1]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_2be59c), Parameter(p_3b7aea), Parameter(p_6142d5), Parameter(p_668fde), Parameter(p_75d3b5), Parameter(p_ef3ee6)])]",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

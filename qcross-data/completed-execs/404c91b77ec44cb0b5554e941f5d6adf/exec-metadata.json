@@ -1,0 +1,63 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "56.140958 ms"
+        },
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "404c91b77ec44cb0b5554e941f5d6adf",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "3209.621792 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "8027.954292 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000000": 2771
+            },
+            "time_taken": "22.879708 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

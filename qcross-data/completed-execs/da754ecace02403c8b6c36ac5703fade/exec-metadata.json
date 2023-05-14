@@ -1,0 +1,149 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000010": 566,
+                "01000011": 534,
+                "01010010": 20,
+                "01010011": 13,
+                "10000010": 829,
+                "10000011": 809
+            },
+            "time_taken": "192.607375 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "01000010": 545,
+                "01000011": 581,
+                "01010010": 14,
+                "01010011": 20,
+                "10000010": 793,
+                "10000011": 818
+            },
+            "time_taken": "433.8295 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000010": 571,
+                "01000011": 584,
+                "01010010": 26,
+                "01010011": 20,
+                "10000010": 769,
+                "10000011": 801
+            },
+            "time_taken": "23.455208 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9994190960830099,
+            "statistic": 0.009743774810537712
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9221405938513679,
+            "statistic": 0.014796102490075786
+        },
+        "source_followup_divergence": {
+            "p-value": 0.374509664492762,
+            "statistic": 0.024539877300613498
+        }
+    },
+    "prog_id": "da754ecace02403c8b6c36ac5703fade",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ChangeOptLevel",
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x173f8f090>",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000010": 577,
+                "01000011": 588,
+                "01010010": 9,
+                "01010011": 16,
+                "10000010": 801,
+                "10000011": 780
+            },
+            "time_taken": "17083.811708 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "01000010": 503,
+                "01000011": 604,
+                "01010010": 15,
+                "01010011": 15,
+                "10000010": 796,
+                "10000011": 838
+            },
+            "time_taken": "47.54325 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 0.4116059238575073,
+            "statistic": 0.02381811620353663
+        },
+        "qiskit_followup": {
+            "exception": "Cannot find gate definition for 'c3sx', line 11 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000010": 569,
+                "01000011": 524,
+                "01010010": 20,
+                "01010011": 10,
+                "10000010": 802,
+                "10000011": 846
+            },
+            "time_taken": "24.65525 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "01000010": 574,
+                "01000011": 554,
+                "01010010": 20,
+                "01010011": 19,
+                "10000010": 787,
+                "10000011": 817
+            },
+            "time_taken": "37.569084 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.8760028027498028,
+            "statistic": 0.015878744135691087
+        },
+        "source_followup_divergence": null
+    }
+}

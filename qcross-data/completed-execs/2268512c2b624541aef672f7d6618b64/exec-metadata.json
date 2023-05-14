@@ -1,0 +1,113 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0001": 345,
+                "0101": 347
+            },
+            "time_taken": "109.991083 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "0001": 339,
+                "0101": 353
+            },
+            "time_taken": "180.20725 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0001": 349,
+                "0101": 343
+            },
+            "time_taken": "6.566167 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack",
+                "AddUnusedRegister",
+                "ChangeTargetBasis",
+                "InjectNullEffect"
+            ],
+            "unused_registers": true
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999999999996,
+            "statistic": 0.008670520231213872
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.999999666023825,
+            "statistic": 0.014450867052023121
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999999,
+            "statistic": 0.005780346820809248
+        }
+    },
+    "prog_id": "2268512c2b624541aef672f7d6618b64",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "AddUnusedRegister",
+                "ChangeTargetBasis",
+                "InjectNullEffect"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0001": 326,
+                "0101": 366
+            },
+            "time_taken": "5388.06275 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0001": 349,
+                "0101": 343
+            },
+            "time_taken": "4739.514875 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8396182780572109,
+            "statistic": 0.033236994219653176
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "3,0: node of type SubroutineDefinition is not supported",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Cannot find gate definition for 'rzx', line 3 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0001": 364,
+                "0101": 328
+            },
+            "time_taken": "110.019292 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Unable to map source basis {('p', 1), ('cu', 2), ('rx', 1), ('csx', 2), ('sxdg', 1), ('rz', 1), ('rzz', 2), ('measure', 1), ('h', 1), ('t', 1), ('ch', 2), ('cu1', 2), ('iswap', 2), ('x', 1), ('cx', 2), ('rccx', 3), ('ecr', 2), ('rzx', 2)} to target basis {'measure', 'delay', 'h', 'barrier', 'snapshot', 'ccx', 'reset'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x15fdc3790>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

@@ -1,0 +1,83 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000": 979
+            },
+            "time_taken": "32.814833 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000": 979
+            },
+            "time_taken": "7.932875 ms"
+        },
+        "config": {
+            "opt_level": {
+                "initial_level": 1,
+                "new_level": 0
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "ChangeOptLevel"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "10cf8534f0ec4b4b8fbad400e4d7ee66",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 1,
+                "new_level": 0
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "ChangeOptLevel"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "01000": 979
+            },
+            "time_taken": "349.838917 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000": 979
+            },
+            "time_taken": "389.522667 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "01000": 979
+            },
+            "time_taken": "6.550667 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000": 979
+            },
+            "time_taken": "10.255084 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

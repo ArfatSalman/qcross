@@ -1,0 +1,88 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "Wrong number of qubits for <cirq.ControlledGate(sub_gate=cirq.X, num_controls=3)>. Expected 4 qubits but got <(5.94477504571567,)>.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_qasm_qiskit": {
+            "exception": "Wrong number of qubits for <cirq.ControlledGate(sub_gate=cirq.X, num_controls=3)>. Expected 4 qubits but got <(5.94477504571567,)>.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0001000": 1959
+            },
+            "time_taken": "15.915917 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "InjectNullEffect",
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": null,
+        "source_cirq_qasm_qiskit_divergence": null,
+        "source_followup_divergence": null
+    },
+    "prog_id": "8db6bdb79dc94edcbcf3c0ef57f0853a",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectNullEffect",
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0001000": 1959
+            },
+            "time_taken": "15966.532041 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0001000": 1959
+            },
+            "time_taken": "23625.403292 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0001000": 1959
+            },
+            "time_taken": "20.935917 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

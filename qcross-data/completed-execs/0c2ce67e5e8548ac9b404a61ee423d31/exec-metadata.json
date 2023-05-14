@@ -1,0 +1,196 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 2726,
+                "0100000100": 2816
+            },
+            "time_taken": "72.064083 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "0100000000": 2750,
+                "0100000100": 2792
+            },
+            "time_taken": "799.729041 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2763,
+                "0100000100": 2779
+            },
+            "time_taken": "52.979458 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_12f990": 5.987304452123941,
+                "p_474773": 4.229610589867865,
+                "p_8a56c7": 6.163759533339787
+            },
+            "qubit_order": {
+                "0": 0,
+                "1": 5,
+                "2": 4,
+                "3": 3,
+                "4": 6,
+                "5": 7,
+                "6": 2,
+                "7": 1,
+                "8": 9,
+                "9": 8
+            },
+            "relations": [
+                "InjectParameters",
+                "ToQasmAndBack",
+                "ChangeQubitOrder"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999994707717,
+            "statistic": 0.004330566582461205
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999999999999,
+            "statistic": 0.0023457235654998194
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9996734372709281,
+            "statistic": 0.006676290147961025
+        }
+    },
+    "prog_id": "0c2ce67e5e8548ac9b404a61ee423d31",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_12f990": 5.987304452123941,
+                "p_474773": 4.229610589867865,
+                "p_8a56c7": 6.163759533339787
+            },
+            "qasm_roundtrip": true,
+            "qubit_order": {
+                "0": 0,
+                "1": 5,
+                "2": 4,
+                "3": 3,
+                "4": 6,
+                "5": 7,
+                "6": 2,
+                "7": 1,
+                "8": 9,
+                "9": 8
+            },
+            "relations": [
+                "InjectParameters",
+                "ToQasmAndBack",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2791,
+                "0100000100": 2751
+            },
+            "time_taken": "1964.857459 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": {
+            "p-value": 0.9999992163305141,
+            "statistic": 0.005232767953807289
+        },
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "0100000000": 2789,
+                "0100000100": 2753
+            },
+            "result_original": {
+                "1000000000": 2789,
+                "1000010000": 2753
+            },
+            "time_taken": "179.926917 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.00288704438830747
+        },
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 2760,
+                "0100000100": 2782
+            },
+            "result_original": {
+                "1000000000": 2760,
+                "1000010000": 2782
+            },
+            "time_taken": "40.794083 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2805,
+                "0100000100": 2737
+            },
+            "time_taken": "34.230334 ms"
+        },
+        "qpy_followup_divergence": {
+            "p-value": 0.9981164877594664,
+            "statistic": 0.007398051245037893
+        },
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "0100000000": 2801,
+                "0100000100": 2741
+            },
+            "result_original": {
+                "1000000000": 2801,
+                "1000010000": 2741
+            },
+            "time_taken": "42.684708 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.9999999999999998,
+            "statistic": 0.0007217610970768675
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9931616116386319,
+            "statistic": 0.00811981234211476
+        }
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "0100000000": 2721,
+                "0100000100": 2821
+            },
+            "time_taken": "111.396792 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: DECLARE p_8a56c7 REAL[1]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": null,
+            "result": {
+                "1000000000": 2788,
+                "1000010000": 2754
+            },
+            "time_taken": "67.071584 ms"
+        }
+    }
+}

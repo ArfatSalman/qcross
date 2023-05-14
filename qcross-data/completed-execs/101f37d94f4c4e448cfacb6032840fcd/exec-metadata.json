@@ -1,0 +1,92 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0000": 692
+            },
+            "time_taken": "18.660291 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000": 692
+            },
+            "time_taken": "5.076542 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_189742": 4.066449154047175,
+                "p_d42ab6": 6.163759533339787
+            },
+            "opt_level": {
+                "initial_level": 3,
+                "new_level": 0
+            },
+            "relations": [
+                "ChangeBackend",
+                "ChangeOptLevel",
+                "InjectParameters",
+                "ChangeOptLevel"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "101f37d94f4c4e448cfacb6032840fcd",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_189742": 4.066449154047175,
+                "p_d42ab6": 6.163759533339787
+            },
+            "opt_level": {
+                "initial_level": 3,
+                "new_level": 0
+            },
+            "relations": [
+                "ChangeBackend",
+                "ChangeOptLevel",
+                "InjectParameters",
+                "ChangeOptLevel"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000": 692
+            },
+            "time_taken": "195.329333 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0000": 692
+            },
+            "time_taken": "11.257417 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000": 692
+            },
+            "time_taken": "7.520833 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000": 441,
+                "01101": 538
+            },
+            "time_taken": "6.327 ms"
+        },
+        "config": {
+            "relations": [
+                "ChangeTargetBasis",
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "06c39bf87cca4cb1ac71de981bbe7988",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "ChangeTargetBasis",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "01000": 429,
+                "01101": 550
+            },
+            "time_taken": "1071.147459 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000": 450,
+                "01101": 529
+            },
+            "time_taken": "677.214542 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9780338091338385,
+            "statistic": 0.021450459652706845
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Cannot unroll the circuit to the given basis, ['cx', 'h', 's', 't']. Instruction id not found in equivalence library and no rule found to expand.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000": 447,
+                "01101": 532
+            },
+            "time_taken": "10.857083 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

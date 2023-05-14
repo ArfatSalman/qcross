@@ -1,0 +1,78 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0000000": 1959
+            },
+            "time_taken": "19.100333 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000000": 1959
+            },
+            "time_taken": "19.298417 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_1f78f3": 6.163759533339787
+            },
+            "relations": [
+                "ChangeTargetBasis",
+                "InjectParameters",
+                "ChangeCouplingMap"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "ee0af6ce710b4b36b798bb2bb1934570",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_1f78f3": 6.163759533339787
+            },
+            "relations": [
+                "ChangeTargetBasis",
+                "InjectParameters",
+                "ChangeCouplingMap"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0000000": 1959
+            },
+            "time_taken": "217.738583 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000000": 1959
+            },
+            "time_taken": "213.317541 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Unable to map source basis {('rz', 1), ('measure', 1)} to target basis {'reset', 'delay', 'ccx', 'snapshot', 'barrier', 'measure', 'h'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x172cdc7c0>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000000": 1959
+            },
+            "time_taken": "5.143625 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

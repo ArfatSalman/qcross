@@ -1,0 +1,103 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 3919
+            },
+            "time_taken": "461.450875 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 3919
+            },
+            "time_taken": "29.30075 ms"
+        },
+        "config": {
+            "opt_level": {
+                "initial_level": 1,
+                "new_level": 2
+            },
+            "qubit_order": {
+                "0": 4,
+                "1": 0,
+                "2": 3,
+                "3": 8,
+                "4": 7,
+                "5": 1,
+                "6": 6,
+                "7": 5,
+                "8": 2
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "ChangeOptLevel",
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "f82d7c4f742544d59b3e16f5ebe9042a",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 1,
+                "new_level": 2
+            },
+            "qubit_order": {
+                "0": 4,
+                "1": 0,
+                "2": 3,
+                "3": 8,
+                "4": 7,
+                "5": 1,
+                "6": 6,
+                "7": 5,
+                "8": 2
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "ChangeOptLevel",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 3919
+            },
+            "result_original": {
+                "000000010": 3919
+            },
+            "time_taken": "20.925875 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 3919
+            },
+            "time_taken": "22.461833 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

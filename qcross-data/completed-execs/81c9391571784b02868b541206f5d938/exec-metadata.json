@@ -1,0 +1,70 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00000000": 2771
+            },
+            "time_taken": "31.951 ms"
+        },
+        "config": {
+            "relations": [
+                "ChangeCouplingMap",
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "81c9391571784b02868b541206f5d938",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "ChangeCouplingMap",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00000000": 2771
+            },
+            "time_taken": "813.795834 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00000000": 2771
+            },
+            "time_taken": "1287.39425 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00000000": 2771
+            },
+            "time_taken": "15.103333 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00000000": 2771
+            },
+            "time_taken": "8.924166 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

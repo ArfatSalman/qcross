@@ -1,0 +1,154 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000010": 555,
+                "01000011": 283,
+                "01000111": 268,
+                "01010010": 10,
+                "01010011": 9,
+                "01010111": 10,
+                "10000010": 813,
+                "10000011": 402,
+                "10000111": 421
+            },
+            "time_taken": "89.7405 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "01000010": 542,
+                "01000011": 279,
+                "01000111": 290,
+                "01010010": 20,
+                "01010011": 9,
+                "01010111": 9,
+                "10000010": 796,
+                "10000011": 401,
+                "10000111": 425
+            },
+            "time_taken": "215.257083 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000010": 512,
+                "01000011": 300,
+                "01000111": 264,
+                "01010010": 15,
+                "01010011": 9,
+                "01010111": 6,
+                "10000010": 805,
+                "10000011": 452,
+                "10000111": 408
+            },
+            "time_taken": "31.213542 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "AddUnusedRegister",
+                "ToQasmAndBack"
+            ],
+            "unused_registers": true
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999994359836,
+            "statistic": 0.006134969325153374
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.8925521148918594,
+            "statistic": 0.015517863587152653
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8925521148918594,
+            "statistic": 0.015517863587152653
+        }
+    },
+    "prog_id": "47d5fea65a44467e850b42ce14e9b238",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "AddUnusedRegister",
+                "ToQasmAndBack"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "[Errno 61] Connection refused",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "01000010": 541,
+                "01000011": 301,
+                "01000111": 267,
+                "01010010": 17,
+                "01010011": 7,
+                "01010111": 13,
+                "10000010": 828,
+                "10000011": 412,
+                "10000111": 385
+            },
+            "time_taken": "291.883875 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 0.9999996541346521,
+            "statistic": 0.007217610970768676
+        },
+        "qiskit_followup": {
+            "exception": "Cannot find gate definition for 'c3sx', line 13 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000010": 561,
+                "01000011": 286,
+                "01000111": 276,
+                "01010010": 10,
+                "01010011": 7,
+                "01010111": 7,
+                "10000010": 815,
+                "10000011": 419,
+                "10000111": 390
+            },
+            "time_taken": "83.186834 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "01000010": 598,
+                "01000011": 287,
+                "01000111": 273,
+                "01010010": 24,
+                "01010011": 8,
+                "01010111": 8,
+                "10000010": 835,
+                "10000011": 347,
+                "10000111": 391
+            },
+            "time_taken": "91.544167 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.3229730769125913,
+            "statistic": 0.025622518946228797
+        },
+        "source_followup_divergence": null
+    }
+}

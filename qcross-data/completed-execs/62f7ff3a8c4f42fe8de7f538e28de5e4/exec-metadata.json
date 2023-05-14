@@ -1,0 +1,81 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0000": 362,
+                "0100": 330
+            },
+            "time_taken": "6.189667 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000": 321,
+                "0100": 371
+            },
+            "time_taken": "6.148125 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.17615647223574657,
+            "statistic": 0.059248554913294796
+        }
+    },
+    "prog_id": "62f7ff3a8c4f42fe8de7f538e28de5e4",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0000": 371,
+                "0100": 321
+            },
+            "time_taken": "5149.185917 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000": 327,
+                "0100": 365
+            },
+            "time_taken": "6010.764375 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.12189128382196983,
+            "statistic": 0.06358381502890173
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0000": 339,
+                "0100": 353
+            },
+            "time_taken": "22.63825 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000": 335,
+                "0100": 357
+            },
+            "time_taken": "23.284 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999999,
+            "statistic": 0.005780346820809248
+        }
+    }
+}

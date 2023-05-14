@@ -1,0 +1,129 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01001": 71,
+                "01011": 81,
+                "01100": 69,
+                "01101": 78,
+                "01111": 66,
+                "11001": 159,
+                "11011": 158,
+                "11100": 2,
+                "11101": 152,
+                "11111": 143
+            },
+            "time_taken": "82.632958 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01001": 67,
+                "01011": 75,
+                "01100": 66,
+                "01101": 66,
+                "01111": 58,
+                "11001": 153,
+                "11011": 159,
+                "11100": 5,
+                "11101": 169,
+                "11111": 161
+            },
+            "time_taken": "9.319334 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_236385": 0.07157463504881167,
+                "p_3176a0": 2.0099472182748075,
+                "p_500aa6": 1.4112277317699358,
+                "p_8aac37": 4.623446645668956,
+                "p_8f916e": 4.229610589867865,
+                "p_9f7fb1": 5.887184334931191
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "ChangeTargetBasis",
+                "InjectParameters",
+                "ChangeOptLevel",
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.4191361738531001,
+            "statistic": 0.03983656792645557
+        }
+    },
+    "prog_id": "c51ab04ef40d4e38b1c6599067dfb423",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_236385": 0.07157463504881167,
+                "p_3176a0": 2.0099472182748075,
+                "p_500aa6": 1.4112277317699358,
+                "p_8aac37": 4.623446645668956,
+                "p_8f916e": 4.229610589867865,
+                "p_9f7fb1": 5.887184334931191
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "ChangeTargetBasis",
+                "InjectParameters",
+                "ChangeOptLevel",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01001": 68,
+                "01011": 63,
+                "01100": 60,
+                "01101": 67,
+                "01111": 72,
+                "11001": 177,
+                "11011": 142,
+                "11100": 2,
+                "11101": 171,
+                "11111": 157
+            },
+            "time_taken": "1653.244208 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_8aac37)])]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01001": 92,
+                "01011": 59,
+                "01100": 73,
+                "01101": 47,
+                "01111": 66,
+                "11001": 161,
+                "11011": 181,
+                "11100": 5,
+                "11101": 150,
+                "11111": 145
+            },
+            "time_taken": "156.801209 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

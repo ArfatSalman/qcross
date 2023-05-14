@@ -1,0 +1,152 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000010": 1173,
+                "10000010": 1598
+            },
+            "time_taken": "70.187709 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "01000010": 1112,
+                "10000010": 1659
+            },
+            "time_taken": "222.81925 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000010": 1110,
+                "10000010": 1661
+            },
+            "time_taken": "28.852 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "qubit_order": {
+                "0": 6,
+                "1": 3,
+                "2": 5,
+                "3": 4,
+                "4": 0,
+                "5": 2,
+                "6": 7,
+                "7": 1
+            },
+            "relations": [
+                "ChangeCouplingMap",
+                "ToQasmAndBack",
+                "ChangeQubitOrder"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.5130004723904067,
+            "statistic": 0.02201371346084446
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0007217610970768675
+        },
+        "source_followup_divergence": {
+            "p-value": 0.4710787941111776,
+            "statistic": 0.02273547455792133
+        }
+    },
+    "prog_id": "355a53e456624c4c97388761e591363f",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "qubit_order": {
+                "0": 6,
+                "1": 3,
+                "2": 5,
+                "3": 4,
+                "4": 0,
+                "5": 2,
+                "6": 7,
+                "7": 1
+            },
+            "relations": [
+                "ChangeCouplingMap",
+                "ToQasmAndBack",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "01000010": 1164,
+                "10000010": 1607
+            },
+            "time_taken": "16054.40475 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000010": 1135,
+                "10000010": 1636
+            },
+            "time_taken": "16922.713916 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9981116336131146,
+            "statistic": 0.010465535907614579
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "62,2: name '$0' is not defined in this scope",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "01000010": 1130,
+                "10000010": 1641
+            },
+            "result_original": {
+                "00001010": 1641,
+                "10001000": 1130
+            },
+            "time_taken": "54.104458 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000010": 1132,
+                "10000010": 1639
+            },
+            "time_taken": "25.77425 ms"
+        },
+        "qpy_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.001804402742692169
+        },
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "01000010": 1135,
+                "10000010": 1636
+            },
+            "result_original": {
+                "00001010": 1636,
+                "10001000": 1135
+            },
+            "time_taken": "43.378958 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0010826416456153013
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0007217610970768675
+        }
+    }
+}

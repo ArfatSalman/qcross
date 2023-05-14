@@ -1,0 +1,68 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "10.568375 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "10.950417 ms"
+        },
+        "config": {
+            "relations": [
+                "ChangeTargetBasis"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "e4b1f2e0b9eb436ba36d892d733a33c3",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "ChangeTargetBasis"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "3339.76025 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "3535.684333 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Unable to map source basis {('h', 1), ('cu', 2), ('crz', 2), ('z', 1), ('cx', 2), ('rz', 1), ('cu1', 2), ('measure', 1)} to target basis {'measure', 'snapshot', 's', 'cx', 'reset', 'delay', 't', 'h', 'barrier'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x15ebc4850>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "14.116 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

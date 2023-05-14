@@ -1,0 +1,141 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000": 449,
+                "01101": 530
+            },
+            "time_taken": "23.984 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "01000": 450,
+                "01101": 529
+            },
+            "time_taken": "44.488708 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000": 390,
+                "01101": 589
+            },
+            "time_taken": "6.342375 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeBackend"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999999999994,
+            "statistic": 0.0010214504596527069
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.05056403554101691,
+            "statistic": 0.06128702757916241
+        },
+        "source_followup_divergence": {
+            "p-value": 0.05710398598503172,
+            "statistic": 0.0602655771195097
+        }
+    },
+    "prog_id": "4c7664adce0b40a8a5795cab421cd40d",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "01000": 448,
+                "01101": 531
+            },
+            "time_taken": "1142.541833 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000": 445,
+                "01101": 534
+            },
+            "time_taken": "1109.999084 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0030643513789581204
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "01000": 479,
+                "01101": 500
+            },
+            "time_taken": "25.537875 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 0.08124401466567452,
+            "statistic": 0.05720122574055159
+        },
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000": 423,
+                "01101": 556
+            },
+            "time_taken": "11.032041 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "01000": 449,
+                "01101": 530
+            },
+            "time_taken": "23.886292 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.8805333962787787,
+            "statistic": 0.026557711950970377
+        },
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "01000": 413,
+                "01101": 566
+            },
+            "time_taken": "26.199417 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "SX",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

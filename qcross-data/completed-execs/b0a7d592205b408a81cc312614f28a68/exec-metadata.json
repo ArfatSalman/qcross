@@ -1,0 +1,104 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 1966,
+                "000100001": 980,
+                "000100101": 973
+            },
+            "time_taken": "76.824458 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1883,
+                "000100001": 1041,
+                "000100101": 995
+            },
+            "time_taken": "33.253917 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_078f44": 3.2142159669963557,
+                "p_14147f": 3.326780904591333,
+                "p_31d873": 5.987304452123941,
+                "p_39dba4": 2.438459595578943,
+                "p_3d1a45": 0.6724371252296606,
+                "p_584aac": 0.4827903095199283,
+                "p_5f2994": 3.4232119351142516,
+                "p_7ad57d": 1.4112277317699358,
+                "p_8f5281": 0.5112149185250571,
+                "p_ab882a": 2.3864521352475245,
+                "p_b6dc31": 5.897054719225356,
+                "p_bb9f8c": 6.163759533339787
+            },
+            "relations": [
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.3430985714001548,
+            "statistic": 0.02117887216126563
+        }
+    },
+    "prog_id": "b0a7d592205b408a81cc312614f28a68",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_078f44": 3.2142159669963557,
+                "p_14147f": 3.326780904591333,
+                "p_31d873": 5.987304452123941,
+                "p_39dba4": 2.438459595578943,
+                "p_3d1a45": 0.6724371252296606,
+                "p_584aac": 0.4827903095199283,
+                "p_5f2994": 3.4232119351142516,
+                "p_7ad57d": 1.4112277317699358,
+                "p_8f5281": 0.5112149185250571,
+                "p_ab882a": 2.3864521352475245,
+                "p_b6dc31": 5.897054719225356,
+                "p_bb9f8c": 6.163759533339787
+            },
+            "relations": [
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 1975,
+                "000100001": 942,
+                "000100101": 1002
+            },
+            "time_taken": "2149.775958 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1960,
+                "000100001": 977,
+                "000100101": 982
+            },
+            "time_taken": "33.169666 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999996567805,
+            "statistic": 0.0051033426894615975
+        }
+    }
+}

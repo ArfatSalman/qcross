@@ -1,0 +1,121 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 245,
+                "010": 244
+            },
+            "time_taken": "23.531541 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 242,
+                "010": 247
+            },
+            "time_taken": "2.746042 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_9744ba": 6.163759533339787
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "InjectParameters",
+                "ChangeBackend",
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999998,
+            "statistic": 0.006134969325153374
+        }
+    },
+    "prog_id": "5f0770c042af438999d12bdaa9ed878f",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_9744ba": 6.163759533339787
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "InjectParameters",
+                "ChangeBackend",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000": 252,
+                "010": 237
+            },
+            "time_taken": "204.421417 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 254,
+                "010": 235
+            },
+            "time_taken": "172.595542 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999997,
+            "statistic": 0.00408997955010225
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 230,
+                "010": 259
+            },
+            "time_taken": "13.770375 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 257,
+                "010": 232
+            },
+            "time_taken": "38.255584 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.4456221007762617,
+            "statistic": 0.05521472392638037
+        }
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "000": 266,
+                "010": 223
+            },
+            "time_taken": "24.549 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: PRAGMA INITIAL_REWIRING \"GREEDY",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_9744ba)])]",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

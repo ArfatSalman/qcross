@@ -1,0 +1,120 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "155.392541 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "199.99175 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "12.667708 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_2b203d": 3.672121211148789,
+                "p_320da9": 4.229610589867865,
+                "p_334c70": 4.563562108824195,
+                "p_52b317": 2.696266694818697,
+                "p_5a7038": 2.3864521352475245,
+                "p_7d6e79": 2.9151388486514547,
+                "p_94dcf5": 4.2641612072511235,
+                "p_9f724d": 0.5112149185250571,
+                "p_e94aea": 5.897054719225356
+            },
+            "relations": [
+                "InjectNullEffect",
+                "InjectParameters",
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "854a6ec4ddb24d51b8f71faeb09219c8",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_2b203d": 3.672121211148789,
+                "p_320da9": 4.229610589867865,
+                "p_334c70": 4.563562108824195,
+                "p_52b317": 2.696266694818697,
+                "p_5a7038": 2.3864521352475245,
+                "p_7d6e79": 2.9151388486514547,
+                "p_94dcf5": 4.2641612072511235,
+                "p_9f724d": 0.5112149185250571,
+                "p_e94aea": 5.897054719225356
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectNullEffect",
+                "InjectParameters",
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "7444.508834 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "ParameterExpression with unbound parameters ({Parameter(p_320da9)}) cannot be cast to a float.",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "ParameterExpression with unbound parameters ({Parameter(p_320da9)}) cannot be cast to a float.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000": 1385
+            },
+            "time_taken": "105.910542 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "ParameterExpression with unbound parameters ({Parameter(p_320da9)}) cannot be cast to a float.",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

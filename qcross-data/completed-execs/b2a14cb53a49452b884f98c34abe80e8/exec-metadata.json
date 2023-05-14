@@ -1,0 +1,100 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "221.27425 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "116.744542 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_50c455": 5.190931186022931,
+                "p_5f113d": 5.154187354656876,
+                "p_7e38fe": 4.094867647151279,
+                "p_cf8439": 1.2128092629174942,
+                "p_e13c2b": 5.01836135520768,
+                "p_ec106f": 6.163759533339787
+            },
+            "relations": [
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "b2a14cb53a49452b884f98c34abe80e8",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_50c455": 5.190931186022931,
+                "p_5f113d": 5.154187354656876,
+                "p_7e38fe": 4.094867647151279,
+                "p_cf8439": 1.2128092629174942,
+                "p_e13c2b": 5.01836135520768,
+                "p_ec106f": 6.163759533339787
+            },
+            "relations": [
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "1510.913125 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "13.349458 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "308.134292 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: DECLARE p_ec106f REAL[1]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_50c455), Parameter(p_5f113d), Parameter(p_7e38fe), Parameter(p_cf8439), Parameter(p_e13c2b), Parameter(p_ec106f)])]",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

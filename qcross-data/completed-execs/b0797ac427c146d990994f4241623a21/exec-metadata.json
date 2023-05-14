@@ -1,0 +1,85 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01001": 448,
+                "01100": 531
+            },
+            "time_taken": "10.416833 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01001": 405,
+                "01100": 574
+            },
+            "time_taken": "9.084583 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.3016152279008845,
+            "statistic": 0.043922369765066395
+        }
+    },
+    "prog_id": "b0797ac427c146d990994f4241623a21",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend",
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "01001": 440,
+                "01100": 539
+            },
+            "time_taken": "575.100958 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01001": 437,
+                "01100": 542
+            },
+            "time_taken": "591.068417 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0030643513789581204
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "01001": 440,
+                "01100": 539
+            },
+            "time_taken": "35.18125 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01001": 412,
+                "01100": 567
+            },
+            "time_taken": "18.300417 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8184130290454313,
+            "statistic": 0.028600612870275793
+        }
+    }
+}

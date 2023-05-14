@@ -1,0 +1,122 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01": 241,
+                "10": 105
+            },
+            "time_taken": "51.624666 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "01": 231,
+                "10": 115
+            },
+            "time_taken": "128.289083 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01": 246,
+                "10": 100
+            },
+            "time_taken": "3.330292 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "opt_level": {
+                "initial_level": 0,
+                "new_level": 1
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeOptLevel",
+                "ChangeOptLevel",
+                "ChangeOptLevel"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9987517849671945,
+            "statistic": 0.028901734104046242
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9017487428539722,
+            "statistic": 0.04335260115606936
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999889,
+            "statistic": 0.014450867052023121
+        }
+    },
+    "prog_id": "3f34104855a94096b01b8f5d1f933390",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 0,
+                "new_level": 1
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeOptLevel",
+                "ChangeOptLevel",
+                "ChangeOptLevel"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "01": 236,
+                "10": 110
+            },
+            "time_taken": "32.675917 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.008670520231213872
+        },
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01": 233,
+                "10": 113
+            },
+            "time_taken": "21.329916 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "01": 233,
+                "10": 113
+            },
+            "time_taken": "23.377625 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_followup_divergence": null
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "102.080166 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "103.836041 ms"
+        },
+        "config": {
+            "relations": [
+                "ChangeTargetBasis"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "6d094f796c3b4a2399a01c3e8392b4ac",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "ChangeTargetBasis"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "1574.339958 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "1602.61025 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Unable to map source basis {('z', 1), ('rz', 1), ('measure', 1), ('ccx', 3), ('crz', 2)} to target basis {'delay', 'h', 'barrier', 'ccx', 'snapshot', 'reset', 'measure'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x174c47790>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "12.5745 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

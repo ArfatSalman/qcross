@@ -1,0 +1,85 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "Wrong number of qubits for <cirq.ControlledGate(sub_gate=cirq.X, num_controls=3)>. Expected 4 qubits but got <(1.559175067549406,)>.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1977,
+                "00010000100": 1977,
+                "10010000000": 1903,
+                "10010000100": 1981
+            },
+            "time_taken": "85.225 ms"
+        },
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeOptLevel"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "82acea9eac794c61bb10b2f89cd200fc",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeOptLevel"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 1908,
+                "00010000100": 1974,
+                "10010000000": 1969,
+                "10010000100": 1987
+            },
+            "time_taken": "7094.420666 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1920,
+                "00010000100": 1981,
+                "10010000000": 1961,
+                "10010000100": 1976
+            },
+            "time_taken": "2289.388958 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0024240877774942588
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1953,
+                "00010000100": 1998,
+                "10010000000": 1964,
+                "10010000100": 1923
+            },
+            "time_taken": "37.414083 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

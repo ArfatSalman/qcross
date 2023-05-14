@@ -1,0 +1,106 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0001000": 1959
+            },
+            "time_taken": "70.073541 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "0001000": 1959
+            },
+            "time_taken": "247.407667 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0001000": 1959
+            },
+            "time_taken": "17.467417 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_0733ce": 6.163759533339787,
+                "p_74209b": 2.0099472182748075
+            },
+            "relations": [
+                "InjectParameters",
+                "ToQasmAndBack",
+                "ChangeTargetBasis"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "f0f66c42de554a30b44310c8a854b3bf",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_0733ce": 6.163759533339787,
+                "p_74209b": 2.0099472182748075
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectParameters",
+                "ToQasmAndBack",
+                "ChangeTargetBasis"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0001000": 1959
+            },
+            "time_taken": "18204.143083 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "Unable to map source basis {('x', 1), ('measure', 1), ('rz', 1), ('z', 1), ('h', 1), ('crx', 2), ('cx', 2), ('u1', 1), ('ch', 2)} to target basis {'h', 'measure', 'delay', 'cx', 'reset', 's', 'snapshot', 'barrier', 't'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x156243820>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Cannot find gate definition for 'c3sx', line 9 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0001000": 1959
+            },
+            "time_taken": "246.107708 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Unable to map source basis {('cu1', 2), ('x', 1), ('measure', 1), ('rz', 1), ('z', 1), ('h', 1), ('crx', 2), ('cx', 2), ('ch', 2)} to target basis {'h', 'measure', 'delay', 'cx', 'reset', 's', 'snapshot', 'barrier', 't'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x156243820>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

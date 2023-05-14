@@ -1,0 +1,61 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000010": 1162,
+                "10000010": 1609
+            },
+            "time_taken": "28.728834 ms"
+        },
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "21399dbf6cb34d7da3354012ffa15330",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x16b60ee80>",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000010": 1079,
+                "10000010": 1692
+            },
+            "time_taken": "16155.113042 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000010": 1115,
+                "10000010": 1656
+            },
+            "time_taken": "22.0975 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

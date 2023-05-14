@@ -1,0 +1,100 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "DensityMatrixSimulator doesn't support <bloqs.ext.cirq.gates.U2Gate object at 0x284eea190>.on(cirq.NamedQubit('q2'))",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 814,
+                "0100000001": 338,
+                "0100000100": 1251,
+                "0100000101": 330,
+                "1100000000": 837,
+                "1100000001": 325,
+                "1100000100": 1287,
+                "1100000101": 360
+            },
+            "time_taken": "58.585417 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_2061b2": 5.987304452123941,
+                "p_28ab37": 4.167661441102218,
+                "p_536d06": 6.163759533339787,
+                "p_732b5a": 2.1276323672732023,
+                "p_77100f": 2.586208953975239,
+                "p_c8704d": 2.5163050709890156,
+                "p_dbfaed": 4.2641612072511235,
+                "p_efcc68": 4.229610589867865
+            },
+            "relations": [
+                "InjectParameters",
+                "AddUnusedRegister",
+                "ChangeBackend",
+                "InjectNullEffect"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "17e62f5b92534358b1cf3b98f3d0dce8",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_2061b2": 5.987304452123941,
+                "p_28ab37": 4.167661441102218,
+                "p_536d06": 6.163759533339787,
+                "p_732b5a": 2.1276323672732023,
+                "p_77100f": 2.586208953975239,
+                "p_c8704d": 2.5163050709890156,
+                "p_dbfaed": 4.2641612072511235,
+                "p_efcc68": 4.229610589867865
+            },
+            "relations": [
+                "InjectParameters",
+                "AddUnusedRegister",
+                "ChangeBackend",
+                "InjectNullEffect"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 859,
+                "0100000001": 342,
+                "0100000100": 1240,
+                "0100000101": 347,
+                "1100000000": 834,
+                "1100000001": 336,
+                "1100000100": 1215,
+                "1100000101": 369
+            },
+            "time_taken": "89.932959 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

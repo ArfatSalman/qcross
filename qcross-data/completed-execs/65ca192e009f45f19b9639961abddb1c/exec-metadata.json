@@ -1,0 +1,108 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "Wrong number of qubits for <cirq.ControlledGate(sub_gate=cirq.X, num_controls=3)>. Expected 4 qubits but got <(5.94477504571567,)>.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 1022,
+                "1001000": 937
+            },
+            "time_taken": "16.278541 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeOptLevel",
+                "InjectNullEffect",
+                "ChangeBackend"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "65ca192e009f45f19b9639961abddb1c",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 3
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeOptLevel",
+                "InjectNullEffect",
+                "ChangeBackend"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0000000": 237,
+                "0000001": 217,
+                "0001000": 215,
+                "0001001": 242,
+                "1000000": 319,
+                "1000001": 199,
+                "1001000": 316,
+                "1001001": 214
+            },
+            "time_taken": "76793.846875 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 997,
+                "1001000": 962
+            },
+            "time_taken": "20424.068792 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.2167042718763408e-191,
+            "statistic": 0.4650331801939765
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 948,
+                "1001000": 1011
+            },
+            "time_taken": "264.62125 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": "Wrong number of qubits for <cirq.ControlledGate(sub_gate=cirq.X, num_controls=3)>. Expected 4 qubits but got <(5.94477504571567,)>.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: PRAGMA INITIAL_REWIRING \"GREEDY",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

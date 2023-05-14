@@ -1,0 +1,129 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 3792,
+                "10010000000": 4046
+            },
+            "time_taken": "117.592458 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00010000000": 3880,
+                "10010000000": 3958
+            },
+            "time_taken": "2752.870166 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 3902,
+                "10010000000": 3936
+            },
+            "time_taken": "97.284125 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.7065134174702674,
+            "statistic": 0.011227353916815515
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999999999998,
+            "statistic": 0.0028068384792038787
+        },
+        "source_followup_divergence": {
+            "p-value": 0.4230151596944263,
+            "statistic": 0.014034192396019394
+        }
+    },
+    "prog_id": "83121ca2d3da44c4b0bff3fe18d21a49",
+    "pyquil": {
+        "config": {
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 3877,
+                "10010000000": 3961
+            },
+            "time_taken": "2226.178875 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 3865,
+                "10010000000": 3973
+            },
+            "time_taken": "1970.233875 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999996,
+            "statistic": 0.0015310028068384791
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0024240877774942588
+        },
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "00010000000": 3908,
+                "10010000000": 3930
+            },
+            "time_taken": "41.221167 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 0.7329857221349443,
+            "statistic": 0.010972186782342434
+        },
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 3927,
+                "10010000000": 3911
+            },
+            "time_taken": "52.516542 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 3822,
+                "10010000000": 4016
+            },
+            "time_taken": "58.981375 ms"
+        },
+        "qpy_followup_divergence": {
+            "p-value": 0.3172531685803949,
+            "statistic": 0.015310028068384792
+        },
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "00010000000": 3807,
+                "10010000000": 4031
+            },
+            "time_taken": "43.010583 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.001913753508548099
+        },
+        "source_followup_divergence": {
+            "p-value": 0.48277441232509505,
+            "statistic": 0.013396274559836692
+        }
+    }
+}

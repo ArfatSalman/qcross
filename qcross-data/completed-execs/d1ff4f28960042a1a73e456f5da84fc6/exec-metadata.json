@@ -1,0 +1,149 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01001": 72,
+                "01011": 60,
+                "01100": 66,
+                "01101": 59,
+                "01111": 81,
+                "11001": 177,
+                "11011": 168,
+                "11100": 2,
+                "11101": 150,
+                "11111": 144
+            },
+            "time_taken": "11.465291 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01001": 73,
+                "01011": 70,
+                "01100": 70,
+                "01101": 69,
+                "01111": 56,
+                "11001": 153,
+                "11011": 175,
+                "11100": 3,
+                "11101": 151,
+                "11111": 159
+            },
+            "time_taken": "8.931208 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_33d287": 3.2142159669963557,
+                "p_4b58f7": 0.07157463504881167,
+                "p_669459": 3.865496458458116,
+                "p_69e8c5": 5.887184334931191,
+                "p_7fdc7e": 5.398622178940033,
+                "p_a1b5f5": 4.623446645668956,
+                "p_b10c48": 1.4112277317699358,
+                "p_c0b116": 5.708725119517347,
+                "p_c6c4c2": 1.0296448789776642,
+                "p_da461d": 4.229610589867865,
+                "p_eb23fe": 4.167661441102218,
+                "p_eb8e6b": 2.0099472182748075
+            },
+            "relations": [
+                "ChangeBackend",
+                "AddUnusedRegister",
+                "InjectParameters"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9072133947286779,
+            "statistic": 0.02553626149131767
+        }
+    },
+    "prog_id": "d1ff4f28960042a1a73e456f5da84fc6",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_33d287": 3.2142159669963557,
+                "p_4b58f7": 0.07157463504881167,
+                "p_669459": 3.865496458458116,
+                "p_69e8c5": 5.887184334931191,
+                "p_7fdc7e": 5.398622178940033,
+                "p_a1b5f5": 4.623446645668956,
+                "p_b10c48": 1.4112277317699358,
+                "p_c0b116": 5.708725119517347,
+                "p_c6c4c2": 1.0296448789776642,
+                "p_da461d": 4.229610589867865,
+                "p_eb23fe": 4.167661441102218,
+                "p_eb8e6b": 2.0099472182748075
+            },
+            "relations": [
+                "ChangeBackend",
+                "AddUnusedRegister",
+                "InjectParameters"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01001": 81,
+                "01011": 53,
+                "01100": 73,
+                "01101": 65,
+                "01111": 71,
+                "11001": 160,
+                "11011": 179,
+                "11100": 2,
+                "11101": 157,
+                "11111": 138
+            },
+            "time_taken": "1166.047791 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "01001": 84,
+                "01011": 73,
+                "01100": 63,
+                "01101": 65,
+                "01111": 63,
+                "11001": 148,
+                "11011": 166,
+                "11100": 5,
+                "11101": 172,
+                "11111": 140
+            },
+            "time_taken": "23.853875 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01001": 73,
+                "01011": 82,
+                "01100": 66,
+                "01101": 68,
+                "01111": 59,
+                "11001": 139,
+                "11011": 180,
+                "11100": 2,
+                "11101": 150,
+                "11111": 160
+            },
+            "time_taken": "20.465083 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9868588878823522,
+            "statistic": 0.020429009193054137
+        }
+    }
+}

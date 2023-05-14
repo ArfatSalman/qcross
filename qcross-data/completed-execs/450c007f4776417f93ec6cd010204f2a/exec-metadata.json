@@ -1,0 +1,110 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 2021,
+                "00010000100": 1887,
+                "10010000000": 1943,
+                "10010000100": 1987
+            },
+            "time_taken": "87.126792 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1889,
+                "00010000100": 1967,
+                "10010000000": 1973,
+                "10010000100": 2009
+            },
+            "time_taken": "89.993375 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 8,
+                "1": 0,
+                "2": 1,
+                "3": 5,
+                "4": 7,
+                "5": 4,
+                "6": 6,
+                "7": 2,
+                "8": 10,
+                "9": 9,
+                "10": 3
+            },
+            "relations": [
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.2162973718748484,
+            "statistic": 0.016841030875223272
+        }
+    },
+    "prog_id": "450c007f4776417f93ec6cd010204f2a",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 8,
+                "1": 0,
+                "2": 1,
+                "3": 5,
+                "4": 7,
+                "5": 4,
+                "6": 6,
+                "7": 2,
+                "8": 10,
+                "9": 9,
+                "10": 3
+            },
+            "relations": [
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 1939,
+                "00010000100": 1972,
+                "10010000000": 1953,
+                "10010000100": 1974
+            },
+            "result_original": {
+                "00000000100": 1939,
+                "00000000110": 1972,
+                "00000001100": 1953,
+                "00000001110": 1974
+            },
+            "time_taken": "32.205291 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1945,
+                "00010000100": 1934,
+                "10010000000": 1944,
+                "10010000100": 2015
+            },
+            "time_taken": "42.003209 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999230414125356,
+            "statistic": 0.005230926256698137
+        }
+    }
+}

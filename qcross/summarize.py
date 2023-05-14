@@ -60,29 +60,75 @@ def search_github_issues(repository_name, query):
     return list(issues.get_page(0))
 
 
-def get_exception_data(folder="qcross-data/completed-execs"):
+def get_all_data(json_path="$..result", folders=None):
+    folders = ["qcross-data/completed-execs", "qcross-data/new-completed-execs"]
+    jsonpath_expr = parse(json_path)
+    df_data = []
+    for folder in folders:
+        for filename in os.listdir(folder):
+            try:
+                with open(
+                    os.path.join(folder, filename, "exec-metadata.json"),
+                    encoding="utf-8",
+                ) as f:
+                    data = json.load(f)
+                    exceptions = {
+                        str(match.full_path): match.value
+                        for match in jsonpath_expr.find(data)
+                        if match.value is not None
+                    }
+                    df_data.append(
+                        {
+                            "prog_id": data["prog_id"],
+                            **exceptions,
+                        }
+                    )
+            except IOError:
+                continue
+    return pd.DataFrame(df_data)
+
+
+def get_exception_data(folders=None):
+    if folders is None:
+        folders = ["qcross-data/completed-execs", "qcross-data/new-completed-execs"]
+
     df_data = []
     jsonpath_expr = parse("$..exception")
-    for filename in os.listdir(folder):
-        try:
-            with open(
-                os.path.join(folder, filename, "exec-metadata.json"),
-                encoding="utf-8",
-            ) as f:
-                data = json.load(f)
-                exceptions = {
-                    str(match.full_path): match.value
-                    for match in jsonpath_expr.find(data)
-                    if match.value is not None
-                }
-                df_data.append(
-                    {
-                        "prog_id": data["prog_id"],
-                        **exceptions,
+    p_value_divergence_expr = parse("$..source_followup_divergence.p-value")
+    statistic_divergence_expr = parse("$..source_followup_divergence.statistic")
+    for folder in folders:
+        for filename in os.listdir(folder):
+            try:
+                with open(
+                    os.path.join(folder, filename, "exec-metadata.json"),
+                    encoding="utf-8",
+                ) as f:
+                    data = json.load(f)
+                    exceptions = {
+                        str(match.full_path): match.value
+                        for match in jsonpath_expr.find(data)
+                        if match.value is not None
                     }
-                )
-        except IOError:
-            continue
+                    p_value = {
+                        str(match.full_path): match.value
+                        for match in p_value_divergence_expr.find(data)
+                        if match.value is not None
+                    }
+                    stat_value = {
+                        str(match.full_path): match.value
+                        for match in statistic_divergence_expr.find(data)
+                        if match.value is not None
+                    }
+                    df_data.append(
+                        {
+                            "prog_id": data["prog_id"],
+                            **exceptions,
+                            **p_value,
+                            **stat_value,
+                        }
+                    )
+            except IOError:
+                continue
     return pd.DataFrame(df_data)
 
 

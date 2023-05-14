@@ -1,0 +1,131 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0000010000": 936,
+                "0000010001": 175,
+                "0000010100": 98,
+                "0000010101": 204,
+                "0100010000": 947,
+                "0100010001": 158,
+                "0100010100": 83,
+                "0100010101": 189,
+                "1000010000": 944,
+                "1000010001": 161,
+                "1000010100": 111,
+                "1000010101": 183,
+                "1100010000": 958,
+                "1100010001": 136,
+                "1100010100": 87,
+                "1100010101": 172
+            },
+            "time_taken": "68.251292 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_14882b": 2.5163050709890156,
+                "p_1e7763": 6.163759533339787,
+                "p_229656": 4.167661441102218,
+                "p_9a6428": 2.586208953975239,
+                "p_cb603f": 4.2641612072511235,
+                "p_d83aa6": 2.1276323672732023,
+                "p_f80351": 5.970852306777193
+            },
+            "relations": [
+                "InjectParameters",
+                "InjectNullEffect",
+                "AddUnusedRegister",
+                "ChangeBackend"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "87bbf2393c0f44b6aa261f3d04b14ccd",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_14882b": 2.5163050709890156,
+                "p_1e7763": 6.163759533339787,
+                "p_229656": 4.167661441102218,
+                "p_9a6428": 2.586208953975239,
+                "p_cb603f": 4.2641612072511235,
+                "p_d83aa6": 2.1276323672732023,
+                "p_f80351": 5.970852306777193
+            },
+            "relations": [
+                "InjectParameters",
+                "InjectNullEffect",
+                "AddUnusedRegister",
+                "ChangeBackend"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0000010000": 962,
+                "0000010001": 157,
+                "0000010100": 108,
+                "0000010101": 178,
+                "0100010000": 963,
+                "0100010001": 147,
+                "0100010100": 118,
+                "0100010101": 198,
+                "1000010000": 933,
+                "1000010001": 151,
+                "1000010100": 98,
+                "1000010101": 184,
+                "1100010000": 904,
+                "1100010001": 167,
+                "1100010100": 108,
+                "1100010101": 166
+            },
+            "time_taken": "5098.133833 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0000010000": 944,
+                "0000010001": 176,
+                "0000010100": 102,
+                "0000010101": 188,
+                "0100010000": 903,
+                "0100010001": 167,
+                "0100010100": 92,
+                "0100010101": 171,
+                "1000010000": 961,
+                "1000010001": 169,
+                "1000010100": 94,
+                "1000010101": 180,
+                "1100010000": 937,
+                "1100010001": 162,
+                "1100010100": 104,
+                "1100010101": 192
+            },
+            "time_taken": "238.779583 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

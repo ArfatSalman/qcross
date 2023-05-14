@@ -1,0 +1,82 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 978,
+                "000100001": 140,
+                "000100100": 963,
+                "000100101": 1838
+            },
+            "time_taken": "41.16375 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 980,
+                "000100001": 159,
+                "000100100": 1004,
+                "000100101": 1776
+            },
+            "time_taken": "36.307625 ms"
+        },
+        "config": {
+            "relations": [
+                "AddUnusedRegister",
+                "InjectNullEffect"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7107910975061812,
+            "statistic": 0.015820362337330952
+        }
+    },
+    "prog_id": "e6935a889df640b3a55c8d9caa3c7a1b",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "AddUnusedRegister",
+                "InjectNullEffect"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 971,
+                "000100001": 148,
+                "000100100": 1001,
+                "000100101": 1799
+            },
+            "time_taken": "4479.785166 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 997,
+                "000100001": 138,
+                "000100100": 965,
+                "000100101": 1819
+            },
+            "time_taken": "337.58725 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999948102410039,
+            "statistic": 0.006634345496300076
+        }
+    }
+}

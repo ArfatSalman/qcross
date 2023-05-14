@@ -1,0 +1,86 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 1905,
+                "000100001": 2014
+            },
+            "time_taken": "37.559291 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1964,
+                "000100001": 1955
+            },
+            "time_taken": "32.168292 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_2ae583": 5.897054719225356,
+                "p_595a74": 2.3864521352475245,
+                "p_a57db2": 0.5112149185250571
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeCouplingMap",
+                "ChangeBackend"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7662235235285442,
+            "statistic": 0.015054860933911712
+        }
+    },
+    "prog_id": "2cec728399d8455b844ab05702566ed7",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_2ae583": 5.897054719225356,
+                "p_595a74": 2.3864521352475245,
+                "p_a57db2": 0.5112149185250571
+            },
+            "relations": [
+                "InjectParameters",
+                "ChangeCouplingMap",
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 1900,
+                "000100001": 2019
+            },
+            "time_taken": "50.786666 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1959,
+                "000100001": 1960
+            },
+            "time_taken": "25.894166 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.7662235235285442,
+            "statistic": 0.015054860933911712
+        }
+    }
+}

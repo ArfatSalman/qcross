@@ -1,0 +1,81 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "159.663 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "112.254 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_1b382d": 2.9151388486514547,
+                "p_744464": 4.501598818751339,
+                "p_a1819b": 3.427505621225153,
+                "p_b0de03": 4.2641612072511235,
+                "p_b3b922": 2.696266694818697,
+                "p_c00892": 4.229610589867865,
+                "p_d7cdb5": 6.163759533339787
+            },
+            "relations": [
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "8f0015fa9d9d454d988c68df630a1925",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_1b382d": 2.9151388486514547,
+                "p_744464": 4.501598818751339,
+                "p_a1819b": 3.427505621225153,
+                "p_b0de03": 4.2641612072511235,
+                "p_b3b922": 2.696266694818697,
+                "p_c00892": 4.229610589867865,
+                "p_d7cdb5": 6.163759533339787
+            },
+            "relations": [
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "ParameterExpression with unbound parameters ({Parameter(p_c00892)}) cannot be cast to a float.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "27.55 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

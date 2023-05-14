@@ -1,0 +1,80 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 3919
+            },
+            "time_taken": "37.946917 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 3919
+            },
+            "time_taken": "35.591292 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_33458c": 6.163759533339787
+            },
+            "relations": [
+                "ChangeCouplingMap",
+                "ChangeTargetBasis",
+                "InjectParameters",
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "4e4fc0789cb04e9894da3a8633d4cf7f",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_33458c": 6.163759533339787
+            },
+            "relations": [
+                "ChangeCouplingMap",
+                "ChangeTargetBasis",
+                "InjectParameters",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Server disconnected without sending a response.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000100000": 3919
+            },
+            "time_taken": "52461.652084 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 3919
+            },
+            "time_taken": "51.344125 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 3919
+            },
+            "time_taken": "16.319125 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

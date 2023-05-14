@@ -1,0 +1,99 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "3.231083 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "2.8185 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeCouplingMap",
+                "ChangeBackend"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "ab7098b5d4d64c3eba3db747c4ac4426",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeCouplingMap",
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "152.674791 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "170.348125 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "11.188583 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "10.232417 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "4.472583 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "RZZ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": null,
+            "result": {
+                "10": 346
+            },
+            "time_taken": "17.498375 ms"
+        },
+        "unitary": false
+    }
+}

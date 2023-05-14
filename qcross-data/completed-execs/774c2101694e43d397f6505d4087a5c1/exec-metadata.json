@@ -1,0 +1,63 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "Wrong number of qubits for <cirq.ControlledGate(sub_gate=cirq.X, num_controls=3)>. Expected 4 qubits but got <(2.0099472182748075,)>.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000000000": 3919
+            },
+            "time_taken": "47.345334 ms"
+        },
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "774c2101694e43d397f6505d4087a5c1",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000000000": 3919
+            },
+            "time_taken": "6614.119709 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000000000": 3919
+            },
+            "time_taken": "357.84425 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000000000": 3919
+            },
+            "time_taken": "6.834833 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

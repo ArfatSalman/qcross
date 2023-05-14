@@ -1,0 +1,87 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 972,
+                "1001000": 987
+            },
+            "time_taken": "22.540958 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 981,
+                "1001000": 978
+            },
+            "time_taken": "20.582125 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 1,
+                "1": 2,
+                "2": 4,
+                "3": 5,
+                "4": 0,
+                "5": 6,
+                "6": 3
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999997,
+            "statistic": 0.004594180704441042
+        }
+    },
+    "prog_id": "4899509499cd4dc783bedd136d6e3428",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 1,
+                "1": 2,
+                "2": 4,
+                "3": 5,
+                "4": 0,
+                "5": 6,
+                "6": 3
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x1724a44c0>",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 950,
+                "1001000": 1009
+            },
+            "time_taken": "65966.362083 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "array is too big; `arr.size * arr.dtype.itemsize` is larger than the maximum possible size.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 982,
+                "1001000": 977
+            },
+            "time_taken": "466.8455 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

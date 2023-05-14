@@ -1,0 +1,108 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0100": 692
+            },
+            "time_taken": "27.782667 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "0100": 692
+            },
+            "time_taken": "93.49375 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100": 692
+            },
+            "time_taken": "5.714709 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_536ad5": 0.5112149185250571,
+                "p_baa0bd": 5.987304452123941,
+                "p_d13af9": 6.163759533339787,
+                "p_feab72": 4.066449154047175
+            },
+            "relations": [
+                "InjectParameters",
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "b6ddcb6fb0414d32a6536a14e86592c5",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_536ad5": 0.5112149185250571,
+                "p_baa0bd": 5.987304452123941,
+                "p_d13af9": 6.163759533339787,
+                "p_feab72": 4.066449154047175
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectParameters",
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0100": 692
+            },
+            "time_taken": "1179.918458 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "p_536ad5' is not defined in the current context",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Argument 'p_536ad5' in expression cannot be found, line 11 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100": 692
+            },
+            "time_taken": "10.948375 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_536ad5), Parameter(p_baa0bd)])]",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

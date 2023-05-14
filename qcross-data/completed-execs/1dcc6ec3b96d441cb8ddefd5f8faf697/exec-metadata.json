@@ -1,0 +1,149 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01001": 815,
+                "01100": 64,
+                "01101": 65,
+                "11001": 29,
+                "11100": 2,
+                "11101": 4
+            },
+            "time_taken": "49.563709 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "01001": 794,
+                "01100": 70,
+                "01101": 65,
+                "11001": 45,
+                "11100": 3,
+                "11101": 2
+            },
+            "time_taken": "81.243375 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01001": 804,
+                "01100": 58,
+                "01101": 79,
+                "11001": 31,
+                "11100": 2,
+                "11101": 5
+            },
+            "time_taken": "9.592083 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_01353d": 1.6723037552953224,
+                "p_18bd1c": 2.0099472182748075,
+                "p_2e72b1": 4.167661441102218,
+                "p_6eeda0": 5.887184334931191,
+                "p_ba0550": 4.623446645668956,
+                "p_d56d65": 1.4112277317699358,
+                "p_ea6b64": 6.163759533339787,
+                "p_ee580c": 5.708725119517347,
+                "p_f65747": 1.0296448789776642
+            },
+            "relations": [
+                "ChangeBackend",
+                "ToQasmAndBack",
+                "ChangeCouplingMap",
+                "InjectParameters"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9780338091338385,
+            "statistic": 0.021450459652706845
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.99999954320319,
+            "statistic": 0.012257405515832482
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9984885056301764,
+            "statistic": 0.017364657814096015
+        }
+    },
+    "prog_id": "1dcc6ec3b96d441cb8ddefd5f8faf697",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_01353d": 1.6723037552953224,
+                "p_18bd1c": 2.0099472182748075,
+                "p_2e72b1": 4.167661441102218,
+                "p_6eeda0": 5.887184334931191,
+                "p_ba0550": 4.623446645668956,
+                "p_d56d65": 1.4112277317699358,
+                "p_ea6b64": 6.163759533339787,
+                "p_ee580c": 5.708725119517347,
+                "p_f65747": 1.0296448789776642
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ChangeBackend",
+                "ToQasmAndBack",
+                "ChangeCouplingMap",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01001": 822,
+                "01100": 57,
+                "01101": 55,
+                "11001": 40,
+                "11100": 4,
+                "11101": 1
+            },
+            "time_taken": "1708.666417 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "p_ee580c' is not defined in the current context",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01001": 800,
+                "01100": 70,
+                "01101": 68,
+                "11001": 37,
+                "11100": 3,
+                "11101": 1
+            },
+            "time_taken": "22.211583 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_2e72b1), Parameter(p_ba0550), Parameter(p_ee580c)])]",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

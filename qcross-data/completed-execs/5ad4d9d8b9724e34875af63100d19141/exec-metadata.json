@@ -1,0 +1,85 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "Wrong number of qubits for <cirq.ControlledGate(sub_gate=cirq.X, num_controls=3)>. Expected 4 qubits but got <(5.94477504571567,)>.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 956,
+                "1001000": 1003
+            },
+            "time_taken": "16.966542 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_bb87af": 6.163759533339787
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "5ad4d9d8b9724e34875af63100d19141",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_bb87af": 6.163759533339787
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "InjectNullEffect",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 997,
+                "1001000": 962
+            },
+            "time_taken": "20578.822584 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 980,
+                "1001000": 979
+            },
+            "time_taken": "27030.22825 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999995089844802,
+            "statistic": 0.008677896886166412
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 1013,
+                "1001000": 946
+            },
+            "time_taken": "241.481292 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

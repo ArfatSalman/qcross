@@ -1,0 +1,99 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "193.953375 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "110.7425 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_d542f8": 6.163759533339787
+            },
+            "relations": [
+                "InjectParameters",
+                "AddUnusedRegister",
+                "ChangeTargetBasis"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "5c8acbefd53b4a929372bf7ec54a2dec",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_d542f8": 6.163759533339787
+            },
+            "relations": [
+                "InjectParameters",
+                "AddUnusedRegister",
+                "ChangeTargetBasis"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "1403.862542 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "1403.282959 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Unable to map source basis {('rz', 1), ('measure', 1)} to target basis {'reset', 'delay', 'ccx', 'snapshot', 'barrier', 'measure', 'h'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x172cdc7c0>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "10.895 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "00000000000": 7838
+            },
+            "time_taken": "123.468875 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: DECLARE p_d542f8 REAL[1]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_d542f8)])]",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

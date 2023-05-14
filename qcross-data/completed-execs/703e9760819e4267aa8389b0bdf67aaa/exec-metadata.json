@@ -1,0 +1,87 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "Simulator doesn't support <bloqs.ext.cirq.gates.U2Gate object at 0x28dd8bd50>.on(cirq.NamedQubit('q6'))",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 3919
+            },
+            "time_taken": "37.183167 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_3ab710": 0.5112149185250571,
+                "p_3bb993": 0.07157463504881167,
+                "p_3c804b": 5.987304452123941,
+                "p_5a4f4d": 6.2047416485134805,
+                "p_77c43b": 3.672121211148789,
+                "p_7f95e9": 6.163759533339787,
+                "p_94d012": 2.3864521352475245,
+                "p_97b6e3": 5.887184334931191
+            },
+            "relations": [
+                "InjectNullEffect",
+                "AddUnusedRegister",
+                "InjectParameters"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "703e9760819e4267aa8389b0bdf67aaa",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_3ab710": 0.5112149185250571,
+                "p_3bb993": 0.07157463504881167,
+                "p_3c804b": 5.987304452123941,
+                "p_5a4f4d": 6.2047416485134805,
+                "p_77c43b": 3.672121211148789,
+                "p_7f95e9": 6.163759533339787,
+                "p_94d012": 2.3864521352475245,
+                "p_97b6e3": 5.887184334931191
+            },
+            "relations": [
+                "InjectNullEffect",
+                "AddUnusedRegister",
+                "InjectParameters"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x28c5fc110>",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 3919
+            },
+            "time_taken": "2436.508708 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 3919
+            },
+            "time_taken": "14.175666 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    }
+}

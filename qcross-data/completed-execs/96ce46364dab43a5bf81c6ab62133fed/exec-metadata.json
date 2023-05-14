@@ -1,0 +1,63 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "Wrong number of qubits for <cirq.ControlledGate(sub_gate=cirq.X, num_controls=3)>. Expected 4 qubits but got <(5.94477504571567,)>.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000010": 1096,
+                "10000010": 1675
+            },
+            "time_taken": "28.176 ms"
+        },
+        "config": {
+            "relations": [
+                "InjectNullEffect",
+                "ChangeCouplingMap"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "96ce46364dab43a5bf81c6ab62133fed",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "InjectNullEffect",
+                "ChangeCouplingMap"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x297236880>",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000010": 1147,
+                "10000010": 1624
+            },
+            "time_taken": "15963.593834 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "label expects a string or None",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000010": 1161,
+                "10000010": 1610
+            },
+            "time_taken": "25.625875 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

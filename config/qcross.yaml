@@ -77,17 +77,17 @@ generation_strategy:
     - 3
   optimizations: []
   gate_set:
-    - name: C3SXGate
-      n_bits: 4
-      n_params: 0
-    - name: C3XGate
-      n_bits: 4
-      n_params: 0
-      shortname: mcx
-    - name: C4XGate
-      n_bits: 5
-      n_params: 0
-      shortname: mcx
+    # - name: C3SXGate
+    #   n_bits: 4
+    #   n_params: 0
+    # - name: C3XGate
+    #   n_bits: 4
+    #   n_params: 0
+    #   shortname: mcx
+    # - name: C4XGate
+    #   n_bits: 5
+    #   n_params: 0
+    #   shortname: mcx
     - name: CCXGate
       n_bits: 3
       n_params: 0
@@ -359,81 +359,81 @@ qdiff_diff_testing:
       #- pulse_simulator
 
 morphq_metamorphic_strategies:
-  ChangeOptLevel:
-    levels:
-      - 0
-      - 1
-      - 2
-      - 3
-  ChangeCouplingMap:
-    min_perc_nodes: 1
-    max_perc_nodes: 1.5
-    min_connection_density: 0.05
-    max_connection_density: 0.20
-    force_connected: true # true | false
-  ChangeBackend:
-    available_backends:
-      - aer_simulator
-      - aer_simulator_statevector
-      # - aer_simulator_statevector_gpu  # cannot run GPU in multithreading
-      - statevector_simulator
-      - aer_simulator_density_matrix
-      # - aer_simulator_density_matrix_gpu  # cannot run GPU in multithreading
-      # the stabilizer simulator works only if the circuit can be decomposed
-      # in the clifford group, e.g., in  CNOT, Hadamard, phase gate S gates
-      #- aer_simulator_stabilizer
-      #- aer_simulator_extended_stabilizer
-      - aer_simulator_matrix_product_state
-      # the unitary simulators are exponential in the number of qubits.
-      #- aer_simulator_unitary
-      #- aer_simulator_unitary_gpu
-      #- unitary_simulator
-      # From Qiskit doc:
-      # "A dense superoperator matrix simulation of an ideal or noisy circuit.
-      # This simulates the superoperator matrix of the circuit itself rather
-      # than the evolution of an initial quantum state. This method can
-      # simulate ideal and noisy gates, and reset, but does not support
-      # measurement.""
-      # QiskitError: 'Data for experiment "qc" could not be found.'
-      #- aer_simulator_superop
-      - qasm_simulator
-      #- pulse_simulator
-  ChangeTargetBasis:
-    universal_gate_sets:
-      - gates:
-          - rx
-          - ry
-          - rz
-          - p
-          - cx
-      - gates:
-          - cx
-          - h
-          - s
-          - t
-      - gates:
-          - ccx # TOFFOLI
-          - h
-  ChangeQubitOrder:
-    scramble_percentage: 1
-  RunIndependentPartitions:
-    n_partitions: 2
+  # ChangeOptLevel:
+  #   levels:
+  #     - 0
+  #     - 1
+  #     - 2
+  #     - 3
+  # ChangeCouplingMap:
+  #   min_perc_nodes: 1
+  #   max_perc_nodes: 1.5
+  #   min_connection_density: 0.05
+  #   max_connection_density: 0.20
+  #   force_connected: true # true | false
+  # ChangeBackend:
+  #   available_backends:
+  #     - aer_simulator
+  #     - aer_simulator_statevector
+  #     # - aer_simulator_statevector_gpu  # cannot run GPU in multithreading
+  #     - statevector_simulator
+  #     - aer_simulator_density_matrix
+  #     # - aer_simulator_density_matrix_gpu  # cannot run GPU in multithreading
+  #     # the stabilizer simulator works only if the circuit can be decomposed
+  #     # in the clifford group, e.g., in  CNOT, Hadamard, phase gate S gates
+  #     #- aer_simulator_stabilizer
+  #     #- aer_simulator_extended_stabilizer
+  #     - aer_simulator_matrix_product_state
+  #     # the unitary simulators are exponential in the number of qubits.
+  #     #- aer_simulator_unitary
+  #     #- aer_simulator_unitary_gpu
+  #     #- unitary_simulator
+  #     # From Qiskit doc:
+  #     # "A dense superoperator matrix simulation of an ideal or noisy circuit.
+  #     # This simulates the superoperator matrix of the circuit itself rather
+  #     # than the evolution of an initial quantum state. This method can
+  #     # simulate ideal and noisy gates, and reset, but does not support
+  #     # measurement.""
+  #     # QiskitError: 'Data for experiment "qc" could not be found.'
+  #     #- aer_simulator_superop
+  #     - qasm_simulator
+  #     #- pulse_simulator
+  # ChangeTargetBasis:
+  #   universal_gate_sets:
+  #     - gates:
+  #         - rx
+  #         - ry
+  #         - rz
+  #         - p
+  #         - cx
+  #     - gates:
+  #         - cx
+  #         - h
+  #         - s
+  #         - t
+  #     - gates:
+  #         - ccx # TOFFOLI
+  #         - h
+  # ChangeQubitOrder:
+  #   scramble_percentage: 1
+  # RunIndependentPartitions:
+  #   n_partitions: 2
   InjectNullEffect:
     min_n_ops: 0
     max_n_ops: 10
     fuzzer_object: QiskitFuzzer
     gate_set:
-      - name: C3SXGate
-        n_bits: 4
-        n_params: 0
-      - name: C3XGate
-        n_bits: 4
-        n_params: 0
-        shortname: mcx
-      - name: C4XGate
-        n_bits: 5
-        n_params: 0
-        shortname: mcx
+      # - name: C3SXGate
+      #   n_bits: 4
+      #   n_params: 0
+      # - name: C3XGate
+      #   n_bits: 4
+      #   n_params: 0
+      #   shortname: mcx
+      # - name: C4XGate
+      #   n_bits: 5
+      #   n_params: 0
+      #   shortname: mcx
       - name: CCXGate
         n_bits: 3
         n_params: 0
@@ -637,20 +637,20 @@ morphq_metamorphic_strategies:
     #- name: XYGate
     #  n_bits:
     #  n_params: 0
-  AddUnusedRegister:
-    min_n_bit: 1
-    max_n_bit: 10
-    reg_types:
-      - QuantumRegister
-      # - ClassicalRegister
-      # ClassicalRegister leads to a longer output string because qiskit
-      # measures all the classical registers
-    after_sections:
-      - CIRCUIT
-      - MEASURE
-  InjectParameters:
-    min_n_params: 1
-    max_n_params: null # null to consider all concrete values in the program
+  # AddUnusedRegister:
+  #   min_n_bit: 1
+  #   max_n_bit: 10
+  #   reg_types:
+  #     - QuantumRegister
+  #     # - ClassicalRegister
+  #     # ClassicalRegister leads to a longer output string because qiskit
+  #     # measures all the classical registers
+  #   after_sections:
+  #     - CIRCUIT
+  #     - MEASURE
+  # InjectParameters:
+  #   min_n_params: 1
+  #   max_n_params: null # null to consider all concrete values in the program
   ToQasmAndBack:
     qasm_version: 2
     before_sections:

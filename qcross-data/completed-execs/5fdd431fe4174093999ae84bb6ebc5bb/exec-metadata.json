@@ -1,0 +1,95 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 1978,
+                "000100001": 972,
+                "000100101": 969
+            },
+            "time_taken": "53.140541 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1937,
+                "000100001": 1026,
+                "000100101": 956
+            },
+            "time_taken": "59.717041 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 2,
+                "1": 0,
+                "2": 8,
+                "3": 3,
+                "4": 4,
+                "5": 6,
+                "6": 7,
+                "7": 1,
+                "8": 5
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9828372930251251,
+            "statistic": 0.010461852513396274
+        }
+    },
+    "prog_id": "5fdd431fe4174093999ae84bb6ebc5bb",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 2,
+                "1": 0,
+                "2": 8,
+                "3": 3,
+                "4": 4,
+                "5": 6,
+                "6": 7,
+                "7": 1,
+                "8": 5
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 1955,
+                "000100001": 999,
+                "000100101": 965
+            },
+            "time_taken": "33147.092292 ms"
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "array is too big; `arr.size * arr.dtype.itemsize` is larger than the maximum possible size.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 1954,
+                "000100001": 983,
+                "000100101": 982
+            },
+            "time_taken": "693.981625 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

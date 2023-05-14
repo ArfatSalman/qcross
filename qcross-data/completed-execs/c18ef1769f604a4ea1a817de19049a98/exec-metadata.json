@@ -1,0 +1,73 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 3919
+            },
+            "time_taken": "37.787084 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 3919
+            },
+            "time_taken": "36.712542 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_45fbe7": 0.5112149185250571,
+                "p_63fe22": 6.163759533339787,
+                "p_8b8a09": 5.897054719225356,
+                "p_bd04cf": 2.3864521352475245
+            },
+            "relations": [
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0
+        }
+    },
+    "prog_id": "c18ef1769f604a4ea1a817de19049a98",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_45fbe7": 0.5112149185250571,
+                "p_63fe22": 6.163759533339787,
+                "p_8b8a09": 5.897054719225356,
+                "p_bd04cf": 2.3864521352475245
+            },
+            "relations": [
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_45fbe7), Parameter(p_8b8a09), Parameter(p_bd04cf)])]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 3919
+            },
+            "time_taken": "131.45575 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

@@ -1,0 +1,163 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01001": 74,
+                "01011": 78,
+                "01100": 83,
+                "01101": 60,
+                "01111": 68,
+                "10001": 50,
+                "10011": 57,
+                "10101": 51,
+                "10111": 51,
+                "11001": 117,
+                "11011": 106,
+                "11100": 1,
+                "11101": 92,
+                "11111": 91
+            },
+            "time_taken": "118.409167 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01001": 55,
+                "01011": 68,
+                "01100": 65,
+                "01101": 80,
+                "01111": 50,
+                "10001": 63,
+                "10011": 64,
+                "10100": 2,
+                "10101": 50,
+                "10111": 56,
+                "11001": 115,
+                "11011": 117,
+                "11100": 3,
+                "11101": 92,
+                "11111": 99
+            },
+            "time_taken": "11.789375 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_0cd2a2": 6.163759533339787,
+                "p_25d5a8": 1.0296448789776642,
+                "p_2907ce": 3.1562533916051736,
+                "p_4f8db3": 4.229610589867865,
+                "p_574806": 3.2142159669963557,
+                "p_6f799f": 5.708725119517347,
+                "p_89f9ae": 1.4112277317699358,
+                "p_a8217e": 2.0099472182748075,
+                "p_a87faa": 1.6723037552953224,
+                "p_cf4aa0": 4.028174522740928,
+                "p_daae8b": 3.865496458458116,
+                "p_eadd70": 5.0063780207098425,
+                "p_efceeb": 5.398622178940033
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "relations": [
+                "ChangeBackend",
+                "ChangeOptLevel",
+                "InjectParameters",
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.2092784833742795,
+            "statistic": 0.04800817160367722
+        }
+    },
+    "prog_id": "a7c36964c8824b3c8b056934d32e7477",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_0cd2a2": 6.163759533339787,
+                "p_25d5a8": 1.0296448789776642,
+                "p_2907ce": 3.1562533916051736,
+                "p_4f8db3": 4.229610589867865,
+                "p_574806": 3.2142159669963557,
+                "p_6f799f": 5.708725119517347,
+                "p_89f9ae": 1.4112277317699358,
+                "p_a8217e": 2.0099472182748075,
+                "p_a87faa": 1.6723037552953224,
+                "p_cf4aa0": 4.028174522740928,
+                "p_daae8b": 3.865496458458116,
+                "p_eadd70": 5.0063780207098425,
+                "p_efceeb": 5.398622178940033
+            },
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "relations": [
+                "ChangeBackend",
+                "ChangeOptLevel",
+                "InjectParameters",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01001": 77,
+                "01010": 71,
+                "01100": 60,
+                "01101": 68,
+                "01110": 66,
+                "10001": 52,
+                "10010": 52,
+                "10100": 2,
+                "10101": 50,
+                "10110": 54,
+                "11001": 118,
+                "11010": 109,
+                "11100": 2,
+                "11101": 107,
+                "11110": 91
+            },
+            "time_taken": "3507.436584 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Mismatch between run_config.parameter_binds and all circuit parameters. Parameter binds: [] Circuit parameters: [ParameterView([Parameter(p_2907ce), Parameter(p_6f799f), Parameter(p_daae8b), Parameter(p_eadd70)])]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01001": 77,
+                "01011": 84,
+                "01100": 63,
+                "01101": 66,
+                "01111": 78,
+                "10001": 56,
+                "10011": 65,
+                "10101": 49,
+                "10111": 47,
+                "11001": 92,
+                "11011": 88,
+                "11100": 4,
+                "11101": 101,
+                "11111": 109
+            },
+            "time_taken": "32.435625 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

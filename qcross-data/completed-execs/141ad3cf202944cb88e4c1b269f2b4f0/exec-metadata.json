@@ -1,0 +1,179 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 44,
+                "001": 83,
+                "010": 30,
+                "011": 124,
+                "100": 1,
+                "101": 24,
+                "110": 155,
+                "111": 28
+            },
+            "time_taken": "106.989167 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "000": 38,
+                "001": 71,
+                "010": 33,
+                "011": 109,
+                "100": 1,
+                "101": 34,
+                "110": 153,
+                "111": 50
+            },
+            "time_taken": "227.300916 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 42,
+                "001": 79,
+                "010": 29,
+                "011": 95,
+                "100": 3,
+                "101": 20,
+                "110": 175,
+                "111": 46
+            },
+            "time_taken": "5.804333 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "cirq_qasm_qiskit": true,
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "relations": [
+                "ChangeBackend",
+                "ToQasmAndBack",
+                "ChangeOptLevel"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.3164542820627613,
+            "statistic": 0.06134969325153374
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.8953471843132854,
+            "statistic": 0.03680981595092025
+        },
+        "source_followup_divergence": {
+            "p-value": 0.10436009041623426,
+            "statistic": 0.07770961145194274
+        }
+    },
+    "prog_id": "141ad3cf202944cb88e4c1b269f2b4f0",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 1
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ChangeBackend",
+                "ToQasmAndBack",
+                "ChangeOptLevel"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000": 39,
+                "001": 85,
+                "010": 160,
+                "011": 97,
+                "100": 27,
+                "101": 50,
+                "110": 27,
+                "111": 4
+            },
+            "time_taken": "6660.861959 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 54,
+                "001": 72,
+                "010": 155,
+                "011": 105,
+                "100": 31,
+                "101": 44,
+                "110": 26,
+                "111": 2
+            },
+            "time_taken": "820.728625 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9757276166479697,
+            "statistic": 0.03067484662576687
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "000": 39,
+                "001": 96,
+                "010": 23,
+                "011": 97,
+                "100": 2,
+                "101": 33,
+                "110": 156,
+                "111": 43
+            },
+            "time_taken": "46.177125 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 0.5984096532139881,
+            "statistic": 0.049079754601226995
+        },
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 37,
+                "001": 74,
+                "010": 31,
+                "011": 123,
+                "100": 2,
+                "101": 27,
+                "110": 137,
+                "111": 58
+            },
+            "time_taken": "24.605709 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "000": 38,
+                "001": 81,
+                "010": 25,
+                "011": 94,
+                "100": 1,
+                "101": 30,
+                "110": 178,
+                "111": 42
+            },
+            "time_taken": "52.385625 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.3995270704311289,
+            "statistic": 0.05725971370143149
+        },
+        "source_followup_divergence": null
+    }
+}

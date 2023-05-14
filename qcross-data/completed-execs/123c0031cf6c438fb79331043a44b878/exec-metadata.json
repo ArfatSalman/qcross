@@ -1,0 +1,85 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 517,
+                "1000100": 501,
+                "1001000": 465,
+                "1001100": 476
+            },
+            "time_taken": "34.940667 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 521,
+                "1000100": 480,
+                "1001000": 459,
+                "1001100": 499
+            },
+            "time_taken": "19.372917 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9992713003518545,
+            "statistic": 0.01174068402246044
+        }
+    },
+    "prog_id": "123c0031cf6c438fb79331043a44b878",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 514,
+                "1000100": 455,
+                "1001000": 491,
+                "1001100": 499
+            },
+            "time_taken": "65149.577917 ms"
+        },
+        "pyquil_source": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x17d37cd00>",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 485,
+                "1000100": 501,
+                "1001000": 508,
+                "1001100": 465
+            },
+            "time_taken": "1202.364334 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 525,
+                "1000100": 481,
+                "1001000": 463,
+                "1001100": 490
+            },
+            "time_taken": "1165.242292 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8089098211296321,
+            "statistic": 0.02041858090862685
+        }
+    }
+}

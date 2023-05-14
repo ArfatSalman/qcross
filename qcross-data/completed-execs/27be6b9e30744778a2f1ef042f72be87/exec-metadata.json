@@ -1,0 +1,75 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "object of type '<class 'cirq.circuits.circuit.Circuit'>' isn't invertible. It has no __pow__ method (or the method returned NotImplemented) and it isn't an iterable of invertible objects.",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000010": 569,
+                "01000011": 607,
+                "10000010": 814,
+                "10000011": 781
+            },
+            "time_taken": "37.396209 ms"
+        },
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "27be6b9e30744778a2f1ef042f72be87",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "01000010": 598,
+                "01000011": 575,
+                "10000010": 770,
+                "10000011": 828
+            },
+            "time_taken": "6072.705292 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000010": 580,
+                "01000011": 596,
+                "10000010": 787,
+                "10000011": 808
+            },
+            "time_taken": "16417.579167 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999996541346521,
+            "statistic": 0.007217610970768676
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000010": 606,
+                "01000011": 591,
+                "10000010": 813,
+                "10000011": 761
+            },
+            "time_taken": "58.009041 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

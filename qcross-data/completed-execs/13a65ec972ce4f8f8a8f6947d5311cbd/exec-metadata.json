@@ -1,0 +1,191 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01000010": 575,
+                "01000011": 274,
+                "01000111": 300,
+                "01010010": 15,
+                "01010011": 6,
+                "01010111": 6,
+                "10000010": 755,
+                "10000011": 442,
+                "10000111": 398
+            },
+            "time_taken": "180.706708 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01000010": 623,
+                "01000011": 266,
+                "01000111": 279,
+                "01010010": 14,
+                "01010011": 8,
+                "01010111": 8,
+                "10000010": 790,
+                "10000011": 376,
+                "10000111": 407
+            },
+            "time_taken": "25.273584 ms"
+        },
+        "config": {
+            "opt_level": {
+                "initial_level": 3,
+                "new_level": 1
+            },
+            "qubit_order": {
+                "0": 4,
+                "1": 0,
+                "2": 1,
+                "3": 5,
+                "4": 2,
+                "5": 6,
+                "6": 7,
+                "7": 3
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "ChangeOptLevel",
+                "ChangeOptLevel",
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.6009506833126489,
+            "statistic": 0.020570191266690727
+        }
+    },
+    "prog_id": "13a65ec972ce4f8f8a8f6947d5311cbd",
+    "pyquil": {
+        "config": {
+            "opt_level": {
+                "initial_level": 3,
+                "new_level": 1
+            },
+            "qubit_order": {
+                "0": 4,
+                "1": 0,
+                "2": 1,
+                "3": 5,
+                "4": 2,
+                "5": 6,
+                "6": 7,
+                "7": 3
+            },
+            "relations": [
+                "ChangeOptLevel",
+                "ChangeOptLevel",
+                "ChangeOptLevel",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x2a5551af0>",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01000010": 532,
+                "01000011": 275,
+                "01000111": 298,
+                "01010010": 25,
+                "01010011": 7,
+                "01010111": 5,
+                "10000010": 832,
+                "10000011": 375,
+                "10000111": 422
+            },
+            "time_taken": "16053.635917 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "01000010": 569,
+                "01000011": 268,
+                "01000111": 276,
+                "01010010": 15,
+                "01010011": 12,
+                "01010111": 5,
+                "10000010": 821,
+                "10000011": 405,
+                "10000111": 400
+            },
+            "result_original": {
+                "00001001": 821,
+                "00011001": 405,
+                "00011011": 400,
+                "10000001": 569,
+                "10000101": 15,
+                "10010001": 268,
+                "10010011": 276,
+                "10010101": 12,
+                "10010111": 5
+            },
+            "time_taken": "21.108 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01000010": 563,
+                "01000011": 303,
+                "01000111": 278,
+                "01010010": 14,
+                "01010011": 7,
+                "01010111": 16,
+                "10000010": 805,
+                "10000011": 377,
+                "10000111": 408
+            },
+            "time_taken": "56.992875 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9735301179616372,
+            "statistic": 0.012991699747383616
+        }
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "01000010": 533,
+                "01000011": 284,
+                "01000111": 284,
+                "01010010": 15,
+                "01010011": 6,
+                "01010111": 7,
+                "10000010": 826,
+                "10000011": 394,
+                "10000111": 422
+            },
+            "time_taken": "207.388625 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: PRAGMA INITIAL_REWIRING \"NAIVE",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": null,
+            "result": {
+                "00001001": 788,
+                "00011001": 428,
+                "00011011": 399,
+                "10000001": 551,
+                "10000101": 28,
+                "10010001": 286,
+                "10010011": 274,
+                "10010101": 7,
+                "10010111": 10
+            },
+            "time_taken": "38.752042 ms"
+        },
+        "unitary": false
+    }
+}

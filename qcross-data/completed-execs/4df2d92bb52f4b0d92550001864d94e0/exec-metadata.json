@@ -1,0 +1,81 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 993,
+                "1001000": 966
+            },
+            "time_taken": "16.535958 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 988,
+                "1001000": 971
+            },
+            "time_taken": "15.790875 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_b699b9": 2.0099472182748075,
+                "p_edcf6a": 6.163759533339787
+            },
+            "relations": [
+                "ChangeTargetBasis",
+                "AddUnusedRegister",
+                "InjectParameters"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999999,
+            "statistic": 0.002552322613578356
+        }
+    },
+    "prog_id": "4df2d92bb52f4b0d92550001864d94e0",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_b699b9": 2.0099472182748075,
+                "p_edcf6a": 6.163759533339787
+            },
+            "relations": [
+                "ChangeTargetBasis",
+                "AddUnusedRegister",
+                "InjectParameters"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 987,
+                "1001000": 972
+            },
+            "time_taken": "18914.081333 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Unable to map source basis {('x', 1), ('ch', 2), ('ecr', 2), ('measure', 1), ('cx', 2), ('cu1', 2), ('crx', 2), ('h', 1), ('rz', 1), ('sdg', 1), ('z', 1)} to target basis {'reset', 's', 'delay', 'snapshot', 'barrier', 'measure', 't', 'cx', 'h'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x172cdc7c0>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 986,
+                "1001000": 973
+            },
+            "time_taken": "223.154125 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

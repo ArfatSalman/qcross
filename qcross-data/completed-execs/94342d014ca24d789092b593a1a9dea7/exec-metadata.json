@@ -1,0 +1,147 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 968,
+                "00010000100": 976,
+                "00010100000": 987,
+                "00010100100": 986,
+                "10010000000": 947,
+                "10010000100": 960,
+                "10010100000": 1033,
+                "10010100100": 981
+            },
+            "time_taken": "787.245667 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "00010000000": 965,
+                "00010000100": 987,
+                "00010100000": 1017,
+                "00010100100": 948,
+                "10010000000": 1011,
+                "10010000100": 964,
+                "10010100000": 918,
+                "10010100100": 1028
+            },
+            "time_taken": "5951.073333 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 949,
+                "00010000100": 1009,
+                "00010100000": 982,
+                "00010100100": 957,
+                "10010000000": 1024,
+                "10010000100": 957,
+                "10010100000": 1013,
+                "10010100100": 947
+            },
+            "time_taken": "84.579292 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "InjectNullEffect",
+                "ChangeBackend",
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9295884367122349,
+            "statistic": 0.008675682572084715
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.7967624914942634,
+            "statistic": 0.010334268946159735
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9856979307448239,
+            "statistic": 0.007272263332482776
+        }
+    },
+    "prog_id": "94342d014ca24d789092b593a1a9dea7",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectNullEffect",
+                "ChangeBackend",
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 1043,
+                "00010000100": 894,
+                "00010100000": 933,
+                "00010100100": 971,
+                "10010000000": 1026,
+                "10010000100": 980,
+                "10010100000": 993,
+                "10010100100": 998
+            },
+            "time_taken": "2616.747334 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 969,
+                "00010000100": 979,
+                "00010100000": 946,
+                "00010100100": 1007,
+                "10010000000": 1036,
+                "10010000100": 964,
+                "10010100000": 962,
+                "10010100100": 975
+            },
+            "time_taken": "2284.998375 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.8759554665249341,
+            "statistic": 0.009441183975503956
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 990,
+                "00010000100": 942,
+                "00010100000": 975,
+                "00010100100": 965,
+                "10010000000": 996,
+                "10010000100": 993,
+                "10010100000": 944,
+                "10010100100": 1033
+            },
+            "time_taken": "41.28075 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

@@ -16,7 +16,7 @@ qr = circuit.declare("ro", "BIT", 10)
 
 
 
-defns = get_custom_get_definitions("SXdgGate", "U2Gate", "SXGate", "RZGate", "CSXGate", "CHGate", "ECRGate", "TGate", "CRZGate", "CCXGate", "XGate", "ZGate", "CRXGate", "UGate", "C3SXGate")
+defns = get_custom_get_definitions("ZGate", "CHGate", "UGate", "CCXGate", "SXGate", "TGate", "C3SXGate", "SXdgGate", "ECRGate", "XGate", "U2Gate", "CRXGate", "RZGate", "CRZGate", "CSXGate")
 
 circuit += defns
 

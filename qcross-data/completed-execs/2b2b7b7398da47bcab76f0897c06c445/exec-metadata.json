@@ -1,0 +1,105 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00000": 518,
+                "00100": 461
+            },
+            "time_taken": "7.600333 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00000": 471,
+                "00100": 508
+            },
+            "time_taken": "6.924541 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_1b7413": 6.163759533339787
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeCouplingMap",
+                "ChangeTargetBasis",
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.2092784833742795,
+            "statistic": 0.04800817160367722
+        }
+    },
+    "prog_id": "2b2b7b7398da47bcab76f0897c06c445",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_1b7413": 6.163759533339787
+            },
+            "relations": [
+                "InjectNullEffect",
+                "ChangeCouplingMap",
+                "ChangeTargetBasis",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00000": 503,
+                "00100": 476
+            },
+            "time_taken": "150.102417 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00000": 485,
+                "00100": 494
+            },
+            "time_taken": "141.458916 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9964700076325497,
+            "statistic": 0.018386108273748723
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Unable to map source basis {('measure', 1), ('sxdg', 1), ('sx', 1), ('rz', 1), ('h', 1)} to target basis {'s', 'barrier', 'measure', 'h', 'delay', 'snapshot', 'cx', 'reset', 't'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x161a04510>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00000": 482,
+                "00100": 497
+            },
+            "time_taken": "4.130333 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "00000": 505,
+                "00100": 474
+            },
+            "time_taken": "8.662042 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: DECLARE p_1b7413 REAL[1]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Unable to map source basis {('measure', 1), ('sxdg', 1), ('sx', 1), ('rz', 1), ('h', 1)} to target basis {'s', 'barrier', 'measure', 'h', 'delay', 'snapshot', 'cx', 'reset', 't'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x161a04510>.",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

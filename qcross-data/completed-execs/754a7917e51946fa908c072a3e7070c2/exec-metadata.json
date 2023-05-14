@@ -1,0 +1,81 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01001": 440,
+                "01100": 539
+            },
+            "time_taken": "7.413333 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01001": 451,
+                "01100": 528
+            },
+            "time_taken": "8.214042 ms"
+        },
+        "config": {
+            "relations": [
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.999999979863412,
+            "statistic": 0.011235955056179775
+        }
+    },
+    "prog_id": "754a7917e51946fa908c072a3e7070c2",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "AddUnusedRegister"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "01001": 448,
+                "01100": 531
+            },
+            "time_taken": "977.423875 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01001": 433,
+                "01100": 546
+            },
+            "time_taken": "1044.588291 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9998422912547544,
+            "statistic": 0.015321756894790603
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "01001": 441,
+                "01100": 538
+            },
+            "time_taken": "16.71925 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01001": 457,
+                "01100": 522
+            },
+            "time_taken": "17.227625 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9994550199341308,
+            "statistic": 0.01634320735444331
+        }
+    }
+}

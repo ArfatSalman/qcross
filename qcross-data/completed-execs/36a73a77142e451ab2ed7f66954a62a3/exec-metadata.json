@@ -1,0 +1,92 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 968,
+                "1001000": 991
+            },
+            "time_taken": "18.41875 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 984,
+                "1001000": 975
+            },
+            "time_taken": "19.811334 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 1,
+                "1": 2,
+                "2": 4,
+                "3": 5,
+                "4": 0,
+                "5": 6,
+                "6": 3
+            },
+            "relations": [
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.999999939988425,
+            "statistic": 0.00816743236345074
+        }
+    },
+    "prog_id": "36a73a77142e451ab2ed7f66954a62a3",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 1,
+                "1": 2,
+                "2": 4,
+                "3": 5,
+                "4": 0,
+                "5": 6,
+                "6": 3
+            },
+            "relations": [
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Request to quilc at tcp://127.0.0.1:5555 timed out. This could mean that quilc is not running, is not reachable, or is responding slowly.",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 1001,
+                "1001000": 958
+            },
+            "result_original": {
+                "0001000": 1001,
+                "0101000": 958
+            },
+            "time_taken": "803.575625 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 951,
+                "1001000": 1008
+            },
+            "time_taken": "823.006292 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.5462122969244531,
+            "statistic": 0.025523226135783564
+        }
+    }
+}

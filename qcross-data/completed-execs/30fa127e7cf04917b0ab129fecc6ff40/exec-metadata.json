@@ -1,0 +1,107 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 982,
+                "00010000100": 1012,
+                "00010100000": 971,
+                "00010100100": 954,
+                "10010000000": 994,
+                "10010000100": 930,
+                "10010100000": 987,
+                "10010100100": 1008
+            },
+            "time_taken": "167.520042 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 991,
+                "00010000100": 959,
+                "00010100000": 944,
+                "00010100100": 1024,
+                "10010000000": 970,
+                "10010000100": 981,
+                "10010100000": 999,
+                "10010100100": 970
+            },
+            "time_taken": "104.819208 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend",
+                "InjectNullEffect"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9046817979198943,
+            "statistic": 0.009058433273794336
+        }
+    },
+    "prog_id": "30fa127e7cf04917b0ab129fecc6ff40",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "ChangeBackend",
+                "InjectNullEffect"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "00010000000": 964,
+                "00010000100": 974,
+                "00010100000": 1022,
+                "00010100100": 954,
+                "10010000000": 965,
+                "10010000100": 954,
+                "10010100000": 991,
+                "10010100100": 1014
+            },
+            "time_taken": "2408.786917 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 1010,
+                "00010000100": 959,
+                "00010100000": 1047,
+                "00010100100": 930,
+                "10010000000": 1011,
+                "10010000100": 987,
+                "10010100000": 934,
+                "10010100100": 960
+            },
+            "time_taken": "2460.065875 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.41158212176262976,
+            "statistic": 0.014161775963255933
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": "Maximum allowed dimension exceeded",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "00010000000": 920,
+                "00010000100": 974,
+                "00010100000": 984,
+                "00010100100": 992,
+                "10010000000": 984,
+                "10010000100": 987,
+                "10010100000": 1012,
+                "10010100100": 985
+            },
+            "time_taken": "39.614041 ms"
+        },
+        "source_followup_divergence": null
+    }
+}

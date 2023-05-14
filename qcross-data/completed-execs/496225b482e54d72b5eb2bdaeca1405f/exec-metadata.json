@@ -1,0 +1,76 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 960,
+                "1001000": 999
+            },
+            "time_taken": "28.244291 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 936,
+                "1001000": 1023
+            },
+            "time_taken": "21.991708 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeBackend"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9985265007237669,
+            "statistic": 0.01225114854517611
+        }
+    },
+    "prog_id": "496225b482e54d72b5eb2bdaeca1405f",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeBackend"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x16b10fdc0>",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x16855d4f0>",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 985,
+                "1001000": 974
+            },
+            "time_taken": "594.586875 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 959,
+                "1001000": 1000
+            },
+            "time_taken": "484.003625 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9952855976437609,
+            "statistic": 0.013272077590607452
+        }
+    }
+}

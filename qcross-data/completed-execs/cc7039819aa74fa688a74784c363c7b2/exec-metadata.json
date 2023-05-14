@@ -1,0 +1,147 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": "Simulator doesn't support <bloqs.ext.cirq.gates.U2Gate object at 0x1748c0cd0>.on(cirq.NamedQubit('q8'))",
+            "result": null,
+            "time_taken": null
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 823,
+                "0100000001": 338,
+                "0100000100": 1214,
+                "0100000101": 353,
+                "1100000000": 791,
+                "1100000001": 351,
+                "1100000100": 1310,
+                "1100000101": 362
+            },
+            "time_taken": "55.23475 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_132f3b": 4.229610589867865,
+                "p_2c205c": 2.1276323672732023,
+                "p_72ab38": 6.163759533339787,
+                "p_bd1c3c": 2.586208953975239,
+                "p_c746bf": 5.014941143947427,
+                "p_d5c708": 5.987304452123941,
+                "p_f22bb0": 4.167661441102218
+            },
+            "qubit_order": {
+                "0": 1,
+                "1": 9,
+                "2": 8,
+                "3": 5,
+                "4": 7,
+                "5": 6,
+                "6": 0,
+                "7": 3,
+                "8": 2,
+                "9": 4
+            },
+            "relations": [
+                "ChangeCouplingMap",
+                "InjectParameters",
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": null
+    },
+    "prog_id": "cc7039819aa74fa688a74784c363c7b2",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_132f3b": 4.229610589867865,
+                "p_2c205c": 2.1276323672732023,
+                "p_72ab38": 6.163759533339787,
+                "p_bd1c3c": 2.586208953975239,
+                "p_c746bf": 5.014941143947427,
+                "p_d5c708": 5.987304452123941,
+                "p_f22bb0": 4.167661441102218
+            },
+            "qubit_order": {
+                "0": 1,
+                "1": 9,
+                "2": 8,
+                "3": 5,
+                "4": 7,
+                "5": 6,
+                "6": 0,
+                "7": 3,
+                "8": 2,
+                "9": 4
+            },
+            "relations": [
+                "ChangeCouplingMap",
+                "InjectParameters",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 793,
+                "0100000001": 353,
+                "0100000100": 1254,
+                "0100000101": 348,
+                "1100000000": 830,
+                "1100000001": 332,
+                "1100000100": 1254,
+                "1100000101": 378
+            },
+            "time_taken": "2204.982958 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 789,
+                "0100000001": 377,
+                "0100000100": 1275,
+                "0100000101": 353,
+                "1100000000": 839,
+                "1100000001": 363,
+                "1100000100": 1208,
+                "1100000101": 338
+            },
+            "result_original": {
+                "0000000100": 789,
+                "0000000110": 377,
+                "0000010100": 839,
+                "0000010110": 363,
+                "0100000100": 1275,
+                "0100000110": 353,
+                "0100010100": 1208,
+                "0100010110": 338
+            },
+            "time_taken": "60.997917 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 873,
+                "0100000001": 333,
+                "0100000100": 1266,
+                "0100000101": 351,
+                "1100000000": 787,
+                "1100000001": 341,
+                "1100000100": 1251,
+                "1100000101": 340
+            },
+            "time_taken": "77.552291 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.5476560553730293,
+            "statistic": 0.015156983038614218
+        }
+    }
+}

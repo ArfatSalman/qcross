@@ -1,0 +1,137 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "01001": 428,
+                "01100": 551
+            },
+            "time_taken": "29.47225 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "01001": 427,
+                "01100": 552
+            },
+            "time_taken": "52.908875 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "01001": 436,
+                "01100": 543
+            },
+            "time_taken": "7.260625 ms"
+        },
+        "config": {
+            "cirq_qasm_qiskit": true,
+            "inject_params": {
+                "p_0d2e3c": 1.0296448789776642,
+                "p_6b43a3": 4.229610589867865,
+                "p_7d2faf": 2.0099472182748075,
+                "p_85477f": 1.6723037552953224,
+                "p_86f185": 6.163759533339787,
+                "p_93dcc8": 4.623446645668956,
+                "p_e75067": 4.167661441102218,
+                "p_eb055e": 3.865496458458116,
+                "p_f407a3": 5.708725119517347
+            },
+            "relations": [
+                "InjectParameters",
+                "InjectParameters",
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999999999994,
+            "statistic": 0.0010214504596527069
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9999999999988172,
+            "statistic": 0.009193054136874362
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999996,
+            "statistic": 0.008171603677221655
+        }
+    },
+    "prog_id": "ef3b9be625a1478da29bf39301f352eb",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_0d2e3c": 1.0296448789776642,
+                "p_6b43a3": 4.229610589867865,
+                "p_7d2faf": 2.0099472182748075,
+                "p_85477f": 1.6723037552953224,
+                "p_86f185": 6.163759533339787,
+                "p_93dcc8": 4.623446645668956,
+                "p_e75067": 4.167661441102218,
+                "p_eb055e": 3.865496458458116,
+                "p_f407a3": 5.708725119517347
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "InjectParameters",
+                "InjectParameters",
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "01001": 416,
+                "01100": 563
+            },
+            "time_taken": "559.4705 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "01001": 451,
+                "01100": 528
+            },
+            "time_taken": "95.084458 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 0.9868588878823522,
+            "statistic": 0.020429009193054137
+        },
+        "qiskit_followup": {
+            "exception": "Cannot represent circuits with unbound parameters in OpenQASM 2.",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "01001": 431,
+                "01100": 548
+            },
+            "time_taken": "14.050208 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "01001": 463,
+                "01100": 516
+            },
+            "time_taken": "37.297917 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.6726576189942625,
+            "statistic": 0.03268641470888662
+        },
+        "source_followup_divergence": null
+    }
+}

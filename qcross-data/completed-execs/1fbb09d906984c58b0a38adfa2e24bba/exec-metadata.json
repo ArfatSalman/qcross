@@ -1,0 +1,121 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 1008,
+                "1001000": 951
+            },
+            "time_taken": "265.383208 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "1000000": 987,
+                "1001000": 972
+            },
+            "time_taken": "494.569459 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 989,
+                "1001000": 970
+            },
+            "time_taken": "15.483584 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "cirq_qasm_qiskit": true,
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeBackend",
+                "ChangeTargetBasis",
+                "ChangeOptLevel"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9998715177744585,
+            "statistic": 0.010719754977029096
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0010209290454313426
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999875480085445,
+            "statistic": 0.009698825931597753
+        }
+    },
+    "prog_id": "1fbb09d906984c58b0a38adfa2e24bba",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "opt_level": {
+                "initial_level": 2,
+                "new_level": 0
+            },
+            "qasm_roundtrip": true,
+            "relations": [
+                "ToQasmAndBack",
+                "ChangeBackend",
+                "ChangeTargetBasis",
+                "ChangeOptLevel"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 938,
+                "1001000": 1021
+            },
+            "time_taken": "19724.749 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 984,
+                "1001000": 975
+            },
+            "time_taken": "19247.426708 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.6527614129198124,
+            "statistic": 0.02348136804492088
+        }
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": "Unable to map source basis {('measure', 1), ('u1', 1), ('crx', 2), ('x', 1), ('ch', 2), ('rz', 1), ('h', 1), ('sdg', 1), ('cx', 2), ('z', 1), ('ecr', 2)} to target basis {'delay', 's', 'cx', 'h', 'snapshot', 'barrier', 't', 'measure', 'reset'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x170357790>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qasm3_source_divergence": null,
+        "qiskit_followup": {
+            "exception": "Duplicate declaration for gate 'rzx' at line 4, file .\\nPrevious occurrence at line 3, file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 1008,
+                "1001000": 951
+            },
+            "time_taken": "225.724542 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": "Unable to map source basis {('measure', 1), ('crx', 2), ('x', 1), ('ch', 2), ('cu1', 2), ('rz', 1), ('h', 1), ('sdg', 1), ('cx', 2), ('z', 1), ('ecr', 2)} to target basis {'delay', 's', 'cx', 'h', 'snapshot', 'barrier', 't', 'measure', 'reset'} over library <qiskit.circuit.equivalence.EquivalenceLibrary object at 0x170357790>.",
+            "result": null,
+            "time_taken": null
+        },
+        "qpy_source_divergence": null,
+        "source_followup_divergence": null
+    }
+}

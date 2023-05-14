@@ -132,7 +132,6 @@ class PyQuilCircuit:
         return f'Gates.{gate_name}({", ".join(map(str, args))})( {self._qubits_args(qubit_pos)} )'
 
     def subcircuit_creator(self):
-
         out = ["\nsubcircuit = Program()"]
 
         subcircuit, defns = self.construct_circuit(
@@ -194,7 +193,6 @@ class PyQuilCircuit:
         return ""
 
     def construct_circuit(self, instructions, circuit_name="circuit"):
-
         for i in reversed(instructions):
             if self.followup_config.get("qubit_mutation", 0) > self.mutation:
                 if i["gate"].startswith("C"):
@@ -258,7 +256,6 @@ class PyQuilCircuit:
         print(colored(f"transpiler:: {text}", color))
 
     def get_inject_parameters_symbols(self):
-
         params = self.followup_config.get("inject_params")
         if not params:
             return ""
@@ -282,7 +279,6 @@ for param, value in params.items():
         """
 
     def construct_all_circuits(self):
-
         if self.followup_config.get("independent_circuits", None):
             self.log("INDEPENDENT CIRCUITS")
             self.independent_circuit_creator()
@@ -338,6 +334,8 @@ defns = get_custom_get_definitions({', '.join([f'"{el}"' for el in self.gates_to
             return
 
     def get_measurement_gates(self):
+        if self.followup_config.get("add_unitary", False):
+            return []
         res = []
         res.append(self.get_unused_registers())
         order = self.followup_config.get("qubit_order")
@@ -370,7 +368,10 @@ from bloqs.ext.pyquil.utils import get_qiskit_like_output
         """
 
     def epilogue(self, shots):
-
+        if self.followup_config.get("add_unitary", False):
+            return f"""
+{ self.add_unitary() }
+"""
         measurement_keys = []
         for i in range(self.qubits):
             measurement_keys.append(f"'cr{str(i)}'")
@@ -435,6 +436,8 @@ lattice = cirq.GridQubit.square(qubits_num + 1 if qubits_num == 1 else qubits_nu
         """
 
     def generate_qubit_registers(self):
+        if self.followup_config.get("add_unitary"):
+            return ""
         return (
             f'{self.qubit_id} = {self.main_circuit}.declare("ro", "BIT", {self.qubits})'
         )
@@ -604,7 +607,6 @@ quil_out = {self.main_circuit}.out()
 
     @staticmethod
     def from_qiskit_source(qiskit_source: str):
-
         registers = metamorph.get_registers_used(qiskit_source)
         qubit_size = None
         qubit_name = None

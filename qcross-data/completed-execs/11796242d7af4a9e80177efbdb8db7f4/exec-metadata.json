@@ -1,0 +1,119 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 41,
+                "001": 19,
+                "010": 14,
+                "011": 30,
+                "100": 227,
+                "101": 37,
+                "110": 115,
+                "111": 6
+            },
+            "time_taken": "5.635917 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 48,
+                "001": 16,
+                "010": 12,
+                "011": 35,
+                "100": 229,
+                "101": 35,
+                "110": 110,
+                "111": 4
+            },
+            "time_taken": "3.895375 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_2738e6": 6.163759533339787,
+                "p_74f3ba": 5.987304452123941,
+                "p_852197": 1.6723037552953224
+            },
+            "relations": [
+                "ChangeBackend",
+                "ChangeBackend",
+                "InjectParameters"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999972593426544,
+            "statistic": 0.018404907975460124
+        }
+    },
+    "prog_id": "11796242d7af4a9e80177efbdb8db7f4",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "inject_params": {
+                "p_2738e6": 6.163759533339787,
+                "p_74f3ba": 5.987304452123941,
+                "p_852197": 1.6723037552953224
+            },
+            "relations": [
+                "ChangeBackend",
+                "ChangeBackend",
+                "InjectParameters"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nCondition CL-QUIL::COMPILER-DOES-NOT-APPLY was signalled.",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 37,
+                "001": 10,
+                "010": 13,
+                "011": 33,
+                "100": 236,
+                "101": 30,
+                "110": 124,
+                "111": 6
+            },
+            "time_taken": "626.637375 ms"
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 43,
+                "001": 20,
+                "010": 3,
+                "011": 28,
+                "100": 249,
+                "101": 37,
+                "110": 103,
+                "111": 6
+            },
+            "time_taken": "18.378583 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 42,
+                "001": 17,
+                "010": 16,
+                "011": 36,
+                "100": 233,
+                "101": 30,
+                "110": 112,
+                "111": 3
+            },
+            "time_taken": "18.74475 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9295014952908248,
+            "statistic": 0.034764826175869123
+        }
+    }
+}

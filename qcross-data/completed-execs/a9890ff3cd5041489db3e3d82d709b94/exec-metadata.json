@@ -1,0 +1,135 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000": 237,
+                "010": 128,
+                "011": 124
+            },
+            "time_taken": "2.411875 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000": 239,
+                "010": 118,
+                "011": 132
+            },
+            "time_taken": "2.377541 ms"
+        },
+        "config": {
+            "inject_params": {
+                "p_174706": 6.163759533339787
+            },
+            "qubit_order": {
+                "0": 2,
+                "1": 0,
+                "2": 1
+            },
+            "relations": [
+                "ChangeTargetBasis",
+                "InjectParameters",
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999436890225,
+            "statistic": 0.016359918200409
+        }
+    },
+    "prog_id": "a9890ff3cd5041489db3e3d82d709b94",
+    "pyquil": {
+        "config": {
+            "inject_params": {
+                "p_174706": 6.163759533339787
+            },
+            "qubit_order": {
+                "0": 2,
+                "1": 0,
+                "2": 1
+            },
+            "relations": [
+                "ChangeTargetBasis",
+                "InjectParameters",
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "000": 241,
+                "010": 120,
+                "011": 128
+            },
+            "time_taken": "394.346709 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "000": 242,
+                "010": 125,
+                "011": 122
+            },
+            "time_taken": "290.559375 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999757,
+            "statistic": 0.012269938650306749
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "000": 247,
+                "010": 125,
+                "011": 117
+            },
+            "result_original": {
+                "000": 247,
+                "001": 125,
+                "101": 117
+            },
+            "time_taken": "10.207583 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000": 226,
+                "010": 134,
+                "011": 129
+            },
+            "time_taken": "9.049958 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.758549383533953,
+            "statistic": 0.04294478527607362
+        }
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "000": 252,
+                "010": 111,
+                "011": 126
+            },
+            "time_taken": "4.056958 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "Can only compute program unitary for programs composed of `Gate`s. Found unsupported instruction: DECLARE p_174706 REAL[1]",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": null,
+            "result": {
+                "000": 246,
+                "001": 126,
+                "101": 117
+            },
+            "time_taken": "14.941792 ms"
+        }
+    }
+}

@@ -3,6 +3,9 @@ SHELL := /bin/bash
 start:
 	python3 -m qcross.start
 
+start-v52:
+	python3 -m qcross.start --existing-programs-src data/qmt_v52/programs
+
 start-new:
 	python3 -m qcross.start --run-new-programs
 

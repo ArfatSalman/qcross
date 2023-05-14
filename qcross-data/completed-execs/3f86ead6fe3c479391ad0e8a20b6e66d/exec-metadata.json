@@ -1,0 +1,114 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 2776,
+                "0100000100": 1364,
+                "0100000101": 1402
+            },
+            "time_taken": "52.808709 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2728,
+                "0100000100": 1411,
+                "0100000101": 1403
+            },
+            "time_taken": "53.476042 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 2,
+                "1": 0,
+                "2": 6,
+                "3": 9,
+                "4": 3,
+                "5": 4,
+                "6": 7,
+                "7": 8,
+                "8": 1,
+                "9": 5
+            },
+            "relations": [
+                "ChangeQubitOrder"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9854725113468811,
+            "statistic": 0.00866113316492241
+        }
+    },
+    "prog_id": "3f86ead6fe3c479391ad0e8a20b6e66d",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 2,
+                "1": 0,
+                "2": 6,
+                "3": 9,
+                "4": 3,
+                "5": 4,
+                "6": 7,
+                "7": 8,
+                "8": 1,
+                "9": 5
+            },
+            "relations": [
+                "ChangeQubitOrder"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 2758,
+                "0100000100": 1414,
+                "0100000101": 1370
+            },
+            "time_taken": "2547.271708 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2772,
+                "0100000100": 1406,
+                "0100000101": 1364
+            },
+            "time_taken": "3093.559333 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999999,
+            "statistic": 0.0025261638397690365
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "0100000000": 2762,
+                "0100000100": 1369,
+                "0100000101": 1411
+            },
+            "result_original": {
+                "0000000010": 2762,
+                "0001000010": 1369,
+                "0001000110": 1411
+            },
+            "time_taken": "32.690417 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "0100000000": 2752,
+                "0100000100": 1393,
+                "0100000101": 1397
+            },
+            "time_taken": "35.438375 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999999999,
+            "statistic": 0.0025261638397690365
+        }
+    }
+}

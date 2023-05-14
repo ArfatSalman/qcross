@@ -128,7 +128,6 @@ class CirqCircuit:
         return f'Gates.{gate_name}({", ".join(map(str, args))})( {self._qubits_args(qubit_pos)} )'
 
     def subcircuit_creator(self):
-
         out = ["\nsubcircuit = cirq.Circuit()"]
 
         subcircuit, defns = self.construct_circuit(
@@ -172,7 +171,6 @@ class CirqCircuit:
         self.qubits = count
 
     def construct_circuit(self, instructions, circuit_name="circuit"):
-
         for i in reversed(instructions):
             if self.followup_config.get("qubit_mutation", 0) > self.mutation:
                 if i["gate"].startswith("C"):
@@ -247,7 +245,6 @@ class CirqCircuit:
         print(colored(f"transpiler:: {text}", color, on_color="on_red"))
 
     def get_inject_parameters_symbols(self):
-
         params = self.followup_config.get("inject_params")
         if not params:
             return ""
@@ -265,7 +262,6 @@ class CirqCircuit:
         """
 
     def construct_all_circuits(self):
-
         if self.followup_config.get("independent_circuits", None):
             self.log("INDEPENDENT CIRCUITS")
             self.independent_circuit_creator()
@@ -544,9 +540,9 @@ def apply_transformations(circuit, context=None):
             return match.group(1)
 
     def qasm_roundtrip(self):
-        return """
-qasm_output = cirq.qasm(cirq.expand_composite(circuit))
-circuit = circuit_from_qasm(qasm_output) # new circuit
+        return f"""
+qasm_output = cirq.qasm(cirq.expand_composite({self.main_circuit}))
+{self.main_circuit} = circuit_from_qasm(qasm_output) # new circuit
 """
 
     def _get_equivalent(self, shots=None):
@@ -577,7 +573,7 @@ circuit = circuit_from_qasm(qasm_output) # new circuit
         self.followup_metadata = {}
 
         if self.followup_config.get("independent_circuits"):
-            self.log("INDENTED CIRCUITS FOUND - SPLITTING")
+            self.log("INDEPENDENT CIRCUITS FOUND - SPLITTING")
             out = ""
             del config["independent_circuits"]
             shots = self.get_shots()
@@ -621,7 +617,6 @@ circuit = circuit_from_qasm(qasm_output) # new circuit
 
     @staticmethod
     def from_qiskit_source(qiskit_source: str):
-
         registers = metamorph.get_registers_used(qiskit_source)
         qubit_size = None
         qubit_name = None

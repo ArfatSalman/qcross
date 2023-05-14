@@ -1,0 +1,146 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "000100000": 991,
+                "000100001": 153,
+                "001100000": 1003,
+                "001100001": 1772
+            },
+            "time_taken": "617.673875 ms"
+        },
+        "cirq_qasm_qiskit": {
+            "exception": null,
+            "result": {
+                "000100000": 998,
+                "000100001": 135,
+                "001100000": 1012,
+                "001100001": 1774
+            },
+            "time_taken": "689.264875 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "000100000": 996,
+                "000100001": 148,
+                "001100000": 955,
+                "001100001": 1820
+            },
+            "time_taken": "46.473417 ms"
+        },
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "cirq_qasm_qiskit": true,
+            "relations": [
+                "ChangeBackend",
+                "ToQasmAndBack"
+            ]
+        },
+        "followup_cirq_qasm_qiskit_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.0028068384792038787
+        },
+        "source_cirq_qasm_qiskit_divergence": {
+            "p-value": 0.9500639759886308,
+            "statistic": 0.011737688185761675
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9305083237751808,
+            "statistic": 0.012248022454707833
+        }
+    },
+    "prog_id": "5f58ceaa1d544d49af54788ad5454bc3",
+    "pyquil": {
+        "config": {
+            "backend": "DensityMatrixSimulator",
+            "qasm_roundtrip": true,
+            "relations": [
+                "ChangeBackend",
+                "ToQasmAndBack"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Unhandled error in host program:\nToo many SWAP instructions selected in a row: 1000",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qasm3_followup_divergence": null,
+        "qasm3_roundtrip": {
+            "exception": null,
+            "result": {
+                "000100000": 976,
+                "000100001": 139,
+                "001100000": 950,
+                "001100001": 1854
+            },
+            "time_taken": "799.887333 ms"
+        },
+        "qasm3_source_divergence": {
+            "p-value": 0.8806311370011657,
+            "statistic": 0.013268690992600153
+        },
+        "qiskit_followup": {
+            "exception": "Cannot find gate definition for 'c3sx', line 10 file ",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "000100000": 987,
+                "000100001": 125,
+                "001100000": 1005,
+                "001100001": 1802
+            },
+            "time_taken": "703.782792 ms"
+        },
+        "qpy_followup_divergence": null,
+        "qpy_roundtrip": {
+            "exception": null,
+            "result": {
+                "000100000": 975,
+                "000100001": 131,
+                "001100000": 973,
+                "001100001": 1840
+            },
+            "time_taken": "809.2855 ms"
+        },
+        "qpy_source_divergence": {
+            "p-value": 0.9927998501320023,
+            "statistic": 0.009696351109977035
+        },
+        "source_followup_divergence": null
+    },
+    "unitary": {
+        "cirq_unitary": {
+            "exception": null,
+            "result": {
+                "000100000": 977,
+                "000100001": 116,
+                "001100000": 1004,
+                "001100001": 1822
+            },
+            "time_taken": "715.475917 ms"
+        },
+        "pyquil_unitary": {
+            "exception": "SX",
+            "result": null,
+            "time_taken": null
+        },
+        "qiskit_unitary": {
+            "exception": "Cannot find gate definition for 'c3sx', line 10 file ",
+            "result": null,
+            "time_taken": null
+        }
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 986,
+                "1001000": 973
+            },
+            "time_taken": "14.341042 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 994,
+                "1001000": 965
+            },
+            "time_taken": "15.459667 ms"
+        },
+        "config": {
+            "relations": [
+                "ChangeCouplingMap"
+            ]
+        },
+        "source_followup_divergence": {
+            "p-value": 1.0,
+            "statistic": 0.00408371618172537
+        }
+    },
+    "prog_id": "05f38fa62c364623a6043d1837b9e16e",
+    "pyquil": {
+        "config": {
+            "relations": [
+                "ChangeCouplingMap"
+            ]
+        },
+        "pyquil_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 916,
+                "1001000": 1043
+            },
+            "time_taken": "26149.5295 ms"
+        },
+        "pyquil_source": {
+            "exception": null,
+            "result": {
+                "1000000": 997,
+                "1001000": 962
+            },
+            "time_taken": "27222.50125 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.07021783801836116,
+            "statistic": 0.04134762633996937
+        }
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 1004,
+                "1001000": 955
+            },
+            "time_taken": "34.938958 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 1017,
+                "1001000": 942
+            },
+            "time_taken": "30.790917 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9999999999957347,
+            "statistic": 0.006636038795303726
+        }
+    }
+}

@@ -1,0 +1,96 @@
+{
+    "cirq": {
+        "cirq_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 1001,
+                "1001000": 958
+            },
+            "time_taken": "17.126375 ms"
+        },
+        "cirq_source": {
+            "exception": null,
+            "result": {
+                "1000000": 925,
+                "1001000": 1034
+            },
+            "time_taken": "23.573209 ms"
+        },
+        "config": {
+            "qubit_order": {
+                "0": 4,
+                "1": 0,
+                "2": 1,
+                "3": 6,
+                "4": 5,
+                "5": 3,
+                "6": 2
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "source_followup_divergence": {
+            "p-value": 0.10482890125688438,
+            "statistic": 0.03879530372639101
+        }
+    },
+    "prog_id": "a120846f192d4cb6973ecbb634966595",
+    "pyquil": {
+        "config": {
+            "qubit_order": {
+                "0": 4,
+                "1": 0,
+                "2": 1,
+                "3": 6,
+                "4": 5,
+                "5": 3,
+                "6": 2
+            },
+            "relations": [
+                "AddUnusedRegister",
+                "ChangeQubitOrder"
+            ],
+            "unused_registers": true
+        },
+        "pyquil_followup": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x16fb42940>",
+            "result": null,
+            "time_taken": null
+        },
+        "pyquil_source": {
+            "exception": "Timeout on client tcp://127.0.0.1:5555, method name quil_to_native_quil, class info: <rpcq._client.Client object at 0x17f292910>",
+            "result": null,
+            "time_taken": null
+        },
+        "source_followup_divergence": null
+    },
+    "qiskit": {
+        "qiskit_followup": {
+            "exception": null,
+            "result": {
+                "1000000": 1005,
+                "1001000": 954
+            },
+            "result_original": {
+                "0000100": 1005,
+                "1000100": 954
+            },
+            "time_taken": "436.930834 ms"
+        },
+        "qiskit_source": {
+            "exception": null,
+            "result": {
+                "1000000": 976,
+                "1001000": 983
+            },
+            "time_taken": "467.669333 ms"
+        },
+        "source_followup_divergence": {
+            "p-value": 0.9827841947805601,
+            "statistic": 0.014803471158754467
+        }
+    }
+}
